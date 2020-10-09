@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## Welcome To My Cyber Security Blog,  Hacker
 
-You can use the [editor on GitHub](https://github.com/Muzec0318/Muzec0318.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Different Hacking Tricks, Writeups, Articles, Any Stuffs Related To Hacking... I'm Happy You're Here Mate.
 
 ### Markdown
 
