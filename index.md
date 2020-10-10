@@ -2,6 +2,14 @@
 
 Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Different Hacking Tricks, Writeups, Articles, Any Stuffs Related To Hacking... I'm Happy You're Here Mate.
 
+### My Bio
+
+# My Name:    Muzec Saminu
+# Known as:   Muzec
+# What I Do:  CTF / Red Teaming / Ethical Hacking
+# Twitter:    https://twitter.com/muzec_saminu
+# GitHub:     https://github.com/Muzec0318
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
