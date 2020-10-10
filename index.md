@@ -4,8 +4,8 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ### My Bio
 
-- My Name:    `Muzec Saminu
-- Known as:   `Muzec
+- My Name:    `Muzec Saminu`
+- Known as:   `Muzec`
 - What Do I Do:  `CTF / Red Teaming / Ethical Hacking`
 - Twitter:    `https://twitter.com/muzec_saminu`
 - GitHub:     `https://github.com/Muzec0318`
