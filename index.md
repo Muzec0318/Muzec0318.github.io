@@ -1,4 +1,4 @@
-## Welcome To My Cyber Security Blog,  Hacker
+### Welcome To My Cyber Security Blog,  Hacker
 
 Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Different Hacking Tricks, Writeups, Articles, Any Stuffs Related To Hacking... I'm Happy You're Here Mate.
 
@@ -32,7 +32,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 -
 -
 
-### CTF
+### CTF_Writeups
 -
 -
 -
