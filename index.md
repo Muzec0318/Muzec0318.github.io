@@ -1,8 +1,8 @@
-### Welcome To My Cyber Security Blog,  Hacker
+## Welcome To My Cyber Security Blog,  Hacker
 
 Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Different Hacking Tricks, Writeups, Articles, Any Stuffs Related To Hacking... I'm Happy You're Here Mate.
 
-### My Bio
+## My Bio
 
 
 - My Name:    `Muzec Saminu`
@@ -11,28 +11,28 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - Twitter:    `https://twitter.com/muzec_saminu`
 - GitHub:     `https://github.com/Muzec0318`
 
-### TryHackMe_Writeups 
+## TryHackMe_Writeups 
 -
 -
 -
 -
 -
 
-### VulnHubs_Writeups
+## VulnHubs_Writeups
 -
 -
 -
 -
 -
 
-### HackTheBox_Writeups
+## HackTheBox_Writeups
 -
 -
 -
 -
 -
 
-### CTF_Writeups
+## CTF_Writeups
 -
 -
 -
