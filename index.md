@@ -13,7 +13,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ## TryHackMe_Writeups:-
 
-- `[TryHackMe -- JoyStick](https://muzec0318.github.io/posts/JoyStick.html)`
+### [TryHackMe -- JoyStick](https://muzec0318.github.io/posts/JoyStick.html)
 -
 -
 -
