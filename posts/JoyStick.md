@@ -1,7 +1,13 @@
+---
+layout: default
+title : muzec - JoyStick Writeup
+---
+
 ![Image](https://miro.medium.com/max/700/1*KdskuMV6EJIHUvyfsLXNFg.png)
 
 # PORT SCANNING.
-`Nmap 7.80 scan initiated Thu Jul 16 10:08:10 2020 as: nmap -sC -sV -oA nmap 10.10.191.17
+```
+Nmap 7.80 scan initiated Thu Jul 16 10:08:10 2020 as: nmap -sC -sV -oA nmap 10.10.191.17
 Nmap scan report for 10.10.191.17
 Host is up (0.16s latency).
 Not shown: 997 closed ports
@@ -19,7 +25,8 @@ PORT STATE SERVICE VERSION
 Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done at Thu Jul 16 10:08:53 2020–1 IP address (1 host up) scanned in 42.44 seconds` 
+Nmap done at Thu Jul 16 10:08:53 2020–1 IP address (1 host up) scanned in 42.44 seconds
+```
 
 # 3 OPEN PORTS 21, 22 AND 80.
 
@@ -48,3 +55,8 @@ Boom we are in and we have user.txt let go for root now.
 ![Image](https://miro.medium.com/max/700/1*-46KMAxuE94pxevUWeR1ZQ.png)
 
 Going back to the home dir we found another user notch which root flag boom box completed.
+
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
