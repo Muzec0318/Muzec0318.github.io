@@ -19,11 +19,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## TryHackMe_Writeups:-
 
 
+- [TryHackMe --Source]
 - [TryHackMe -- JoyStick](https://muzec0318.github.io/posts/JoyStick.html)
-- [TryHackMe -- Jack Of All trades](https://muzec0318.github.io/posts/Jack.html)   
-- Post..:  
-- Post..:    
-- Post..:     
+- [TryHackMe -- Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html) 
 
 
 ## VulnHubs_Writeups:-
