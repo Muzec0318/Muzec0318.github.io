@@ -40,7 +40,7 @@ Cool we found something a message to one of the user let some some ssh brute for
 
 ![Image](https://miro.medium.com/max/700/1*zoxWBcKCfH1ph_tWMSzuCQ.png)
 
-Boom we have the details trying the rockyou.txt is taking to long changing wordlist to `usr/share/wordlists/fasttrack.txt we have the credential with no time no move to next step.
+Boom we have the details trying the rockyou.txt is taking to long changing wordlist to `usr/share/wordlists/fasttrack.txt` we have the credential with no time no move to next step.
 
 ![Image](https://miro.medium.com/max/700/1*H0Z_ep7n_xoQXy89YJYpIg.png)
 
