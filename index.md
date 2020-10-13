@@ -20,7 +20,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 - [TryHackMe -- JoyStick](https://muzec0318.github.io/posts/JoyStick.html)
-- Post..:   
+- [TryHackMe -- Jack Of All trades](https://muzec0318.github.io/posts/Jack.html)   
 - Post..:  
 - Post..:    
 - Post..:     
@@ -51,6 +51,6 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 -
 
 
-### Support or Contact
+### Support Or Contact Me:-
 
 
