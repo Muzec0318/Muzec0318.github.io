@@ -1,7 +1,6 @@
 ![Image](https://miro.medium.com/max/700/1*KdskuMV6EJIHUvyfsLXNFg.png)
 
 # PORT SCANNING.
-
 `Nmap 7.80 scan initiated Thu Jul 16 10:08:10 2020 as: nmap -sC -sV -oA nmap 10.10.191.17
 Nmap scan report for 10.10.191.17
 Host is up (0.16s latency).
