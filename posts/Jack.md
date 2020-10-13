@@ -84,6 +84,7 @@ Time to spawn a reverse shell to our terminal.
 Try to make the shell stable by spawning a TTY shell ```python -c ‘import pty; pty.spawn(“/bin/bash”)’```
 
 ![image](https://miro.medium.com/max/700/1*xAwVIlohAGdNGlgbFp-4LQ.png)
+
 ```After spawning TTY Shell```
 
 ![image](https://miro.medium.com/max/700/1*ohV1WrlpZMnp9AOJTghVSA.png)
