@@ -44,7 +44,7 @@ The only interesting dir is ```/admin``` let try to access it maybe luckily we c
 
 Not the boom am expecting it Overpass administrator login page hmm let try a simple username and password admin and admin hmm no luck let try simple SQL injection admin'— 1=1' — no luck let view some page source.
 
-![Image](https://miro.medium.com/max/700/1*dMZYHeXTcYqWNdW6e7UHSA.png}
+![Image](https://miro.medium.com/max/700/1*dMZYHeXTcYqWNdW6e7UHSA.png)
 
 The login.js let check maybe a hint is hidden or anything that can lead us to be able to log in.
 
