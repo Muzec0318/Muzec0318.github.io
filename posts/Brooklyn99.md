@@ -43,7 +43,7 @@ PORT STATE SERVICE VERSION
 Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Jul 25 23:15:34 2020–1 IP address (1 host up) scanned in 26.38 seconds```
+Nmap done at Sat Jul 25 23:15:34 2020–1 IP address (1 host up) scanned in 26.38 seconds```
 
 We have three open ports 21,22 and 80 very interesting observing my scan output we find out port 21 which is the FTP we have access to the Anonymous FTP login cool guess it our lucky day.
 
