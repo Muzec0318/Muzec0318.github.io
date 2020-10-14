@@ -12,7 +12,8 @@ So i finally root Overpass on Tryhackme took me days with some little help from 
 # SCANNING.
 
 
-```Nmap 7.80 scan initiated Sat Jul 18 08:33:44 2020 as: nmap -sC -sV -oA nmap 10.10.113.243
+```
+Nmap 7.80 scan initiated Sat Jul 18 08:33:44 2020 as: nmap -sC -sV -oA nmap 10.10.113.243
 Nmap scan report for 10.10.113.243
 Host is up (0.20s latency).
 Not shown: 998 closed ports
@@ -27,7 +28,8 @@ PORT STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done at Sat Jul 18 08:34:43 2020–1 IP address (1 host up) scanned in 58.78 seconds```
+Nmap done at Sat Jul 18 08:34:43 2020–1 IP address (1 host up) scanned in 58.78 seconds
+```
 
 
 # ACCESSING IP.
