@@ -24,7 +24,8 @@ In order to get the blog to work with AWS, you’ll need to add blog.thm to your
 
 # Nmap
 
-```Nmap 7.80 scan initiated Sun Jul 12 19:14:28 2020 as: nmap -sC -sV -oA nmap blog.thm
+```
+Nmap 7.80 scan initiated Sun Jul 12 19:14:28 2020 as: nmap -sC -sV -oA nmap blog.thm
 Nmap scan report for blog.thm (10.10.96.47)
 Host is up (0.14s latency).
 Not shown: 996 closed ports
@@ -66,7 +67,8 @@ Host script results:
 |_ start_date: N/A
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done at Sun Jul 12 19:15:04 2020–1 IP address (1 host up) scanned in 35.92 seconds```
+Nmap done at Sun Jul 12 19:15:04 2020–1 IP address (1 host up) scanned in 35.92 seconds
+```
 
 
 We have 4 open ports 22 which is SSH port 80 normal HTTP port 139,445 which is samba.
