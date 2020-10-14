@@ -117,6 +117,8 @@ Checking the SUID files i found something interesting ```/usr/bin/strings``` coo
 
 ```Boom we have root.txt```
 
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
 <br> <br>
 [Back To Home](../index.md)
 <br>
