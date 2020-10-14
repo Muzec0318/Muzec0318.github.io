@@ -19,6 +19,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## TryHackMe_Writeups:-
 
 
+- [TryHackMe -- Ghizer CTF](https://muzec0318.github.io/posts/Ghizer.html)
 - [TryHackMe -- Blog](https://muzec0318.github.io/posts/Blog.html)
 - [TryHackMe -- Brooklyn 99](https://muzec0318.github.io/posts/Brooklyn99.html)
 - [TryHackMe -- Overpass](https://muzec0318.github.io/posts/Overpass.html)
