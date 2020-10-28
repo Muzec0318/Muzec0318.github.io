@@ -32,9 +32,11 @@ Cheat Sheets For Spawning A TTY Shell.
 Bypassing Shell Restriction And Spawning A TTY Shell.
 
 Within Vi
+
 ```:set shell=/bin/bash:shell```
 
 Within Vi
+
 ```:!bash```
 
 Within Nmap
@@ -45,6 +47,7 @@ nmap --interactive
 ```
 
 Within IRB
+
 ```exec "/bin/sh"```
 
 Greeting From [Muzec](https://twitter.com/muzec_saminu)
