@@ -10,7 +10,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## WhoAmI:-
 
 
-- My Name:    `Muzec Saminu`
+- My Name:    `Saminu Musa Saminu`
 - Known as:   `Muzec`
 - What Do I Do:  `CTF / Red Teaming / Ethical Hacking`
 - Twitter:    `https://twitter.com/muzec_saminu`
@@ -19,6 +19,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## Latest_Articles
 
 - [Spawning A TTY Shell, Cheat Sheets](https://muzec0318.github.io/posts/Ttyshells.html)
+- [Reverse Shell Cheat Sheet](https://muzec0318.github.io/posts/ReverseShell.html)
 
 ## TryHackMe_Writeups:-
 
