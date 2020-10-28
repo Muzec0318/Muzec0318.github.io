@@ -41,10 +41,8 @@ Within Vi
 
 Within Nmap
 
-```
-nmap --interactive
-!sh
-```
+```nmap --interactive
+!sh```
 
 Within IRB
 
