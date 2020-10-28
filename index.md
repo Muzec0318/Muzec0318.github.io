@@ -16,6 +16,10 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - Twitter:    `https://twitter.com/muzec_saminu`
 - GitHub:     `https://github.com/Muzec0318`
 
+## Latest_Articles
+
+- [Spawning A TTY Shell, Cheat Sheets](https://muzec0318.github.io/posts/Ttyshells.html)
+
 ## TryHackMe_Writeups:-
 
 
