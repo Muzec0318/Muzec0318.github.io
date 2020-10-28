@@ -41,11 +41,7 @@ Within Vi
 
 Within Nmap
 
-```
-nmap --interactive
-
-!sh
-```
+```nmap --interactive``` Now Type ```!sh```
 
 Within IRB
 
