@@ -24,6 +24,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## TryHackMe_Writeups:-
 
 
+- [TryHackMe -- 0day](https://muzec0318.github.io/posts/0day.html)
 - [TryHackMe -- The Marketplace](https://muzec0318.github.io/posts/Marketplace.html)
 - [TryHackMe -- Revenge](https://muzec0318.github.io/posts/Revenge.html)
 - [TryHackme -- Mnemonic](https://muzec0318.github.io/posts/Mnemonic.html)
