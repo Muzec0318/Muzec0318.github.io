@@ -95,7 +95,22 @@ Boom we have the ssh password also the username which is tony let hit ssh.
 
 ![f16](https://user-images.githubusercontent.com/69868171/99819349-ae4a1c00-2ae2-11eb-975f-e9b4c616bda9.PNG)
 
-ssh we are in.
+ssh we are in first thing first let check sudo with ```sudo -l```
 
+![f17](https://user-images.githubusercontent.com/69868171/99878635-448d4900-2b9a-11eb-8a4d-114e0b79eec9.PNG)
 
+Plenty way to get root but let go with ```/usr/bin/pkexec``` let check [GTFOBins ](https://gtfobins.github.io/)
 
+![f18](https://user-images.githubusercontent.com/69868171/99878755-d1380700-2b9a-11eb-801e-3ea18e3d8ac4.PNG)
+
+Now let run ```sudo pkexec /bin/sh```
+
+![f20](https://user-images.githubusercontent.com/69868171/99878796-368bf800-2b9b-11eb-9ba0-41c4bce883a5.PNG)
+
+We are root Box Rooted.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
