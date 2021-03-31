@@ -42,6 +42,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## VulnHubs_Writeups:-
 
 - [VulnHub -- FunboxEasy](https://muzec0318.github.io/posts/Funbox3.html)
+- [VulnHub -- Kioptrix 1](https://muzec0318.github.io/posts/kioptrix1.html)
 
 ## HackTheBox_Writeups:-
 
