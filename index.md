@@ -38,11 +38,11 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [TryHackMe -- JoyStick](https://muzec0318.github.io/posts/JoyStick.html)
 - [TryHackMe -- Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html) 
 
-
 ## VulnHubs_Writeups:-
 
 - [VulnHub -- FunboxEasy](https://muzec0318.github.io/posts/Funbox3.html)
 - [VulnHub -- Kioptrix 1](https://muzec0318.github.io/posts/kioptrix1.html)
+- [VulnHub -- Kioptrix 2](https://muzec0318.github.io/posts/kioptrix2.html)
 
 ## HackTheBox_Writeups:-
 
