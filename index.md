@@ -24,7 +24,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## TryHackMe_Writeups:-
 
 
-- [TryHackMe -- Tokyo Ghoul](https://muzec0318.github.io/posts/Debug.html)
+- [TryHackMe -- Debug](https://muzec0318.github.io/posts/Debug.html)
 - [TryHackMe -- Tokyo Ghoul](https://muzec0318.github.io/posts/tokyoghoul666.html)
 - [TryHackMe -- The Server From Hell](https://muzec0318.github.io/posts/TheServerFromHell.html)
 - [TryHackMe -- 0day](https://muzec0318.github.io/posts/0day.html)
