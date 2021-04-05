@@ -42,6 +42,8 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 18.91 seconds
 ```
 
+Cool let burst some dirs maybe we have any hidden dirs to be reveals.
+
 ![image](https://imgur.com/f2qexKZ.png)
 
 Cool some nice dirs let check the one with admin.
