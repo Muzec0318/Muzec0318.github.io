@@ -107,8 +107,10 @@ except:
 
 4. Finding Bad Characters
 
-```!mona config -set workingfolder c:\mona\%p```
-```!mona bytearray -b "\x00"```
+```
+!mona config -set workingfolder c:\mona\%p
+!mona bytearray -b "\x00"`
+```
 
 Now generate a string of bad chars that is identical to the bytearray. The following python script can be used to generate a string of bad chars from \x01 to \xff;
 
@@ -156,12 +158,6 @@ Not all of these might be badchars! Sometimes badchars cause the next byte to ge
 
 The first badchar in the list should be the null byte (\x00) since we already removed it from the file. Make a note of any others.
 
-Mona Configuration
-
-The mona script has been preinstalled, however to make it easier to work with, you should configure a working folder using the following command, which you can run in the command input box at the bottom of the Immunity Debugger window:
-
-```!mona config -set workingfolder c:\mona\%p```
-```!mona bytearray -b "\x00"```
 
 5. Finding a Jump Point
 
