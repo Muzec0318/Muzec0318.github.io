@@ -110,7 +110,7 @@ except:
 Let Create a working Directory First
 ```
 !mona config -set workingfolder c:\mona\%p
-!mona bytearray -b "\x00"`
+!mona bytearray -b "\x00"
 ```
 
 Now generate a string of bad chars that is identical to the bytearray. The following python script can be used to generate a string of bad chars from \x01 to \xff;
