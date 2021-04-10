@@ -107,6 +107,7 @@ except:
 
 4. Finding Bad Characters
 
+Let Create a working Directory First
 ```
 !mona config -set workingfolder c:\mona\%p
 !mona bytearray -b "\x00"`
