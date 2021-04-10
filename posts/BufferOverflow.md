@@ -163,6 +163,7 @@ The first badchar in the list should be the null byte (\x00) since we already re
 5. Finding a Jump Point
 
 ```!mona jmp -r esp -cpb "\x00\x16\x2f\xf4\xfd"```
+
 This command finds all "jmp esp" (or equivalent) instructions with addresses that don't contain any of the badchars specified. 
 
 ![Image](https://imgur.com/I81eQqM.png)
