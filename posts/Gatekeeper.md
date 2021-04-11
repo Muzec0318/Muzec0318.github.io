@@ -445,6 +445,6 @@ Now let start a listener with ncat and run the script if we have everything righ
 
 Boom we have shell now what we have to do is to edit it to our target IP now.
 
-[Image](https://imgur.com/ssIdedp.png)
+![Image](https://imgur.com/ssIdedp.png)
 
 Finally we have access to the machine shit am tired lol.
