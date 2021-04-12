@@ -447,4 +447,58 @@ Boom we have shell now what we have to do is to edit it to our target IP now.
 
 ![Image](https://imgur.com/ssIdedp.png)
 
-Finally we have access to the machine shit am tired lol.
+Finally we have access to the machine shit am tired lol. so i spend time on getting the root but i got no luck so i check on write up to see what am missing so i try doing it again.
+
+
+### TRANSFER SHELL TO METASPLOIT 
+
+![image](https://imgur.com/4os2SnV.png)
+
+Now let run our exploit we should get a shell back.
+
+![image](https://imgur.com/SGSy8AL.png)
+
+Now let upgrade our shell to meterpreter shell.
+
+`sessions -u 1`
+
+`sessions`
+
+`sessions 2`
+
+![image](https://imgur.com/Lyxlm3t.png)
+
+![image](https://imgur.com/hkivXsE.png)
+
+I think i told you guys i was stuck here the last time before checking write up to see what am missing now i think we can see `Firefox.lnk` now let try to use one of the metasploit module `post/multi/gather/firefox_creds` to see if we can get any credentials.
+
+![image](https://imgur.com/8GZm2l7.png)
+
+Now let hit exploit.
+
+![image](https://imgur.com/HQyQB2J.png)
+
+Boom Boom So i go to my metasploit loot to rename each file `cert9.db` `cookies.sqlite` `key4.db` `logins.json` cool to the real name.
+
+![Image](https://imgur.com/eW6Pu6G.png)
+
+So i download Firefox Decrypt which can be used to recover passwords from a profile which is cool since we got some profile dumps also from the firefox folders also now let run our script.
+
+`python3 firefox_decrypt.py ./` and we get the credentials.
+
+![Image](https://imgur.com/jxAWgl5.png)
+
+Cool we can easily use RDP to log in with the new credentials we just found.
+
+`rdesktop IP:3389 -u mayor -p Password`
+
+![image](https://imgur.com/EmFl7oW.png)
+
+
+And we are done.... Shit i really need to brush my skills more in windows but hell yea the Buffer Overflow was fun......
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
