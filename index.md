@@ -25,7 +25,8 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## TryHackMe_Writeups:-
 
 
-- [TryHackMe -- Gatekeeper](https://muzec0318.github.io/posts/Gatekeeper.html) BOF
+- [TryHackMe -- Watcher](https://muzec0318.github.io/posts/Watcher.html) *Python Library Hijacking*
+- [TryHackMe -- Gatekeeper](https://muzec0318.github.io/posts/Gatekeeper.html) *BOF*
 - [TryHackMe -- Debug](https://muzec0318.github.io/posts/Debug.html)
 - [TryHackMe -- Tokyo Ghoul](https://muzec0318.github.io/posts/tokyoghoul666.html)
 - [TryHackMe -- The Server From Hell](https://muzec0318.github.io/posts/TheServerFromHell.html)
