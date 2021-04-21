@@ -52,6 +52,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [VulnHub -- SickOs 1.1](https://muzec0318.github.io/posts/Sickos.html)    *Squid Proxy*
 - [VulnHub -- Toppo](https://muzec0318.github.io/posts/Toppo.html)
 - [VulnHub -- BlueMoon:2021](https://muzec0318.github.io/posts/Bluemoon.html)
+- [VulnHub -- Tr0ll 1](https://muzec0318.github.io/posts/Tr0ll.html)
 
 ## HackTheBox_Writeups:-
 
