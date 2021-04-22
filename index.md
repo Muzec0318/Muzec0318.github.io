@@ -28,20 +28,20 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 - [TryHackMe -- Watcher](https://muzec0318.github.io/posts/Watcher.html) *Python Library Hijacking*
 - [TryHackMe -- Gatekeeper](https://muzec0318.github.io/posts/Gatekeeper.html) *BOF*
-- [TryHackMe -- Debug](https://muzec0318.github.io/posts/Debug.html)
+- [TryHackMe -- Debug](https://muzec0318.github.io/posts/Debug.html)  *PHP Deserialization*
 - [TryHackMe -- Tokyo Ghoul](https://muzec0318.github.io/posts/tokyoghoul666.html)
 - [TryHackMe -- The Server From Hell](https://muzec0318.github.io/posts/TheServerFromHell.html)
-- [TryHackMe -- 0day](https://muzec0318.github.io/posts/0day.html)
-- [TryHackMe -- The Marketplace](https://muzec0318.github.io/posts/Marketplace.html)
-- [TryHackMe -- Revenge](https://muzec0318.github.io/posts/Revenge.html)
+- [TryHackMe -- 0day](https://muzec0318.github.io/posts/0day.html)  *Shellshock*
+- [TryHackMe -- The Marketplace](https://muzec0318.github.io/posts/Marketplace.html)  *SQL Injection & XSS*
+- [TryHackMe -- Revenge](https://muzec0318.github.io/posts/Revenge.html)  *SQLMAP*
 - [TryHackme -- Mnemonic](https://muzec0318.github.io/posts/Mnemonic.html)
 - [TryHackMe -- Ghizer CTF](https://muzec0318.github.io/posts/Ghizer.html)
-- [TryHackMe -- Blog](https://muzec0318.github.io/posts/Blog.html)
+- [TryHackMe -- Blog](https://muzec0318.github.io/posts/Blog.html)  *Wordpress*
 - [TryHackMe -- Brooklyn 99](https://muzec0318.github.io/posts/Brooklyn99.html)
 - [TryHackMe -- Overpass](https://muzec0318.github.io/posts/Overpass.html)
-- [TryHackMe -- Source](https://muzec0318.github.io/posts/Source.html)
+- [TryHackMe -- Source](https://muzec0318.github.io/posts/Source.html)  *Webmin Exploit*
 - [TryHackMe -- JoyStick](https://muzec0318.github.io/posts/JoyStick.html)
-- [TryHackMe -- Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html) 
+- [TryHackMe -- Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html)  *Steghide*
 
 ## VulnHubs_Writeups:-
 
