@@ -48,9 +48,50 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Tue Apr  6 05:37:30 2021 -- 1 IP address (1 host up) scanned in 30.35 seconds
 ```
 
-4 open ports let check out the port 80 first hmmm a simple login page ok let leave it first and burst some directory.
+4 open ports let check out the port 80 first hmmm a simple login page let burst some directory.
 
 ![Image](https://imgur.com/rYwguxx.png)
 
+Some user names i guess going back to the login page to test for sqli.
+
+![Image](https://imgur.com/2au10Qj.png)
+
+Yea it vulnerable now let try it with the username we got from the directory with the username `john` and password ` ' OR '1'='1'-- -` .
+
+![Image](https://imgur.com/uo7U4bs.png)
+
+Cool some credentials let try using it on SSH.
+
+![Image](https://imgur.com/IVVDKBp.png)
+
+Boom we are in but the shell is kind of strange let find a way to bypass the `/bin/kshell` because we keep getting kick out of the SSH.
+
+![Image](https://imgur.com/AFs0KLs.png)
+
+`echo os.system('/bin/sh')` and we bypass it.
+
+![Image](https://imgur.com/eZh7MQQ.png)
+
+Boom and it running a old version of linux yea it dirtycow let confirm it.
+
+![Image](https://imgur.com/Ynoc5WH.png)
+
+So we download the exploit and get it on the attack machine now let complie and run it.
+
+`gcc -pthread dirty.c -o dirty -lcrypt`
+
+Boom now let run it after doing that let log in ssh with the new credentials we just got or we can easily just use the `su firefart` and the password we created with it.
+
+![Image](https://imgur.com/6RRpyaP.png)
+
+And boom we are root.
+
+![Image](https://imgur.com/psOyipo.png)
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
 
 
