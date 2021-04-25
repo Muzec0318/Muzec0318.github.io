@@ -51,7 +51,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [VulnHub -- Kioptrix 1](https://muzec0318.github.io/posts/kioptrix1.html)     *Samba Trans2open*
 - [VulnHub -- Kioptrix 2](https://muzec0318.github.io/posts/Kioptrix2.html)     *SQLI*
 - [VulnHub -- Kioptrix 3](https://muzec0318.github.io/posts/Kioptrix3.html)     *RCE*
-- [VulnHub -- Kioptrix 4](https://muzec0318.github.io/posts/Kioptrix4.html)     *SQI*
+- [VulnHub -- Kioptrix 4](https://muzec0318.github.io/posts/Kioptrix4.html)     *SQLI*
 - [VulnHub -- SickOs 1.1](https://muzec0318.github.io/posts/Sickos.html)    *Squid Proxy*
 - [VulnHub -- Toppo](https://muzec0318.github.io/posts/Toppo.html)
 - [VulnHub -- BlueMoon:2021](https://muzec0318.github.io/posts/Bluemoon.html)
