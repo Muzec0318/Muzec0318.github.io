@@ -46,16 +46,16 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## VulnHubs_Writeups:-
 
 - [VulnHub -- Inclusiveness](https://muzec0318.github.io/posts/Inclusiveness.html)  *PATH Variable With Whoami*
-- [VulnHub -- FunboxEasyEnum](https://muzec0318.github.io/posts/Funboxeasyenum.html)
+- [VulnHub -- FunboxEasyEnum](https://muzec0318.github.io/posts/Funboxeasyenum.html)  *Webshell*
 - [VulnHub -- FunboxEasy](https://muzec0318.github.io/posts/Funbox3.html)
-- [VulnHub -- Kioptrix 1](https://muzec0318.github.io/posts/kioptrix1.html)
-- [VulnHub -- Kioptrix 2](https://muzec0318.github.io/posts/Kioptrix2.html)
-- [VulnHub -- Kioptrix 3](https://muzec0318.github.io/posts/Kioptrix3.html)
-- [VulnHub -- Kioptrix 4](https://muzec0318.github.io/posts/Kioptrix4.html)
+- [VulnHub -- Kioptrix 1](https://muzec0318.github.io/posts/kioptrix1.html)     *Samba Trans2open*
+- [VulnHub -- Kioptrix 2](https://muzec0318.github.io/posts/Kioptrix2.html)     *SQLI*
+- [VulnHub -- Kioptrix 3](https://muzec0318.github.io/posts/Kioptrix3.html)     *RCE*
+- [VulnHub -- Kioptrix 4](https://muzec0318.github.io/posts/Kioptrix4.html)     *SQI*
 - [VulnHub -- SickOs 1.1](https://muzec0318.github.io/posts/Sickos.html)    *Squid Proxy*
 - [VulnHub -- Toppo](https://muzec0318.github.io/posts/Toppo.html)
 - [VulnHub -- BlueMoon:2021](https://muzec0318.github.io/posts/Bluemoon.html)
-- [VulnHub -- Tr0ll 1](https://muzec0318.github.io/posts/Tr0ll.html)
+- [VulnHub -- Tr0ll 1](https://muzec0318.github.io/posts/Tr0ll.html)      *Crontab*
 
 ## HackTheBox_Writeups:-
 
