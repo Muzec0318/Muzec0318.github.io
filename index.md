@@ -46,6 +46,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## VulnHubs_Writeups:-
 
 - [VulnHub -- Inclusiveness](https://muzec0318.github.io/posts/Inclusiveness.html)  *PATH Variable With Whoami*
+- [VulnHub -- FunboxEasyEnum](https://muzec0318.github.io/posts/Funboxeasyenum.html)
 - [VulnHub -- FunboxEasy](https://muzec0318.github.io/posts/Funbox3.html)
 - [VulnHub -- Kioptrix 1](https://muzec0318.github.io/posts/kioptrix1.html)
 - [VulnHub -- Kioptrix 2](https://muzec0318.github.io/posts/Kioptrix2.html)
