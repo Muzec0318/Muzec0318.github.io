@@ -56,6 +56,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [VulnHub -- Toppo](https://muzec0318.github.io/posts/Toppo.html)
 - [VulnHub -- BlueMoon:2021](https://muzec0318.github.io/posts/Bluemoon.html)
 - [VulnHub -- Tr0ll 1](https://muzec0318.github.io/posts/Tr0ll.html)      *Crontab*
+- [VulnHub -- Brainpan 1](https://muzec0318.github.io/posts/Brainpan1.html)      *Crontab*
 
 ## HackTheBox_Writeups:-
 
