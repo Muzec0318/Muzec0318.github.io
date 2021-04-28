@@ -18,6 +18,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ## Latest_Articles
 
+- [OverlayFS - Local Privilege Escalation - CVE-2021-3493 (POC)](https://muzec0318.github.io/posts/overlayfs.html)
 - [Exploiting Telnet To Gain A Reverse Shell](https://muzec0318.github.io/posts/Telnet.html)
 - [Buffer Overflow Cheat Sheet](https://muzec0318.github.io/posts/BufferOverflow.html)
 - [Spawning A TTY Shell, Cheat Sheets](https://muzec0318.github.io/posts/Ttyshells.html)
