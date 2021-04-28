@@ -18,9 +18,13 @@ CVE-2021-3493
 ### Affected Versions
 
 Ubuntu 20.10
+
 Ubuntu 20.04 LTS
+
 Ubuntu 18.04 LTS
+
 Ubuntu 16.04 LTS
+
 Ubuntu 14.04 ESM
 
 ### Vulnerability Analysis
