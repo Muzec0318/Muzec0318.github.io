@@ -30,7 +30,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [TryHackMe -- Watcher](https://muzec0318.github.io/posts/Watcher.html) *Python Library Hijacking*
 - [TryHackMe -- Gatekeeper](https://muzec0318.github.io/posts/Gatekeeper.html) *BOF*
 - [TryHackMe -- Debug](https://muzec0318.github.io/posts/Debug.html)  *PHP Deserialization*
-- [TryHackMe -- Tokyo Ghoul](https://muzec0318.github.io/posts/tokyoghoul666.html)
+- [TryHackMe -- Tokyo Ghoul](https://muzec0318.github.io/posts/tokyoghoul666.html)  *Python Jail*
 - [TryHackMe -- The Server From Hell](https://muzec0318.github.io/posts/TheServerFromHell.html)
 - [TryHackMe -- 0day](https://muzec0318.github.io/posts/0day.html)  *Shellshock*
 - [TryHackMe -- The Marketplace](https://muzec0318.github.io/posts/Marketplace.html)  *SQL Injection & XSS*
