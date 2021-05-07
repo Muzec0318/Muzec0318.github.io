@@ -51,6 +51,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [VulnHub -- Inclusiveness](https://muzec0318.github.io/posts/Inclusiveness.html)  *PATH Variable With Whoami*
 - [VulnHub -- SunsetNoontide](https://muzec0318.github.io/posts/Sunsetnoontide.html)  *IRC*
 - [VulnHub -- FunboxEasyEnum](https://muzec0318.github.io/posts/Funboxeasyenum.html)  *Webshell*
+- [VulnHub -- Zico2](https://muzec0318.github.io/posts/zico2.html)
 - [VulnHub -- FunboxEasy](https://muzec0318.github.io/posts/Funbox3.html)
 - [VulnHub -- Kioptrix 1](https://muzec0318.github.io/posts/kioptrix1.html)     *Samba Trans2open*
 - [VulnHub -- Kioptrix 2](https://muzec0318.github.io/posts/Kioptrix2.html)     *SQL Injection*
