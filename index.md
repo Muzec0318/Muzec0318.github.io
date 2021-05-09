@@ -74,7 +74,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ## CTF_Writeups:-
 
--[CTF_Writeups -- zSecurity Fuel CTF](https://muzec0318.github.io/posts/Zfuel.html)
+- [CTF_Writeups -- zSecurity Fuel CTF](https://muzec0318.github.io/posts/Zfuel.html)
 -
 -
 -
