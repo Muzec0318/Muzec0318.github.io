@@ -211,6 +211,8 @@ Now let visit `localhost:8111` to confirm it.
 
 ![image](https://user-images.githubusercontent.com/69868171/117656607-8e78e400-b166-11eb-94e7-79ec757e877d.png)
 
+Now we need a token to get access to the super user panel so let go back to the machine to enumerate the TeamCity folder spend some time on it and boom i found the token file. 
+
 ![image](https://user-images.githubusercontent.com/69868171/117674555-c2113980-b179-11eb-9edd-7a0990f56e45.png)
 
 So i found the token at `/TeamCity/logs/catalina.out` let use it to log in without username .
