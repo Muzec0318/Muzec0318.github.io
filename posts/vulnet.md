@@ -213,3 +213,7 @@ Now let visit `localhost:8111` to confirm it.
 
 So i click on Log in as a Super user to create an administrator account. 
 
+![image](https://user-images.githubusercontent.com/69868171/117659974-98044b00-b16a-11eb-88e2-41288cf36e1e.png)
+
+So we need  Authentication token: before we can get access with the Super user now go back to the target machine to find it.
+
