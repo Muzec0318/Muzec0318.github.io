@@ -48,6 +48,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ## VulnHubs_Writeups:-
 
+- [VulnHub -- DroopyCTF](https://muzec0318.github.io/posts/Droopy.html) *Drupal Exploit*
 - [VulnHub -- Wakanda 1](https://muzec0318.github.io/posts/wakanda.html) *LFI With PHP Wrapper Fliter*
 - [VulnHub -- Me And My Girlfriend 1](https://muzec0318.github.io/posts/meandmygirlfriend.html) *Account Takeover*
 - [VulnHub -- Inclusiveness](https://muzec0318.github.io/posts/Inclusiveness.html)  *PATH Variable With Whoami*
