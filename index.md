@@ -62,6 +62,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [VulnHub -- Kioptrix 3](https://muzec0318.github.io/posts/Kioptrix3.html)     *RCE*
 - [VulnHub -- Kioptrix 4](https://muzec0318.github.io/posts/Kioptrix4.html)     *SQL Injection*
 - [VulnHub -- SickOs 1.1](https://muzec0318.github.io/posts/Sickos.html)    *Squid Proxy*
+- [VulnHub -- SickOs 1.2](https://muzec0318.github.io/posts/Sickos2.html)    *Http-Method*
 - [VulnHub -- Toppo](https://muzec0318.github.io/posts/Toppo.html)
 - [VulnHub -- BlueMoon:2021](https://muzec0318.github.io/posts/Bluemoon.html)
 - [VulnHub -- Tr0ll 1](https://muzec0318.github.io/posts/Tr0ll.html)      *Crontab*
