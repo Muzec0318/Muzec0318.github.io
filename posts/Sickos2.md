@@ -41,7 +41,7 @@ We have 2 open ports SSH and HTTP let hit port 80 first which is the HTTP port .
 
 ![image](https://user-images.githubusercontent.com/69868171/118409304-d2cd1e00-b657-11eb-8c10-dfec6d85f2b1.png)
 
-We found a simpe web page so i try check the source code first maybe a hint is left behind but nothing just a troll lol .
+We found a simpe web page so i try checking the source code first maybe a hint is left behind but nothing just a troll lol .
 
 ![image](https://user-images.githubusercontent.com/69868171/118409548-ee84f400-b658-11eb-9cc3-2d661ac74d6b.png)
 
