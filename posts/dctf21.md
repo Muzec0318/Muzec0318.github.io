@@ -153,4 +153,113 @@ When i click on submit it now boom we have the flag .
 
 `dctf{w3b_c4n_b3_fun_r1ght?}`
 
-### Web:-  
+### Web:-   Injection 
+![image](https://user-images.githubusercontent.com/69868171/118533982-bb089f00-b716-11eb-88ea-1e30e88c1063.png)
+
+A simple login page but not that simple and not related to sql injection first thing first i try to confirm it if it vulnerable to (SSTI) Server Side Template Injection thanks to my little cheat sheet `${{<%[%'"}}%` ok let confirm it.
+
+![image](https://user-images.githubusercontent.com/69868171/118534492-4bdf7a80-b717-11eb-934a-746cf99194f4.png)
+
+![image](https://user-images.githubusercontent.com/69868171/118535416-7251e580-b718-11eb-988f-0b27d0cea18c.png)
+
+Cool we got `500 Internal Server Error` now let craft our payload all thanks to our captain `@Kiomet` for the hard work here.
+
+![image](https://user-images.githubusercontent.com/69868171/118535468-8269c500-b718-11eb-93a8-49e2316ac00b.png)
+
+Payload ready ` http://dctf1-chall-injection.westeurope.azurecontainer.io:8080/%7B%7Bconfig.__class__.__init__.__globals__['os'].popen('ls -la').read()}}`
+
+![image](https://user-images.githubusercontent.com/69868171/118536338-9f52c800-b719-11eb-88c2-545319044446.png)
+
+You can view in page source to make it more clean to see.
+
+`http://dctf1-chall-injection.westeurope.azurecontainer.io:8080/%7B%7Bconfig.__class__.__init__.__globals__['os'].popen('cat lib/security.py').read()}}`
+
+![image](https://user-images.githubusercontent.com/69868171/118537078-7e3ea700-b71a-11eb-99f7-3d2b53e612c7.png)
+
+Now getting the flag let reverse and decode the password we found.
+
+![image](https://user-images.githubusercontent.com/69868171/118537214-b1813600-b71a-11eb-84b7-a9d2c3b5758f.png)
+
+`dctf{4ll_us3r_1nput_1s_3v1l}`
+
+### Web:-    Very secure website 
+![image](https://user-images.githubusercontent.com/69868171/118537322-d2e22200-b71a-11eb-8b39-2ca41e83312e.png)
+
+Some students have built their most secure website ever. Can you spot their mistake?
+
+Checking the source code that was left behind for us.
+
+```
+ <?php
+    if (isset($_GET['username']) and isset($_GET['password'])) {
+        if (hash("tiger128,4", $_GET['username']) != "51c3f5f5d8a8830bc5d8b7ebcb5717df") {
+            echo "Invalid username";
+        }
+        else if (hash("tiger128,4", $_GET['password']) == "0e132798983807237937411964085731") {
+            $flag = fopen("flag.txt", "r") or die("Cannot open file");
+            echo fread($flag, filesize("flag.txt"));
+            fclose($flag);
+        }
+        else {
+            echo "Try harder";
+        }
+    }
+    else {
+        echo "Invalid parameters";
+    }
+?> 
+```
+
+I try using admin/admin for both username and password but got no luck so i try to use magic hashes for PHP  cheat sheet below;
+
+![image](https://user-images.githubusercontent.com/69868171/118537938-8e0abb00-b71b-11eb-8168-879eb916ec5f.png)
+
+
+Now using `admin` for username and `LnFwjYqB` for password.
+
+![image](https://user-images.githubusercontent.com/69868171/118538080-ba263c00-b71b-11eb-8611-b5185adcf4a9.png)
+
+And boom we have the flag .
+
+![image](https://user-images.githubusercontent.com/69868171/118538200-e2159f80-b71b-11eb-8f33-08bee1b9fd23.png)
+
+`dctf{It's_magic._I_ain't_gotta_explain_shit.}`
+
+### Web:-     DevOps vs SecOps 
+![image](https://user-images.githubusercontent.com/69868171/118538328-07a2a900-b71c-11eb-84cf-cb4edfea05c1.png)
+
+Automatization is amazing when it works, but it all comes at a cost... You have to be careful...
+
+Now back to the github page .
+
+![image](https://user-images.githubusercontent.com/69868171/118538485-3e78bf00-b71c-11eb-8a8d-bd325f3e72f7.png)
+
+Some really interesting hint.
+
+![image](https://user-images.githubusercontent.com/69868171/118538544-53ede900-b71c-11eb-8e60-c2e8e7b2c458.png)
+
+![image](https://user-images.githubusercontent.com/69868171/118538634-72ec7b00-b71c-11eb-8aeb-3f4b72f89620.png)
+
+Clicking on the `.github` .
+
+![image](https://user-images.githubusercontent.com/69868171/118538704-8b5c9580-b71c-11eb-8c8f-f9f996514d79.png)
+
+Now `setup.py` .
+
+![image](https://user-images.githubusercontent.com/69868171/118538796-a7603700-b71c-11eb-8f04-9776dbdb3cce.png)
+
+And we have our flag .
+
+`dctf{H3ll0_fr0m_1T_guy}`
+
+Yea i know all the challenges are cool aand all thanks to my teammates `@fr334aks` it was really fun playing with you all.
+
+![image](https://user-images.githubusercontent.com/69868171/118539196-205f8e80-b71d-11eb-8e34-44ff0eeabcb4.png)
+
+Boom and we stand at 15th place out of 1084 teams.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
