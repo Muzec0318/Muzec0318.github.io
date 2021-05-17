@@ -3,7 +3,7 @@ layout: default
 title : muzec - dCTF 2021 CTF Writeup
 ---
 
-dCTF 2021 was hosted by DragonSec SI the CTF lasted from 14.5.2021 at 15:00 UTC to 16.5.2021 at 21:59 UTC so i decided to share some of the tasks solutions.
+dCTF 2021 was hosted by DragonSec SI the CTF lasted from 14.5.2021 at 15:00 UTC to 16.5.2021 at 21:59 UTC so i decided to share some of the solutions.
 
 
 ### Misc:-  Encrypted the flag I have
