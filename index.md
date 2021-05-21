@@ -72,21 +72,13 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ## HackTheBox_Writeups:-
 
--
-
--
-
--
-
--
-
--
+- [HackTheBox -- ScriptKiddie](https://muzec0318.github.io/posts/scriptkiddie.html) *overlayfs*
 
 ## CTF_Writeups:-
 
-- [CTF_Writeups -- dCTF 2021 CTF](https://muzec0318.github.io/posts/dctf21.html)
-- [CTF_Writeups -- zSecurity Fuel CTF](https://muzec0318.github.io/posts/Zfuel.html)
-- [CTF_Writeups -- zSecurity Cute CTF](https://muzec0318.github.io/posts/Zcute.html)
+- [CTF -- dCTF 2021 CTF](https://muzec0318.github.io/posts/dctf21.html)
+- [CTF -- zSecurity Fuel CTF](https://muzec0318.github.io/posts/Zfuel.html)
+- [CTF -- zSecurity Cute CTF](https://muzec0318.github.io/posts/Zcute.html)
 
 ### Support Or Contact Me:-
 Hey You, Having Any Issues With My Writeups, Articles Send Me A DM on Twitter [Muzec](https://twitter.com/muzec_saminu)  Am Alawys Free To Help......
