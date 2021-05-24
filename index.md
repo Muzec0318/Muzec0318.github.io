@@ -49,6 +49,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## VulnHubs_Writeups:-
 
 - [VulnHub -- Covfefe](https://muzec0318.github.io/posts/covfefe.html) *BOF*
+- [VulnHub -- VulnOSv2](https://muzec0318.github.io/posts/vulnos2.html) *Drupal Exploit*
 - [VulnHub -- DC1](https://muzec0318.github.io/posts/dc1.html) *Drupal Exploit*
 - [VulnHub -- DC2](https://muzec0318.github.io/posts/dc2.html) *Restricted rbash Shell*
 - [VulnHub -- Stapler](https://muzec0318.github.io/posts/stapler.html) *Doubleput_exploit*
