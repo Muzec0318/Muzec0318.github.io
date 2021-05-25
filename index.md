@@ -3,20 +3,20 @@ layout: default
 title: Muzec's Cyber Security Blog
 ---
 
-## Welcome To My Cyber Security Blog,  Hacker
+## **Welcome To My Cyber Security Blog,  Hacker**
 
 Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Different Hacking Tricks, Writeups, Articles, Any Stuffs Related To Hacking... I'm Happy You're Here Mate.
 
 ## WhoAmI:-
 
 
-- My Name:    `Saminu Musa Saminu`
-- Known as:   `Muzec`
-- What Do I Do:  `CTF / Red Teaming / Ethical Hacking`
-- Twitter:    `https://twitter.com/muzec_saminu`
-- GitHub:     `https://github.com/Muzec0318`
+- **My Name:**    `Saminu Musa Saminu`
+- **Known as:**   `Muzec`
+- **What Do I Do:**  `CTF / Red Teaming / Ethical Hacking`
+- **Twitter:**    `https://twitter.com/muzec_saminu`
+- **GitHub:**     `https://github.com/Muzec0318`
 
-## Latest_Articles
+## **Latest_Articles**
 
 - **Apr 30, 2021:** [OverlayFS - Local Privilege Escalation - CVE-2021-3493 (POC)](https://muzec0318.github.io/posts/overlayfs.html)
 - **Apr 20, 2021:** [OS Command Injection Attacks](https://muzec0318.github.io/posts/oscommand.html)
@@ -25,7 +25,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Jul 01, 2020:** [Spawning A TTY Shell, Cheat Sheets](https://muzec0318.github.io/posts/Ttyshells.html)
 - **Jul 01, 2020:** [Reverse Shell Cheat Sheet](https://muzec0318.github.io/posts/ReverseShell.html)
 
-## TryHackMe_Writeups:-
+## **TryHackMe_Writeups:-**
 
 
 - **May 05, 2021:** [TryHackMe -- VulnNet Internal](https://muzec0318.github.io/posts/vulnet.html) *Redis, rsync & TeamCity*
@@ -46,7 +46,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Jul 17, 2020:** [TryHackMe -- JoyStick](https://muzec0318.github.io/posts/JoyStick.html)
 - **Jun 28, 2020:** [TryHackMe -- Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html)  *Steghide*
 
-## VulnHubs_Writeups:-
+## **VulnHubs_Writeups:-**
 
 - **May 24, 2021:** [VulnHub -- Momentum](https://muzec0318.github.io/posts/momentum.html) *AES-decrypt*
 - **May 23, 2021:** [VulnHub -- Covfefe](https://muzec0318.github.io/posts/covfefe.html) *BOF*
@@ -74,18 +74,18 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Mar 10, 2021:** [VulnHub -- Tr0ll 1](https://muzec0318.github.io/posts/Tr0ll.html)      *Crontab*
 - **Apr 10, 2021:** [VulnHub -- Brainpan 1](https://muzec0318.github.io/posts/Brainpan1.html)      *BOF*
 
-## HackTheBox_Writeups:-
+## **HackTheBox_Writeups:-**
 
 - **May 25, 2021:** [HackTheBox -- Templated](https://muzec0318.github.io/posts/templated.html) *SSTI*
 - **May 23, 2021:** [HackTheBox -- Knife](https://muzec0318.github.io/posts/knife.html) *PHP 8.1.0-dev Backdoor RCE*
 - **Apr 30, 2021:** [HackTheBox -- ScriptKiddie](https://muzec0318.github.io/posts/scriptkiddie.html) *overlayfs*
 
-## CTF_Writeups:-
+## **CTF_Writeups:-**
 
 - **May 16, 2021:** [CTF -- dCTF 2021 CTF](https://muzec0318.github.io/posts/dctf21.html)
 - **Mar 12, 2021:** [CTF -- zSecurity Fuel CTF](https://muzec0318.github.io/posts/Zfuel.html)
 - **Feb 7, 2021:** [CTF -- zSecurity Cute CTF](https://muzec0318.github.io/posts/Zcute.html)
 
-### Support Or Contact Me:-
+### **Support Or Contact Me:-**
 Hey You, Having Any Issues With My Writeups, Articles Send Me A DM on Twitter [Muzec](https://twitter.com/muzec_saminu)  Am Alawys Free To Help......
 
