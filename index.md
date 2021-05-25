@@ -58,7 +58,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Apr 18, 2021:** [VulnHub -- Wakanda 1](https://muzec0318.github.io/posts/wakanda.html) *LFI With PHP Wrapper Filter*
 - **Apr 16, 2021:** [VulnHub -- Me And My Girlfriend 1](https://muzec0318.github.io/posts/meandmygirlfriend.html) *Account Takeover*
 - **Apr 14, 2021:** [VulnHub -- Inclusiveness](https://muzec0318.github.io/posts/Inclusiveness.html)  *PATH Variable With Whoami*
-- **Apr 8, 2021:**  [VulnHub -- SunsetNoontide](https://muzec0318.github.io/posts/Sunsetnoontide.html)  *IRC*
+- **Apr 08, 2021:** [VulnHub -- SunsetNoontide](https://muzec0318.github.io/posts/Sunsetnoontide.html)  *IRC*
 - **Mar 30, 2021:** [VulnHub -- FunboxEasyEnum](https://muzec0318.github.io/posts/Funboxeasyenum.html)  *Webshell*
 - **Mar 28, 2021:** [VulnHub -- Zico2](https://muzec0318.github.io/posts/zico2.html)
 - **Mar 26, 2021:** [VulnHub -- EVM](https://muzec0318.github.io/posts/evm.html)
@@ -70,7 +70,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Mar 14, 2021:** [VulnHub -- SickOs 1.1](https://muzec0318.github.io/posts/Sickos.html)    *Squid Proxy*
 - **Mar 12, 2021:** [VulnHub -- SickOs 1.2](https://muzec0318.github.io/posts/Sickos2.html)    *Http-Method*
 - **Mar 11, 2021:** [VulnHub -- Toppo](https://muzec0318.github.io/posts/Toppo.html)
-- **Apr 7, 2021:**  [VulnHub -- BlueMoon:2021](https://muzec0318.github.io/posts/Bluemoon.html)
+- **Apr 07, 2021:** [VulnHub -- BlueMoon](https://muzec0318.github.io/posts/Bluemoon.html)
 - **Mar 10, 2021:** [VulnHub -- Tr0ll 1](https://muzec0318.github.io/posts/Tr0ll.html)      *Crontab*
 - **Apr 10, 2021:** [VulnHub -- Brainpan 1](https://muzec0318.github.io/posts/Brainpan1.html)      *BOF*
 
