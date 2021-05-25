@@ -76,9 +76,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ## HackTheBox_Writeups:-
 
-- [HackTheBox -- Templated](https://muzec0318.github.io/posts/templated.html) *SSTI*
-- [HackTheBox -- Knife](https://muzec0318.github.io/posts/knife.html) *PHP 8.1.0-dev Backdoor RCE*
-- [HackTheBox -- ScriptKiddie](https://muzec0318.github.io/posts/scriptkiddie.html) *overlayfs*
+- **May 25, 2020:** [HackTheBox -- Templated](https://muzec0318.github.io/posts/templated.html) *SSTI*
+- **May 23, 2020:** [HackTheBox -- Knife](https://muzec0318.github.io/posts/knife.html) *PHP 8.1.0-dev Backdoor RCE*
+- **Apr 30, 2020:** [HackTheBox -- ScriptKiddie](https://muzec0318.github.io/posts/scriptkiddie.html) *overlayfs*
 
 ## CTF_Writeups:-
 
