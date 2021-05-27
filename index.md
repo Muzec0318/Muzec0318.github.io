@@ -53,7 +53,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **May 22, 2021:** [VulnHub -- VulnOSv2](https://muzec0318.github.io/posts/vulnos2.html) *Drupal Exploit*
 - **May 20, 2021:** [VulnHub -- DC1](https://muzec0318.github.io/posts/dc1.html) *Drupal Exploit*
 - **May 18, 2021:** [VulnHub -- DC2](https://muzec0318.github.io/posts/dc2.html) *Restricted rbash Shell*
-- **May 27, 2021:** [VulnHub -- DC5](https://muzec0318.github.io/posts/dc5.html) *Screen-4.5.0*
+- **May 27, 2021:** [VulnHub -- DC5](https://muzec0318.github.io/posts/dc5.html) *LFI To RCE*
 - **May 12, 2021:** [VulnHub -- Stapler](https://muzec0318.github.io/posts/stapler.html) *Doubleput_exploit*
 - **Apr 29, 2021:** [VulnHub -- DroopyCTF](https://muzec0318.github.io/posts/Droopy.html) *Drupal Exploit*
 - **Apr 18, 2021:** [VulnHub -- Wakanda 1](https://muzec0318.github.io/posts/wakanda.html) *LFI With PHP Wrapper Filter*
