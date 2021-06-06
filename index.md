@@ -49,7 +49,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ## **VulnHubs_Writeups:-**
 
-- **Jun 06, 2021:** [VulnHub -- Lord Of The Root](https://muzec0318.github.io/posts/lordoftheroot.html)
+- **Jun 06, 2021:** [VulnHub -- Lord Of The Root](https://muzec0318.github.io/posts/lordoftheroot.html) *Port Knocking*
 - **Jun 05, 2021:** [VulnHub -- Sar](https://muzec0318.github.io/posts/sar.html)
 - **Jun 01, 2021:** [VulnHub -- DC 9](https://muzec0318.github.io/posts/dc9.html) *Port Knocking*
 - **May 31, 2021:** [VulnHub -- Insomnia](https://muzec0318.github.io/posts/insomnia.html)
