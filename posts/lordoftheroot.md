@@ -115,3 +115,34 @@ We are right it vulnerable to SQL injection let dump it.
 
 ![image](https://user-images.githubusercontent.com/69868171/120682732-cc69df00-c46a-11eb-96a8-42a19f020606.png)
 
+Looking back at our nmap result seems we have SSH open now let try using the credentials to brute force SSH guess is the way in let try it.
+
+![image](https://user-images.githubusercontent.com/69868171/120933228-25ce4a00-c6c7-11eb-8379-776e171735ce.png)
+
+Boom credentials for SSH nice let log in.
+
+![image](https://user-images.githubusercontent.com/69868171/120933331-a4c38280-c6c7-11eb-806c-f614e24242e0.png)
+
+We are in time to get root.
+
+### Privilege Escalation
+
+Checking `sudo -l` no luck so let try checking for kernal version.
+
+![image](https://user-images.githubusercontent.com/69868171/120933485-68445680-c6c8-11eb-809a-7e2aca09adb2.png)
+
+Cool it running an old version let check for exploit on exploitdb.
+
+![image](https://user-images.githubusercontent.com/69868171/120933594-cbce8400-c6c8-11eb-8df7-2f07e374206a.png)
+
+Let get it on the target and compile the exploit and run.
+
+![image](https://user-images.githubusercontent.com/69868171/120933710-52836100-c6c9-11eb-9c79-24f1ff49a7f2.png)
+
+We are root and done.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
