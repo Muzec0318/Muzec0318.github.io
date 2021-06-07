@@ -90,6 +90,10 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **May 23, 2021:** [HackTheBox -- Knife](https://muzec0318.github.io/posts/knife.html) *PHP 8.1.0-dev Backdoor RCE*
 - **Apr 30, 2021:** [HackTheBox -- ScriptKiddie](https://muzec0318.github.io/posts/scriptkiddie.html) *overlayfs*
 
+## **HackMyVm_Writeups:-**
+
+- **May 07, 2021:** [HackMyVm -- Ripper](https://muzec0318.github.io/posts/ripper.html) *Crontab*
+
 ## **CTF_Writeups:-**
 
 - **May 16, 2021:** [CTF -- dCTF 2021 CTF](https://muzec0318.github.io/posts/dctf21.html)
