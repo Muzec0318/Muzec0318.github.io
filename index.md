@@ -93,6 +93,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **HackMyVm_Writeups:-**
 
 - **May 07, 2021:** [HackMyVm -- Ripper](https://muzec0318.github.io/posts/ripper1.html) *Crontab*
+- **May 07, 2021:** [HackMyVm -- Gift](https://muzec0318.github.io/posts/gift.html)
 
 ## **CTF_Writeups:-**
 
