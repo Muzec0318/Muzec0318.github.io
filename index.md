@@ -84,6 +84,10 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Mar 10, 2021:** [VulnHub -- Tr0ll 1](https://muzec0318.github.io/posts/Tr0ll.html)      *Crontab*
 - **Apr 10, 2021:** [VulnHub -- Brainpan 1](https://muzec0318.github.io/posts/Brainpan1.html)      *BOF*
 
+## **PwnTillDawn_Writeups:-**
+
+- **Jun 09, 2021:** [PwnTillDawn -- FullMounty](https://muzec0318.github.io/posts/fullMounty.html) *NFS*
+
 ## **HackTheBox_Writeups:-**
 
 - **May 25, 2021:** [HackTheBox -- Templated](https://muzec0318.github.io/posts/templated.html) *SSTI*
@@ -92,9 +96,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ## **HackMyVm_Writeups:-**
 
-- **May 07, 2021:** [HackMyVm -- Ripper](https://muzec0318.github.io/posts/ripper1.html) *Crontab*
-- **May 07, 2021:** [HackMyVm -- Gift](https://muzec0318.github.io/posts/gift.html)
-- **May 08, 2021:** [HackMyVm -- Dominator](https://muzec0318.github.io/posts/dominator.html) *Rot13*
+- **Jun 07, 2021:** [HackMyVm -- Ripper](https://muzec0318.github.io/posts/ripper1.html) *Crontab*
+- **Jun 07, 2021:** [HackMyVm -- Gift](https://muzec0318.github.io/posts/gift.html)
+- **Jun 08, 2021:** [HackMyVm -- Dominator](https://muzec0318.github.io/posts/dominator.html) *Rot13*
 
 ## **CTF_Writeups:-**
 
