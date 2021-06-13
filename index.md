@@ -87,6 +87,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **PwnTillDawn_Writeups:-**
 
 - **Jun 09, 2021:** [PwnTillDawn -- FullMounty](https://muzec0318.github.io/posts/fullMounty.html) *NFS*
+- **Jun 14, 2021:** [PwnTillDawn -- Stuntman Mike](https://muzec0318.github.io/posts/Stuntman.html)
 
 ## **HackTheBox_Writeups:-**
 
