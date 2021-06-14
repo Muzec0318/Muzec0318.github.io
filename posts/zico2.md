@@ -125,7 +125,7 @@ And we have shell.
 
 ![image](https://user-images.githubusercontent.com/69868171/117458735-9c392a00-af18-11eb-8d24-a295754a0e0c.png)
 
-let Spawn a TTY shell. [Spawning A TTY Shell][https://muzec0318.github.io/posts/Ttyshells.html]
+let Spawn a TTY shell. [Spawning A TTY Shell](https://muzec0318.github.io/posts/Ttyshells.html)
 
 ![image](https://user-images.githubusercontent.com/69868171/117458926-cdb1f580-af18-11eb-84df-9287abda3f4e.png)
 
