@@ -18,6 +18,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ## **Latest_Articles**
 
+
 - **Jun 01, 2021:** [FOGProject 1.5.9 - File Upload RCE (Authenticated) - (POC)](https://muzec0318.github.io/posts/fog.html)
 - **Apr 30, 2021:** [OverlayFS - Local Privilege Escalation - CVE-2021-3493 (POC)](https://muzec0318.github.io/posts/overlayfs.html)
 - **Apr 20, 2021:** [OS Command Injection Attacks](https://muzec0318.github.io/posts/oscommand.html)
@@ -29,6 +30,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **TryHackMe_Writeups:-**
 
 
+- **May 05, 2021:** [TryHackMe -- Couch](https://muzec0318.github.io/posts/couch.html) *CouchDB, Docker*
 - **May 05, 2021:** [TryHackMe -- VulnNet Internal](https://muzec0318.github.io/posts/vulnet.html) *Redis, rsync & TeamCity*
 - **Feb 20, 2021:** [TryHackMe -- Watcher](https://muzec0318.github.io/posts/Watcher.html) *Python Library Hijacking*
 - **Apr 05, 2021:** [TryHackMe -- Gatekeeper](https://muzec0318.github.io/posts/Gatekeeper.html) *BOF*
@@ -48,6 +50,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Jun 28, 2020:** [TryHackMe -- Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html)  *Steghide*
 
 ## **VulnHubs_Writeups:-**
+
 
 - **Jun 24, 2021:** [VulnHub -- Pluck](https://muzec0318.github.io/posts/pluck.html) *TFTP*
 - **Jun 16, 2021:** [VulnHub -- Assertion101](https://muzec0318.github.io/posts/assertion101.html) *Assert LFI*
@@ -88,6 +91,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ## **PwnTillDawn_Writeups:-**
 
+
 - **Jun 09, 2021:** [PwnTillDawn -- Juno](https://muzec0318.github.io/posts/juno.html) *Reverse APK*
 - **Jun 09, 2021:** [PwnTillDawn -- FullMounty](https://muzec0318.github.io/posts/fullMounty.html) *NFS*
 - **Jun 14, 2021:** [PwnTillDawn -- Stuntman Mike](https://muzec0318.github.io/posts/Stuntman.html)
@@ -95,17 +99,20 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 ## **HackTheBox_Writeups:-**
 
+
 - **May 25, 2021:** [HackTheBox -- Templated](https://muzec0318.github.io/posts/templated.html) *SSTI*
 - **May 23, 2021:** [HackTheBox -- Knife](https://muzec0318.github.io/posts/knife.html) *PHP 8.1.0-dev Backdoor RCE*
 - **Apr 30, 2021:** [HackTheBox -- ScriptKiddie](https://muzec0318.github.io/posts/scriptkiddie.html) *overlayfs*
 
 ## **HackMyVm_Writeups:-**
 
+
 - **Jun 07, 2021:** [HackMyVm -- Ripper](https://muzec0318.github.io/posts/ripper1.html) *Crontab*
 - **Jun 07, 2021:** [HackMyVm -- Gift](https://muzec0318.github.io/posts/gift.html)
 - **Jun 08, 2021:** [HackMyVm -- Dominator](https://muzec0318.github.io/posts/dominator.html) *Rot13*
 
 ## **CTF_Writeups:-**
+
 
 - **May 16, 2021:** [CTF -- dCTF 2021 CTF](https://muzec0318.github.io/posts/dctf21.html)
 - **Mar 12, 2021:** [CTF -- zSecurity Fuel CTF](https://muzec0318.github.io/posts/Zfuel.html)
