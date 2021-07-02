@@ -92,7 +92,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **PwnTillDawn_Writeups:-**
 
 
-- **Jun 09, 2021:** [PwnTillDawn -- Juno](https://muzec0318.github.io/posts/juno.html) *Reverse APK*
+- **Jun 30, 2021:** [PwnTillDawn -- Juno](https://muzec0318.github.io/posts/juno.html) *Reverse APK*
 - **Jun 09, 2021:** [PwnTillDawn -- FullMounty](https://muzec0318.github.io/posts/fullMounty.html) *NFS*
 - **Jun 14, 2021:** [PwnTillDawn -- Stuntman Mike](https://muzec0318.github.io/posts/Stuntman.html)
 - **Jun 15, 2021:** [PwnTillDawn -- Django](https://muzec0318.github.io/posts/django.html) *Windows Box*
@@ -103,6 +103,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **May 25, 2021:** [HackTheBox -- Templated](https://muzec0318.github.io/posts/templated.html) *SSTI*
 - **May 23, 2021:** [HackTheBox -- Knife](https://muzec0318.github.io/posts/knife.html) *PHP 8.1.0-dev Backdoor RCE*
 - **Apr 30, 2021:** [HackTheBox -- ScriptKiddie](https://muzec0318.github.io/posts/scriptkiddie.html) *overlayfs*
+- **Jul 02, 2021:** [HackTheBox -- Shocker](https://muzec0318.github.io/posts/shocker.html)
 
 ## **HackMyVm_Writeups:-**
 
