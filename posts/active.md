@@ -122,7 +122,7 @@ Done installing we will be using the ` GetUserSPNs.py` script let try to locate 
 
 And boom We were able to request a TGS from an Administrator SPN.
 
-If you find this error from Linux: Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great) it because of your local time, you need to synchronise the host with the DC: ntpdate <IP of DC>
+If you find this error from Linux: Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great) it because of your local time, you need to synchronise the host with the DC: `ntpdate IP of DC`
 
 Now that we have the hash let crack it using john the ripper save in a file name `hash` .
   
