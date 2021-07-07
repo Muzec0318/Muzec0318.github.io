@@ -106,6 +106,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Jul 02, 2021:** [HackTheBox -- Shocker](https://muzec0318.github.io/posts/shocker.html)
 - **Jul 02, 2021:** [HackTheBox -- Active](https://muzec0318.github.io/posts/active.html) *Active Directory*
 - **Jul 06, 2021:** [HackTheBox -- Bastion](https://muzec0318.github.io/posts/bastion.html) *Mounting VHD*
+- **Jul 07, 2021:** [HackTheBox -- Heist](https://muzec0318.github.io/posts/heist.html) *Windows Box*
 
 ## **HackMyVm_Writeups:-**
 
