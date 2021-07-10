@@ -3,3 +3,9 @@ title: Muzec's Cyber Security Blog
 show_downloads: false
 show_repo: false
 theme: jekyll-theme-hacker
+
+gems:
+  - jekyll-sitemap
+
+whitelist:
+  - jekyll-sitemap
