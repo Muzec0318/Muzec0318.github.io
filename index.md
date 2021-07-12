@@ -30,6 +30,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **TryHackMe_Writeups:-**
 
 
+- **Jul 12, 2021:** [TryHackMe -- VulnNet Roasted](https://muzec0318.github.io/posts/roasted.html) *Active Directory*
 - **Jul 01, 2021:** [TryHackMe -- Couch](https://muzec0318.github.io/posts/couch.html) *CouchDB, Docker*
 - **May 05, 2021:** [TryHackMe -- VulnNet Internal](https://muzec0318.github.io/posts/vulnet.html) *Redis, rsync & TeamCity*
 - **Feb 20, 2021:** [TryHackMe -- Watcher](https://muzec0318.github.io/posts/Watcher.html) *Python Library Hijacking*
