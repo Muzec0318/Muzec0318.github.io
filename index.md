@@ -109,6 +109,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Jul 06, 2021:** [HackTheBox -- Bastion](https://muzec0318.github.io/posts/bastion.html) *Mounting VHD*
 - **Jul 07, 2021:** [HackTheBox -- Heist](https://muzec0318.github.io/posts/heist.html) *Windows Box*
 - **Jul 10, 2021:** [HackTheBox -- Forest](https://muzec0318.github.io/posts/forest.html) *Active Directory*
+- **Jul 14, 2021:** [HackTheBox -- OpenAdmin](https://muzec0318.github.io/posts/openadmin.html) *OpenNetAdmin 18.1.1*
 
 ## **HackMyVm_Writeups:-**
 
