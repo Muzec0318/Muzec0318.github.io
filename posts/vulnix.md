@@ -182,15 +182,38 @@ sudoedit /etc/exports
 
 Interesting since we can read and write to `/home/vulnix` i think it possible to edit it to the root user folder to add our `authorized_keys`  so we can SSH using root let give it a try.
 
-![image](https://user-images.githubusercontent.com/69868171/125824968-2cb2d79e-eae5-46d0-ab70-2d5edbaa8a34.png)
+![image](https://user-images.githubusercontent.com/69868171/125828933-0e3d23d2-5b78-41e7-80e6-b428851ceba6.png)
 
 
 Now we change `/home/vulnix   *(rw,root_squash)`  to `/root   *(rw,no_root_squash)` now let go ahead to confirm it.
 
-![image](https://user-images.githubusercontent.com/69868171/125825239-33bb6965-1e04-4901-9594-ce4c6bc3f72d.png)
+![image](https://user-images.githubusercontent.com/69868171/125828441-4d2d62a5-aff5-467a-9848-8e6749bb688f.png)
 
 Boom now let mount the NFS share.
 
-![image](https://user-images.githubusercontent.com/69868171/125825847-95bd0c95-0a3d-4de7-8a53-205cd45cde17.png)
+![image](https://user-images.githubusercontent.com/69868171/125828511-f1e915a1-70d5-447e-b767-4243bb75d093.png)
 
-Mounted 
+```
+mount -v -t  nfs  -o vers=3,proto=tcp,nolock 172.16.139.216:/root /tmp/root
+```
+
+Mounted now let change directory to `/tmp/root` .
+
+![image](https://user-images.githubusercontent.com/69868171/125829044-2661d457-6bd3-474c-85cf-c9ac3f0ee92d.png)
+
+We have the root flag but nah i wnt to get access to SSH with root now let add our `authorized_keys` again.
+
+![image](https://user-images.githubusercontent.com/69868171/125829328-496909c7-aa50-4057-8f09-bb376a7aeec2.png)
+
+Now let try to SSH using root with the private key.
+
+![image](https://user-images.githubusercontent.com/69868171/125829477-d5b261ad-4005-49b0-8491-57545fa66d0d.png)
+
+We are done and dusted.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
+
