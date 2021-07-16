@@ -53,6 +53,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **VulnHubs_Writeups:-**
 
 
+- **Jul 16, 2021:** [VulnHub -- Lin.Security](https://muzec0318.github.io/posts/lin.security.html) *NFS*
 - **Jul 15, 2021:** [VulnHub -- HackLab: Vulnix](https://muzec0318.github.io/posts/vulnix.html) *NFS*
 - **Jun 24, 2021:** [VulnHub -- Pluck](https://muzec0318.github.io/posts/pluck.html) *TFTP*
 - **Jun 16, 2021:** [VulnHub -- Assertion101](https://muzec0318.github.io/posts/assertion101.html) *Assert LFI*
