@@ -784,3 +784,144 @@ Final Flag:- `abcctf{remember_YoUr_s3cret_!s_safe_with_us}`
 
 All clear man i have fun let hit it.
 
+###  Pinky and The mouse - 100 point 
+
+![image](https://user-images.githubusercontent.com/69868171/131212342-9e0e221e-5746-4991-897e-1f661c1f3a19.png)
+
+Let download the head.txt file.
+
+```
+++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>>---.+.+..+++++++++++++++++.--------------.+++++++++++++++++++++.<+++++++++++++.>------------------.++++.+++.----.<++++++.++++++.-----------------------------.>++++++.<--.>---------.+++++.---------------------.++++++++++++++++++++++++++++++++++++.
+```
+
+Definitely a Brainf*ck Code let hit it.
+
+![image](https://user-images.githubusercontent.com/69868171/131212431-f490f295-9657-42b8-b706-b9b548e61d37.png)
+
+Final Flag:- `abcctf{SimplY_Br@inY}`
+
+###  Gentle Reminder  - 250 point 
+
+![image](https://user-images.githubusercontent.com/69868171/131212522-d8de2d66-8648-4ab5-a19f-f477446f8140.png)
+
+Never put sensitive things in your purse man let just download it.
+
+```
+011^0000^1011^011^00^0100^0100^1011^111^001^1000^0^0100^111^111^101^00^10^110^0010^111^010^011^0000^01^1^00^000^10^111^1^11^00^000^000^00^10^110^0^11^111^000^00011^011^01^1011^0100^0110^11^00^000^0^000^010^11111^11^0010^1^1010^1010^1000^01^01^11^111^10^110^11^00^000^000^00^10^110^1^0000^00^10^110^000^111^010^100^111^1011^111^001^10^111^1^101^10^111^011^1^0000^01^1^00^1^011^00^0100^0100^0100^0^01^100^1^111^1011^111^001^0100^111^111^101^00^10^110^1^111^111^100^0^0^0110^0100^1011^01^10^100^011^00^100^0^0100^1011^0010^111^010^011^0000^01^1^000^0000^111^001^0100^100^10^111^1^1000^0^000^111^001^110^0000^1^0010^111^010^00^10^1^0000^0^0100^01^10^100^111^0010^1^0000^0^110^01^11^0
+```
+
+I will call it a fu#king broken binary when not let fix it.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Desktop/CTFPlayground/ABC/ABCWriteup]
+└─$ cat  binary.txt  | tr  '^'  ' '
+011 0000 1011 011 00 0100 0100 1011 111 001 1000 0 0100 111 111 101 00 10 110 0010 111 010 011 0000 01 1 00 000 10 111 1 11 00 000 000 00 10 110 0 11 111 000 00011 011 01 1011 0100 0110 11 00 000 0 000 010 11111 11 0010 1 1010 1010 1000 01 01 11 111 10 110 11 00 000 000 00 10 110 1 0000 00 10 110 000 111 010 100 111 1011 111 001 10 111 1 101 10 111 011 1 0000 01 1 00 1 011 00 0100 0100 0100 0 01 100 1 111 1011 111 001 0100 111 111 101 00 10 110 1 111 111 100 0 0 0110 0100 1011 01 10 100 011 00 100 0 0100 1011 0010 111 010 011 0000 01 1 000 0000 111 001 0100 100 10 111 1 1000 0 000 111 001 110 0000 1 0010 111 010 00 10 1 0000 0 0100 01 10 100 111 0010 1 0000 0 110 01 11 0
+```
+
+Cutting out `^` and also adding some space.
+
+```
+
+from __future__ import print_function
+a = input("input the string:")
+s = a.split(" ")
+dict = {'01': 'A',
+        '1000': 'B',
+        '1010': 'C',
+        '100':'D',
+        '0':'E',
+        '0010':'F',
+        '110': 'G',
+        '0000': 'H',
+        '00': 'I',
+        '0111':'J',
+        '101': 'K',
+        '0100': 'L',
+        '11': 'M',
+        '10': 'N',
+        '111': 'O',
+        '0110': 'P',
+        '1101': 'Q',
+        '010': 'R',
+        '000': 'S',
+        '1': 'T',
+        '001': 'U',
+        '0001': 'V',
+        '011': 'W',
+        '1001': 'X',
+        '1011': 'Y',
+        '1100': 'Z',
+        '01111': '1',
+        '00111': '2',
+        '00011': '3',
+        '00001': '4',
+        '00000': '5',
+        '10000': '6',
+        '11000': '7',
+        '11100': '8',
+        '11110': '9',
+        '11111': '0',
+        '001100': '?',
+        '10010': '/',
+        '101101': '()',
+        '100001': '-',
+        '010101': '.',
+        '110011':',',
+        '011010':'@',
+        '111000':':',
+        '101010':':',
+        '10001':'=',
+        '011110':"'",
+        '101011':'!',
+        '001101':'_',
+        '010010':'"',
+        '10110':'(',
+        '1111011':'{',
+        '1111101':'}'
+        };
+for item in s:
+    print (dict[item],end='')
+```
+
+Some really cool script to decode it.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Desktop/CTFPlayground/ABC/ABCWriteup]
+└─$ python3 crypto.py                                                                                      
+input the string:011 0000 1011 011 00 0100 0100 1011 111 001 1000 0 0100 111 111 101 00 10 110 0010 111 010 011 0000 01 1 00 000 10 111 1 11 00 000 000 00 10 110 0 11 111 000 00011 011 01 1011 0100 0110 11 00 000 0 000 010 11111 11 0010 1 1010 1010 1000 01 01 11 111 10 110 11 00 000 000 00 10 110 1 0000 00 10 110 000 111 010 100 111 1011 111 001 10 111 1 101 10 111 011 1 0000 01 1 00 1 011 00 0100 0100 0100 0 01 100 1 111 1011 111 001 0100 111 111 101 00 10 110 1 111 111 100 0 0 0110 0100 1011 01 10 100 011 00 100 0 0100 1011 0010 111 010 011 0000 01 1 000 0000 111 001 0100 100 10 111 1 1000 0 000 111 001 110 0000 1 0010 111 010 00 10 1 0000 0 0100 01 10 100 111 0010 1 0000 0 110 01 11 0
+WHYWILLYOUBELOOKINGFORWHATISNOTMISSINGEMOS3WAYLPMISESR0MFTCCBAAMONGMISSINGTHINGSORDOYOUNOTKNOWTHATITWILLLEADTOYOULOOKINGTOODEEPLYANDWIDELYFORWHATSHOULDNOTBESOUGHTFORINTHELANDOFTHEGAME 
+```
+
+In clear format;
+
+```
+WHY WILL YOU BE LOOKING FOR WHAT IS NOT MISSING EMOS3WAYLPMISESR0MFTCCBA AMONG MISSING THINGS OR DO YOU NOT KNOW THAT IT WILL LEAD TO YOU LOOKING TOO DEEPLY AND WIDELY FOR WHAT SHOULD NOT BE SOUGHT FOR IN THE LAND OF THE GAME
+```
+
+A words is in reverse let fix that.
+
+![image](https://user-images.githubusercontent.com/69868171/131212845-8efb5fc8-2a66-4269-a265-13458d10a13e.png)
+
+We have the flag since we know the format it should be easy.
+
+Final Flag:- `abcctf{m0rse_simply_aw3some}`
+
+###  No-brainer  - 350 point
+
+![image](https://user-images.githubusercontent.com/69868171/131212935-fcf8f17a-4dcc-47ba-843e-ceb39ddea4e4.png)
+
+I wonder if they use their brains at all, or something else, man you talk to much let just hit it.
+
+![image](https://user-images.githubusercontent.com/69868171/131212978-acabfe88-1bb4-4e71-ae9f-88fa39f3a3e5.png)
+
+JsFuck it should be easy.
+
+![image](https://user-images.githubusercontent.com/69868171/131213013-ca3a973f-e141-45c2-a744-a741fbe13bcc.png)
+
+Decoding and we got `return"aler\164\50a\142\143\143\164f\173\102r\100in\137\167\110\101\164s\137u\120\175\51"` Definitely a javascript strings.
+
+![image](https://user-images.githubusercontent.com/69868171/131213071-acd7dd90-25c4-4cd7-bc56-9f4ca55043fa.png)
+
+
+Final Flag:- `abcctf{Br@in_wHAts_uP}`
+
