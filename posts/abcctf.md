@@ -925,3 +925,82 @@ Decoding and we got `return"aler\164\50a\142\143\143\164f\173\102r\100in\137\167
 
 Final Flag:- `abcctf{Br@in_wHAts_uP}`
 
+
+###  Read read Read - 500 point
+
+![image](https://user-images.githubusercontent.com/69868171/131259572-f3754f64-6eff-4bc1-8c95-e81eda1f3566.png)
+
+Learning by books make sense
+
+A docx file was given for this challenge, Given the word hint biblio (book) as the file name and the challenge title "read read read", had me thinking it might have been a book cipher.
+
+My first attempt was to actually view the document as is, in it's .docx format. It turned out to be a one page document with multiple paragraphs whose content was basic, nothing special.
+
+![image](https://user-images.githubusercontent.com/69868171/131259670-073881c8-c8c6-40b0-b1d3-54c50dd1de85.png)
+
+So if this was truely a book cipher as suspected, i knew i needed some sort of key(s) to crack it. A quick note is that docx files are actually zip archives with a bunch of XMLs and all the attached media. I decided to pass it straight into cyberchef for unzipping and further analysis.
+
+![image](https://user-images.githubusercontent.com/69868171/131259752-185ab612-2bb8-4e32-9a95-df806ccbd891.png)
+
+
+With the help of cyberchef unzip tool, i was able to bake (extract) to reveal the underlying files which were xmls and rels files. Clicking through each file accordingly, i came across an interesting xml, "words/rel/rels.xml". Interesting because it had a PNG signature.
+
+![image](https://user-images.githubusercontent.com/69868171/131259851-23dccc6f-6634-44d6-9428-f75fd43c7043.png)
+
+I downloaded this file out of cyberchef's results then converted and opened it to reveal a 15 rows and 3 column digits as shown below;
+
+![image](https://user-images.githubusercontent.com/69868171/131259910-c9e8d603-236c-4e36-a8ca-2d3cc1bfd471.png)
+
+```
+6 1 13
+1 2 22
+5 1 60
+3 1 4 
+4 3 10
+1 2 2
+8 4 2 
+5 2 1
+6 2 16
+2 3 24
+2 2 5
+6 2 16
+1 2 23
+1 3 1
+1 2 30
+```
+
+`Alas! The keys!!`
+
+Next was to find out how this 3 parts keys fit into the book cipher as most book cipher consist majorly of 2 parts. But the major key here was making sure to have the word document opened in its original layout using office word ( software or online version) and not a text wrapping docx viewer in other to not mess up with the document line layout.
+
+Since the docx had only 1 page, the first part of the key couldn't be page number so i decided to take it as paragraph number as there are only 8 paragraphs in the text and the highest key digit in the first column was 8 which made it fit perfectly.
+
+For the second key part, it had to translate to line number to give us the perfect position to apply the third key.
+
+The Final key was a bit confusing as it could either mean words count to choose first letter or letter count. I decided after seeing the greatest value of 60 that no paragraph had up to 60 words on them and then opted for the second option of letter count starting from the line number gotten from the second key part to reveal;
+
+![image](https://user-images.githubusercontent.com/69868171/131260055-502421db-28d6-4f6f-a2af-deda22b1be73.png)
+
+```
+6 1 13 --- c
+1 2 22 --- 1
+5 1 60 --- P
+3 1 4 --- h 
+4 3 10 --- 3
+1 2 2 --- r
+8 4 2 --- f
+5 2 1 ---R
+6 2 16 ---0
+2 3 24 ---m
+2 2 5 --- b
+6 2 16 --- 0 
+1 2 23 --- 0
+1 3 1 --- k
+1 2 30 ---5
+```
+
+Since we know the flag format it shoukd be easy.
+
+Final Flag:- `abcctf{c1Ph3r_fr0m_b00k5}`
+
+The  Read read Read  Crypto challenge was only solve by our redqueen `AN3M0N1` feel free to connect with her on twitter with [Kaka Sheidu](https://twitter.com/KakaSheidu) or on Linkedln [Kaka Sheidu](https://www.linkedin.com/in/kaka-sheidu-101965139) .
