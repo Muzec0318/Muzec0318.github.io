@@ -5,7 +5,7 @@ title : muzec - abcccyberhackathon CTF 2021 Finals Writeup
 
 ### Overview Of The CTF
 
-As part of the 2021 Cybersecurity Conference, the American Business Council Nigeria (ABC Nigeria) in partnership with Private Sector partners are hosting a Cybersecurity Hackathon. The objective of the hackathon is to highlight the capacity in the space and show the importance of implementing a cybersecurity framework in Nigeria.
+As part of the 2021 Cybersecurity Conference, the American Business Council Nigeria (ABC Nigeria) was Organized by NaijaSecForce in partnership with Private Sector partners are hosting a Cybersecurity Hackathon. The objective of the hackathon is to highlight the capacity in the space and show the importance of implementing a cybersecurity framework in Nigeria.
 
 The Hackathon will award innovators for displaying their level of expertise and skills in developing solutions to cyber challenges. A Cyber Award will be allocated in kind and will be distributed among the top three winners. 
 
