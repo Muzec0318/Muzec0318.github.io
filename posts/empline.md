@@ -131,3 +131,89 @@ Now back to our target let upload the `resume.docx` .
 
 Boom and the contents of `/etc/passwd` is presented to you in the input field. Now what is next is try to find a config file to read using the XML injection  yes credentials credentials or a private key for SSH is the main thing.
 
+
+![image](https://user-images.githubusercontent.com/69868171/134551554-a1fd8ef3-6434-49f3-9b4c-2f8f4113af30.png)
+
+Since OpenCATS is an open source i went on `github` to check where the config.php file is located before running our exploit to be sure if it has a config.php file or not.
+ 
+![image](https://user-images.githubusercontent.com/69868171/134551938-1e1475ea-7d9a-4ee7-81ba-e96b46fc247d.png)
+
+Now let zip it back and upload the docx file on the target.
+
+![image](https://user-images.githubusercontent.com/69868171/134552147-161adf24-6bce-45eb-a5a9-5c69fe090289.png)
+
+Uploading the docx file on the target and boom the config in base64 encoding.
+
+![image](https://user-images.githubusercontent.com/69868171/134552894-32b9d928-cc59-49ef-acfa-d7c42d5784c9.png)
+
+Now let decode it using cyberchef.
+
+![image](https://user-images.githubusercontent.com/69868171/134553287-3cc52ba3-de04-4dce-9308-23a035659382.png)
+
+Boom credentials for mysql let hit it.
+
+![image](https://user-images.githubusercontent.com/69868171/134553502-0483c2de-0412-41c1-9131-18bd5802af2a.png)
+
+Now let find some credentials to loot.
+
+![image](https://user-images.githubusercontent.com/69868171/134553784-fa78b151-2c95-44bc-be2a-2ea00512bd18.png)
+
+
+![image](https://user-images.githubusercontent.com/69868171/134553857-e652fb05-0990-4023-b605-06086908a436.png)
+
+![image](https://user-images.githubusercontent.com/69868171/134553955-e6052919-107a-4571-b0e9-990b9c37fd4f.png)
+
+Boom another credentials probably for SSH first let look up the hash in a databases to crack first.
+
+![image](https://user-images.githubusercontent.com/69868171/134554183-329a0af5-02d4-4fc2-8aac-9de22a7bd4a4.png)
+
+Now let try it on SSH.
+
+![image](https://user-images.githubusercontent.com/69868171/134554352-1e16c28a-ba5a-4ff6-a6c5-7607afcf8761.png)
+
+We are in cool right and we have user.txt already check the passwd file seems we only have 2 users on the system `ubuntu and george` nothing to worry about the `ubuntu` user just some normal user.
+
+![image](https://user-images.githubusercontent.com/69868171/134554855-ae8b42f1-8fc4-42e4-aa14-62f543a6ebd9.png)
+
+Now let get root checking for SUID and Capabilities.
+
+![image](https://user-images.githubusercontent.com/69868171/134555187-b18112e8-6c0c-4712-a751-9b99fe4aefd7.png)
+
+`sudo -l` nothing on that now SUID.
+
+![image](https://user-images.githubusercontent.com/69868171/134555775-1e88b6a0-464a-46fc-ade0-6fc56274cf26.png)
+
+Clean aslo now Capabilities.
+
+![image](https://user-images.githubusercontent.com/69868171/134555874-93f19291-c81a-45cc-956d-f2c7d838a164.png)
+
+```
+/usr/local/bin/ruby = cap_chown+ep
+```
+Ruby seems interesting with the chown capablity command to change the owner of a file system files now let abuse it.
+
+![image](https://user-images.githubusercontent.com/69868171/134556384-6d16b68d-597a-4c2e-8762-238e7c532dff.png)
+
+```
+ruby -e 'puts File.chown(1002, 1002, "/etc/shadow")'
+```
+
+Now the shadow file belong us we can easily change the root password sweet right??
+
+![image](https://user-images.githubusercontent.com/69868171/134556697-be140f0b-e68d-4dbe-8fc7-329d51ee2113.png)
+
+Now editting the shadow file with nano.
+
+![image](https://user-images.githubusercontent.com/69868171/134556910-0a5bc231-c7cf-41e7-9860-e062fad2dfd6.png)
+
+Save and exit. Now let use the password with just add to the shadow file with the root user.
+
+![image](https://user-images.githubusercontent.com/69868171/134557033-eb166b9e-24b1-4edd-8aba-7a084b570c9b.png)
+
+We are root and done.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
