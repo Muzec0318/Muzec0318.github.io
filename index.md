@@ -55,6 +55,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **VulnHubs_Writeups:-**
 
 
+- **Sep 27, 2021:** [VulnHub -- Hackademic.RTB2](https://muzec0318.github.io/posts/hackademic2.html) *SQL Injection, Port Knocking*
 - **Jul 28, 2021:** [VulnHub -- Haclabs NoName](https://muzec0318.github.io/posts/noname.html)
 - **Jul 23, 2021:** [VulnHub -- Shakabrah](https://muzec0318.github.io/posts/shakabrah.html)
 - **Jul 16, 2021:** [VulnHub -- Lin.Security](https://muzec0318.github.io/posts/lin.security.html) *NFS*
