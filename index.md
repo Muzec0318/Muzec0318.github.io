@@ -55,6 +55,8 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **VulnHubs_Writeups:-**
 
 
+- **Sep 30, 2021:** [VulnHub -- Blackwidow](https://muzec0318.github.io/posts/blackwidow.html) *LFI Fuzzing With FFUF*
+- **Sep 30, 2021:** [VulnHub -- Os-ByteSec](https://muzec0318.github.io/posts/os-bytesec.html) *SMB, Path Variable*
 - **Sep 27, 2021:** [VulnHub -- Hackademic.RTB2](https://muzec0318.github.io/posts/hackademic2.html) *SQL Injection, Port Knocking*
 - **Jul 28, 2021:** [VulnHub -- Haclabs NoName](https://muzec0318.github.io/posts/noname.html)
 - **Jul 23, 2021:** [VulnHub -- Shakabrah](https://muzec0318.github.io/posts/shakabrah.html)
