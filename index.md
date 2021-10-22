@@ -124,6 +124,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **HackMyVm_Writeups:-**
 
 
+- **Oct 22, 2021:** [HackMyVm -- Noob](https://muzec0318.github.io/posts/noob.html)
 - **Oct 18, 2021:** [HackMyVm -- May](https://muzec0318.github.io/posts/may.html) *Brute Forcing, Webmin Conf*
 - **Oct 03, 2021:** [HackMyVm -- Video-Club](https://muzec0318.github.io/posts/videoclub.html) *CMD Fuzzing With FFUF*
 - **Oct 01, 2021:** [HackMyVm -- DriftingBlues 6](https://muzec0318.github.io/posts/Driftingblues6.html)
