@@ -106,6 +106,111 @@ Checking our mail for the activation code to activate our nessus.
 
 ![image](https://user-images.githubusercontent.com/69868171/139279153-09410d5b-0278-43f7-a7fc-27a0c4694fb2.png)
 
-User created now let wait.
+User created now let wait the installing of the plugins and compiling take time.
 
 ![image](https://user-images.githubusercontent.com/69868171/139280859-10290f34-1ded-4c82-bbc6-c2d59a18ea5f.png)
+
+In a bit.
+
+![image](https://user-images.githubusercontent.com/69868171/139287442-a3a38481-f785-449f-a267-716a98570a36.png)
+
+Done now let set up a new policies for windows.
+
+![image](https://user-images.githubusercontent.com/69868171/139288259-b11be4a4-4bb7-4bf6-9fc2-a2545d6589c1.png)
+
+Smooth seems we have some really cool Vulnerabilities scanners.
+
+![image](https://user-images.githubusercontent.com/69868171/139288614-09211aa6-edba-40f8-9f39-8012e2c6e631.png)
+
+But let click on advanced scan.
+
+![image](https://user-images.githubusercontent.com/69868171/139289491-375541d1-3287-47f6-b29a-f7f0f772bf2e.png)
+
+Now let click on `DISCOVERY` > `PORT SCANNING` .
+
+![image](https://user-images.githubusercontent.com/69868171/139290060-23b5870b-088f-4147-896c-8b836d92569a.png)
+
+Now let tick `TCP` .
+
+![image](https://user-images.githubusercontent.com/69868171/139290153-bcb9ef9a-176a-46df-bdfe-19c2de704325.png)
+
+Now let save it.
+
+![image](https://user-images.githubusercontent.com/69868171/139290926-e30bdd19-e4df-4cf9-82c1-b1a62c02ff99.png)
+
+Now back to My scan and click on New Scan.
+
+![image](https://user-images.githubusercontent.com/69868171/139291920-2d192012-12f5-4e60-9549-165de80fc7f9.png)
+
+Click on User Defined.
+
+![image](https://user-images.githubusercontent.com/69868171/139292117-9e5473e8-54b1-4121-9177-70edf60b9e4a.png)
+
+Now let click on our new policies we created.
+
+![image](https://user-images.githubusercontent.com/69868171/139292683-bac53e68-4bda-4c6e-837c-b94f914827ab.png)
+
+Add target and click on save.
+
+![image](https://user-images.githubusercontent.com/69868171/139292901-e53d8ae5-cb1a-4643-b2d7-86e5b36ab250.png)
+
+Now let click on the icon to launch.
+
+![image](https://user-images.githubusercontent.com/69868171/139294074-b5302d4f-472f-4dab-9bec-12f7a332bd60.png)
+
+Completed now let check the result.
+
+![image](https://user-images.githubusercontent.com/69868171/139298008-53197ae0-c6ba-415b-9a48-45faa547ae31.png)
+
+Now let export our report to see what we found export report in html.
+
+![image](https://user-images.githubusercontent.com/69868171/139298350-c8c00ffa-f517-446f-b808-364c7de30194.png)
+
+Some very interesting reports vulnerabilities to exploit.
+
+![image](https://user-images.githubusercontent.com/69868171/139298765-16a0329d-1bab-4ba0-bfc8-83bfdc0b2a58.png)
+
+
+### Vulnerabilities Exploitation With Metasploit
+
+Let start with the first one:-  	MS08-067: Microsoft Windows Server Service Crafted RPC Request Handling Remote Code Execution (958644) (ECLIPSEDWING) (uncredentialed check)
+
+Starting `Msfconsole` now let search the exploit.
+
+![image](https://user-images.githubusercontent.com/69868171/139300997-c35e2175-20ff-4657-8df4-85c87af0e08f.png)
+
+Now let use the exploit.
+
+```
+use exploit/windows/smb/ms08_067_netapi
+```
+Setting up `rhost and lhost` rhost which is the target IP and lhost our listen address.
+
+![image](https://user-images.githubusercontent.com/69868171/139302096-1c76e377-2f66-4bb0-ad93-1b43bbc2c475.png)
+
+Now let exploit.
+
+![image](https://user-images.githubusercontent.com/69868171/139303497-ead4a087-bb7c-4ddc-b3e1-e0f87acd45c9.png)
+
+Boom exploit completed.
+
+Now for the second one:- MS09-001: Microsoft Windows SMB Vulnerabilities Remote Code Execution (958687) (uncredentialed check)
+
+![image](https://user-images.githubusercontent.com/69868171/139304950-305c4a77-3e17-4dd4-a9fa-90ebc2201519.png)
+
+Exploit that crashes the system.
+
+![image](https://user-images.githubusercontent.com/69868171/139305343-c87133ec-3064-4d3b-a096-6327258765aa.png)
+
+Boom overflowing till it crashes.
+
+Now for the third one:- MS17-010: Security Update for Microsoft Windows SMB Server (4013389) (ETERNALBLUE) (ETERNALCHAMPION) (ETERNALROMANCE) (ETERNALSYNERGY) (WannaCry) (EternalRocks) (Petya) (uncredentialed check)
+
+![image](https://user-images.githubusercontent.com/69868171/139305838-9a7d00f1-5e00-4c82-8a2e-389070a05c90.png)
+
+Setting it up before exploiting.
+
+![image](https://user-images.githubusercontent.com/69868171/139306138-0fe73015-db74-44a4-94bd-b3e17179b822.png)
+
+Now let exploit it.
+
