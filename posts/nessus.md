@@ -214,3 +214,14 @@ Setting it up before exploiting.
 
 Now let exploit it.
 
+![image](https://user-images.githubusercontent.com/69868171/139542944-5a9b031b-e6aa-4310-a838-949c1350fad9.png)
+
+Hmm interesting it vulnerable but the metasploit module is for x64 bit targets only you can use a quick python script to exploit it if you want to try it i think that from now see you next in the blackbox penetration testing series.
+
+Hope you learn one or two from my article peace out guys.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
