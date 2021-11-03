@@ -95,7 +95,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Tue Nov  2 15:05:49 2021 -- 1 IP address (1 host up) scanned in 15.09 seconds
 ```
 
-Some much information man let break it down.
+So much information man let break it down.
 
 ```
 21 - FTP - We have anonymous login allowed
