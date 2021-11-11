@@ -1,6 +1,6 @@
 ---
 layout: default
-title : muzec - Haclabs NoName Writeup
+title : muzec - Empline Writeup
 ---
 
 
