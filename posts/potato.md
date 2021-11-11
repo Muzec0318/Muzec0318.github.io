@@ -118,4 +118,4 @@ Potato Company with a dress lol checking the source page i got nothing seems it 
 
 ![image](https://user-images.githubusercontent.com/69868171/141303675-3501076d-518e-4b0d-a500-6f11cbf67522.png)
 
-We found a directory that lead to a login page.
+We found an admin directory that lead to a login page.
