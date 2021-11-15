@@ -185,6 +185,14 @@ sudo run-parts --new-session --regex '^sh$' /bin
 
 We are root and done.
 
+### Helpful Resources
+
+```
+https://book.hacktricks.xyz/pentesting/pentesting-web/cgi
+
+https://gtfobins.github.io/gtfobins/run-parts/#sudo
+```
+
 Greeting From [Muzec](https://twitter.com/muzec_saminu)
 
 <br> <br>
