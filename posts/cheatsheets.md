@@ -21,9 +21,9 @@ An XML External Entity attack is a type of attack against an application that pa
  </userInfo>
  ```
  
- It might help to set the `Content-Type: application/xml` in the request when sending XML payload to the server.
+It might help to set the `Content-Type: application/xml` in the request when sending XML payload to the server.
  
- ### Exploiting XXE to retrieve files
+### Exploiting XXE to retrieve files
   
 To perform an XXE injection attack that retrieves an arbitrary file from the server's filesystem, you need to modify the submitted XML in two ways: 
 
