@@ -19,6 +19,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **Latest_Articles**
 
 
+- **Nov 21, 2021:** [All About Payloads Cheat Sheet For XXE,LFI,RFI,SSTI,SSRF](https://muzec0318.github.io/posts/cheatsheets.html)
 - **Nov 01, 2021:** [Exploiting Cross-site Scripting To Steal Cookies](https://muzec0318.github.io/posts/xsslab.html)
 - **Oct 30, 2021:** [Penetration Testing With Nessus To Perform A Vulnerability Scan Against A Target](https://muzec0318.github.io/posts/nessus.html)
 - **Jun 01, 2021:** [FOGProject 1.5.9 - File Upload RCE (Authenticated) - (POC)](https://muzec0318.github.io/posts/fog.html)
