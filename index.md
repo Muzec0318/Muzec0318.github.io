@@ -125,6 +125,11 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Jul 10, 2021:** [HackTheBox -- Forest](https://muzec0318.github.io/posts/forest.html) *Active Directory*
 - **Jul 14, 2021:** [HackTheBox -- OpenAdmin](https://muzec0318.github.io/posts/openadmin.html) *OpenNetAdmin 18.1.1*
 
+## **Proving_Grounds_Writeups:-**
+
+
+- **NOV 28, 2021:** [Proving Grounds -- Peppo](https://muzec0318.github.io/posts/peppo.html) *Ident, Docker images*
+
 ## **HackMyVm_Writeups:-**
 
 
