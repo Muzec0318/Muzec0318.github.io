@@ -62,7 +62,6 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Sep 30, 2021:** [VulnHub -- Os-ByteSec](https://muzec0318.github.io/posts/os-bytesec.html) *SMB, Path Variable*
 - **Sep 27, 2021:** [VulnHub -- Hackademic.RTB2](https://muzec0318.github.io/posts/hackademic2.html) *SQL Injection, Port Knocking*
 - **Jul 28, 2021:** [VulnHub -- Haclabs NoName](https://muzec0318.github.io/posts/noname.html)
-- **Jul 23, 2021:** [VulnHub -- Shakabrah](https://muzec0318.github.io/posts/shakabrah.html)
 - **Jul 16, 2021:** [VulnHub -- Lin.Security](https://muzec0318.github.io/posts/lin.security.html) *NFS*
 - **Jul 15, 2021:** [VulnHub -- HackLab: Vulnix](https://muzec0318.github.io/posts/vulnix.html) *NFS*
 - **Jun 24, 2021:** [VulnHub -- Pluck](https://muzec0318.github.io/posts/pluck.html) *TFTP*
@@ -129,6 +128,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 - **NOV 28, 2021:** [Proving Grounds -- Peppo](https://muzec0318.github.io/posts/peppo.html) *Ident, Docker images*
+- **Jul 23, 2021:** [Proving Grounds -- Shakabrah](https://muzec0318.github.io/posts/shakabrah.html)
 
 ## **HackMyVm_Writeups:-**
 
