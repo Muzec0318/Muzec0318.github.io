@@ -112,6 +112,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **HackTheBox_Writeups:-**
 
 
+- **Dec 02, 2021:** [HackTheBox -- Driver](https://muzec0318.github.io/posts/driver.html) *Forced Authentication, Responder, Printer, CVE-2021-34527*
 - **Nov 26, 2021:** [HackTheBox -- Backdoor](https://muzec0318.github.io/posts/backdoor.html) *Wordpress, Gdbserver 9.2 RCE, Screen*
 - **Sep 08, 2021:** [HackTheBox -- Gobox](https://muzec0318.github.io/posts/gobox.html) *Go SSTI & ngx_http_execute_module.so*
 - **May 25, 2021:** [HackTheBox -- Templated](https://muzec0318.github.io/posts/templated.html) *SSTI*
