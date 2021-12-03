@@ -159,6 +159,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 - **Dec 03, 2021:** [echoCTF.RED -- Nopal](https://muzec0318.github.io/posts/nopal.html) *Cacti RCE, SNMP, Snmpwalk*
+- **Dec 03, 2021:** [echoCTF.RED -- Anvil](https://muzec0318.github.io/posts/anvil.html) *Privilege Escalation*
 
 ### **Support Or Contact Me:-**
 Hey You, Having Any Issues With My Writeups, Articles Send Me A DM on Twitter [Muzec](https://twitter.com/muzec_saminu)  Am Alawys Free To Help......
