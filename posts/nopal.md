@@ -189,4 +189,38 @@ snmpwalk 127.0.0.1 -c public -v1 . -On
 
 ![image](https://user-images.githubusercontent.com/69868171/144613398-7d5b8f86-4f6e-4e4a-81f9-b517769c9f29.png)
 
-Boom we have root shell and we have walk successfully which also execute the bash file with root privillege to give us root shell.
+Boom we have root shell and we have walk successfully which also execute the bash file with root privilege to give us root shell.
+
+
+![image](https://user-images.githubusercontent.com/69868171/144613835-c13833fa-41fe-45c5-b872-0b2012e8f1a1.png)
+
+We spawn a tty sheel to make it more stable now let get the flags.
+
+![image](https://user-images.githubusercontent.com/69868171/144614463-0ad2b1aa-7c19-433c-8c00-7bc6de4d35bf.png)
+
+`/etc/shadow` Flag
+
+
+![image](https://user-images.githubusercontent.com/69868171/144614219-9a139101-fa79-4f28-8eac-3bd03a5cf593.png)
+
+`/root` Flag. Now to get the last flag is `env` let check our process.
+
+```
+ps -aux
+```
+
+![image](https://user-images.githubusercontent.com/69868171/144614712-1be46c30-4ae8-4873-b83d-86d438997ce1.png)
+
+
+Interesting let get it.
+
+![image](https://user-images.githubusercontent.com/69868171/144614885-3ce607df-125a-4105-adba-11727a3388c2.png)
+
+
+Boom and we are done.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
