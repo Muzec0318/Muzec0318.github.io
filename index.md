@@ -155,6 +155,11 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Mar 12, 2021:** [CTF -- zSecurity Fuel CTF](https://muzec0318.github.io/posts/Zfuel.html)
 - **Feb 7, 2021:** [CTF -- zSecurity Cute CTF](https://muzec0318.github.io/posts/Zcute.html)
 
+## **echoCTF.RED_Writeups:-**
+
+
+- **Dec 03, 2021:** [echoCTF.RED -- Nopal](https://muzec0318.github.io/posts/nopal.html) *Cacti RCE, SNMP, Snmpwalk*
+
 ### **Support Or Contact Me:-**
 Hey You, Having Any Issues With My Writeups, Articles Send Me A DM on Twitter [Muzec](https://twitter.com/muzec_saminu)  Am Alawys Free To Help......
 
