@@ -158,6 +158,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **echoCTF.RED_Writeups:-**
 
 
+- **Dec 04, 2021:** [echoCTF.RED -- CVE-2020-7247](https://muzec0318.github.io/posts/cve-2020-7247.html) *OpenSMTPD RCE*
 - **Dec 04, 2021:** [echoCTF.RED -- Cupidme](https://muzec0318.github.io/posts/cupidme.html) *Upload Insecure Files, MagicBytes, OpenSMTPD RCE*
 - **Dec 03, 2021:** [echoCTF.RED -- Nopal](https://muzec0318.github.io/posts/nopal.html) *Cacti RCE, SNMP, Snmpwalk*
 - **Dec 03, 2021:** [echoCTF.RED -- Anvil](https://muzec0318.github.io/posts/anvil.html) *Privilege Escalation*
