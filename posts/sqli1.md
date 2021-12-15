@@ -140,3 +140,58 @@ Boom we solve it and have more products show to us.
 Which mean we are done with the lab 1. Let move forward.
 
 ### Subverting Application Logic
+
+Consider an application that lets users log in with a username and password. If a user submits the username `wiener` and the password `bluecheese`, the application checks the credentials by performing the following SQL query:
+
+```
+SELECT * FROM users WHERE username = 'wiener' AND password = 'bluecheese'
+```
+
+If the query returns the details of a user, then the login is successful. Otherwise, it is rejected.
+
+Here, an attacker can log in as any user without a password simply by using the SQL comment sequence `--` to remove the password check from the `WHERE` clause of the query. For example, submitting the username `administrator'--` and a blank password results in the following query:
+
+```
+SELECT * FROM users WHERE username = 'administrator'--' AND password = ''
+```
+
+This query returns the user whose username is `administrator` and successfully logs the attacker in as that user.
+
+
+### SQL Injection Lab 2
+
+```
+Lab: SQL injection vulnerability allowing login bypass
+```
+
+This lab contains an `SQL injection` vulnerability in the login function.
+
+To solve the lab, perform an SQL injection attack that logs in to the application as the `administrator` user.
+
+Now let access the lab.
+
+![image](https://user-images.githubusercontent.com/69868171/146233475-22dc4c45-ea09-46b4-aac8-8b3946a782e0.png)
+
+Now let click on `my account` to log in.
+
+![image](https://user-images.githubusercontent.com/69868171/146233553-ea75de43-931e-40d8-9d3f-9a2e6c8b06d6.png)
+
+We have a login page if i can remember the goal clearly we need to access the `administrator` account using sql injection to exploit it. Now let hit it.
+
+```
+username:- administrator'--
+password:- <blank>
+```
+
+![image](https://user-images.githubusercontent.com/69868171/146233915-bdb8cf2b-a37e-47ac-b91f-7e655e68fa3c.png)
+
+Now let log in we can use `burp suite` to intercept the request to make the password field blank.
+
+![image](https://user-images.githubusercontent.com/69868171/146234630-f1315bce-aeea-48f3-be56-37de349ec2fa.png)
+
+I remove the `12` i added has password and send request and boom we are in and administrator account access.
+
+![image](https://user-images.githubusercontent.com/69868171/146234914-b607ea27-8490-4d36-817a-7c64e8027188.png)
+
+We are done and lab 2 clear.
+
