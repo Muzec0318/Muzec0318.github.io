@@ -104,7 +104,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **PortSwigger_Labs:-**
 
 
-- **Jun 30, 2021:** [Sql Injection -- Juno](https://muzec0318.github.io/posts/juno.html) *Portswigger*
+- **Jun 30, 2021:** [PortSwigger -- SQL Injection](https://muzec0318.github.io/posts/sqli1.html)
 
 ## **PwnTillDawn_Writeups:-**
 
