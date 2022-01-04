@@ -27,7 +27,7 @@ Read data files from: /usr/bin/../share/nmap
 # Nmap done at Thu Dec 30 08:31:48 2021 -- 1 IP address (1 host up) scanned in 70.64 seconds
 ```
 
-Interesting two open ports let throw some service detection and scripts switch on it to confirm wwhat we have running on it we can already see it `SSH and HTTP` but let keep it flashy lol.
+Interesting two open ports let throw some service detection and scripts switch on it to confirm what we have running on it we can already see it `SSH and HTTP` but let keep it flashy lol.
 
 
 ```
