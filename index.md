@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home | Muzec@sec:~#
+title: Home | root💀Muzec-Security:~#
 ---
 
 ## **Welcome To My Cyber Security Blog,  Hacker**
