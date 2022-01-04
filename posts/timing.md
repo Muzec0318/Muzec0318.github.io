@@ -461,4 +461,95 @@ Now we just need to decode the base64 to file and we have the zip file easy righ
 
 ![image](https://user-images.githubusercontent.com/69868171/148090548-a0544a00-d3d6-4079-b5ba-e2d191973544.png)
 
-Now let download it and unzip 
+Now let download it and unzip it.
+
+![image](https://user-images.githubusercontent.com/69868171/148090772-fd8a66dd-a386-42dc-83ee-984023c72ddd.png)
+
+Done seems it a backup files.
+
+![image](https://user-images.githubusercontent.com/69868171/148090885-932e9bed-72dc-48cf-972f-6b47d2dfad5d.png)
+
+Let check if we miss any hidden folder with `ls -la` .
+
+![image](https://user-images.githubusercontent.com/69868171/148090999-a8e69441-8861-45c2-a3e6-238cbc9e4998.png)
+
+Boom we have a `.git` folder let check the logs.
+
+![image](https://user-images.githubusercontent.com/69868171/148091143-30365758-834f-4f8e-aa84-53f855fdee2b.png)
+
+We found another password let try using it on SSH with user `aaron` .
+
+![image](https://user-images.githubusercontent.com/69868171/148091324-a37e8305-70fb-460d-a4ac-4a6b107a1256.png)
+
+Boom we are in and we have the `user.txt` now time to get root let check `sudo` and see.
+
+![image](https://user-images.githubusercontent.com/69868171/148091451-e656158f-0963-4234-bb78-193dfb2f5ab2.png)
+
+interesting we can run `sudo` on `/usr/bin/netutils` let see what it does.
+
+![image](https://user-images.githubusercontent.com/69868171/148091646-b300c8b4-34b3-485e-8edf-b0951c8d043e.png)
+
+Seems we can use `FTP` and `HTTP` let try to download a file using the `HTTP` but let keep `pspy64` running to check the process.
+
+![image](https://user-images.githubusercontent.com/69868171/148092066-84395375-336e-4e5a-b987-caf28b9150b3.png)
+
+Now let run it.
+
+![image](https://user-images.githubusercontent.com/69868171/148092950-45ddcb09-24a3-4f34-a4f7-6159fcc61680.png)
+
+Interesting we can see a crontab is running but let confirm what `/usr/bin/netutils` doest first.
+
+![image](https://user-images.githubusercontent.com/69868171/148093193-99b14736-fecf-49d2-8d86-8377d4c9f35f.png)
+
+Downloaded we also notice it use `axel` to download the file `A Command-Line File Download Accelerator for Linux` cool .
+
+![image](https://user-images.githubusercontent.com/69868171/148093437-e391b1ef-c73f-41e0-955c-e94a808ed1dc.png)
+
+We also notice the file we download is own by root which mean on the other hand we have write access has root intersting but only if we have access to the folder so since we have no access to `/root` folder so we can't write to it but we have access to `/etc` let see what we can do.
+
+![image](https://user-images.githubusercontent.com/69868171/148094638-16ebcc10-ba83-453f-a66c-d7250718b0b1.png)
+
+We can't overwrite the `passwd` file because it will just be rename to `passwd.1` so not helpful let check the crons folders.
+
+![image](https://user-images.githubusercontent.com/69868171/148095121-44f4c8e3-061f-4c43-ad46-f605a86fb67d.png)
+
+Let setup some old school cronjobs to run has root remember we have write access has root so i change directory to `/tmp` let quickly write a one liner reverse shell in a bash script.
+
+![image](https://user-images.githubusercontent.com/69868171/148095852-bf9680e1-6e28-4b55-a73d-716d488feba8.png)
+
+Save and quit let make it executable.
+
+```
+chmod +x shell.sh
+```
+
+![image](https://user-images.githubusercontent.com/69868171/148096031-8696fc66-d8bb-4a9c-922b-54a9e219b770.png)
+
+Now back to our attacking machine to create a cronjob file.
+
+```
+#  WARNING: The scripts is for a reverse shell by Muzec
+#  Notice: create the file you want to run in /tmp
+#  Notice: I create a simple one liner reverse shell
+#  with bash scripting.
+
+# Reverse shell in 2min
+*/2 *     * * *     root   /tmp/shell.sh
+```
+
+Now let transfer it to the `cron.d` folder with `/usr/bin/netutils` .
+
+![image](https://user-images.githubusercontent.com/69868171/148097026-a512cf1f-11b6-4524-ad06-66f82f39cda6.png)
+
+Downloaded let confirm it and start our Ncat listener to get the shell when the cronjob run in 2 min.
+
+
+![image](https://user-images.githubusercontent.com/69868171/148097250-69f4a6af-673a-4879-913d-b0a95b3b5e28.png)
+
+Boom and we have root shell we are done.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
