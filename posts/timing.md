@@ -548,6 +548,16 @@ Downloaded let confirm it and start our Ncat listener to get the shell when the 
 
 Boom and we have root shell we are done.
 
+NOTICE:- seems  The `profile_update.php` page form is vulnerable to sql injection also i was able to dump the database but hash credentials is not crackable.
+
+![image](https://user-images.githubusercontent.com/69868171/148097896-0d784859-71f8-4d36-94e0-9e130bd8d90a.png)
+
+Credentials database dumps below;
+
+![image](https://user-images.githubusercontent.com/69868171/148098051-3d6e4d7a-34f4-49a8-bd79-275dbca0e3d1.png)
+
+Always leave no stone unturned that is the way of a penetration tester.
+
 Greeting From [Muzec](https://twitter.com/muzec_saminu)
 
 <br> <br>
