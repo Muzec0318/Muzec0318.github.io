@@ -272,7 +272,7 @@ I quickly fire on my burp suite to intercept the request and send to repeater.
 
 ![image](https://user-images.githubusercontent.com/69868171/148076461-3915a553-e490-44f0-91e1-009ccbfc690e.png)
 
-Damn that is some bad practice we can see everything also the password hash and the role and id etc see if we can see the role in the source code of the `profile.php` seems it possible to update the role let hit it.
+Damn that is some bad practice we can see everything also the password hash and the role and id etc seems we can see the role in the source code of the `profile.php` that mean it possible to update the role let hit it.
 
 ![image](https://user-images.githubusercontent.com/69868171/148077165-7d25f435-cc68-444f-b96c-50da7fcb1295.png)
 
