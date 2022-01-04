@@ -85,7 +85,7 @@ We got a welcome message and the rest is blank so i try adding `/admin` and the 
 
 ![image](https://user-images.githubusercontent.com/69868171/148062675-e9ac9161-42c1-46fa-893c-44a25d29fc5c.png)
 
-Seems we are dealing with `strapi cms` using some default credentials and we got no luck let see wwhat we can find on google.
+Seems we are dealing with `strapi cms` using some default credentials and we got no luck let see what we can find on google.
 
 ```
 http://api-prod.horizontall.htb/admin/strapiVersion
