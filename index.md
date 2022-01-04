@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Muzec's Cyber Security Blog
+title: Home | Muzec@sec:~#
 ---
 
 ## **Welcome To My Cyber Security Blog,  Hacker**
