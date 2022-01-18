@@ -243,3 +243,40 @@ sudo /etc/init.d/solr restart
 To validate that the patch has taken place, start another netcat listener as you had before, and spin up your temporary LDAP referral server and HTTP server.
 
 ![image](https://user-images.githubusercontent.com/69868171/149918049-30fc4cd5-14cd-4285-8645-f30625c80b82.png)
+
+![image](https://user-images.githubusercontent.com/69868171/149918266-67ff2643-0ed8-41a9-b5bc-e7e35eb07402.png)
+
+
+We didn't get any reverse shell, meaning the patch worked.
+
+![image](https://user-images.githubusercontent.com/69868171/149918336-5887e1de-69e9-4ef7-89c4-56d37661b732.png)
+
+
+A QUICK NOTE:- 
+
+Switchback the current java version from jdk1.8.0_181 to the Default version in Kali Linux let confirm it.
+
+```
+update-java-alternatives --list
+```
+
+![image](https://user-images.githubusercontent.com/69868171/149918575-d4983b4d-0b9b-4f2d-bb4b-91c42964d24f.png)
+
+To change back to default, we'll need to enter the selection number, enter and verify the java updated version.
+
+```
+sudo update-alternatives --config java
+java -version
+```
+
+![image](https://user-images.githubusercontent.com/69868171/149918696-4826710c-a3b8-4096-a65c-8d3e5d38bc69.png)
+
+
+Now we are done and i hope you have fun and learn two or three from the great log4j write up all thanks to [P3rzv41](https://twitter.com/p3rzv41?t=ubWHyNiEjkYaHAsWAc1I7A&s=09) all credit goes to him we really appriciate you taking your time to write about the new log4j vulnerabilities.
+
+Greeting From [P3rzv41](https://twitter.com/p3rzv41?t=ubWHyNiEjkYaHAsWAc1I7A&s=09)
+
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
