@@ -19,6 +19,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **Latest_Articles:~#**
 
 
+- **Jan 27, 2022:** [Polkit Pkexec (PwnKit) -  Local Privilege Escalation - CVE-2021-4034 (POC)](https://muzec0318.github.io/posts/CVE-2021-4034.html)
 - **Nov 21, 2021:** [All About Payloads Cheat Sheet For XXE,LFI,RFI,SSTI,SSRF](https://muzec0318.github.io/posts/cheatsheets.html)
 - **Nov 01, 2021:** [Exploiting Cross-site Scripting To Steal Cookies](https://muzec0318.github.io/posts/xsslab.html)
 - **Oct 30, 2021:** [Penetration Testing With Nessus To Perform A Vulnerability Scan Against A Target](https://muzec0318.github.io/posts/nessus.html)
