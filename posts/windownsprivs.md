@@ -175,3 +175,91 @@ While the second approach will allow you to detect antivirus software without pr
 sc queryex type=service
 ```
 
+### Vulnerable Software:- 
+
+Software installed on the target system can present various privilege escalation opportunities. As with drivers, organizations and users may not update them as often as they update the operating system. You can use the `wmic` tool seen previously to list software installed on the target system and its versions. The command below will dump information it can gather on installed software.
+
+
+```
+wmic product
+```
+
+This output is not easy to read, and depending on the screen size over which you have access to the target system; it can seem impossible to find anything useful. You could filter the output to obtain a cleaner output with the command below.
+
+```
+wmic product get name,version,vendor
+```
+
+Be careful; due to some backward compatibility issues (e.g. software written for 32 bits systems running on 64 bits), the `wmic product` command may not return all installed programs.  Therefore, It is worth checking running services using the command below to have a better understanding of the target system.
+
+```
+wmic service list brief
+```
+
+As the output of this command can be overwhelming, you can grep the output for running services by adding a findstr command as shown below.
+
+```
+wmic service list brief | findstr  "Running"
+```
+
+If you need more information on any service, you can simply use the `sc qc` command as seen below.
+
+![image](https://user-images.githubusercontent.com/69868171/153878798-cf4bc2aa-03a5-443c-91ca-e97d6b9c4ba3.png)
+
+
+```
+sc qc RemoteMouseService
+```
+
+At this point, you have a few options to find any possible privilege escalation exploit that can be used against software installed on the target system.
+
+    Searchsploit
+    Metasploit
+    Exploit-DB
+    Github
+    Google
+
+Be careful using exploit code that is not verified or is part of the Metasploit framework, as it can contain malicious code that could affect your attacking system. Be sure you understand the exploit code well, go over any obfuscated parts, and have a good understanding of all commands the exploit code will attempt to run.
+
+### Below Are A Few Tools Commonly Used To Identify Privilege Escalation Vectors:-
+
+1. WinPEAS:- WinPEAS is a script developed to enumerate the target system to uncover privilege escalation paths. You can find more information about winPEAS and download either the precompiled executable or a .bat script. Please note, Windows Defender detects and disables winPEAS. WinPEAS will run commands similar to the ones listed in the previous task and print their output. The output from winPEAS can be lengthy and sometimes difficult to read. This is why it would be good practice to always redirect the output to a file, as shown below: 
+
+![image](https://user-images.githubusercontent.com/69868171/153871059-4bee2d24-0777-403d-a669-5e78880a50e2.png)
+
+```
+winpeas.exe > outputfile.txt
+```
+
+2. PowerUp:- PowerUp is a PowerShell script that searches common privilege escalation on the target system. You can run it with the `Invoke-AllChecks` option that will perform all possible checks on the target system or use it to conduct specific checks (e.g. the `Get-UnquotedService` option to only look for potential unquoted service path vulnerabilities).
+
+![image](https://user-images.githubusercontent.com/69868171/153871367-eedf135c-94e0-40fd-8a3a-beccb60e91ca.png)
+
+`Reminder:` To run PowerUp on the target system, you may need to bypass the execution policy restrictions. To achieve this, you can launch PowerShell using the command below.
+
+![image](https://user-images.githubusercontent.com/69868171/153871500-dd402738-6e5f-4766-a220-d87b4be5fe44.png)
+
+
+### Windows Exploit Suggester:-
+
+Some exploit suggesting scripts (e.g. winPEAS) will require you to upload them to the target system and run them there. This may cause antivirus software to detect and delete them. To avoid making unnecessary noise that can attract attention, you may prefer to use Windows Exploit Suggester, which will run on your attacking machine.
+
+![image](https://user-images.githubusercontent.com/69868171/153873560-3881aa43-0348-42d9-8e88-8445aec52315.png)
+
+Once installed, and before you use it, type the `windows-exploit-suggester.py –update` command to update the database. The script will refer to the database it creates to check for missing patches that can result in a vulnerability you can use to elevate your privileges on the target system.
+
+To use the script, you will need to run the `systeminfo` command on the target system. Do not forget to direct the output to a `.txt` file you will need to move to your attacking machine.
+
+Once this is done, windows-exploit-suggester.py can be run as follows;
+
+```
+windows-exploit-suggester.py --database 2021-09-21-mssb.xls --systeminfo sysinfo_output.txt
+```
+
+A newer version of Windows Exploit Suggester is available [here](https://github.com/bitsadmin/wesng). Depending on the version of the target system, using the newer version could be more efficient.
+
+![image](https://user-images.githubusercontent.com/69868171/153875493-768817c7-78dd-4bee-a9bc-41cd86b7b62e.png)
+
+### Metasploit:-
+
+If you already have a Meterpreter shell on the target system, you can use the `multi/recon/local_exploit_suggester` module to list vulnerabilities that may affect the target system and allow you to elevate your privileges on the target system. 
