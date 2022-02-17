@@ -261,3 +261,66 @@ Now that we have a password let try password reuses on the usernames we have yes
 
 Now let hit it with crackmapexec.
 
+```
+┌──(muzec㉿Muzec-Security)-[~/Documents/HTB/10.10.11.129]
+└─$ crackmapexec smb search.htb -u users.txt -p @3ONEmillionbaby --continue-on-success
+```
+![image](https://user-images.githubusercontent.com/69868171/154484719-063fc420-1434-479a-a53f-aded1c670cfe.png)
+
+Now we can use it to access SMB.
+
+![image](https://user-images.githubusercontent.com/69868171/154484918-8c9346d7-38cf-455e-8ef4-d8ff05ba3a81.png)
+
+Now let see what we can get in the SMB shares of user `edgar.jacobs` .
+
+![image](https://user-images.githubusercontent.com/69868171/154485146-0ae60ca4-0b0e-459d-9084-ef23fa443dda.png)
+
+Boom we have a `xlsx` file let download it to our target. But when i opened the file which contains firstname, lastname, Username. There is also a protected cell named password which is hided let see how we can recovered that.
+
+Let go through some few tricks which we can use to recover a protected cell.
+
+let make a copy of the document rename the file from `Phishing_Attempt.xlsx` to `Phishing_Attempt.zip` after that let unzip it and we should have a folder.
+
+![image](https://user-images.githubusercontent.com/69868171/154487867-4085ca68-1090-4f0a-85dd-5a7ad9b270f8.png)
+
+Now let locate the `xl` folder and then `worksheets` inside the `worksheets` now let open the `sheet2.xml` file.
+
+![image](https://user-images.githubusercontent.com/69868171/154487928-74773c6b-2e37-4fcd-9f03-1828a1fe4ff5.png)
+
+![image](https://user-images.githubusercontent.com/69868171/154488355-86375b7f-22f5-4dab-8d61-02b90b510586.png)
+
+![image](https://user-images.githubusercontent.com/69868171/154488423-7ec930c1-e44d-46b4-958b-c48c76d24b55.png)
+
+![image](https://user-images.githubusercontent.com/69868171/154488816-86435256-ecd4-450b-a1d9-e30a5ecdec86.png)
+
+Now let remove the `sheetProtection` tag and save file back.
+
+Renaming the file `Phishing_Attempt.zip` back to `Phishing_Attempt.xlsx` and when you Open the file you should now be able to read the password cell.
+
+![image](https://user-images.githubusercontent.com/69868171/154489205-0932575f-5157-4917-8e97-6dbeab4f4614.png)
+
+A quick Notice:- `I was able to perform this process by using a Windows machine linux keep bringing gibberish.`
+
+Now that we have more credentials let spray it again on SMB using `crackmapexec` XD .
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Documents/HTB/10.10.11.129]
+└─$ crackmapexec smb search.htb -u users.txt -p pass.txt --continue-on-success       
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154490636-426d705f-6183-42cc-b593-f754d9d4e876.png)
+
+Ahhh yes let use it to access the SMB share again to see what we can get in `sierra.frye` desktop.
+
+![image](https://user-images.githubusercontent.com/69868171/154490907-94ce1e62-9c01-44bd-a02a-05fe6ca2315b.png)
+
+Now that we are in let check `sierra.frye` desktop.
+
+![image](https://user-images.githubusercontent.com/69868171/154491493-f4aa5831-4217-491f-88d2-f2b8ffa449c7.png)
+
+Boom we have `user.txt` finally going throug the rest dirs we found a backups folder which contains certificate files. After some time doing research, I found out this certificate can be imported into the browser and used by some domains. Trying to import the certificate requires a password. I used [crackpkcs12](https://github.com/crackpkcs12/crackpkcs12) to crack the password and imported the certificate successfully.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Documents/HTB/10.10.11.129]
+└─$ crackpkcs12 -d  /usr/share/wordlists/rockyou.txt staff.pfx -t 10 
+```
