@@ -322,5 +322,97 @@ Boom we have `user.txt` finally going throug the rest dirs we found a backups fo
 
 ```
 ┌──(muzec㉿Muzec-Security)-[~/Documents/HTB/10.10.11.129]
-└─$ crackpkcs12 -d  /usr/share/wordlists/rockyou.txt staff.pfx -t 10 
+└─$ crackpkcs12 -d  /usr/share/wordlists/rockyou.txt staff.pfx -t 10          
+
+Dictionary attack - Starting 10 threads
+
+*********************************************************
+Dictionary attack - Thread 4 - Password found: misspissy
+*********************************************************
 ```
+
+Now that we cracked it and we have the password back to `https://search.htb/staff/` we know we can import the certificate file on our browser.
+
+![image](https://user-images.githubusercontent.com/69868171/154495798-84b2796c-f129-472c-a293-1af7979ef6ac.png)
+
+
+![image](https://user-images.githubusercontent.com/69868171/154495852-4160cd50-a4ab-4722-9a06-d6d441bc45b8.png)
+
+![image](https://user-images.githubusercontent.com/69868171/154496186-83184373-2f10-4b5b-b92a-46e42fd41a27.png)
+
+Import the `staff.pfx` certificate file it will ask for a password we already have the password just input it and we are good to go let refresh the page.
+
+![image](https://user-images.githubusercontent.com/69868171/154496501-5da4cd34-bb0c-446c-ad5a-b9480d22ae36.png)
+
+Click on `ok` and boom.
+
+![image](https://user-images.githubusercontent.com/69868171/154496571-c2647941-e5f3-4e99-bfdf-9cead47ed58c.png)
+
+Windows PowerShell Web Access let use the credential we have which is for `sierra.frye` .
+
+![image](https://user-images.githubusercontent.com/69868171/154497142-2b5342ed-efa9-4129-ab76-ad99305d8354.png)
+
+Now we should have a powershell console ready for us after login.
+
+![image](https://user-images.githubusercontent.com/69868171/154497361-e2a4d8c9-ab4b-41eb-b3b9-af11c1790a9f.png)
+
+Now the headche i try everything to get a reverse shell back to our terminal but damn man AV keep deleting our files even the `sharphound.exe` i uploaded so since we have a valid credentials let use the `bloodhound-python` which we can easily use `pip3 install bloodhound` to get it installed.
+
+![image](https://user-images.githubusercontent.com/69868171/154497883-8a96698b-258d-40d1-a3d4-c64f38d7fc5a.png)
+
+```
+bloodhound-python -u 'sierra.frye' -p '$$49=wide=STRAIGHT=jordan=28$$18' -ns 10.10.11.129 -d search.htb -c all
+```
+So let give it time after some min we got a json files.
+
+![image](https://user-images.githubusercontent.com/69868171/154498594-fa0457c7-c3c2-4267-9cd3-36087623a99e.png)
+
+Now we can easily use BloodHound GUI to import all json files. let start it.
+
+```
+sudo neo4j console
+```
+
+Now let start the GUI.
+
+```
+./BloodHound --no-sandbox
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154498895-be4d5ad4-01dc-4576-bb42-6c258e9c92b8.png)
+
+So i search for the user we presently have access to now and marked it has owned.
+
+![image](https://user-images.githubusercontent.com/69868171/154500712-b46e3c6f-331c-417b-b793-e734342477ee.png)
+
+Select `Analysis` under `Pre-Built Analytics Queries` click on `Shortest Paths to Domain Admins from Owned Principals` and we should have the diagram below.
+
+
+![image](https://user-images.githubusercontent.com/69868171/154501023-07a2c185-97ae-4489-bc7f-4e6741a49013.png)
+
+```
+The user SIERRA.FRYE@SEARCH.HTB is a member of the group BIRMINGHAM-ITSEC@SEARCH.HTB. Groups in active directory grant their members any privileges the group itself has. If a group has rights to another principal, users/computers in the group, as well as other groups inside the group inherit those permissions.
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154501288-c4bb9bb0-588b-4d5a-9043-d5ed2c75c32d.png)
+
+
+So we know the path is like `sierra.frye -> ITSEC@search.htb -> BIR-ADFS-GMSA@search.htb -> tristan.davies -> Domain Admin` right which should be easy for us to abuse.
+
+### ReadGMSAPassword
+
+```
+BIR-ADFS-GMSA@SEARCH.HTB is a Group Managed Service Account. The group ITSEC@SEARCH.HTB can retrieve the password for the GMSA BIR-ADFS-GMSA@SEARCH.HTB.
+
+Group Managed Service Accounts are a special type of Active Directory object, where the password for that object is mananaged by and automatically changed by Domain Controllers on a set interval (check the MSDS-ManagedPasswordInterval attribute).
+
+The intended use of a GMSA is to allow certain computer accounts to retrieve the password for the GMSA, then run local services as the GMSA. An attacker with control of an authorized principal may abuse that privilege to impersonate the GMSA.
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154502460-2cecf5b3-a60c-4060-987f-ed5c669c6cc2.png)
+
+Which we can easily abuse now.
+
+![image](https://user-images.githubusercontent.com/69868171/154502573-9a9eb60a-cb3c-417c-af42-7d272c36744f.png)
+
+Since sierra.frye is a member of the ITSEC@search.htb group, this user has access to all the group permissions. We can easily use [gMSADumper](https://github.com/micahvandeusen/gMSADumper) on our attacking machine to do that.
