@@ -132,4 +132,121 @@ Which was publish back in 2021, February got the exploit code but i decided to d
 
 ![image](https://user-images.githubusercontent.com/69868171/154801182-e518a034-d0ec-4121-a24a-bb87c8fbda18.png)
 
-Now let click on `setting` 
+Now let click on `settings >> Git Hooks >> post-receive` .
+
+
+![image](https://user-images.githubusercontent.com/69868171/154801312-e21fe84b-745b-4389-83ef-ad8cbfb5f6df.png)
+
+
+So let add our reverse shell payload and update the `hooks` .
+
+![image](https://user-images.githubusercontent.com/69868171/154801421-3c12281e-9f9e-4b87-b31e-e7bf77ec5ec7.png)
+
+Now let move to the next step let start our `ncat listener` and make a commit to trigger our payload.
+
+![image](https://user-images.githubusercontent.com/69868171/154801562-fc1ab6da-9097-4c72-b5bc-1132327016d1.png)
+
+```
+touch shell.md
+git init
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154801867-ba56ff1c-7941-4d04-ae8e-2e8e96bf8afe.png)
+
+```
+git add shell.md
+git commit -m "Initial commit"
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154801940-ee9930db-a8ee-4173-8ddc-c2b853252e42.png)
+
+```
+git remote add origin http://git.git-and-crumpets.thm/scones/cant-touch-this.git
+git push -u origin master --force
+```
+
+So we add `scones` and `Password`  to push the commit which trigger the payload and boom we have a reverse shell. Let spawn a full tty shell.
+
+![image](https://user-images.githubusercontent.com/69868171/154802101-9e9b674b-4603-41ec-8949-3f1f26082f7b.png)
+
+Now let get the `user.txt` in the home directory.
+
+![image](https://user-images.githubusercontent.com/69868171/154802230-133e5c8d-f6eb-4633-b05b-d5cfa68b283d.png)
+
+
+### Privilege Escalation
+
+Going through directories the only promising one is `/var/lib/gitea/data` we found `gitea.db` let check what we have on it using `sqlite3` .
+
+![image](https://user-images.githubusercontent.com/69868171/154802716-7ec600d0-54c3-4f78-9fa1-56af8b05b5e4.png)
+
+Now let type `sqlite3` to open the db file.
+
+![image](https://user-images.githubusercontent.com/69868171/154802766-67bf4c41-304e-4951-9b61-64815d8134e4.png)
+
+Boom let drop the `user` table.
+
+![image](https://user-images.githubusercontent.com/69868171/154802829-315adef1-2009-46fe-8ef8-dbbe925eb6f0.png)
+
+we know user `scones` is not an admin on `gitea` but since we have all permission to the `gitea.db` we can change all users to `admin` or change each users `password` let do that now.
+
+```
+select lower_name, is_admin from user;
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154802915-609d3316-78d8-4b76-bdf4-d84df613f41c.png)
+
+Only `hydra` have access has admin we can easily change `scones` ID to `1` which he will also have admin privilege let update that now.
+
+```
+UPDATE user SET is_admin=1 WHERE lower_name="scones";
+```
+
+![image](https://user-images.githubusercontent.com/69868171/154803013-77d74578-6c87-452f-bf00-1c51e19900ae.png)
+
+Now let log back in to `gitea` .
+
+![image](https://user-images.githubusercontent.com/69868171/154803063-d80dfff5-ba29-46ab-92e1-5858525ca5ed.png)
+
+We are `admin` now time to reset all users `Password` .
+
+![image](https://user-images.githubusercontent.com/69868171/154803086-d038c4f5-32b6-4238-9e86-d43a28f8dd7c.png)
+
+Now i added new `password` for each users and reset `2FA` also XD.
+
+![image](https://user-images.githubusercontent.com/69868171/154803143-ed068dc2-9e5a-440d-9135-165703a86a54.png)
+
+
+![image](https://user-images.githubusercontent.com/69868171/154803158-0b949023-eef1-42b9-a495-2841f7945664.png)
+
+Now let click on `update user account` and we should be good i do it for all users. we should get user account has been updated.
+
+![image](https://user-images.githubusercontent.com/69868171/154803238-ac499524-a48f-4fe8-9df0-533aff618e50.png)
+
+Now we can easily use the `password` to access each account to check there commits i firstly go for user `hydra` but got nothing on the commits let check user `root` now.
+
+![image](https://user-images.githubusercontent.com/69868171/154803465-d9fd22a4-f61e-4116-a06b-2910127bec58.png)
+
+Boom we got a `backup` repo with some pushed and deleted commits but the `ssh` with a `password` i guess caught my eyes let check it out.
+
+![image](https://user-images.githubusercontent.com/69868171/154803525-5a23f06e-173c-4c9e-9892-62ce17ee154b.png)
+
+Four commits let click on it and see what we have in store for us.
+
+![image](https://user-images.githubusercontent.com/69868171/154803618-ab9c6d10-2f43-4985-ae75-80ec7f69f1a6.png)
+
+Ahhhhhhhh awesome let see what we have on the `ssh` .
+
+![image](https://user-images.githubusercontent.com/69868171/154803732-57cf39bc-6026-4def-a098-26122bc6d2fc.png)
+
+Boom we found a private key ahhhhhh finally some progress i quickly copy and save it on my attacking machine let try using it with the `root` user on SSH.
+
+![image](https://user-images.githubusercontent.com/69868171/154803876-41319dbf-edea-4fbe-a6f0-d6951e387f47.png)
+
+Boom we are root and done for the private key password you already know it `Sup3rS3****` just look close and that all.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
