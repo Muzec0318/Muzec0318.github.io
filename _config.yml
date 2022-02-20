@@ -9,7 +9,4 @@ gems:
 
 whitelist:
   - jekyll-sitemap
-# Includes an icon in the footer
-footer-links:
-  github: muzec0318
-  twitter: muzec_saminu
+
