@@ -120,43 +120,43 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **HackTheBox_Writeups:~#**
 
 
-- **Feb 17, 2022:** [Search](https://muzec0318.github.io/posts/hackthebox/search.html) *AD, ldapsearch, Crackmapexec, Kerberoasting, Excel, BloodHound*
-- **Jan 02, 2022:** [Timing](https://muzec0318.github.io/posts/hackthebox/timing.html) *LFI, PHP code review, Bypasses to gain admin, Sudo, Cronjob*
-- **Jan 01, 2022:** [Horizontall](https://muzec0318.github.io/posts/hackthebox/horizontall.html) *Subdomain, Strapi RCE, Chisel Port Forward, Laravel 8 RCE*
-- **Dec 02, 2021:** [Driver](https://muzec0318.github.io/posts/hackthebox/driver.html) *Forced Authentication, Responder, Printer, CVE-2021-34527*
-- **Nov 26, 2021:** [Backdoor](https://muzec0318.github.io/posts/hackthebox/backdoor.html) *Wordpress, Gdbserver 9.2 RCE, Screen*
-- **Sep 08, 2021:** [Gobox](https://muzec0318.github.io/posts/hackthebox/gobox.html) *Go SSTI & ngx_http_execute_module.so*
-- **May 25, 2021:** [Templated](https://muzec0318.github.io/posts/hackthebox/templated.html) *SSTI*
-- **May 23, 2021:** [Knife](https://muzec0318.github.io/posts/hackthebox/knife.html) *PHP 8.1.0-dev Backdoor RCE*
-- **Apr 30, 2021:** [ScriptKiddie](https://muzec0318.github.io/posts/hackthebox/scriptkiddie.html) *overlayfs*
+- **Feb 17, 2022:** [Search](https://muzec0318.github.io/posts/hackthebox/search.html) `AD,` `ldapsearch,` `Crackmapexec,` `Kerberoasting,` `Excel,` `BloodHound`
+- **Jan 02, 2022:** [Timing](https://muzec0318.github.io/posts/hackthebox/timing.html) `LFI,` `PHP code review,` `Bypasses to gain admin,` `Sudo,` `Cronjob`
+- **Jan 01, 2022:** [Horizontall](https://muzec0318.github.io/posts/hackthebox/horizontall.html) `Strapi RCE,` `Chisel Port Forward,` `Laravel 8 RCE`
+- **Dec 02, 2021:** [Driver](https://muzec0318.github.io/posts/hackthebox/driver.html) `Forced Authentication` `Responder` `Printer` `CVE-2021-34527`
+- **Nov 26, 2021:** [Backdoor](https://muzec0318.github.io/posts/hackthebox/backdoor.html) `Wordpress,` `Gdbserver 9.2 RCE,` `Screen`
+- **Sep 08, 2021:** [Gobox](https://muzec0318.github.io/posts/hackthebox/gobox.html) `Go SSTI & ngx_http_execute_module.so`
+- **May 25, 2021:** [Templated](https://muzec0318.github.io/posts/hackthebox/templated.html) `SSTI`
+- **May 23, 2021:** [Knife](https://muzec0318.github.io/posts/hackthebox/knife.html) `PHP 8.1.0-dev Backdoor RCE`
+- **Apr 30, 2021:** [ScriptKiddie](https://muzec0318.github.io/posts/hackthebox/scriptkiddie.html) `overlayfs`
 - **Jul 02, 2021:** [Shocker](https://muzec0318.github.io/posts/hackthebox/shocker.html)
-- **Jul 02, 2021:** [Active](https://muzec0318.github.io/posts/hackthebox/active.html) *Active Directory*
-- **Jul 06, 2021:** [Bastion](https://muzec0318.github.io/posts/hackthebox/bastion.html) *Mounting VHD*
-- **Jul 07, 2021:** [Heist](https://muzec0318.github.io/posts/hackthebox/heist.html) *Windows Box*
-- **Jul 10, 2021:** [Forest](https://muzec0318.github.io/posts/hackthebox/forest.html) *Active Directory*
-- **Jul 14, 2021:** [OpenAdmin](https://muzec0318.github.io/posts/hackthebox/openadmin.html) *OpenNetAdmin 18.1.1*
+- **Jul 02, 2021:** [Active](https://muzec0318.github.io/posts/hackthebox/active.html) `Active Directory`
+- **Jul 06, 2021:** [Bastion](https://muzec0318.github.io/posts/hackthebox/bastion.html) `Mounting VHD`
+- **Jul 07, 2021:** [Heist](https://muzec0318.github.io/posts/hackthebox/heist.html) `Windows Box`
+- **Jul 10, 2021:** [Forest](https://muzec0318.github.io/posts/hackthebox/forest.html) `Active Directory`
+- **Jul 14, 2021:** [OpenAdmin](https://muzec0318.github.io/posts/hackthebox/openadmin.html) `OpenNetAdmin 18.1.1`
 
 ## **Proving_Grounds_Writeups:~#**
 
 
 - **NOV 28, 2021:** [Kevin](https://muzec0318.github.io/posts/PG/kevin.html)
-- **NOV 28, 2021:** [Peppo](https://muzec0318.github.io/posts/PG/peppo.html) *Ident, Docker images*
+- **NOV 28, 2021:** [Peppo](https://muzec0318.github.io/posts/PG/peppo.html) `Ident,` `Docker images`
 - **Jul 23, 2021:** [Shakabrah](https://muzec0318.github.io/posts/PG/shakabrah.html)
 
 ## **HackMyVm_Writeups:~#**
 
 
-- **NOV 15, 2021:** [Condor](https://muzec0318.github.io/posts/hackmyvm/condor.html) *CGI Tricks*
-- **NOV 03, 2021:** [Level](https://muzec0318.github.io/posts/hackmyvm/level.html) *Port Forwarding*
+- **NOV 15, 2021:** [Condor](https://muzec0318.github.io/posts/hackmyvm/condor.html) `CGI Tricks`
+- **NOV 03, 2021:** [Level](https://muzec0318.github.io/posts/hackmyvm/level.html) `Port Forwarding`
 - **Oct 22, 2021:** [Pwned](https://muzec0318.github.io/posts/hackmyvm/pwned.html)
-- **Oct 22, 2021:** [Hommie](https://muzec0318.github.io/posts/hackmyvm/hommie.html) *Hijacking Path Variable*
+- **Oct 22, 2021:** [Hommie](https://muzec0318.github.io/posts/hackmyvm/hommie.html) `Hijacking Path Variable`
 - **Oct 22, 2021:** [Noob](https://muzec0318.github.io/posts/hackmyvm/noob.html)
-- **Oct 18, 2021:** [May](https://muzec0318.github.io/posts/hackmyvm/may.html) *Brute Forcing, Webmin Conf*
-- **Oct 03, 2021:** [Video-Club](https://muzec0318.github.io/posts/hackmyvm/videoclub.html) *CMD Fuzzing With FFUF*
+- **Oct 18, 2021:** [May](https://muzec0318.github.io/posts/hackmyvm/may.html) `Brute Forcing,` `Webmin Conf`
+- **Oct 03, 2021:** [Video-Club](https://muzec0318.github.io/posts/hackmyvm/videoclub.html) `CMD Fuzzing With FFUF`
 - **Oct 01, 2021:** [DriftingBlues 6](https://muzec0318.github.io/posts/hackmyvm/Driftingblues6.html)
-- **Jun 07, 2021:** [Ripper](https://muzec0318.github.io/posts/hackmyvm/ripper1.html) *Crontab*
+- **Jun 07, 2021:** [Ripper](https://muzec0318.github.io/posts/hackmyvm/ripper1.html) `Crontab`
 - **Jun 07, 2021:** [Gift](https://muzec0318.github.io/posts/hackmyvm/gift.html)
-- **Jun 08, 2021:** [Dominator](https://muzec0318.github.io/posts/hackmyvm/dominator.html) *Rot13*
+- **Jun 08, 2021:** [Dominator](https://muzec0318.github.io/posts/hackmyvm/dominator.html) `Rot13`
 
 ## **CTF_Writeups:~#**
 
