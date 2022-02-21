@@ -120,21 +120,21 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **HackTheBox_Writeups:~#**
 
 
-- **Feb 17, 2022:** [HackTheBox -- Search](https://muzec0318.github.io/posts/search.html) *AD, ldapsearch, Crackmapexec, Kerberoasting, Excel, BloodHound*
-- **Jan 02, 2022:** [HackTheBox -- Timing](https://muzec0318.github.io/posts/timing.html) *LFI, PHP code review, Bypasses to gain admin, Sudo, Cronjob*
-- **Jan 01, 2022:** [HackTheBox -- Horizontall](https://muzec0318.github.io/posts/horizontall.html) *Subdomain, Strapi RCE, Chisel Port Forward, Laravel 8 RCE*
-- **Dec 02, 2021:** [HackTheBox -- Driver](https://muzec0318.github.io/posts/driver.html) *Forced Authentication, Responder, Printer, CVE-2021-34527*
-- **Nov 26, 2021:** [HackTheBox -- Backdoor](https://muzec0318.github.io/posts/backdoor.html) *Wordpress, Gdbserver 9.2 RCE, Screen*
-- **Sep 08, 2021:** [HackTheBox -- Gobox](https://muzec0318.github.io/posts/gobox.html) *Go SSTI & ngx_http_execute_module.so*
-- **May 25, 2021:** [HackTheBox -- Templated](https://muzec0318.github.io/posts/templated.html) *SSTI*
-- **May 23, 2021:** [HackTheBox -- Knife](https://muzec0318.github.io/posts/knife.html) *PHP 8.1.0-dev Backdoor RCE*
-- **Apr 30, 2021:** [HackTheBox -- ScriptKiddie](https://muzec0318.github.io/posts/scriptkiddie.html) *overlayfs*
-- **Jul 02, 2021:** [HackTheBox -- Shocker](https://muzec0318.github.io/posts/shocker.html)
-- **Jul 02, 2021:** [HackTheBox -- Active](https://muzec0318.github.io/posts/active.html) *Active Directory*
-- **Jul 06, 2021:** [HackTheBox -- Bastion](https://muzec0318.github.io/posts/bastion.html) *Mounting VHD*
-- **Jul 07, 2021:** [HackTheBox -- Heist](https://muzec0318.github.io/posts/heist.html) *Windows Box*
-- **Jul 10, 2021:** [HackTheBox -- Forest](https://muzec0318.github.io/posts/forest.html) *Active Directory*
-- **Jul 14, 2021:** [HackTheBox -- OpenAdmin](https://muzec0318.github.io/posts/openadmin.html) *OpenNetAdmin 18.1.1*
+- **Feb 17, 2022:** [Search](https://muzec0318.github.io/posts/hackthebox/search.html) *AD, ldapsearch, Crackmapexec, Kerberoasting, Excel, BloodHound*
+- **Jan 02, 2022:** [Timing](https://muzec0318.github.io/posts/hackthebox/timing.html) *LFI, PHP code review, Bypasses to gain admin, Sudo, Cronjob*
+- **Jan 01, 2022:** [Horizontall](https://muzec0318.github.io/posts/hackthebox/horizontall.html) *Subdomain, Strapi RCE, Chisel Port Forward, Laravel 8 RCE*
+- **Dec 02, 2021:** [Driver](https://muzec0318.github.io/posts/hackthebox/driver.html) *Forced Authentication, Responder, Printer, CVE-2021-34527*
+- **Nov 26, 2021:** [Backdoor](https://muzec0318.github.io/posts/hackthebox/backdoor.html) *Wordpress, Gdbserver 9.2 RCE, Screen*
+- **Sep 08, 2021:** [Gobox](https://muzec0318.github.io/posts/hackthebox/gobox.html) *Go SSTI & ngx_http_execute_module.so*
+- **May 25, 2021:** [Templated](https://muzec0318.github.io/posts/hackthebox/templated.html) *SSTI*
+- **May 23, 2021:** [Knife](https://muzec0318.github.io/posts/hackthebox/knife.html) *PHP 8.1.0-dev Backdoor RCE*
+- **Apr 30, 2021:** [ScriptKiddie](https://muzec0318.github.io/posts/hackthebox/scriptkiddie.html) *overlayfs*
+- **Jul 02, 2021:** [Shocker](https://muzec0318.github.io/posts/hackthebox/shocker.html)
+- **Jul 02, 2021:** [Active](https://muzec0318.github.io/posts/hackthebox/active.html) *Active Directory*
+- **Jul 06, 2021:** [Bastion](https://muzec0318.github.io/posts/hackthebox/bastion.html) *Mounting VHD*
+- **Jul 07, 2021:** [Heist](https://muzec0318.github.io/posts/hackthebox/heist.html) *Windows Box*
+- **Jul 10, 2021:** [Forest](https://muzec0318.github.io/posts/hackthebox/forest.html) *Active Directory*
+- **Jul 14, 2021:** [OpenAdmin](https://muzec0318.github.io/posts/hackthebox/openadmin.html) *OpenNetAdmin 18.1.1*
 
 ## **Proving_Grounds_Writeups:~#**
 
