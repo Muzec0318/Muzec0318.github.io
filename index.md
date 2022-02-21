@@ -112,10 +112,10 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **PwnTillDawn_Writeups:~#**
 
 
-- **Jun 30, 2021:** [PwnTillDawn -- Juno](https://muzec0318.github.io/posts/juno.html) *Reverse APK*
-- **Jun 09, 2021:** [PwnTillDawn -- FullMounty](https://muzec0318.github.io/posts/fullMounty.html) *NFS*
-- **Jun 14, 2021:** [PwnTillDawn -- Stuntman Mike](https://muzec0318.github.io/posts/Stuntman.html)
-- **Jun 15, 2021:** [PwnTillDawn -- Django](https://muzec0318.github.io/posts/django.html) *Windows Box*
+- **Jun 30, 2021:** [Juno](https://muzec0318.github.io/posts/pwntilldawn/juno.html) `Reverse APK,` `Mobsf`
+- **Jun 09, 2021:** [FullMounty](https://muzec0318.github.io/posts/pwntilldawn/fullMounty.html) `NFS`
+- **Jun 14, 2021:** [Stuntman Mike](https://muzec0318.github.io/posts/pwntilldawn/Stuntman.html)
+- **Jun 15, 2021:** [Django](https://muzec0318.github.io/posts/pwntilldawn/django.html) `Windows Box`
 
 ## **HackTheBox_Writeups:~#**
 
