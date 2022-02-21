@@ -169,11 +169,11 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **echoCTF.RED_Writeups:~#**
 
 
-- **Dec 07, 2021:** [PcPrincipal](https://muzec0318.github.io/posts/echoctf/pcprincipal.html) *GilaCMS, ETCD, CONFD*
-- **Dec 04, 2021:** [CVE-2020-7247](https://muzec0318.github.io/posts/echoctf/cve-2020-7247.html) *OpenSMTPD RCE*
-- **Dec 04, 2021:** [Cupidme](https://muzec0318.github.io/posts/echoctf/cupidme.html) *Upload Insecure Files, MagicBytes, OpenSMTPD RCE*
-- **Dec 03, 2021:** [Nopal](https://muzec0318.github.io/posts/echoctf/nopal.html) *Cacti RCE, SNMP, Snmpwalk*
-- **Dec 03, 2021:** [Anvil](https://muzec0318.github.io/posts/echoctf/anvil.html) *Privilege Escalation*
+- **Dec 07, 2021:** [PcPrincipal](https://muzec0318.github.io/posts/echoctf/pcprincipal.html) #GilaCMS #ETCD #CONFD
+- **Dec 04, 2021:** [CVE-2020-7247](https://muzec0318.github.io/posts/echoctf/cve-2020-7247.html) #OpenSMTPD RCE
+- **Dec 04, 2021:** [Cupidme](https://muzec0318.github.io/posts/echoctf/cupidme.html) #Upload Insecure Files #MagicBytes #OpenSMTPD RCE
+- **Dec 03, 2021:** [Nopal](https://muzec0318.github.io/posts/echoctf/nopal.html) #Cacti RCE #SNMP #Snmpwalk
+- **Dec 03, 2021:** [Anvil](https://muzec0318.github.io/posts/echoctf/anvil.html) #Privilege Escalation
 
 ### **Support Or Contact Me:~#**
 Hey You, Having Any Issues With My Writeups, Articles Send Me A DM on Twitter [Muzec](https://twitter.com/muzec_saminu)  Am Alawys Free To Help......
