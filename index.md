@@ -146,25 +146,25 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **HackMyVm_Writeups:~#**
 
 
-- **NOV 15, 2021:** [HackMyVm -- Condor](https://muzec0318.github.io/posts/hackmyvm/condor.html) *CGI Tricks*
-- **NOV 03, 2021:** [HackMyVm -- Level](https://muzec0318.github.io/posts/hackmyvm/level.html) *Port Forwarding*
-- **Oct 22, 2021:** [HackMyVm -- Pwned](https://muzec0318.github.io/posts/hackmyvm/pwned.html)
-- **Oct 22, 2021:** [HackMyVm -- Hommie](https://muzec0318.github.io/posts/hackmyvm/hommie.html) *Hijacking Path Variable*
-- **Oct 22, 2021:** [HackMyVm -- Noob](https://muzec0318.github.io/posts/hackmyvm/noob.html)
-- **Oct 18, 2021:** [HackMyVm -- May](https://muzec0318.github.io/posts/hackmyvm/may.html) *Brute Forcing, Webmin Conf*
-- **Oct 03, 2021:** [HackMyVm -- Video-Club](https://muzec0318.github.io/posts/hackmyvm/videoclub.html) *CMD Fuzzing With FFUF*
-- **Oct 01, 2021:** [HackMyVm -- DriftingBlues 6](https://muzec0318.github.io/posts/hackmyvm/Driftingblues6.html)
-- **Jun 07, 2021:** [HackMyVm -- Ripper](https://muzec0318.github.io/posts/hackmyvm/ripper1.html) *Crontab*
-- **Jun 07, 2021:** [HackMyVm -- Gift](https://muzec0318.github.io/posts/hackmyvm/gift.html)
-- **Jun 08, 2021:** [HackMyVm -- Dominator](https://muzec0318.github.io/posts/hackmyvm/dominator.html) *Rot13*
+- **NOV 15, 2021:** [Condor](https://muzec0318.github.io/posts/hackmyvm/condor.html) *CGI Tricks*
+- **NOV 03, 2021:** [Level](https://muzec0318.github.io/posts/hackmyvm/level.html) *Port Forwarding*
+- **Oct 22, 2021:** [Pwned](https://muzec0318.github.io/posts/hackmyvm/pwned.html)
+- **Oct 22, 2021:** [Hommie](https://muzec0318.github.io/posts/hackmyvm/hommie.html) *Hijacking Path Variable*
+- **Oct 22, 2021:** [Noob](https://muzec0318.github.io/posts/hackmyvm/noob.html)
+- **Oct 18, 2021:** [May](https://muzec0318.github.io/posts/hackmyvm/may.html) *Brute Forcing, Webmin Conf*
+- **Oct 03, 2021:** [Video-Club](https://muzec0318.github.io/posts/hackmyvm/videoclub.html) *CMD Fuzzing With FFUF*
+- **Oct 01, 2021:** [DriftingBlues 6](https://muzec0318.github.io/posts/hackmyvm/Driftingblues6.html)
+- **Jun 07, 2021:** [Ripper](https://muzec0318.github.io/posts/hackmyvm/ripper1.html) *Crontab*
+- **Jun 07, 2021:** [Gift](https://muzec0318.github.io/posts/hackmyvm/gift.html)
+- **Jun 08, 2021:** [Dominator](https://muzec0318.github.io/posts/hackmyvm/dominator.html) *Rot13*
 
 ## **CTF_Writeups:~#**
 
 
-- **Aug 29, 2021:** [CTF -- abcccyberhackathon CTF 2021](https://muzec0318.github.io/posts/abcctf.html)
-- **May 16, 2021:** [CTF -- dCTF 2021 CTF](https://muzec0318.github.io/posts/dctf21.html)
-- **Mar 12, 2021:** [CTF -- zSecurity Fuel CTF](https://muzec0318.github.io/posts/Zfuel.html)
-- **Feb 07, 2021:** [CTF -- zSecurity Cute CTF](https://muzec0318.github.io/posts/Zcute.html)
+- **Aug 29, 2021:** [abcccyberhackathon CTF 2021](https://muzec0318.github.io/posts/CTF/abcctf.html)
+- **May 16, 2021:** [dCTF 2021 CTF](https://muzec0318.github.io/posts/CTF/dctf21.html)
+- **Mar 12, 2021:** [zSecurity Fuel CTF](https://muzec0318.github.io/posts/CTF/Zfuel.html)
+- **Feb 07, 2021:** [zSecurity Cute CTF](https://muzec0318.github.io/posts/CTF/Zcute.html)
 
 ## **echoCTF.RED_Writeups:~#**
 
