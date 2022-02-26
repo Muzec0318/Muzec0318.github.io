@@ -34,6 +34,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **TryHackMe_Writeups:~#**
 
 
+- **Feb 19, 2022:** [TryHackMe -- Flatline](https://muzec0318.github.io/posts/flatline.html) `Freeswitch exploit,` `SeImpersonatePrivilege`
 - **Feb 19, 2022:** [TryHackMe -- Git and Crumpets v12](https://muzec0318.github.io/posts/gitandcrumpets.html) `Gitea RCE,` `DB Exploiting`
 - **Jan 18, 2022:** [TryHackMe -- Exploiting Log4j](https://muzec0318.github.io/posts/log4j.html) `log4j,` `Log4shell,` `Java 8,` `CVE-2021-44228`
 - **Sep 23, 2021:** [TryHackMe -- Empline](https://muzec0318.github.io/posts/empline.html) `Ruby Capabilities With Chown`
