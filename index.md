@@ -121,6 +121,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **HackTheBox_Writeups:~#**
 
 
+- **Mar 01, 2022:** [Acute](https://muzec0318.github.io/posts/hackthebox/acute.html) `AD,` `Windows`
 - **Feb 17, 2022:** [Search](https://muzec0318.github.io/posts/hackthebox/search.html) `AD,` `ldapsearch,` `Crackmapexec,` `Kerberoasting,` `Excel,` `BloodHound`
 - **Jan 02, 2022:** [Timing](https://muzec0318.github.io/posts/hackthebox/timing.html) `LFI,` `PHP code review,` `Bypasses to gain admin,` `Sudo,` `Cronjob`
 - **Jan 01, 2022:** [Horizontall](https://muzec0318.github.io/posts/hackthebox/horizontall.html) `Strapi RCE,` `Chisel Port Forward,` `Laravel 8 RCE`
