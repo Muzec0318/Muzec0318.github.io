@@ -62,7 +62,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **VulnHubs_Writeups:~#**
 
 
-- **Mar 03, 2022:** [VulnHub -- Symfonos](https://muzec0318.github.io/posts/symfonos1.html) `SMTP 2 RCE`, `Path Variable`
+- **Mar 03, 2022:** [VulnHub -- Symfonos](https://muzec0318.github.io/posts/symfonos1.html) `SMTP 2 RCE,` `Path Variable`
 - **Sep 30, 2021:** [VulnHub -- Blackwidow](https://muzec0318.github.io/posts/Blackwidow.html) `LFI Fuzzing With FFUF`
 - **Sep 30, 2021:** [VulnHub -- Os-ByteSec](https://muzec0318.github.io/posts/os-bytesec.html) `SMB,` `Path Variable`
 - **Sep 27, 2021:** [VulnHub -- Hackademic.RTB2](https://muzec0318.github.io/posts/hackademic2.html) `SQL Injection,` `Port Knocking`
