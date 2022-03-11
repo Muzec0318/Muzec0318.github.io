@@ -63,6 +63,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 - **Mar 10, 2022:** [VulnHub -- Symfonos 5](https://muzec0318.github.io/posts/symfonos5.html) `Ldap,` `LFI,` `ldapsearch`
+- **Mar 04, 2022:** [VulnHub -- Symfonos 2](https://muzec0318.github.io/posts/symfonos2.html) `ProFTPD 1.3.5,` `Port Forwarding,` `LibreNMS RCE`
 - **Mar 03, 2022:** [VulnHub -- Symfonos 1](https://muzec0318.github.io/posts/symfonos1.html) `SMTP 2 RCE,` `Path Variable`
 - **Sep 30, 2021:** [VulnHub -- Blackwidow](https://muzec0318.github.io/posts/Blackwidow.html) `LFI Fuzzing With FFUF`
 - **Sep 30, 2021:** [VulnHub -- Os-ByteSec](https://muzec0318.github.io/posts/os-bytesec.html) `SMB,` `Path Variable`
