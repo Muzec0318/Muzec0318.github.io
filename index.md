@@ -148,7 +148,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **NOV 28, 2021:** [Peppo](https://muzec0318.github.io/posts/PG/peppo.html) `Ident,` `Docker images`
 - **Jul 23, 2021:** [Shakabrah](https://muzec0318.github.io/posts/PG/shakabrah.html)
 - **Mar 30, 2022:** [Potato](https://muzec0318.github.io/posts/PG/potato.html) `PHP strcmp`
-- **Mar 31, 2021:** [Assertion101](https://muzec0318.github.io/posts/assertion101.html) `Assert LFI`
+- **Mar 31, 2021:** [Assertion101](https://muzec0318.github.io/posts/PG/assertion101.html) `Assert LFI`
 
 ## **HackMyVm_Writeups:~#**
 
