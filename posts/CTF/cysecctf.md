@@ -188,3 +188,9 @@ We have our private key and also added the `authorized_keys` now let try to acce
 Boom we have the flag and we are done.
 
 Flag:- `CYSEC{y0u_scaNNed_ME!}`
+
+
+### Doctor Strange -- 2000 Point
+
+![image](https://user-images.githubusercontent.com/69868171/168495231-33e8db95-0563-44e8-95cb-d2e21505254b.png)
+
