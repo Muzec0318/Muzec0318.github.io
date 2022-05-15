@@ -106,3 +106,62 @@ Flag:- `CYSEC{itz__easssssszzzzzzy0876#}`
 
 ![image](https://user-images.githubusercontent.com/69868171/168490455-f24da123-28db-4a43-99cc-42f4de8dd473.png)
 
+Seems `The Examiner` web challange is hosted on THM platform let connect to our VPN to access it.
+
+![image](https://user-images.githubusercontent.com/69868171/168491492-eaee8563-2395-4bf9-9860-52e8e5ffa7c8.png)
+
+Deploying and we got our IP not going to waste to much time on using `nmap` to scan for full ports and we got one only which is port `5000` .
+
+![image](https://user-images.githubusercontent.com/69868171/168491572-edf997cb-ea4d-4956-a482-574672a03bad.png)
+
+Boom and we landed on a port scanner page let see what we have on the source code.
+
+![image](https://user-images.githubusercontent.com/69868171/168491612-6873aadc-d9f1-46c5-bd26-d053788cd0fe.png)
+
+Now that is the interesting part of the form let try intercepting our request using burp to undertand it more on how it works.
+
+![image](https://user-images.githubusercontent.com/69868171/168491843-bf503b1e-4c7f-408b-8880-30fb7c0e5cd3.png)
+
+Intercepted and send to repeater now let play with it.
+
+![image](https://user-images.githubusercontent.com/69868171/168491868-c22963e4-26ff-4048-a24d-35882e66a408.png)
+
+But i got `Invalid IP format detected.` i have no reason i keep swaping IP and Port but the same error now seems we already have the source code and our craft code i decided to change the `Content-Type` to `application/json` back in crafting our command.
+
+![image](https://user-images.githubusercontent.com/69868171/168492285-c95c426a-b974-424a-a70d-49c85870342d.png)
+
+Boom and we got it time to get a reverse shell back to our terminal.
+
+![image](https://user-images.githubusercontent.com/69868171/168492426-37003502-e6d6-48a1-9228-1b4ac9ac1132.png)
+
+Listener ready.
+
+![image](https://user-images.githubusercontent.com/69868171/168492455-702f1566-b39c-45c8-ab32-a4f681b4036c.png)
+
+One liner reverse shell payload to execute ready also let hit and we should have a reverse shell back to our terminal.
+
+![image](https://user-images.githubusercontent.com/69868171/168492491-1ad3aa83-942b-4ce6-a957-52fa82d00dea.png)
+
+Now spawning a full TTY shell to make our shell more stable and strong.
+
+![image](https://user-images.githubusercontent.com/69868171/168492716-11fb1990-0955-4082-8c08-4ccf9b88f596.png)
+
+Now it ready time for more enumeration.
+
+![image](https://user-images.githubusercontent.com/69868171/168492807-0f7c6734-e5ad-48da-9227-035f30af8305.png)
+
+User `Rudefish` can run `sudo` let hit gtfobins.
+
+![image](https://user-images.githubusercontent.com/69868171/168492845-8f8b3ee0-be26-48ef-a038-2bb173cf4863.png)
+
+Running that and we are root time to hunt for the flag.
+
+![image](https://user-images.githubusercontent.com/69868171/168493029-344353e6-0561-4c10-907a-5525186f7a5c.png)
+
+Getting into root directory seems we have no flag in it but seems we have the `.bash_history` which store the history of a user command let see what we have in it.
+
+![image](https://user-images.githubusercontent.com/69868171/168493412-77eb7932-93d0-4e17-9c44-417d4c090f3e.png)
+
+
+![image](https://user-images.githubusercontent.com/69868171/168493375-20b2b21e-62cc-4e40-b6e6-c3a35eca056c.png)
+
