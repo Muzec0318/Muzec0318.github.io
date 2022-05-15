@@ -165,3 +165,26 @@ Getting into root directory seems we have no flag in it but seems we have the `.
 
 ![image](https://user-images.githubusercontent.com/69868171/168493375-20b2b21e-62cc-4e40-b6e6-c3a35eca056c.png)
 
+We can see the flag being remove in the `.bash_history` i try using the `find` command to see if the flag is hidden elsewhere but no luck so let check what port is running locally.
+
+![image](https://user-images.githubusercontent.com/69868171/168494114-3c9ac44f-c003-457c-8df7-6ce6a42079a6.png)
+
+Seems we have `SSH` port on which is cool seems we re root we can easily change any user password and have access to it also we can easily change to any  user without a password which can be done with `su sshuser` .
+
+![image](https://user-images.githubusercontent.com/69868171/168494385-ffc351e8-614c-4e21-b40d-46e1d63ba69a.png)
+
+Now we can easily generate a SSH private key for the user `sshuser` so we can easily access SSH with it.
+
+![image](https://user-images.githubusercontent.com/69868171/168494991-38a0d2ec-87b2-42c0-800e-90328cb987b5.png)
+
+```
+ssh-keygen -t rsa
+```
+
+We have our private key and also added the `authorized_keys` now let try to access SSH.
+
+![image](https://user-images.githubusercontent.com/69868171/168495070-f26c5fb1-e4c7-4fa1-8b94-2d9b2dfb1cf9.png)
+
+Boom we have the flag and we are done.
+
+Flag:- `CYSEC{y0u_scaNNed_ME!}`
