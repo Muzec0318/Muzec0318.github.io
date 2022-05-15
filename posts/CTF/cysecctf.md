@@ -194,3 +194,92 @@ Flag:- `CYSEC{y0u_scaNNed_ME!}`
 
 ![image](https://user-images.githubusercontent.com/69868171/168495231-33e8db95-0563-44e8-95cb-d2e21505254b.png)
 
+Man am tired jumping back in.
+
+![image](https://user-images.githubusercontent.com/69868171/168495808-39aef10a-1e87-431c-a449-2814b8b3612d.png)
+
+We have nothing on the source let check for `robots.txt` .
+
+![image](https://user-images.githubusercontent.com/69868171/168495866-45be0e1a-0955-481b-95a4-99c336c8b675.png)
+
+Ahhhh we have something on the `robots.txt` let check `inpect.js` .
+
+![image](https://user-images.githubusercontent.com/69868171/168495999-3dbcb33a-6247-4f3c-9ee2-1fabd842fd9c.png)
+
+```
+const { exec } = require('child_process');
+
+var setData = {
+    isMalicious: true
+};
+
+const run = {
+    runCommand: (req, res) => {
+        if (!req.body.inspect) {
+            return res.status(400).send("Bad request");
+        } else {
+            try {
+                const data = JSON.parse(req.body.inspect);
+                if (data.cmdToRun) {
+                    const constructUserData = merge(setData, data);
+                    if (setData.isMalicious === false) {
+                        exec(`ping ${data.cmdToRun}`, (error, stdout, stderr) => {
+                            if(error) {
+                                return res.status(500).send(error.message)
+                            } else if(stderr) {
+                                return res.status(500).send(stderr.message);
+                            } else {
+                                return res.status(200).json(stdout)
+                            }
+                        });
+                    } else {
+                        exec(`ping 127.0.0.1`, (error, stdout, stderr) => {
+                            if(error) {
+                                return res.status(500).send(error.message)
+                            } else if(stderr) {
+                                return res.status(500).send(stderr.message);
+                            } else {
+                                return res.status(200).json({message: "Malicious code detected. This is all you get, you hacker", result: stdout})
+                            }
+                        });
+                    }
+                } else {
+                    return res.status(400).send("What would you like to inspect today?");
+                }
+            } catch (e) {
+                return res.status(400).send(e.message);
+            }
+        }
+    }
+};
+
+module.exports = run;
+
+const merge = (target, source) => {
+    for(var attr in source) {
+        if (typeof(target[attr]) === "object" && typeof(source[attr]) === "object") {
+            merge(target[attr], source[attr]);
+        } else {
+            target[attr] = source[attr];
+        }
+    }
+    return target;
+};
+```
+
+Now that seems more like a javascript prototype pollution it kind of interesting seems we have to pollute `setData` object at the top here (line 3) to set it to `false` and `POST` request with the payload we got.
+
+```
+{"__proto__": {"isMalicious": false}, "cmdToRun":"<command_injection_payload>">}
+```
+
+Payload ready but seems we are missing the right endpoint let hit dirs brute forcing.
+
+![image](https://user-images.githubusercontent.com/69868171/168496646-b81d40a5-6950-45e1-8dcc-a6baebc383ce.png)
+
+We found a login page but no creds to access it trying some default and sql injection payloads got no luck let check the source page.
+
+![image](https://user-images.githubusercontent.com/69868171/168496707-f67e60c1-ac7c-4d37-b3ce-18e0cb739071.png)
+
+Now that is a progress we know it a send a `POST` request to `/api/v1/login` anytime we try to login seems like more `API` let try bruting the endpoint.
+
