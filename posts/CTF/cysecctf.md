@@ -98,6 +98,11 @@ Now we have our flag but am still curious to know what was encoded in the cookie
 
 Ahhhh you can't guess that right.
 
+A quick one seems `nc` can also get us the cookie.
+
+![image](https://user-images.githubusercontent.com/69868171/168553908-425539b2-47bb-472d-84a4-73232d76acc1.png)
+
+
 Flag:- `CYSEC{itz__easssssszzzzzzy0876#}`
 
 
@@ -270,7 +275,7 @@ const merge = (target, source) => {
 Now that seems more like a javascript prototype pollution it kind of interesting seems we have to pollute `setData` object at the top here (line 3) to set it to `false` and `POST` request with the payload we got.
 
 ```
-{"__proto__": {"isMalicious": false}, "cmdToRun":"<command_injection_payload>">}
+{"proto": {"isMalicious": false}, "cmdToRun":"<command_injection_payload>">}
 ```
 
 Payload ready but seems we are missing the right endpoint let hit dirs brute forcing.
@@ -283,3 +288,48 @@ We found a login page but no creds to access it trying some default and sql inje
 
 Now that is a progress we know it send a `POST` request to `/api/v1/login` anytime we try to login seems like more `API` let try brute forcing the endpoint to avoid missing important part that can help us solve it.
 
+Fire up burp suite and intercept the request changing the rquest method to `POST` since the `API` request on `POST` method now that is funny WTF am typing self XD send to `intruder` .
+
+![image](https://user-images.githubusercontent.com/69868171/168563238-3c3c32dc-6d16-4f5b-acff-2530838f76e7.png)
+
+Now to payloads to select the wordlist seems `medium.txt` would work fine i guess.
+
+![image](https://user-images.githubusercontent.com/69868171/168563618-503413a8-491c-4681-98bc-2c2e6e27bfe5.png)
+
+Now hit on start attack we should get lot of `404 not found` error but from my observation the valid dirs have `400 bad request` .
+
+![image](https://user-images.githubusercontent.com/69868171/168564456-b8e4e01f-99ca-4d87-90b3-d39470fee25a.png)
+
+![image](https://user-images.githubusercontent.com/69868171/168565126-66c0c1ce-0d84-444f-a285-23a79d325b83.png)
+
+Now that is some useful endpoint let see if i can register an account. Luckily yes i was able to register an account but it was useless unable to get access to the login page with it some back to the `inspect.js` it should be possible we have `inspect` endpoint let confirm it.
+
+![image](https://user-images.githubusercontent.com/69868171/168567341-c8b6ceb4-0be9-48b5-ad76-56f8d1afdd16.png)
+
+Back to burp suite with the endpoint and our sweet payload we created.
+
+```
+{"proto": {"isMalicious": false}, "cmdToRun":"<command_injection_payload>"}
+```
+
+![image](https://user-images.githubusercontent.com/69868171/168569291-59f8464a-a2ca-4584-9c0d-2f7c61460669.png)
+
+```
+{"proto": {"isMalicious": false}, "cmdToRun":"127.0.0.1;id"}
+```
+
+Boom we have command injection.
+
+![image](https://user-images.githubusercontent.com/69868171/168569568-d3277215-93fa-44ac-b9fd-b1bca11921b4.png)
+
+We can also using curl.
+
+![image](https://user-images.githubusercontent.com/69868171/168569678-9bd553d9-e0d1-4bf5-bfe6-5639b0eef4a1.png)
+
+Now let get our flag.
+
+![image](https://user-images.githubusercontent.com/69868171/168569918-4ce9fb12-a1e4-48c7-9f9a-d9fe76bc6fad.png)
+
+Done and dusted fun right.
+
+Flag:- `CYSEC{l3t_the_!njection5_r41n.}`
