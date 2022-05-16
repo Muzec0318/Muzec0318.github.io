@@ -638,3 +638,76 @@ Thank you and enjoy the rest of your day.
 ```
 
 Seems it pointing us to `jsmith` home `dirs` or should i just call it `desktop` seems we are working on windows machine XD. Now back to the shares.
+
+![image](https://user-images.githubusercontent.com/69868171/168597361-057ac5b7-f4a8-4aea-a051-5025ccdb0a44.png)
+
+Now moving to `jsmith` home desktop hehehehe it sound lame.
+
+![image](https://user-images.githubusercontent.com/69868171/168597652-cb172b2f-e17b-4280-b477-54c0d79622a4.png)
+
+Guess that is what we need let download it.
+
+![image](https://user-images.githubusercontent.com/69868171/168597851-0431effb-d069-414d-9161-015887fa30ad.png)
+
+Now that is a strong password for user `hlevi` now time to take it to the next level. Let try to scan if we have `winrm port` open.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Desktop/CTFPlayground/CysecCTF/cysec]
+└─$ nmap -sC -sV -p 5985 cysec.local           
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-05-16 11:01 WAT
+Nmap scan report for cysec.local (54.234.92.201)
+Host is up (0.25s latency).
+
+PORT     STATE SERVICE VERSION
+5985/tcp open  http    Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 18.32 seconds
+```
+
+Now that is confirm we can use the `evil-winrm` to access the machine with the creds we just got.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Desktop/CTFPlayground/CysecCTF/cysec]
+└─$ evil-winrm -i cysec.local  -u hlevi -p SuperDuperSecurePassword1!
+```
+
+Boom we should be in 3 2 1 .
+
+![image](https://user-images.githubusercontent.com/69868171/168599003-b8812cd7-b7ff-4847-a4e4-6399edbef900.png)
+
+Now that we are in let to enumerate about our present user `hlevi` what group is he on maybe any hidden comments.
+
+```
+net users hlevi
+```
+
+![image](https://user-images.githubusercontent.com/69868171/168599447-1d6820ff-fef2-402b-b30c-796ec4566c65.png)
+
+Now that look like a password and we still have a user which we are still missing a creds for i guess let try confirming it with `cme` possible it a jackpot .
+
+![image](https://user-images.githubusercontent.com/69868171/168599990-7e25bf27-a421-4d39-a860-09690203c4c4.png)
+
+Boom that is a big catch let try accessing it with `evil-winrm` .
+
+![image](https://user-images.githubusercontent.com/69868171/168600393-e2cb1150-3282-4f34-8879-384e2bda1781.png)
+
+We are in and seems our user is in the `domain admin` group which is a big catch really.
+
+![image](https://user-images.githubusercontent.com/69868171/168600657-ee62c3cd-f91d-451c-bc53-32e8b842b47f.png)
+
+We should be able to access the `adminisrator` desktop now to get the flag.
+
+![image](https://user-images.githubusercontent.com/69868171/168600993-8f807e50-113b-4eb0-aa0d-f5402cde943e.png)
+
+Now that is done we have the flag but man am still not happy with that let get access to the `administrator` account. Let use `secretsdump.py`  to get the the `administrator` hashes now use `PTH` to get access to it using `evil-winrm` .
+
+![image](https://user-images.githubusercontent.com/69868171/168602678-ab29cdd2-4aa9-42a1-b462-fbb5ebdaea10.png)
+
+But when i try it no luck guess only `eyeager` with the password is the way.
+
+
+Flag:- `CYSEC{itz_all_n1ce&34sy}`
