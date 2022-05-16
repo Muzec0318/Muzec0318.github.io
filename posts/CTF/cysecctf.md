@@ -333,3 +333,29 @@ Now let get our flag.
 Done and dusted fun right.
 
 Flag:- `CYSEC{l3t_the_!njection5_r41n.}`
+
+
+### REV -- Password Verifier -- 500 Point
+
+![image](https://user-images.githubusercontent.com/69868171/168572239-f252b7d8-7ff9-4aee-a5e2-4a522082dae5.png)
+
+Now for the reversing part we have no time to waste on it.
+
+![image](https://user-images.githubusercontent.com/69868171/168572593-ddbec505-b18d-4a45-98c6-59a57408753a.png)
+
+Now a quick `strings` on it.
+
+![image](https://user-images.githubusercontent.com/69868171/168572737-751f974e-8242-4121-a5b7-87340d6cc5fd.png)
+
+Now that is quick packed with `upx` we can easily get the real binary by unpacking it XD.
+
+![image](https://user-images.githubusercontent.com/69868171/168573178-f3aa70b3-e3cd-436e-9bb8-519e9a82c20b.png)
+
+Now let grep the flag.
+
+![image](https://user-images.githubusercontent.com/69868171/168573303-59fb3629-4ba0-42ae-b66d-05ba3eeaa92a.png)
+
+That was awesome bro and fast hey you reading you are doing well.
+
+Flag:- `CYSEC{easy_easy_easy_rev_rev_rev}`
+
