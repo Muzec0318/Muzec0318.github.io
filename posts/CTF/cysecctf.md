@@ -451,3 +451,5 @@ Boom Boom and we got it.
 ![image](https://user-images.githubusercontent.com/69868171/168585569-41f5cc20-0f4d-446e-af6d-c0c9dbd4f3d3.png)
 
 Flag:- `CYSEC{just_b3_HAPPY}`
+
+### Keep It Simple, Stupid -- 5000 Point
