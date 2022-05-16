@@ -359,3 +359,44 @@ That was awesome bro and fast hey you reading you are doing well.
 
 Flag:- `CYSEC{easy_easy_easy_rev_rev_rev}`
 
+
+### Digital Forensics -- Encore -- 500 Point
+
+![image](https://user-images.githubusercontent.com/69868171/168575010-750bae0d-ac90-4969-8b16-b22fd13eda20.png)
+
+Forensics not my best part of the challanges i sucks on that part really but giving it my all so i download the `jpeg` file.
+
+![image](https://user-images.githubusercontent.com/69868171/168575507-a4070547-da6e-475d-9a30-16615621473c.png)
+
+
+Nothing nothing bruhhhhhhhhh let `strings` it.
+
+![image](https://user-images.githubusercontent.com/69868171/168575669-df9c4a79-90cd-4bf7-8190-1a348c60ac34.png)
+
+We have something `binwalk` should do the tricks.
+
+![image](https://user-images.githubusercontent.com/69868171/168575770-c95254b8-e559-4802-9350-40b88d01f45c.png)
+
+Now that we have a zip file we can easily extract it but seems the same with the present dir we have already.
+
+![image](https://user-images.githubusercontent.com/69868171/168575969-1394e780-34ae-4fb8-95cd-ea670fd5a9ad.png)
+
+Interesting more like a `stegsnow` to me the space and the password is a hint i guess.
+
+![image](https://user-images.githubusercontent.com/69868171/168576469-525a1752-2787-438f-b805-95640e7c8057.png)
+
+Let give it a try bruhhh.
+
+![image](https://user-images.githubusercontent.com/69868171/168577764-8c31e9bb-54ac-4d0b-8b4e-523484272cad.png)
+
+Now that is strange but according to the `Cysec Mod` @Rudefish.
+
+![image](https://user-images.githubusercontent.com/69868171/168577919-b10b6117-7369-4156-a6b0-8a80eb031b87.png)
+
+Ahhh which mean we are done since we have the `Password` already.
+
+
+### Steganography -- Ancient Languages -- 300 Point
+
+![image](https://user-images.githubusercontent.com/69868171/168578178-48f32e9c-0e99-4dac-ac69-2255ed230241.png)
+
