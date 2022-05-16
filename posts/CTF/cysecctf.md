@@ -454,3 +454,187 @@ Boom Boom and we got it.
 Flag:- `CYSEC{just_b3_HAPPY}`
 
 ### Keep It Simple, Stupid -- 5000 Point
+
+
+![image](https://user-images.githubusercontent.com/69868171/168587763-37ced237-9289-42ad-b0b6-235c20c60cc3.png)
+
+Bruhhh i so much love Pwn2Own eh B2R i always state it in all my write up we always start with what `nmap` enumeration is everything.
+
+```
+Note: You may need to add cysec.local to your hosts file
+
+┌──(root💀Muzec-Security)-[/home/…/CTFPlayground/CysecCTF/cysec/nmap]
+└─# echo "54.234.92.201 cysec.local" >> /etc/hosts      
+```
+
+Now for the nmap result.
+
+```
+# Nmap 7.91 scan initiated Fri May 13 08:18:52 2022 as: nmap -sC -sV -oN nmap/normal.tcp -p25,445,587,80,3389,389 54.234.92.201
+Nmap scan report for cysec.local (54.234.92.201)
+Host is up (0.63s latency).
+
+PORT     STATE SERVICE       VERSION
+25/tcp   open  smtp?
+| fingerprint-strings: 
+|   NULL: 
+|_    421 Server busy, too many connections
+|_smtp-commands: Couldn't establish connection on port 25
+80/tcp   open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| http-methods: 
+|_  Potentially risky methods: TRACE
+| http-server-header: 
+|   Microsoft-HTTPAPI/2.0
+|_  Microsoft-IIS/10.0
+|_http-title: IIS Windows Server
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: cysec.local0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?
+587/tcp  open  submission?
+| fingerprint-strings: 
+|   NULL: 
+|_    421 Server busy, too many connections
+|_smtp-commands: Couldn't establish connection on port 587
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: CYSEC
+|   NetBIOS_Domain_Name: CYSEC
+|   NetBIOS_Computer_Name: EC2AMAZ-E36BFJ9
+|   DNS_Domain_Name: cysec.local
+|   DNS_Computer_Name: EC2AMAZ-E36BFJ9.cysec.local
+|   DNS_Tree_Name: cysec.local
+|   Product_Version: 10.0.17763
+|_  System_Time: 2022-05-13T10:19:42+00:00
+| ssl-cert: Subject: commonName=EC2AMAZ-E36BFJ9.cysec.local
+| Not valid before: 2022-02-22T22:23:41
+|_Not valid after:  2022-08-24T22:23:41
+|_ssl-date: 2022-05-13T10:20:19+00:00; +2h59m55s from scanner time.
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port25-TCP:V=7.91%I=7%D=5/13%Time=627E0661%P=x86_64-pc-linux-gnu%r(NULL
+SF:,27,"421\x20Server\x20busy,\x20too\x20many\x20connections\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port587-TCP:V=7.91%I=7%D=5/13%Time=627E0661%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,27,"421\x20Server\x20busy,\x20too\x20many\x20connections\r\n");
+Service Info: Host: EC2AMAZ-E36BFJ9; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 2h59m54s, deviation: 0s, median: 2h59m54s
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2022-05-13T10:19:41
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May 13 08:22:35 2022 -- 1 IP address (1 host up) scanned in 222.69 seconds
+```
+
+Cutting down to the chase already you can check my past write up if you are still lost on how i got the Ports. Now seems we have `SMB` always go for the low hanging fruit first.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/…/CTFPlayground/CysecCTF/cysec/nmap]
+└─$ smbclient -L //54.234.92.201/ -N
+Anonymous login successful
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+SMB1 disabled -- no workgroup available
+                                                                                                                                                                       
+┌──(muzec㉿Muzec-Security)-[~/…/CTFPlayground/CysecCTF/cysec/nmap]
+```
+
+Seems we have no shares yet possible we need a creds but seems we have HTTP port open let see what we have on the page.
+
+![image](https://user-images.githubusercontent.com/69868171/168589843-458d0011-0d95-4317-af81-22d030da15b4.png)
+
+Windows yes bruhh i think you notice already from the `nmap` scan gosh don't look down on yourself man you are cool and l33t XD now back to what we are doing seems we have nothing yet on the page brute forcing for hidden dirs and subdomain would be the next step right now let hit it.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/…/CTFPlayground/CysecCTF/cysec/nmap]
+└─$ ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H "Host: FUZZ.cysec.local" -u http://cysec.local
+```
+
+Now that is to Fuzz for sub-domain way fast and we found something.
+
+![image](https://user-images.githubusercontent.com/69868171/168591533-9a50b760-8650-4091-b9bb-0ef02e417ccd.png)
+
+Now you already know what to do right add `secret.cysec.local` to your `/etc/hosts` file again.
+
+![image](https://user-images.githubusercontent.com/69868171/168591822-236832a6-4902-48be-ae50-abd98b2fd26f.png)
+
+Just like that let see what we have when we access it.
+
+![image](https://user-images.githubusercontent.com/69868171/168592223-a7832f39-528f-4a5e-a74a-2bc86a9b4fda.png)
+
+Now seems we have nothing even after checking the source page let FUZZ the endpoint.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/…/CTFPlayground/CysecCTF/cysec/nmap]
+└─$ ffuf -c -ic -r -u  http://secret.cysec.local/FUZZ -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt
+```
+A quick note we can always add to check for extension with the switch `-e txt,php,phtml,bak,old` incase to avoid missing some goodies at time. 
+
+![image](https://user-images.githubusercontent.com/69868171/168592475-6801436d-ce3b-4e94-a761-6db168768228.png)
+
+Now that look promising the `Backups`.
+
+![image](https://user-images.githubusercontent.com/69868171/168593011-2acafb39-c1e2-4974-99d5-50ba1222ae40.png)
+
+Now that is a lead forward  we have wordlists for both `users` and `passwords` .
+
+```
+jhammond
+ippsec
+pcyber
+jmorgan
+jsmith
+sliberty
+eyeager
+jbiden
+```
+
+Man i can't paste the passwords list here it to long i decided to brute force `SMB` with the wordlists i got using `cme` you have no idea what is that right it `crackmapexec` .
+
+```
+crackmapexec smb cysec.local -u users.txt -p passwords.txt
+```
+
+Let it fly and wait wait wait XD.
+
+![image](https://user-images.githubusercontent.com/69868171/168594258-debff400-1b6f-461c-873b-8ca9aa0a3db0.png)
+
+Now we have creds for `SMB` let confirm it.
+
+```
+[+] cysec.local\jsmith:Password@123
+```
+
+![image](https://user-images.githubusercontent.com/69868171/168594729-a4b5e03e-d722-48b7-85b4-c90bdc27ec15.png)
+
+Shares shares loot loot hehehehehehehe we all love that right now let loot some stuffs first share on my mind is `confidential` let see what we can loot.
+
+![image](https://user-images.githubusercontent.com/69868171/168595686-4ed4323d-e321-4a26-aa8e-81c1421a51ad.png)
+
+Now that is strange the first time i work on the machine i only found one file which is `Email.txt` guess it for one of the player so i downloaded `Email.txt` .
+
+![image](https://user-images.githubusercontent.com/69868171/168595987-3f8f83b1-0086-41a1-9f26-81af7c2eb718.png)
+
+Now let `cat` it.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Desktop/CTFPlayground/CysecCTF/cysec]
+└─$ cat Email.txt                                          
+From HR Manager <hlevi@cysec.local>,
+
+Good day everyone, I hope this email meets you well.
+
+Due to the amount of delay we encountered during the last self-appraisal week, one of the the IT team members, John Smith, has decide to automate the process. Things should do smoother now.
+
+Thank you and enjoy the rest of your day.
+
+- To all employess.                                                                                                                                                                       
+┌──(muzec㉿Muzec-Security)-[~/Desktop/CTFPlayground/CysecCTF/cysec]
+```
+
+Seems it pointing us to `jsmith` home `dirs` or should i just call it `desktop` seems we are working on windows machine XD. Now back to the shares.
