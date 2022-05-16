@@ -309,6 +309,7 @@ A quick note we can also use `ffuf` i just love burp suite.
 └─$ ffuf -c -ic -r -u  http://34.205.69.93:8000/api/v1/FUZZ -X POST  -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -mc 400
 ```
 
+![image](https://user-images.githubusercontent.com/69868171/168586678-ca99ddf2-afd0-4ee0-bfd7-3c6b230edf5e.png)
 
 
 Now that is some useful endpoint let see if i can register an account. Luckily yes i was able to register an account but it was useless unable to get access to the login page with it some back to the `inspect.js` it should be possible we have `inspect` endpoint let confirm it.
