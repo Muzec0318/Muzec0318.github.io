@@ -281,5 +281,5 @@ We found a login page but no creds to access it trying some default and sql inje
 
 ![image](https://user-images.githubusercontent.com/69868171/168496707-f67e60c1-ac7c-4d37-b3ce-18e0cb739071.png)
 
-Now that is a progress we know it a send a `POST` request to `/api/v1/login` anytime we try to login seems like more `API` let try bruting the endpoint.
+Now that is a progress we know it send a `POST` request to `/api/v1/login` anytime we try to login seems like more `API` let try brute forcing the endpoint to avoid missing important part that can help us solve it.
 
