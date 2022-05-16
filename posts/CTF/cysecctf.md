@@ -302,6 +302,15 @@ Now hit on start attack we should get lot of `404 not found` error but from my o
 
 ![image](https://user-images.githubusercontent.com/69868171/168565126-66c0c1ce-0d84-444f-a285-23a79d325b83.png)
 
+A quick note we can also use `ffuf` i just love burp suite.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Desktop/CTFPlayground/CysecCTF]
+└─$ ffuf -c -ic -r -u  http://34.205.69.93:8000/api/v1/FUZZ -X POST  -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -mc 400
+```
+
+
+
 Now that is some useful endpoint let see if i can register an account. Luckily yes i was able to register an account but it was useless unable to get access to the login page with it some back to the `inspect.js` it should be possible we have `inspect` endpoint let confirm it.
 
 ![image](https://user-images.githubusercontent.com/69868171/168567341-c8b6ceb4-0be9-48b5-ad76-56f8d1afdd16.png)
@@ -414,3 +423,31 @@ Flag: `CYSEC{m0rse_is_0ld_really_0ld}`
 
 
 ### Happy Song -- 1000 Point
+
+![image](https://user-images.githubusercontent.com/69868171/168580944-f31b9edb-d90f-48c9-adfe-6f2aad2f125f.png)
+
+Pretty sure not a `morse` lol why because i try it already no luck.
+
+![image](https://user-images.githubusercontent.com/69868171/168581930-3428ecb1-e06f-472c-86e2-7ee3d9cf9093.png)
+
+We always check with `strings` .
+
+![image](https://user-images.githubusercontent.com/69868171/168582810-0a951cc8-5b7b-40aa-acc9-d229101f95cf.png)
+
+A hint maybe or not but am trying it.
+
+![image](https://user-images.githubusercontent.com/69868171/168583071-e4f24a6f-7098-493d-8c26-13496eb791f5.png)
+
+I seriously have no idea of what am doing :sweat_smile: :sweat_smile: .
+
+![image](https://user-images.githubusercontent.com/69868171/168583440-f5f05902-e0b3-4bd6-9256-f92842f23efa.png)
+
+Here we go again with another hint. seems i will be using `https://www.freephototool.com/` so i uploaded the raw file on it set up the `width` to 1588 and the `height` to 1570 and boom i got something reflected back.
+
+![image](https://user-images.githubusercontent.com/69868171/168585218-40dd9051-5459-4929-9028-e3c9d747fe16.png)
+
+Boom Boom and we got it.
+
+![image](https://user-images.githubusercontent.com/69868171/168585569-41f5cc20-0f4d-446e-af6d-c0c9dbd4f3d3.png)
+
+Flag:- `
