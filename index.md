@@ -169,6 +169,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **CTF_Writeups:~#**
 
 
+- **May 14, 2022:** [CysecNG CTF 2022](https://muzec0318.github.io/posts/CTF/cysecctf.html)
 - **Apr 17, 2022:** [Th3 Hacker News B'darija CTF 2022](https://muzec0318.github.io/posts/CTF/thnbdarij.html)
 - **Aug 29, 2021:** [abcccyberhackathon CTF 2021](https://muzec0318.github.io/posts/CTF/abcctf.html)
 - **May 16, 2021:** [dCTF 2021 CTF](https://muzec0318.github.io/posts/CTF/dctf21.html)
