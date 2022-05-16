@@ -335,7 +335,7 @@ Done and dusted fun right.
 Flag:- `CYSEC{l3t_the_!njection5_r41n.}`
 
 
-### REV -- Password Verifier -- 500 Point
+### Password Verifier -- 500 Point
 
 ![image](https://user-images.githubusercontent.com/69868171/168572239-f252b7d8-7ff9-4aee-a5e2-4a522082dae5.png)
 
@@ -360,7 +360,7 @@ That was awesome bro and fast hey you reading you are doing well.
 Flag:- `CYSEC{easy_easy_easy_rev_rev_rev}`
 
 
-### Digital Forensics -- Encore -- 500 Point
+### Encore -- 500 Point
 
 ![image](https://user-images.githubusercontent.com/69868171/168575010-750bae0d-ac90-4969-8b16-b22fd13eda20.png)
 
@@ -396,7 +396,7 @@ Now that is strange but according to the `Cysec Mod` @Rudefish.
 Ahhh which mean we are done since we have the `Password` already.
 
 
-### Steganography -- Ancient Languages -- 300 Point
+### Ancient Languages -- 300 Point
 
 ![image](https://user-images.githubusercontent.com/69868171/168578178-48f32e9c-0e99-4dac-ac69-2255ed230241.png)
 
@@ -412,3 +412,5 @@ Wow that was fast right.
 
 Flag: `CYSEC{m0rse_is_0ld_really_0ld}`
 
+
+### Happy Song -- 1000 Point
