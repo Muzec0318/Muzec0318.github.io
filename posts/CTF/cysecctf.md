@@ -400,3 +400,15 @@ Ahhh which mean we are done since we have the `Password` already.
 
 ![image](https://user-images.githubusercontent.com/69868171/168578178-48f32e9c-0e99-4dac-ac69-2255ed230241.png)
 
+We have a wav file let download it to confirm.
+
+![image](https://user-images.githubusercontent.com/69868171/168578884-1bfad4ae-ab41-43e3-a79d-e7ba656f2f05.png)
+
+Let try `Morse Decoder` on it first.
+
+![image](https://user-images.githubusercontent.com/69868171/168579382-59ca95a7-774b-478e-b83c-b005110f7cca.png)
+
+Wow that was fast right.
+
+Flag: `CYSEC{m0rse_is_0ld_really_0ld}`
+
