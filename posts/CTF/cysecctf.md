@@ -1012,3 +1012,9 @@ We are done.
 
 Flag:- `CYSEC-67890-JEDHB29UEYO02UEDDJPH`
 
+
+### Squished Silence -- 1500 Point
+
+![image](https://user-images.githubusercontent.com/69868171/169117232-9560e34f-a416-480b-8d4c-bcab25f29cb5.png)
+
+
