@@ -990,5 +990,25 @@ It should take time like time time and boom we should have the cracked hash.
 
 ![image](https://user-images.githubusercontent.com/69868171/169110762-f6781b0c-8dfc-44e7-89aa-3f900da233c0.png)
 
+But luckily have done it.
 
-Flag:- `CYSEC{bleh}
+Flag:- `CYSEC{bleh}`
+
+
+### John Morrison -- 500 Point
+
+![image](https://user-images.githubusercontent.com/69868171/169113272-601775be-3147-432c-8abb-94a904c72157.png)
+
+Let download it.
+
+![image](https://user-images.githubusercontent.com/69868171/169114124-1be58e65-338a-4888-b98a-1cedf28531b4.png)
+
+
+Seems like a strange one.
+
+![image](https://user-images.githubusercontent.com/69868171/169115448-8bcb7993-b494-403a-a01c-d2dfc7d7a1d6.png)
+
+We are done.
+
+Flag:- `CYSEC-67890-JEDHB29UEYO02UEDDJPH`
+
