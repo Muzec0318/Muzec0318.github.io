@@ -926,3 +926,38 @@ Boom we got it not going to lie am just guessing here that all.
 
 
 Flag:- `CYSEC{what_a_game_of_wordle!}`
+
+
+### Back to Base -- 100 Point
+
+![image](https://user-images.githubusercontent.com/69868171/169101477-4c07e9d4-c2cc-468b-99ea-49ad778550e6.png)
+
+Most of the crypto was solve by my litle bro @Abzee you can easily reach him on twitter [Abzee](https://twitter.com/AbzeeSaminu) now `Abzee` would be walking you guys through the crypto challenges.
+
+We are using `cybechef` .
+
+![image](https://user-images.githubusercontent.com/69868171/169104406-bba2b0da-3db3-4a84-9ec0-cb606ec20b0e.png)
+
+```
+From base64 ---> Reverse 
+```
+
+We have the flag.
+
+Flag:- `CYSEC{B4se-LXIV}`
+
+
+### Still on Bases -- 100 Point
+
+![image](https://user-images.githubusercontent.com/69868171/169104801-2bdb50a5-d65e-4f76-8939-c9578a5f1c1f.png)
+
+
+Now that look like base32 let give it a try using `cyberchef` also.
+
+![image](https://user-images.githubusercontent.com/69868171/169105007-2a490f04-631e-441f-a74e-8793040680f8.png)
+
+```
+From base32 ---> Reverse
+```
+
+Flag:- `CYSEC{B4se-XXXII}`
