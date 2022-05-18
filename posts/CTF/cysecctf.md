@@ -1031,3 +1031,6 @@ Let try decoding it online.
 
 By changing it we are getting some interesting stuff hehehehe don't mind @Abzee using phone to solve challenges l33t right.
 
+![image](https://user-images.githubusercontent.com/69868171/169119359-17ab5097-bde6-42d7-a6c7-fc896bec8fa3.png)
+
+As you can see we have gotten `cysec{cryptography` We need to continue changing it to upper and lower case till we got the right flag.
