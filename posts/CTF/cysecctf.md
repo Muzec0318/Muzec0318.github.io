@@ -816,3 +816,10 @@ Now that settle it we are done.
 
 Flag: `CYSEC{sQLi_1s_everyWHERe!}` 
 
+
+### Hacker Wordle -- 2000 Point
+
+![image](https://user-images.githubusercontent.com/69868171/169079441-c1d29aa3-c4a3-4f99-a55c-f0635373f63c.png)
+
+Now that would be cool challenge so i download the files but without going to far i got into a issue some missing python modules was missing on my target which required us to download and install `python 3.8` now without wasting to much of time we can do all that with the commands below.
+
