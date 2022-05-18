@@ -1017,4 +1017,17 @@ Flag:- `CYSEC-67890-JEDHB29UEYO02UEDDJPH`
 
 ![image](https://user-images.githubusercontent.com/69868171/169117232-9560e34f-a416-480b-8d4c-bcab25f29cb5.png)
 
+I guess minuscule letters are cute, but now i can't make sense of this beautiful mess. help me decode it. Looking up `minuscule` means uppercase and lowercase which is interesting i guess.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Desktop/CTFPlayground/CysecCTF]
+└─$ cat rubik.txt       
+y3llc2vje2nyexrvz3jhcgh5x2nhbl9izv90aglzx2nyyxp5fq==
+```
+
+Let try decoding it online.
+
+![image](https://user-images.githubusercontent.com/69868171/169118848-856aa4e6-42ff-483c-b234-0b0e34206799.png)
+
+By changing it we are getting some interesting stuff hehehehe don't mind @Abzee using phone to solve challenges l33t right.
 
