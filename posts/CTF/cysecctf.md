@@ -961,3 +961,34 @@ From base32 ---> Reverse
 ```
 
 Flag:- `CYSEC{B4se-XXXII}`
+
+
+### Bella Crypter -- 300 Point
+
+![image](https://user-images.githubusercontent.com/69868171/169105301-a37128c9-e411-4d59-ba7f-fdcc2fd17cb9.png)
+
+
+Trying it with `john the ripper` was so slow.
+
+![image](https://user-images.githubusercontent.com/69868171/169105852-5d2f13e9-5eee-4230-a97e-5739527479d0.png)
+
+But seems we can see the hash type let try using `hashcat` which will be more faster.
+
+
+![image](https://user-images.githubusercontent.com/69868171/169106027-f5e9d573-86a2-489d-810b-d74e236cae9b.png)
+
+
+Setting it up with `hashcat` .
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Desktop/CTFPlayground/CysecCTF]
+└─$ hashcat -m 3200 hash /usr/share/wordlists/rockyou.txt                                                                                                        139 ⨯
+hashcat (v6.1.1) starting...
+```
+
+It should take time like time time and boom we should have the cracked hash.
+
+![image](https://user-images.githubusercontent.com/69868171/169110762-f6781b0c-8dfc-44e7-89aa-3f900da233c0.png)
+
+
+Flag:- `CYSEC{bleh}
