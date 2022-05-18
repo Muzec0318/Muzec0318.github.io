@@ -1033,4 +1033,10 @@ By changing it we are getting some interesting stuff hehehehe don't mind @Abzee 
 
 ![image](https://user-images.githubusercontent.com/69868171/169119359-17ab5097-bde6-42d7-a6c7-fc896bec8fa3.png)
 
-As you can see we have gotten `cysec{cryptography` We need to continue changing it to upper and lower case till we got the right flag.
+As you can see we have gotten `cyesec{cryptography` We need to continue changing it to upper and lower case till we got the right flag.
+
+![image](https://user-images.githubusercontent.com/69868171/169126536-ae03a795-51d4-4e51-8969-06226e31bb14.png)
+
+Bingo and we have our flag by changing d base64 strings upper and lowercase and a little notice seems the flag format was different pretty sure error from there end.
+
+Flag:- `Cyesec{crytography_can_be_this_crazy}`
