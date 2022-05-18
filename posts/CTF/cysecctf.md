@@ -823,3 +823,106 @@ Flag: `CYSEC{sQLi_1s_everyWHERe!}`
 
 Now that would be cool challenge so i download the files but without going to far i got into a issue some missing python modules was missing on my target which required us to download and install `python 3.8` now without wasting to much of time we can do all that with the commands below.
 
+```
+wget https://www.python.org/ftp/python/3.8.13/Python-3.8.13.tar.xz
+```
+
+Now just relax we are installing it manually now that we have the archive file let extract it.
+
+```
+tar -xf Python-3.8.13.tar.xz
+```
+
+We should have the archive extracted already in a folder now we can move it.
+
+```
+sudo mv Python-3.8.13 /opt/
+```
+
+Installing all the dependencies required to install `Python 3.8.` .
+
+```
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev pkg-config make -y
+```
+
+Now let give it time.
+
+```
+cd /opt/Python-3.8.13/
+```
+
+We should run the command below to check if all dependencies are present on our system.
+
+```
+./configure --enable-optimizations --enable-shared
+```
+
+It will optimize the Python binary by running multiple tests now that we have built and configured the environment, it is time to compile it with the command make.
+
+```
+make
+```
+
+Once we have finished building, let install Python binaries as follows:
+
+```
+sudo make altinstall
+```
+
+A quick notice it is advised to use the make altinstall command NOT to overwrite the default Python 3 binary system. after the installation is done we need to configure the dynamic linker run time binding with `ldconfig` command.
+
+
+```
+sudo ldconfig /opt/Python-3.8.13
+```
+
+Now let confirm if we have everything ready.
+
+![image](https://user-images.githubusercontent.com/69868171/169095895-e1994db8-b15f-42da-9d5a-2176ee05f2ba.png)
+
+Now installing requirement for the `wordle` file.
+
+![image](https://user-images.githubusercontent.com/69868171/169095999-57d5df2d-0044-40a0-ba2f-daf1d3bd4c4b.png)
+
+```
+wget https://bootstrap.pypa.io/get-pip.py
+```
+Next, install the file downloaded.
+
+```
+python3.8 get-pip.py
+```
+Once installed, it is a good idea to check for upgrades.
+```
+python3.8 -m pip install --upgrade pip
+```
+
+Checking if `pip3.8` was installed.
+
+![image](https://user-images.githubusercontent.com/69868171/169096890-b12398b1-2a95-4a16-b2e6-aebe2d7d4461.png)
+
+Now for the requirement.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/Desktop/CTFPlayground/CysecCTF]
+└─$ cat requirements.txt       
+coloroma
+random  
+```
+
+Can easily use `pip3.8 install -r requirements.txt` to do that now let run the `wordle` file.
+
+![image](https://user-images.githubusercontent.com/69868171/169098119-622fe20d-a5f6-4054-85cf-b35c6881df9f.png)
+
+When i `strings` it i got nothing so i decided to play with it.
+
+![image](https://user-images.githubusercontent.com/69868171/169099015-b1e435ef-226d-430e-b735-a5f29634bc72.png)
+
+Oh only five words cool let play with it.
+
+![image](https://user-images.githubusercontent.com/69868171/169099245-456fd4e2-a3e6-48ed-9567-749767759170.png)
+
+Boom we got it not going to lie am just guessing here that all.
+
+
+Flag:- `CYSEC{what_a_game_of_wordle!}`
