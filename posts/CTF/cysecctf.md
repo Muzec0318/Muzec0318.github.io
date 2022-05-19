@@ -1040,3 +1040,69 @@ As you can see we have gotten `cyesec{cryptography` We need to continue changing
 Bingo and we have our flag by changing d base64 strings upper and lowercase and a little notice seems the flag format was different pretty sure error from there end.
 
 Flag:- `Cyesec{crytography_can_be_this_crazy}`
+
+
+### Hackerman -- 2000 Point
+
+![image](https://user-images.githubusercontent.com/69868171/169272776-390c917d-ab06-43e0-b4aa-4728a1ab6aa9.png)
+
+We've recently received reports of a script kiddie who goes by the name `detrix01` who goes around hacking into social media accounts using basic techinques. he picks motivation from another hacker. help us find him or them, get us the flag and the predicted country of residence of the hacker.
+
+Open-source intelligence (OSINT) calm down bruh calm down i will be using my best tools [Sherlock](https://github.com/sherlock-project/sherlock) to Hunt down social media accounts by username across social networks which seems cool with out wasting to much of time let hit it.
+
+```
+┌──(muzec㉿Muzec-Security)-[~/…/CTFPlayground/CysecCTF/sherlock/sherlock]
+└─$ python3 sherlock.py detrix01         
+[*] Checking username detrix01 on:
+
+
+[+] 9GAG: https://www.9gag.com/u/detrix01
+[+] AllMyLinks: https://allmylinks.com/detrix01
+[+] CNET: https://www.cnet.com/profiles/detrix01/
+[+] FortniteTracker: https://fortnitetracker.com/profile/all/detrix01
+[+] ICQ: https://icq.im/detrix01/en
+[+] Kongregate: https://www.kongregate.com/accounts/detrix01
+[+] PCGamer: https://forums.pcgamer.com/members/?username=detrix01
+[+] Pinterest: https://www.pinterest.com/detrix01/
+[+] Reddit: https://www.reddit.com/user/detrix01
+[+] Roblox: https://www.roblox.com/user.aspx?username=detrix01
+```
+
+Now that is a headstart going through all links and we found just one interesting one.
+
+![image](https://user-images.githubusercontent.com/69868171/169291166-31ece833-30d5-4dc7-8908-85ba75614ac0.png)
+
+A hint i guess let run `sherlock` on it also to avoid missing anything.
+
+![image](https://user-images.githubusercontent.com/69868171/169292781-ab7f30e7-21c9-400e-b31b-6507b45f5d80.png)
+
+Now going through all links and `https://disqus.com/Albhda` stand out let see what we have on the page.
+
+![image](https://user-images.githubusercontent.com/69868171/169292994-68ce8e9c-c10d-4165-a1aa-6f21e74c4217.png)
+
+```
+Damn! a version of me from the past was careless.. But who's good with time travel? "Flag is 404" 
+```
+ 
+That is a lead i decided to check it on `way back machine` .
+
+![image](https://user-images.githubusercontent.com/69868171/169294226-6fbc0053-5411-486c-93b8-5c864e7f0945.png)
+
+![image](https://user-images.githubusercontent.com/69868171/169294333-4553aad2-f1f9-4f39-a2b6-08c9c154899c.png)
+
+Hehehehehe awesome let go through some snapshot save bu the `way back machine` .
+
+![image](https://user-images.githubusercontent.com/69868171/169297411-a5db485c-2993-4495-91ed-46c68c5d4b81.png)
+
+```
+Rule 1: no system is safe CYSEC-NG{T1m3-Tr4vle-sur3-Rocks} 
+```
+ 
+Now that was fast seems we are just missing the `country` only pain pain google searching `Albhda` and got some result.
+
+![image](https://user-images.githubusercontent.com/69868171/169298182-da894bb6-ff67-4fe3-85b4-b0dc76378faa.png)
+
+I spend time trying `italy,rome` and bla bla bla but trying `latin` and boom i got it but does not seems right to me is `latin` a country XD .
+
+
+Flag:- `CYSEC-NG{T1m3-Tr4vle-sur3-Rocks_Latin}`
