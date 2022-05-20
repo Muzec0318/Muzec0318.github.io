@@ -1004,3 +1004,10 @@ Since we know the flag format it shoukd be easy.
 Final Flag:- `abcctf{c1Ph3r_fr0m_b00k5}`
 
 The  Read read Read  Crypto challenge was only solve by our redqueen `AN3M0N1` feel free to connect with her on twitter with [Kaka Sheidu](https://twitter.com/KakaSheidu) or on Linkedln [Kaka Sheidu](https://www.linkedin.com/in/kaka-sheidu-101965139) .
+
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
