@@ -1106,3 +1106,12 @@ I spend time trying `italy,rome` and bla bla bla but trying `latin` and boom i g
 
 
 Flag:- `CYSEC-NG{T1m3-Tr4vle-sur3-Rocks_Latin}`
+
+
+Bruhhhhh i guess i should stop here XD.
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
