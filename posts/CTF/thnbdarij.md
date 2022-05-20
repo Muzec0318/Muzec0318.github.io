@@ -128,3 +128,11 @@ Boom we are root and we have the `flag`.
 ```
 thnb{p1nG_p0onG_g4m3_w4s_FuN_4kh4y_Sp1p47_696969}
 ```
+
+
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
+
