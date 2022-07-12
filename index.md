@@ -35,6 +35,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 ## **TryHackMe_Writeups:~#**
 
 
+- **Jul 12, 2022:** [TryHackMe -- committed](https://muzec0318.github.io/posts/committed.html) `git`
 - **Apr 02, 2022:** [TryHackMe -- 0x41haz](https://muzec0318.github.io/posts/0x41haz.html) `Reverse engineering,` `Ghidra`
 - **Feb 19, 2022:** [TryHackMe -- Flatline](https://muzec0318.github.io/posts/flatline.html) `Freeswitch exploit,` `SeImpersonatePrivilege`
 - **Feb 19, 2022:** [TryHackMe -- Git and Crumpets v12](https://muzec0318.github.io/posts/gitandcrumpets.html) `Gitea RCE,` `DB Exploiting`
