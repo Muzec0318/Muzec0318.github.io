@@ -3,12 +3,15 @@ layout: default
 title: Home
 ---
 
-## **Welcome To My Cyber Security Blog,  Hacker**
+* * *
+#### **Welcome To My Cyber Security Blog,  Hacker**
+* * *
 
 Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Different Hacking Tricks, Writeups, Articles, Any Stuffs Related To Hacking... I'm Happy You're Here Mate.
 
-## **WhoAmI:~#**
-
+* * *
+#### **WhoAmI:~#**
+* * *
 
 - **My Name:**    `Saminu Musa Saminu`
 - **Known as:**   `Muzec`
@@ -16,7 +19,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Twitter:**    `https://twitter.com/muzec_saminu`
 - **GitHub:**     `https://github.com/Muzec0318`
 
-## **Latest_Articles:~#**
+* * *
+#### **Latest_Articles:~#**
+* * *
 
 
 - **Mar 11, 2022:** [DirtyPipe (DirtyCow Reloaded) -  Local Privilege Escalation - CVE-2022-0847 (POC)](https://muzec0318.github.io/posts/articles/CVE-2022-0847.html)
