@@ -37,12 +37,15 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Jul 01, 2020:** [Spawning A TTY Shell, Cheat Sheets](https://muzec0318.github.io/posts/articles/Ttyshells.html)
 - **Jul 01, 2020:** [Reverse Shell Cheat Sheet](https://muzec0318.github.io/posts/articles/ReverseShell.html)
 
-## **RedTeaming_PlayGrounds:~#**
+* * *
+#### **RedTeaming_PlayGrounds:~#**
+* * *
 
 -
 
-## **TryHackMe_Writeups:~#**
-
+* * *
+#### **TryHackMe_Writeups:~#**
+* * *
 
 - **Jul 12, 2022:** [TryHackMe -- committed](https://muzec0318.github.io/posts/committed.html) `git`
 - **Apr 02, 2022:** [TryHackMe -- 0x41haz](https://muzec0318.github.io/posts/0x41haz.html) `Reverse engineering,` `Ghidra`
@@ -71,8 +74,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Jul 17, 2020:** [TryHackMe -- JoyStick](https://muzec0318.github.io/posts/JoyStick.html)
 - **Jun 28, 2020:** [TryHackMe -- Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html)  `Steghide`
 
-## **VulnHubs_Writeups:~#**
-
+* * *
+#### **VulnHubs_Writeups:~#**
+* * *
 
 - **Mar 10, 2022:** [VulnHub -- Symfonos 5](https://muzec0318.github.io/posts/symfonos5.html) `Ldap,` `LFI,` `ldapsearch`
 - **Mar 04, 2022:** [VulnHub -- Symfonos 2](https://muzec0318.github.io/posts/symfonos2.html) `ProFTPD 1.3.5,` `Port Forwarding,` `LibreNMS RCE`
@@ -119,21 +123,24 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Mar 10, 2021:** [VulnHub -- Tr0ll 1](https://muzec0318.github.io/posts/Tr0ll.html)      `Crontab`
 - **Apr 10, 2021:** [VulnHub -- Brainpan 1](https://muzec0318.github.io/posts/Brainpan1.html)      `BOF`
 
-## **PortSwigger_Labs:~#**
-
+* * *
+#### **PortSwigger_Labs:~#**
+* * *
 
 - **Dec 15, 2021:** [PortSwigger -- SQL Injection](https://muzec0318.github.io/posts/sqli1.html)
 
-## **PwnTillDawn_Writeups:~#**
-
+* * *
+#### **PwnTillDawn_Writeups:~#**
+* * *
 
 - **Jun 30, 2021:** [Juno](https://muzec0318.github.io/posts/pwntilldawn/juno.html) `Reverse APK,` `Mobsf`
 - **Jun 09, 2021:** [FullMounty](https://muzec0318.github.io/posts/pwntilldawn/fullMounty.html) `NFS`
 - **Jun 14, 2021:** [Stuntman Mike](https://muzec0318.github.io/posts/pwntilldawn/Stuntman.html)
 - **Jun 15, 2021:** [Django](https://muzec0318.github.io/posts/pwntilldawn/django.html) `Windows Box`
 
-## **HackTheBox_Writeups:~#**
-
+* * *
+#### **HackTheBox_Writeups:~#**
+* * *
 
 - **Mar 01, 2022:** [Acute](https://muzec0318.github.io/posts/hackthebox/acute.html) `AD,` `Windows`
 - **Feb 17, 2022:** [Search](https://muzec0318.github.io/posts/hackthebox/search.html) `AD,` `ldapsearch,` `Crackmapexec,` `Kerberoasting,` `Excel,` `BloodHound`
@@ -152,8 +159,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Jul 10, 2021:** [Forest](https://muzec0318.github.io/posts/hackthebox/forest.html) `Active Directory`
 - **Jul 14, 2021:** [OpenAdmin](https://muzec0318.github.io/posts/hackthebox/openadmin.html) `OpenNetAdmin 18.1.1`
 
-## **Proving_Grounds_Writeups:~#**
-
+* * *
+#### **Proving_Grounds_Writeups:~#**
+* * *
 
 - **NOV 28, 2021:** [Kevin](https://muzec0318.github.io/posts/PG/kevin.html)
 - **NOV 28, 2021:** [Peppo](https://muzec0318.github.io/posts/PG/peppo.html) `Ident,` `Docker images`
@@ -161,8 +169,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Mar 30, 2022:** [Potato](https://muzec0318.github.io/posts/PG/potato.html) `PHP strcmp`
 - **Mar 31, 2021:** [Assertion101](https://muzec0318.github.io/posts/PG/assertion101.html) `Assert LFI`
 
-## **HackMyVm_Writeups:~#**
-
+* * *
+#### **HackMyVm_Writeups:~#**
+* * *
 
 - **NOV 15, 2021:** [Condor](https://muzec0318.github.io/posts/hackmyvm/condor.html) `CGI Tricks`
 - **NOV 03, 2021:** [Level](https://muzec0318.github.io/posts/hackmyvm/level.html) `Port Forwarding`
@@ -176,8 +185,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Jun 07, 2021:** [Gift](https://muzec0318.github.io/posts/hackmyvm/gift.html)
 - **Jun 08, 2021:** [Dominator](https://muzec0318.github.io/posts/hackmyvm/dominator.html) `Rot13`
 
-## **CTF_Writeups:~#**
-
+* * *
+#### **CTF_Writeups:~#**
+* * *
 
 - **Jun 15, 2022:** [Ilyasehacker](https://muzec0318.github.io/posts/CTF/ilyasehacker.html)
 - **May 14, 2022:** [CysecNG CTF 2022](https://muzec0318.github.io/posts/CTF/cysecctf.html)
@@ -187,8 +197,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Mar 12, 2021:** [zSecurity Fuel CTF](https://muzec0318.github.io/posts/CTF/Zfuel.html)
 - **Feb 07, 2021:** [zSecurity Cute CTF](https://muzec0318.github.io/posts/CTF/Zcute.html)
 
-## **echoCTF.RED_Writeups:~#**
-
+* * *
+#### **echoCTF.RED_Writeups:~#**
+* * *
 
 - **Dec 07, 2021:** [PcPrincipal](https://muzec0318.github.io/posts/echoctf/pcprincipal.html) `GilaCMS,` `ETCD,` `CONFD`
 - **Dec 04, 2021:** [CVE-2020-7247](https://muzec0318.github.io/posts/echoctf/cve-2020-7247.html) `OpenSMTPD RCE`
@@ -196,6 +207,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **Dec 03, 2021:** [Nopal](https://muzec0318.github.io/posts/echoctf/nopal.html) `Cacti RCE,` `SNMP,` `Snmpwalk`
 - **Dec 03, 2021:** [Anvil](https://muzec0318.github.io/posts/echoctf/anvil.html) `Privilege Escalation`
 
-### **Support Or Contact Me:~#**
+* * *
+#### **Support Or Contact Me:~#**
+* * *
+
 Hey You, Having Any Issues With My Writeups, Articles Send Me A DM on Twitter [Muzec](https://twitter.com/muzec_saminu)  Am Alawys Free To Help......
 
