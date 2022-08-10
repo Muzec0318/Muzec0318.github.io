@@ -47,32 +47,32 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 #### **TryHackMe_Writeups:~#**
 * * *
 
-- **Jul 12, 2022:** [TryHackMe -- committed](https://muzec0318.github.io/posts/committed.html) `git`
-- **Apr 02, 2022:** [TryHackMe -- 0x41haz](https://muzec0318.github.io/posts/0x41haz.html) `Reverse engineering,` `Ghidra`
-- **Feb 19, 2022:** [TryHackMe -- Flatline](https://muzec0318.github.io/posts/flatline.html) `Freeswitch exploit,` `SeImpersonatePrivilege`
-- **Feb 19, 2022:** [TryHackMe -- Git and Crumpets v12](https://muzec0318.github.io/posts/gitandcrumpets.html) `Gitea RCE,` `DB Exploiting`
-- **Jan 18, 2022:** [TryHackMe -- Exploiting Log4j](https://muzec0318.github.io/posts/log4j.html) `log4j,` `Log4shell,` `Java 8,` `CVE-2021-44228`
-- **Sep 23, 2021:** [TryHackMe -- Empline](https://muzec0318.github.io/posts/empline.html) `Ruby Capabilities With Chown`
-- **Jul 19, 2021:** [TryHackMe -- Ustoun](https://muzec0318.github.io/posts/ustoun.html) `Active Directory,` `mssqlclient.py`
-- **Jul 12, 2021:** [TryHackMe -- VulnNet Roasted](https://muzec0318.github.io/posts/roasted.html) `Active Directory`
-- **Jul 01, 2021:** [TryHackMe -- Couch](https://muzec0318.github.io/posts/couch.html) `CouchDB` `Docker`
-- **May 05, 2021:** [TryHackMe -- VulnNet Internal](https://muzec0318.github.io/posts/vulnet.html) `Redis,` `rsync & TeamCity`
-- **Feb 20, 2021:** [TryHackMe -- Watcher](https://muzec0318.github.io/posts/Watcher.html) `Python Library Hijacking`
-- **Apr 05, 2021:** [TryHackMe -- Gatekeeper](https://muzec0318.github.io/posts/Gatekeeper.html) `BOF`
-- **Mar 31, 2021:** [TryHackMe -- Debug](https://muzec0318.github.io/posts/Debug.html)  `PHP Deserialization`
-- **Mar 10, 2021:** [TryHackMe -- Tokyo Ghoul](https://muzec0318.github.io/posts/tokyoghoul666.html)  `Python Jail`
-- **Oct 20, 2020:** [TryHackMe -- The Server From Hell](https://muzec0318.github.io/posts/TheServerFromHell.html)
-- **Oct 15, 2020:** [TryHackMe -- 0day](https://muzec0318.github.io/posts/0day.html)  `Shellshock`
-- **Oct 10, 2020:** [TryHackMe -- The Marketplace](https://muzec0318.github.io/posts/Marketplace.html)  `SQL Injection & XSS`
-- **Oct 05, 2020:** [TryHackMe -- Revenge](https://muzec0318.github.io/posts/Revenge.html)  `SQLMAP`
-- **Oct 01, 2020:** [TryHackme -- Mnemonic](https://muzec0318.github.io/posts/Mnemonic.html)
-- **Sep 08, 2020:** [TryHackMe -- Ghizer CTF](https://muzec0318.github.io/posts/Ghizer.html)
-- **Aug 10, 2020:** [TryHackMe -- Blog](https://muzec0318.github.io/posts/Blog.html)  `Wordpress`
-- **Jul 28, 2020:** [TryHackMe -- Brooklyn 99](https://muzec0318.github.io/posts/Brooklyn99.html)
-- **Jul 25, 2020:** [TryHackMe -- Overpass](https://muzec0318.github.io/posts/Overpass.html)
-- **Jul 09, 2020:** [TryHackMe -- Source](https://muzec0318.github.io/posts/Source.html)  `Webmin Exploit`
-- **Jul 17, 2020:** [TryHackMe -- JoyStick](https://muzec0318.github.io/posts/JoyStick.html)
-- **Jun 28, 2020:** [TryHackMe -- Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html)  `Steghide`
+- [[Jul 12, 2022]] [TryHackMe -- committed](https://muzec0318.github.io/posts/committed.html) `git`
+- [[Apr 02, 2022]] [TryHackMe -- 0x41haz](https://muzec0318.github.io/posts/0x41haz.html) `Reverse engineering,` `Ghidra`
+- [[Feb 19, 2022]] [TryHackMe -- Flatline](https://muzec0318.github.io/posts/flatline.html) `Freeswitch exploit,` `SeImpersonatePrivilege`
+- [[Feb 19, 2022]] [TryHackMe -- Git and Crumpets v12](https://muzec0318.github.io/posts/gitandcrumpets.html) `Gitea RCE,` `DB Exploiting`
+- [[Jan 18, 2022]] [TryHackMe -- Exploiting Log4j](https://muzec0318.github.io/posts/log4j.html) `log4j,` `Log4shell,` `Java 8,` `CVE-2021-44228`
+- [[Sep 23, 2021]] [TryHackMe -- Empline](https://muzec0318.github.io/posts/empline.html) `Ruby Capabilities With Chown`
+- [[Jul 19, 2021]] [TryHackMe -- Ustoun](https://muzec0318.github.io/posts/ustoun.html) `Active Directory,` `mssqlclient.py`
+- [[Jul 12, 2021]] [TryHackMe -- VulnNet Roasted](https://muzec0318.github.io/posts/roasted.html) `Active Directory`
+- [[Jul 01, 2021]] [TryHackMe -- Couch](https://muzec0318.github.io/posts/couch.html) `CouchDB` `Docker`
+- [[May 05, 2021]] [TryHackMe -- VulnNet Internal](https://muzec0318.github.io/posts/vulnet.html) `Redis,` `rsync & TeamCity`
+- [[Feb 20, 2021]] [TryHackMe -- Watcher](https://muzec0318.github.io/posts/Watcher.html) `Python Library Hijacking`
+- [[Apr 05, 2021]] [TryHackMe -- Gatekeeper](https://muzec0318.github.io/posts/Gatekeeper.html) `BOF`
+- [[Mar 31, 2021]] [TryHackMe -- Debug](https://muzec0318.github.io/posts/Debug.html)  `PHP Deserialization`
+- [[Mar 10, 2021]] [TryHackMe -- Tokyo Ghoul](https://muzec0318.github.io/posts/tokyoghoul666.html)  `Python Jail`
+- [[Oct 20, 2020]] [TryHackMe -- The Server From Hell](https://muzec0318.github.io/posts/TheServerFromHell.html)
+- [[Oct 15, 2020]] [TryHackMe -- 0day](https://muzec0318.github.io/posts/0day.html)  `Shellshock`
+- [[Oct 10, 2020]] [TryHackMe -- The Marketplace](https://muzec0318.github.io/posts/Marketplace.html)  `SQL Injection & XSS`
+- [[Oct 05, 2020]] [TryHackMe -- Revenge](https://muzec0318.github.io/posts/Revenge.html)  `SQLMAP`
+- [[Oct 01, 2020]] [TryHackme -- Mnemonic](https://muzec0318.github.io/posts/Mnemonic.html)
+- [[Sep 08, 2020]] [TryHackMe -- Ghizer CTF](https://muzec0318.github.io/posts/Ghizer.html)
+- [[Aug 10, 2020]] [TryHackMe -- Blog](https://muzec0318.github.io/posts/Blog.html)  `Wordpress`
+- [[Jul 28, 2020]] [TryHackMe -- Brooklyn 99](https://muzec0318.github.io/posts/Brooklyn99.html)
+- [[Jul 25, 2020]] [TryHackMe -- Overpass](https://muzec0318.github.io/posts/Overpass.html)
+- [[Jul 09, 2020]] [TryHackMe -- Source](https://muzec0318.github.io/posts/Source.html)  `Webmin Exploit`
+- [[Jul 17, 2020]] [TryHackMe -- JoyStick](https://muzec0318.github.io/posts/JoyStick.html)
+- [[Jun 28, 2020]] [TryHackMe -- Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html)  `Steghide`
 
 * * *
 #### **VulnHubs_Writeups:~#**
