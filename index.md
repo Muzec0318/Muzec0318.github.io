@@ -4,13 +4,13 @@ title: Home
 ---
 
 * * *
-#### **Welcome To My Cyber Security Blog,  Hacker**
+#### Welcome To My Cyber Security Blog,  Hacker
 * * *
 
 Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Different Hacking Tricks, Writeups, Articles, Any Stuffs Related To Hacking... I'm Happy You're Here Mate.
 
 * * *
-#### **WhoAmI:~#**
+#### WhoAmI:~#
 * * *
 
 - **My Name:**    `Saminu Musa Saminu`
@@ -24,7 +24,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 * * *
 
 
-- **Mar 11, 2022:** [DirtyPipe (DirtyCow Reloaded) -  Local Privilege Escalation - CVE-2022-0847 (POC)](https://muzec0318.github.io/posts/articles/CVE-2022-0847.html)
+⏲️ [[ Mar 11, 2022: ]] [DirtyPipe (DirtyCow Reloaded) -  Local Privilege Escalation - CVE-2022-0847 (POC)](https://muzec0318.github.io/posts/articles/CVE-2022-0847.html)
 - **Jan 27, 2022:** [Polkit Pkexec (PwnKit) -  Local Privilege Escalation - CVE-2021-4034 (POC)](https://muzec0318.github.io/posts/articles/CVE-2021-4034.html)
 - **Nov 21, 2021:** [All About Payloads Cheat Sheet For XXE,LFI,RFI,SSTI,SSRF](https://muzec0318.github.io/posts/articles/cheatsheets.html)
 - **Nov 01, 2021:** [Exploiting Cross-site Scripting To Steal Cookies](https://muzec0318.github.io/posts/articles/xsslab.html)
