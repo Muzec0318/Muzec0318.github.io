@@ -19,6 +19,7 @@ Flag: SHELLCTF{W4kandA_F0rev3r}.
 
 Easy Peasy right.
 
+
 ### Crypto: Tweeeet
 
 ![image](https://user-images.githubusercontent.com/69868171/184543322-6d455d91-0b39-4ca3-ba64-4995f1702ee5.png)
@@ -90,6 +91,69 @@ The other way to get the flag is using Cyberchef unless you know the key.
 ![image](https://user-images.githubusercontent.com/69868171/184546610-6e3fb4fc-de5b-4b90-9e7a-ed6c1ffc71db.png)
 
 By uploading the encrypted file and knowing the key we where able to get the flag.
+
+
+### Forensics: Alien Communication
+
+![image](https://user-images.githubusercontent.com/69868171/184546829-2bc19a33-7781-4491-83df-5ecc0056c0fe.png)
+
+Let downloaded the audio and use Sonic visualization on it maybe we can get something from it.
+
+![image](https://user-images.githubusercontent.com/69868171/184547086-68b2d575-a5f9-4dcb-97ea-12cff71be3c0.png)
+
+Next step to take is to add it to your Spectrogram and check.
+
+![image](https://user-images.githubusercontent.com/69868171/184547196-9fcff680-0e96-458f-a46b-f3aa6a154249.png)
+
+There goes our flag: SHELL{y0u_g07_7h3_f1ag}.
+
+### Forensics: Secret Document
+
+![image](https://user-images.githubusercontent.com/69868171/184547337-e7e856c8-cb56-41e9-8ed6-de6aadfd0457.png)
+
+Looking at the description of the challenge we are already been given the key which is shell and a hint which is Xorry. Should know in your mind that xorry means from xor so I quickly rush to cyberchef after I downloaded the data.
+
+![image](https://user-images.githubusercontent.com/69868171/184547531-3a7e9a63-00e8-4ae9-8317-b43afd45f4e4.png)
+
+I uploaded it to cyberchef then choose from Xor and put the key that was given and If you can see the data is showining us that it PNG image. Now all we have to do is to convert it to image,
+
+![image](https://user-images.githubusercontent.com/69868171/184547999-21203bd3-e197-431d-91a2-7585f7a6fe08.png)
+
+Here goes our flag: SHELL{y0u_c4n_s33_th3_h1dd3n}.
+
+### Forensics: Hidden File
+
+![image](https://user-images.githubusercontent.com/69868171/184548097-5763a676-1eb6-449d-9121-03327de6a9d5.png)
+
+First of all let download the jpg image and try a tools call Exiftool on it.
+
+![image](https://user-images.githubusercontent.com/69868171/184548167-6a22bdcf-c219-4076-b532-da7078c5897e.png)
+
+If can see there is a password there which is shell so let try steghide on the image.
+
+![image](https://user-images.githubusercontent.com/69868171/184548336-a8947dc4-0246-42d2-8c31-9933226f83ef.png)
+
+Using steghide we were able to get a hidden zip file. Now let unzip the file with a command called unzip.
+
+![image](https://user-images.githubusercontent.com/69868171/184548447-a55a0be4-45e1-4ab2-af5e-9ad76248c876.png)
+
+When unzipping it we were able to retrieve three file which is se3cretf1l3.pdf, something.jpg and flag.zip. When trying to unzip the flag.zip it was asking for password then i started digging to see maybe i can see something, first of all i tried zip2john but i got not then i decided to go through se3cretf1l3.pdf and look well then i got the password for flag.zip file.
+
+![image](https://user-images.githubusercontent.com/69868171/184548766-796fd66d-6b19-495c-9e5d-74798cdee390.png)
+
+As you can see the password is shellctf. Now let unzip it with the password.
+
+![image](https://user-images.githubusercontent.com/69868171/184549090-0eed34ab-fd27-492c-a268-40aefd69a0d1.png)
+
+After unzipping it we were able to get our flag: shell{y0u_g07_th3_flag_N1c3!}.
+
+
+
+
+
+
+
+
 
 
 
