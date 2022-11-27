@@ -128,12 +128,16 @@ Now a deadend seems we need credentials to see some shares on SMB just guessing 
 
 ```
 ldapsearch -x -h 10.10.11.129 -x -s base namingcontexts
+or
+ldapsearch -H ldap://10.10.11.129 -x -s base namingcontexts
 ```
 
 ![image](https://user-images.githubusercontent.com/69868171/154472263-9ccf5861-3df2-4872-aca6-fa726e6749f8.png)
 
 ```
 ldapsearch -x -h 10.10.11.129 -b 'DC=search,DC=htb'
+or
+ldapsearch -H ldap://10.10.11.129 -x -b "DC=search,DC=htb" 
 ```
 
 ![image](https://user-images.githubusercontent.com/69868171/154472408-6ab1b99a-9524-4f85-9d09-72dc88dab337.png)
