@@ -18,6 +18,8 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - **What Do I Do:**  `CTF / Red Teaming / Ethical Hacking`
 - **Twitter:**    `https://twitter.com/muzec_saminu`
 - **GitHub:**     `https://github.com/Muzec0318`
+- **Certification:**     `OSCP, PNPT`
+
 
 * * *
 #### **Latest_Articles:~#**
