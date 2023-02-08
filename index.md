@@ -3,7 +3,6 @@ layout: default
 title: Home
 ---
 
-<div class="header-links">
 <p align="center"><a href="/vulnhub-writeups/htb"><h2 class="header-link" style="color:green">HTB</h2></a></p>
 <p align="center"><a href="/vulnhub-writeups/vulnhub"><h2 class="header-link" style="color:green">Vulnhub</h2></a></p>
 <p align="center"><a href="/vulnhub-writeups/ctf"><h2 class="header-link" style="color:green">CTF</h2></a></p>
