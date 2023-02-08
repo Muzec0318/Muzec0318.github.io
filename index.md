@@ -80,8 +80,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 #### **VulnHubs_Writeups:~#**
 * * *
 
-_To provide materials that allows anyone to gain practical 'hands-on' experience in digital security, computer software & network administration.
-_
+**_To provide materials that allows anyone to gain practical 'hands-on' experience in digital security, computer software & network administration._
+**
+
 - [[Mar 10, 2022]] [Symfonos 5](https://muzec0318.github.io/posts/symfonos5.html) `Ldap,` `LFI,` `ldapsearch`
 - [[Mar 04, 2022]] [Symfonos 2](https://muzec0318.github.io/posts/symfonos2.html) `ProFTPD 1.3.5,` `Port Forwarding,` `LibreNMS RCE`
 - [[Mar 03, 2022]] [Symfonos 1](https://muzec0318.github.io/posts/symfonos1.html) `SMTP 2 RCE,` `Path Variable`
