@@ -30,18 +30,6 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 
-
-* * *
-<h4 class="mume-header" id="redTeaming">RedTeaming PlayGrounds:</h4>
-_These are notes about all things focusing on, but not limited to, red teaming and offensive security._
-<hr>
-<hr>
-
-
--
--
--
-
 * * *
 <h4 class="mume-header" id="hackthebox">HackTheBox:</h4>
 _Hack The Box is a massive hacking playground, and infosec community of over 1.7m platform members who learn, hack, play, exchange ideas and methodologies._
@@ -67,15 +55,6 @@ _Hack The Box is a massive hacking playground, and infosec community of over 1.7
 - [[Jul 14, 2021]] [OpenAdmin](https://muzec0318.github.io/posts/hackthebox/openadmin.html) `OpenNetAdmin 18.1.1`
 
 
-
-* * *
-<h4 class="mume-header" id="portswigger">PortSwigger:</h4>
-_PortSwigger is a global leader in cybersecurity. We created Burp Suite, the leading toolkit for web application security testing._
-<hr>
-<hr>
-
-
-- [[Dec 15, 2021]] [SQL Injection](https://muzec0318.github.io/posts/sqli1.html)
 
 
 
@@ -109,18 +88,32 @@ _Capture the Flag (CTF) in computer security is an exercise in which "flags" are
 - [[Mar 12, 2021]] [zSecurity Fuel CTF](https://muzec0318.github.io/posts/CTF/Zfuel.html)
 - [[Feb 07, 2021]] [zSecurity Cute CTF](https://muzec0318.github.io/posts/CTF/Zcute.html)
 
+
+
 * * *
-<h4 class="mume-header" id="echoctf">echoCTF.RED:</h4>
-_An online platform to train your offensive and defensive IT security skills._
+<h4 class="mume-header" id="portswigger">PortSwigger:</h4>
+_PortSwigger is a global leader in cybersecurity. We created Burp Suite, the leading toolkit for web application security testing._
 <hr>
 <hr>
 
 
-- [[Dec 07, 2021]] [PcPrincipal](https://muzec0318.github.io/posts/echoctf/pcprincipal.html) `GilaCMS,` `ETCD,` `CONFD`
-- [[Dec 04, 2021]] [CVE-2020-7247](https://muzec0318.github.io/posts/echoctf/cve-2020-7247.html) `OpenSMTPD RCE`
-- [[Dec 04, 2021]] [Cupidme](https://muzec0318.github.io/posts/echoctf/cupidme.html) `Upload Insecure Files,` `MagicBytes,` `OpenSMTPD RCE`
-- [[Dec 03, 2021]] [Nopal](https://muzec0318.github.io/posts/echoctf/nopal.html) `Cacti RCE,` `SNMP,` `Snmpwalk`
-- [[Dec 03, 2021]] [Anvil](https://muzec0318.github.io/posts/echoctf/anvil.html) `Privilege Escalation`
+- [[Dec 15, 2021]] [SQL Injection](https://muzec0318.github.io/posts/portswigger/sqli1.html)
+
+
+
+
+* * *
+<h4 class="mume-header" id="redTeaming">RedTeaming PlayGrounds:</h4>
+_These are notes about all things focusing on, but not limited to, red teaming and offensive security._
+<hr>
+<hr>
+
+
+-
+-
+-
+
+
 
 * * *
 <h4 class="mume-header" id="contact">Support Or Contact Me:</h4>
