@@ -3,6 +3,14 @@ layout: default
 title: Home
 ---
 
+<div class="header-links">
+<p align="center"><a href="/vulnhub-writeups/htb"><h2 class="header-link" style="color:green">HTB</h2></a></p>
+<p align="center"><a href="/vulnhub-writeups/vulnhub"><h2 class="header-link" style="color:green">Vulnhub</h2></a></p>
+<p align="center"><a href="/vulnhub-writeups/ctf"><h2 class="header-link" style="color:green">CTF</h2></a></p>
+<p align="center"><a href="/vulnhub-writeups/about"><h2 class="header-link" style="color:green">About</h2></a></p>
+<p align="center"><a href="/vulnhub-writeups/donate"><h2 class="header-link" style="color:green">Donate</h2></a></p>
+
+
 * * *
 #### Welcome To My Cyber Security Blog,  Hacker
 Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Different Hacking Tricks, Writeups, Articles, Any Stuffs Related To Hacking... I'm Happy You're Here Mate.
