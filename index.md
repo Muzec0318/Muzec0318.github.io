@@ -8,15 +8,19 @@ title: Home
 Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Different Hacking Tricks, Writeups, Articles, Any Stuffs Related To Hacking... I'm Happy You're Here Mate.
 
 * * *
-#### WhoAmI:
-* * *
 
-- **My Name:**    `Saminu Musa Saminu`
-- **Known as:**   `Muzec`
-- **What Do I Do:**  `CTF / Red Teaming / Ethical Hacking`
-- **Twitter:**    `https://twitter.com/muzec_saminu`
-- **GitHub:**     `https://github.com/Muzec0318`
-- **Certification:**     `OSCP, PNPT`
+<hr>
+<br>
+<img style="padding-right: 30px;" align="left" src="https://user-images.githubusercontent.com/69868171/217491699-0731e24e-9733-450d-9401-13f56f109a3f.png">
+<br>
+<p><strong>Name :</strong> <a href="#">Saminu Musa Saminu</a></p>
+<p><strong>Known as :</strong> <a href="#">Muzec</a></p>
+<p><strong>What Do I Do :</strong> <a href="#">CTF / Red Teaming / Penetration tester</a></p>
+<p><strong>GitHub :</strong> <a href="https://github.com/Muzec0318">github.com/Muzec0318</a></p>
+<p><strong>Twitter :</strong> <a href="https://twitter.com/muzec_saminu">twitter.com/muzec_saminu</a></p>
+<p><strong>Certification :</strong> <a href="#">OSCP, PNPT</a></p>
+<br clear="left">
+<br clear="left">
 
 
 * * *
