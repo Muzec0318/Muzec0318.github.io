@@ -4,13 +4,13 @@ title: Home
 ---
 
 * * *
-## Welcome To My Cyber Security Blog,  Hacker
+#### Welcome To My Cyber Security Blog,  Hacker
 * * *
 
 Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Different Hacking Tricks, Writeups, Articles, Any Stuffs Related To Hacking... I'm Happy You're Here Mate.
 
 * * *
-## WhoAmI:~#
+#### WhoAmI:
 * * *
 
 - **My Name:**    `Saminu Musa Saminu`
@@ -22,7 +22,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 * * *
-## **Articles:~#**
+#### Articles:
 * * *
 
 
@@ -40,14 +40,18 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Jul 01, 2020]] [Reverse Shell Cheat Sheet](https://muzec0318.github.io/posts/articles/ReverseShell.html)
 
 * * *
-#### **RedTeaming_PlayGrounds:~#**
+#### RedTeaming PlayGrounds:
+_These are notes about all things focusing on, but not limited to, red teaming and offensive security._
 * * *
+
 
 -
 
 * * *
-## **HackTheBox:~#**
+#### HackTheBox:
+_Hack The Box is a massive hacking playground, and infosec community of over 1.7m platform members who learn, hack, play, exchange ideas and methodologies._
 * * *
+
 
 - [[Mar 01, 2022]] [Acute](https://muzec0318.github.io/posts/hackthebox/acute.html) `AD,` `Windows`
 - [[Feb 17, 2022]] [Search](https://muzec0318.github.io/posts/hackthebox/search.html) `AD,` `ldapsearch,` `Crackmapexec,` `Kerberoasting,` `Excel,` `BloodHound`
@@ -68,8 +72,10 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 * * *
-## **TryHackMe:~#**
+#### TryHackMe:
+_TryHackMe is an online platform that teaches cyber security through short, gamified real-world labs._
 * * *
+
 
 - [[Jul 12, 2022]] [Committed](https://muzec0318.github.io/posts/committed.html) `git`
 - [[Apr 02, 2022]] [0x41haz](https://muzec0318.github.io/posts/0x41haz.html) `Reverse engineering,` `Ghidra`
@@ -99,10 +105,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Jun 28, 2020]] [Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html)  `Steghide`
 
 * * *
-## **VulnHub:~#**
+#### VulnHub:
+_To provide materials that allows anyone to gain practical 'hands-on' experience in digital security, computer software & network administration._
 * * *
-
-**_To provide materials that allows anyone to gain practical 'hands-on' experience in digital security, computer software & network administration._**
 
 
 - [[Mar 10, 2022]] [Symfonos 5](https://muzec0318.github.io/posts/symfonos5.html) `Ldap,` `LFI,` `ldapsearch`
@@ -151,14 +156,18 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Apr 10, 2021]] [Brainpan 1](https://muzec0318.github.io/posts/Brainpan1.html)      `BOF`
 
 * * *
-## **PortSwigger:~#**
+#### PortSwigger:
+_PortSwigger is a global leader in cybersecurity. We created Burp Suite, the leading toolkit for web application security testing._
 * * *
+
 
 - [[Dec 15, 2021]] [SQL Injection](https://muzec0318.github.io/posts/sqli1.html)
 
 * * *
-## **PwnTillDawn:~#**
+#### PwnTillDawn:
+_PwnTillDawn is a concept developed by wizlynx group to bring fun to cyber security by gamifying the process of penetration testing and allowing people to learn & exercise their offensive skills._
 * * *
+
 
 - [[Jun 30, 2021]] [Juno](https://muzec0318.github.io/posts/pwntilldawn/juno.html) `Reverse APK,` `Mobsf`
 - [[Jun 09, 2021]] [FullMounty](https://muzec0318.github.io/posts/pwntilldawn/fullMounty.html) `NFS`
@@ -167,8 +176,10 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 * * *
-## ** Offsec Proving_Grounds:~#**
+## Offsec Proving Grounds:
+_Practice your pentesting skills in a standalone, private lab environment with the additions of PG Play and PG Practice to Offensive Security’s Proving Grounds training labs._ 
 * * *
+
 
 - [[NOV 28, 2021]] [Kevin](https://muzec0318.github.io/posts/PG/kevin.html)
 - [[NOV 28, 2021]] [Peppo](https://muzec0318.github.io/posts/PG/peppo.html) `Ident,` `Docker images`
@@ -177,8 +188,10 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Mar 31, 2021]] [Assertion101](https://muzec0318.github.io/posts/PG/assertion101.html) `Assert LFI`
 
 * * *
-## **HackMyVm:~#**
+#### HackMyVm:
+_Hack and Fun. Download more than our 100 vulnerable VMs and start learning/hacking._
 * * *
+
 
 - [[NOV 15, 2021]] [Condor](https://muzec0318.github.io/posts/hackmyvm/condor.html) `CGI Tricks`
 - [[NOV 03, 2021]] [Level](https://muzec0318.github.io/posts/hackmyvm/level.html) `Port Forwarding`
@@ -193,7 +206,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Jun 08, 2021]] [Dominator](https://muzec0318.github.io/posts/hackmyvm/dominator.html) `Rot13`
 
 * * *
-## **CTF Competitions:~#**
+#### CTF Competitions:
 * * *
 
 - [[Jun 15, 2022]] [Ilyasehacker](https://muzec0318.github.io/posts/CTF/ilyasehacker.html)
@@ -205,7 +218,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Feb 07, 2021]] [zSecurity Cute CTF](https://muzec0318.github.io/posts/CTF/Zcute.html)
 
 * * *
-## **echoCTF.RED:~#**
+#### **echoCTF.RED:~#**
 * * *
 
 - [[Dec 07, 2021]] [PcPrincipal](https://muzec0318.github.io/posts/echoctf/pcprincipal.html) `GilaCMS,` `ETCD,` `CONFD`
