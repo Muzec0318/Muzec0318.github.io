@@ -43,6 +43,8 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Jul 01, 2020]] [Spawning A TTY Shell, Cheat Sheets](https://muzec0318.github.io/posts/articles/Ttyshells.html)
 - [[Jul 01, 2020]] [Reverse Shell Cheat Sheet](https://muzec0318.github.io/posts/articles/ReverseShell.html)
 
+
+
 * * *
 <h3 class="mume-header" id="redTeaming">RedTeaming PlayGrounds:</h3>
 _These are notes about all things focusing on, but not limited to, red teaming and offensive security._
@@ -53,9 +55,10 @@ _These are notes about all things focusing on, but not limited to, red teaming a
 -
 
 * * *
-#### HackTheBox:
+<h3 class="mume-header" id="hackthebox">HackTheBox:</h3>
 _Hack The Box is a massive hacking playground, and infosec community of over 1.7m platform members who learn, hack, play, exchange ideas and methodologies._
-* * *
+<hr>
+<hr>
 
 
 - [[Mar 01, 2022]] [Acute](https://muzec0318.github.io/posts/hackthebox/acute.html) `AD,` `Windows`
@@ -78,8 +81,10 @@ _Hack The Box is a massive hacking playground, and infosec community of over 1.7
 
 * * *
 #### TryHackMe:
+<h3 class="mume-header" id="tryhackme">TryHackMe:</h3>
 _TryHackMe is an online platform that teaches cyber security through short, gamified real-world labs._
-* * *
+<hr>
+<hr>
 
 
 - [[Jul 12, 2022]] [Committed](https://muzec0318.github.io/posts/committed.html) `git`
