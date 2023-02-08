@@ -25,8 +25,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 * * *
-#### Articles:
-* * *
+<h3 class="mume-header" id="articles">Articles:</h3>
+<hr>
+<hr>
 
 
 - [[Mar 11, 2022]] [DirtyPipe (DirtyCow Reloaded) -  Local Privilege Escalation - CVE-2022-0847 (POC)](https://muzec0318.github.io/posts/articles/CVE-2022-0847.html)
@@ -43,9 +44,10 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Jul 01, 2020]] [Reverse Shell Cheat Sheet](https://muzec0318.github.io/posts/articles/ReverseShell.html)
 
 * * *
-#### RedTeaming PlayGrounds:
+<h3 class="mume-header" id="redTeaming">RedTeaming PlayGrounds:</h3>
 _These are notes about all things focusing on, but not limited to, red teaming and offensive security._
-* * *
+<hr>
+<hr>
 
 
 -
