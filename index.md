@@ -25,7 +25,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 * * *
-<h3 class="mume-header" id="articles">Articles:</h3>
+<h4 class="mume-header" id="articles">Articles:</h4>
 <hr>
 <hr>
 
@@ -46,16 +46,18 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 * * *
-<h3 class="mume-header" id="redTeaming">RedTeaming PlayGrounds:</h3>
+<h4 class="mume-header" id="redTeaming">RedTeaming PlayGrounds:</h4>
 _These are notes about all things focusing on, but not limited to, red teaming and offensive security._
 <hr>
 <hr>
 
 
 -
+-
+-
 
 * * *
-<h3 class="mume-header" id="hackthebox">HackTheBox:</h3>
+<h4 class="mume-header" id="hackthebox">HackTheBox:</h4>
 _Hack The Box is a massive hacking playground, and infosec community of over 1.7m platform members who learn, hack, play, exchange ideas and methodologies._
 <hr>
 <hr>
@@ -80,8 +82,7 @@ _Hack The Box is a massive hacking playground, and infosec community of over 1.7
 
 
 * * *
-#### TryHackMe:
-<h3 class="mume-header" id="tryhackme">TryHackMe:</h3>
+<h4 class="mume-header" id="tryhackme">TryHackMe:</h4>
 _TryHackMe is an online platform that teaches cyber security through short, gamified real-world labs._
 <hr>
 <hr>
@@ -115,9 +116,10 @@ _TryHackMe is an online platform that teaches cyber security through short, gami
 - [[Jun 28, 2020]] [Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html)  `Steghide`
 
 * * *
-#### VulnHub:
+<h4 class="mume-header" id="vulnhub">VulnHub:</h4>
 _To provide materials that allows anyone to gain practical 'hands-on' experience in digital security, computer software & network administration._
-* * *
+<hr>
+<hr>
 
 
 - [[Mar 10, 2022]] [Symfonos 5](https://muzec0318.github.io/posts/symfonos5.html) `Ldap,` `LFI,` `ldapsearch`
@@ -166,9 +168,10 @@ _To provide materials that allows anyone to gain practical 'hands-on' experience
 - [[Apr 10, 2021]] [Brainpan 1](https://muzec0318.github.io/posts/Brainpan1.html)      `BOF`
 
 * * *
-#### PortSwigger:
+<h4 class="mume-header" id="portswigger">PortSwigger:</h4>
 _PortSwigger is a global leader in cybersecurity. We created Burp Suite, the leading toolkit for web application security testing._
-* * *
+<hr>
+<hr>
 
 
 - [[Dec 15, 2021]] [SQL Injection](https://muzec0318.github.io/posts/sqli1.html)
@@ -176,7 +179,8 @@ _PortSwigger is a global leader in cybersecurity. We created Burp Suite, the lea
 * * *
 #### PwnTillDawn:
 _PwnTillDawn is a concept developed by wizlynx group to bring fun to cyber security by gamifying the process and allowing people to learn & exercise their offensive skills._
-* * *
+<hr>
+<hr>
 
 
 - [[Jun 30, 2021]] [Juno](https://muzec0318.github.io/posts/pwntilldawn/juno.html) `Reverse APK,` `Mobsf`
@@ -186,9 +190,10 @@ _PwnTillDawn is a concept developed by wizlynx group to bring fun to cyber secur
 
 
 * * *
-#### Offensive Proving Grounds:
+<h4 class="mume-header" id="pg">Offensive Proving Grounds:</h4>
 _Practice your pentesting skills in a standalone, private lab environment with the additions of PG Play and PG Practice to Offensive Security’s Proving Grounds._ 
-* * *
+<hr>
+<hr>
 
 
 - [[NOV 28, 2021]] [Kevin](https://muzec0318.github.io/posts/PG/kevin.html)
@@ -198,9 +203,10 @@ _Practice your pentesting skills in a standalone, private lab environment with t
 - [[Mar 31, 2021]] [Assertion101](https://muzec0318.github.io/posts/PG/assertion101.html) `Assert LFI`
 
 * * *
-#### HackMyVm:
+<h4 class="mume-header" id="hackmyvm">HackMyVm:</h4>
 _Hack and Fun. Download more than our 100 vulnerable VMs and start learning/hacking._
-* * *
+<hr>
+<hr>
 
 
 - [[NOV 15, 2021]] [Condor](https://muzec0318.github.io/posts/hackmyvm/condor.html) `CGI Tricks`
@@ -216,9 +222,10 @@ _Hack and Fun. Download more than our 100 vulnerable VMs and start learning/hack
 - [[Jun 08, 2021]] [Dominator](https://muzec0318.github.io/posts/hackmyvm/dominator.html) `Rot13`
 
 * * *
-#### CTF Competitions:
+<h4 class="mume-header" id="ctf">CTF Competitions:</h4>
 _Capture the Flag (CTF) in computer security is an exercise in which "flags" are secretly hidden in purposefully-vulnerable programs or websites._
-* * *
+<hr>
+<hr>
 
 
 - [[Jun 15, 2022]] [Ilyasehacker](https://muzec0318.github.io/posts/CTF/ilyasehacker.html)
@@ -230,9 +237,10 @@ _Capture the Flag (CTF) in computer security is an exercise in which "flags" are
 - [[Feb 07, 2021]] [zSecurity Cute CTF](https://muzec0318.github.io/posts/CTF/Zcute.html)
 
 * * *
-#### echoCTF.RED:
+<h4 class="mume-header" id="echoctf">echoCTF.RED:</h4>
 _An online platform to train your offensive and defensive IT security skills._
-* * *
+<hr>
+<hr>
 
 
 - [[Dec 07, 2021]] [PcPrincipal](https://muzec0318.github.io/posts/echoctf/pcprincipal.html) `GilaCMS,` `ETCD,` `CONFD`
@@ -242,9 +250,10 @@ _An online platform to train your offensive and defensive IT security skills._
 - [[Dec 03, 2021]] [Anvil](https://muzec0318.github.io/posts/echoctf/anvil.html) `Privilege Escalation`
 
 * * *
-#### Support Or Contact Me:
+<h4 class="mume-header" id="contact">Support Or Contact Me:</h4>
 _Feeling generous you can always shoot a DM away let discuss hacking._
-* * *
+<hr>
+<hr>
 
 Hey You, Having Any Issues With My Writeups, Articles Send Me A DM on Twitter [Muzec](https://twitter.com/muzec_saminu)  Am Alawys Free To Help......
 
