@@ -77,21 +77,10 @@ _PortSwigger is a global leader in cybersecurity. We created Burp Suite, the lea
 
 - [[Dec 15, 2021]] [SQL Injection](https://muzec0318.github.io/posts/sqli1.html)
 
-* * *
-#### PwnTillDawn:
-_PwnTillDawn is a concept developed by wizlynx group to bring fun to cyber security by gamifying the process and allowing people to learn & exercise their offensive skills._
-<hr>
-<hr>
-
-
-- [[Jun 30, 2021]] [Juno](https://muzec0318.github.io/posts/pwntilldawn/juno.html) `Reverse APK,` `Mobsf`
-- [[Jun 09, 2021]] [FullMounty](https://muzec0318.github.io/posts/pwntilldawn/fullMounty.html) `NFS`
-- [[Jun 14, 2021]] [Stuntman Mike](https://muzec0318.github.io/posts/pwntilldawn/Stuntman.html)
-- [[Jun 15, 2021]] [Django](https://muzec0318.github.io/posts/pwntilldawn/django.html) `Windows Box`
 
 
 * * *
-<h4 class="mume-header" id="pg">Offensive Proving Grounds:</h4>
+<h4 class="mume-header" id="pg">PG Play/PG Practice:</h4>
 _Practice your pentesting skills in a standalone, private lab environment with the additions of PG Play and PG Practice to Offensive Security’s Proving Grounds._ 
 <hr>
 <hr>
