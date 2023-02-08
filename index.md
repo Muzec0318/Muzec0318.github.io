@@ -3,11 +3,8 @@ layout: default
 title: Home
 ---
 
-<p align="center"><a href="/vulnhub-writeups/htb"><h2 class="header-link" style="color:green">HTB</h2></a></p>
-<p align="center"><a href="/vulnhub-writeups/vulnhub"><h2 class="header-link" style="color:green">Vulnhub</h2></a></p>
-<p align="center"><a href="/vulnhub-writeups/ctf"><h2 class="header-link" style="color:green">CTF</h2></a></p>
-<p align="center"><a href="/vulnhub-writeups/about"><h2 class="header-link" style="color:green">About</h2></a></p>
-<p align="center"><a href="/vulnhub-writeups/donate"><h2 class="header-link" style="color:green">Donate</h2></a></p>
+
+<h1 class="mume-header" id="mainindexhtml-nbspnbsp-contactcontacthtml"><a href="./index.html">Desktop</a> &#xA0;&#xA0;&#xA0;<a href="/hackthebox/htb.html">HTB</a>&#xA0;&#xA0;&#xA0;<a href="/tryhackme/tyhackme.html">THM</a></h1>
 
 
 * * *
