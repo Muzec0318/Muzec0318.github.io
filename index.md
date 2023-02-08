@@ -9,9 +9,10 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 * * *
 
+
 <hr>
 <br>
-<img style="padding-right: 30px;" align="left" src="https://user-images.githubusercontent.com/69868171/217491699-0731e24e-9733-450d-9401-13f56f109a3f.png">
+<img style="padding-right: 30px;" align="left"  width="600" height="400" src="https://user-images.githubusercontent.com/69868171/217498714-2b7c3e24-da81-43dd-9deb-f7911ba45415.png">
 <br>
 <p><strong>Name :</strong> <a href="#">Saminu Musa Saminu</a></p>
 <p><strong>Known as :</strong> <a href="#">Muzec</a></p>
