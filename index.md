@@ -4,13 +4,13 @@ title: Home
 ---
 
 * * *
-#### Welcome To My Cyber Security Blog,  Hacker
+## Welcome To My Cyber Security Blog,  Hacker
 * * *
 
 Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Different Hacking Tricks, Writeups, Articles, Any Stuffs Related To Hacking... I'm Happy You're Here Mate.
 
 * * *
-#### WhoAmI:~#
+## WhoAmI:~#
 * * *
 
 - **My Name:**    `Saminu Musa Saminu`
@@ -22,7 +22,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 
 
 * * *
-#### **Latest_Articles:~#**
+## **Articles:~#**
 * * *
 
 
@@ -46,7 +46,29 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 -
 
 * * *
-#### **TryHackMe_Writeups:~#**
+## **HackTheBox:~#**
+* * *
+
+- [[Mar 01, 2022]] [Acute](https://muzec0318.github.io/posts/hackthebox/acute.html) `AD,` `Windows`
+- [[Feb 17, 2022]] [Search](https://muzec0318.github.io/posts/hackthebox/search.html) `AD,` `ldapsearch,` `Crackmapexec,` `Kerberoasting,` `Excel,` `BloodHound`
+- [[Jan 02, 2022]] [Timing](https://muzec0318.github.io/posts/hackthebox/timing.html) `LFI,` `PHP code review,` `Bypasses to gain admin,` `Sudo,` `Cronjob`
+- [[Jan 01, 2022]] [Horizontall](https://muzec0318.github.io/posts/hackthebox/horizontall.html) `Strapi RCE,` `Chisel Port Forward,` `Laravel 8 RCE`
+- [[Dec 02, 2021]] [Driver](https://muzec0318.github.io/posts/hackthebox/driver.html) `Forced Authentication` `Responder` `Printer` `CVE-2021-34527`
+- [[Nov 26, 2021]] [Backdoor](https://muzec0318.github.io/posts/hackthebox/backdoor.html) `Wordpress,` `Gdbserver 9.2 RCE,` `Screen`
+- [[Sep 08, 2021]] [Gobox](https://muzec0318.github.io/posts/hackthebox/gobox.html) `Go SSTI & ngx_http_execute_module.so`
+- [[May 25, 2021]] [Templated](https://muzec0318.github.io/posts/hackthebox/templated.html) `SSTI`
+- [[May 23, 2021]] [Knife](https://muzec0318.github.io/posts/hackthebox/knife.html) `PHP 8.1.0-dev Backdoor RCE`
+- [[Apr 30, 2021]] [ScriptKiddie](https://muzec0318.github.io/posts/hackthebox/scriptkiddie.html) `overlayfs`
+- [[Jul 02, 2021]] [Shocker](https://muzec0318.github.io/posts/hackthebox/shocker.html)
+- [[Jul 02, 2021]] [Active](https://muzec0318.github.io/posts/hackthebox/active.html) `Active Directory`
+- [[Jul 06, 2021]] [Bastion](https://muzec0318.github.io/posts/hackthebox/bastion.html) `Mounting VHD`
+- [[Jul 07, 2021]] [Heist](https://muzec0318.github.io/posts/hackthebox/heist.html) `Windows Box`
+- [[Jul 10, 2021]] [Forest](https://muzec0318.github.io/posts/hackthebox/forest.html) `Active Directory`
+- [[Jul 14, 2021]] [OpenAdmin](https://muzec0318.github.io/posts/hackthebox/openadmin.html) `OpenNetAdmin 18.1.1`
+
+
+* * *
+## **TryHackMe:~#**
 * * *
 
 - [[Jul 12, 2022]] [Committed](https://muzec0318.github.io/posts/committed.html) `git`
@@ -57,27 +79,27 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Sep 23, 2021]] [Empline](https://muzec0318.github.io/posts/empline.html) `Ruby Capabilities With Chown`
 - [[Jul 19, 2021]] [Ustoun](https://muzec0318.github.io/posts/ustoun.html) `Active Directory,` `mssqlclient.py`
 - [[Jul 12, 2021]] [VulnNet Roasted](https://muzec0318.github.io/posts/roasted.html) `Active Directory`
-- [[Jul 01, 2021]] [TryHackMe -- Couch](https://muzec0318.github.io/posts/couch.html) `CouchDB` `Docker`
-- [[May 05, 2021]] [TryHackMe -- VulnNet Internal](https://muzec0318.github.io/posts/vulnet.html) `Redis,` `rsync & TeamCity`
-- [[Feb 20, 2021]] [TryHackMe -- Watcher](https://muzec0318.github.io/posts/Watcher.html) `Python Library Hijacking`
-- [[Apr 05, 2021]] [TryHackMe -- Gatekeeper](https://muzec0318.github.io/posts/Gatekeeper.html) `BOF`
-- [[Mar 31, 2021]] [TryHackMe -- Debug](https://muzec0318.github.io/posts/Debug.html)  `PHP Deserialization`
-- [[Mar 10, 2021]] [TryHackMe -- Tokyo Ghoul](https://muzec0318.github.io/posts/tokyoghoul666.html)  `Python Jail`
-- [[Oct 20, 2020]] [TryHackMe -- The Server From Hell](https://muzec0318.github.io/posts/TheServerFromHell.html)
-- [[Oct 15, 2020]] [TryHackMe -- 0day](https://muzec0318.github.io/posts/0day.html)  `Shellshock`
-- [[Oct 10, 2020]] [TryHackMe -- The Marketplace](https://muzec0318.github.io/posts/Marketplace.html)  `SQL Injection & XSS`
-- [[Oct 05, 2020]] [TryHackMe -- Revenge](https://muzec0318.github.io/posts/Revenge.html)  `SQLMAP`
-- [[Oct 01, 2020]] [TryHackme -- Mnemonic](https://muzec0318.github.io/posts/Mnemonic.html)
-- [[Sep 08, 2020]] [TryHackMe -- Ghizer CTF](https://muzec0318.github.io/posts/Ghizer.html)
-- [[Aug 10, 2020]] [TryHackMe -- Blog](https://muzec0318.github.io/posts/Blog.html)  `Wordpress`
-- [[Jul 28, 2020]] [TryHackMe -- Brooklyn 99](https://muzec0318.github.io/posts/Brooklyn99.html)
-- [[Jul 25, 2020]] [TryHackMe -- Overpass](https://muzec0318.github.io/posts/Overpass.html)
-- [[Jul 09, 2020]] [TryHackMe -- Source](https://muzec0318.github.io/posts/Source.html)  `Webmin Exploit`
-- [[Jul 17, 2020]] [TryHackMe -- JoyStick](https://muzec0318.github.io/posts/JoyStick.html)
-- [[Jun 28, 2020]] [TryHackMe -- Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html)  `Steghide`
+- [[Jul 01, 2021]] [Couch](https://muzec0318.github.io/posts/couch.html) `CouchDB` `Docker`
+- [[May 05, 2021]] [VulnNet Internal](https://muzec0318.github.io/posts/vulnet.html) `Redis,` `rsync & TeamCity`
+- [[Feb 20, 2021]] [Watcher](https://muzec0318.github.io/posts/Watcher.html) `Python Library Hijacking`
+- [[Apr 05, 2021]] [Gatekeeper](https://muzec0318.github.io/posts/Gatekeeper.html) `BOF`
+- [[Mar 31, 2021]] [Debug](https://muzec0318.github.io/posts/Debug.html)  `PHP Deserialization`
+- [[Mar 10, 2021]] [Tokyo Ghoul](https://muzec0318.github.io/posts/tokyoghoul666.html)  `Python Jail`
+- [[Oct 20, 2020]] [The Server From Hell](https://muzec0318.github.io/posts/TheServerFromHell.html)
+- [[Oct 15, 2020]] [0day](https://muzec0318.github.io/posts/0day.html)  `Shellshock`
+- [[Oct 10, 2020]] [The Marketplace](https://muzec0318.github.io/posts/Marketplace.html)  `SQL Injection & XSS`
+- [[Oct 05, 2020]] [Revenge](https://muzec0318.github.io/posts/Revenge.html)  `SQLMAP`
+- [[Oct 01, 2020]] [Mnemonic](https://muzec0318.github.io/posts/Mnemonic.html)
+- [[Sep 08, 2020]] [Ghizer CTF](https://muzec0318.github.io/posts/Ghizer.html)
+- [[Aug 10, 2020]] [Blog](https://muzec0318.github.io/posts/Blog.html)  `Wordpress`
+- [[Jul 28, 2020]] [Brooklyn 99](https://muzec0318.github.io/posts/Brooklyn99.html)
+- [[Jul 25, 2020]] [Overpass](https://muzec0318.github.io/posts/Overpass.html)
+- [[Jul 09, 2020]] [Source](https://muzec0318.github.io/posts/Source.html)  `Webmin Exploit`
+- [[Jul 17, 2020]] [JoyStick](https://muzec0318.github.io/posts/JoyStick.html)
+- [[Jun 28, 2020]] [Jack Of All Trades](https://muzec0318.github.io/posts/Jack.html)  `Steghide`
 
 * * *
-#### **VulnHub:~#**
+## **VulnHub:~#**
 * * *
 
 **_To provide materials that allows anyone to gain practical 'hands-on' experience in digital security, computer software & network administration._**
@@ -129,13 +151,13 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Apr 10, 2021]] [Brainpan 1](https://muzec0318.github.io/posts/Brainpan1.html)      `BOF`
 
 * * *
-#### **PortSwigger_Labs:~#**
+## **PortSwigger:~#**
 * * *
 
 - [[Dec 15, 2021]] [SQL Injection](https://muzec0318.github.io/posts/sqli1.html)
 
 * * *
-#### **PwnTillDawn_Writeups:~#**
+## **PwnTillDawn:~#**
 * * *
 
 - [[Jun 30, 2021]] [Juno](https://muzec0318.github.io/posts/pwntilldawn/juno.html) `Reverse APK,` `Mobsf`
@@ -143,29 +165,9 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Jun 14, 2021]] [Stuntman Mike](https://muzec0318.github.io/posts/pwntilldawn/Stuntman.html)
 - [[Jun 15, 2021]] [Django](https://muzec0318.github.io/posts/pwntilldawn/django.html) `Windows Box`
 
-* * *
-#### **HackTheBox_Writeups:~#**
-* * *
-
-- [[Mar 01, 2022]] [Acute](https://muzec0318.github.io/posts/hackthebox/acute.html) `AD,` `Windows`
-- [[Feb 17, 2022]] [Search](https://muzec0318.github.io/posts/hackthebox/search.html) `AD,` `ldapsearch,` `Crackmapexec,` `Kerberoasting,` `Excel,` `BloodHound`
-- [[Jan 02, 2022]] [Timing](https://muzec0318.github.io/posts/hackthebox/timing.html) `LFI,` `PHP code review,` `Bypasses to gain admin,` `Sudo,` `Cronjob`
-- [[Jan 01, 2022]] [Horizontall](https://muzec0318.github.io/posts/hackthebox/horizontall.html) `Strapi RCE,` `Chisel Port Forward,` `Laravel 8 RCE`
-- [[Dec 02, 2021]] [Driver](https://muzec0318.github.io/posts/hackthebox/driver.html) `Forced Authentication` `Responder` `Printer` `CVE-2021-34527`
-- [[Nov 26, 2021]] [Backdoor](https://muzec0318.github.io/posts/hackthebox/backdoor.html) `Wordpress,` `Gdbserver 9.2 RCE,` `Screen`
-- [[Sep 08, 2021]] [Gobox](https://muzec0318.github.io/posts/hackthebox/gobox.html) `Go SSTI & ngx_http_execute_module.so`
-- [[May 25, 2021]] [Templated](https://muzec0318.github.io/posts/hackthebox/templated.html) `SSTI`
-- [[May 23, 2021]] [Knife](https://muzec0318.github.io/posts/hackthebox/knife.html) `PHP 8.1.0-dev Backdoor RCE`
-- [[Apr 30, 2021]] [ScriptKiddie](https://muzec0318.github.io/posts/hackthebox/scriptkiddie.html) `overlayfs`
-- [[Jul 02, 2021]] [Shocker](https://muzec0318.github.io/posts/hackthebox/shocker.html)
-- [[Jul 02, 2021]] [Active](https://muzec0318.github.io/posts/hackthebox/active.html) `Active Directory`
-- [[Jul 06, 2021]] [Bastion](https://muzec0318.github.io/posts/hackthebox/bastion.html) `Mounting VHD`
-- [[Jul 07, 2021]] [Heist](https://muzec0318.github.io/posts/hackthebox/heist.html) `Windows Box`
-- [[Jul 10, 2021]] [Forest](https://muzec0318.github.io/posts/hackthebox/forest.html) `Active Directory`
-- [[Jul 14, 2021]] [OpenAdmin](https://muzec0318.github.io/posts/hackthebox/openadmin.html) `OpenNetAdmin 18.1.1`
 
 * * *
-#### **Proving_Grounds_Writeups:~#**
+## ** Offsec Proving_Grounds:~#**
 * * *
 
 - [[NOV 28, 2021]] [Kevin](https://muzec0318.github.io/posts/PG/kevin.html)
@@ -175,7 +177,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Mar 31, 2021]] [Assertion101](https://muzec0318.github.io/posts/PG/assertion101.html) `Assert LFI`
 
 * * *
-#### **HackMyVm_Writeups:~#**
+## **HackMyVm:~#**
 * * *
 
 - [[NOV 15, 2021]] [Condor](https://muzec0318.github.io/posts/hackmyvm/condor.html) `CGI Tricks`
@@ -191,7 +193,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Jun 08, 2021]] [Dominator](https://muzec0318.github.io/posts/hackmyvm/dominator.html) `Rot13`
 
 * * *
-#### **CTF_Writeups:~#**
+## **CTF Competitions:~#**
 * * *
 
 - [[Jun 15, 2022]] [Ilyasehacker](https://muzec0318.github.io/posts/CTF/ilyasehacker.html)
@@ -203,7 +205,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Feb 07, 2021]] [zSecurity Cute CTF](https://muzec0318.github.io/posts/CTF/Zcute.html)
 
 * * *
-#### **echoCTF.RED_Writeups:~#**
+## **echoCTF.RED:~#**
 * * *
 
 - [[Dec 07, 2021]] [PcPrincipal](https://muzec0318.github.io/posts/echoctf/pcprincipal.html) `GilaCMS,` `ETCD,` `CONFD`
@@ -213,7 +215,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 - [[Dec 03, 2021]] [Anvil](https://muzec0318.github.io/posts/echoctf/anvil.html) `Privilege Escalation`
 
 * * *
-#### **Support Or Contact Me:~#**
+## **Support Or Contact Me:~#**
 * * *
 
 Hey You, Having Any Issues With My Writeups, Articles Send Me A DM on Twitter [Muzec](https://twitter.com/muzec_saminu)  Am Alawys Free To Help......
