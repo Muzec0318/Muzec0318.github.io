@@ -3,7 +3,6 @@ layout: default
 title: Home
 ---
 
-* * *
 #### Welcome To My Cyber Security Blog,  Hacker
 * * *
 
