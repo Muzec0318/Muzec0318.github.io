@@ -92,24 +92,7 @@ _Practice your pentesting skills in a standalone, private lab environment with t
 - [[Mar 30, 2022]] [Potato](https://muzec0318.github.io/posts/PG/potato.html) `PHP strcmp`
 - [[Mar 31, 2021]] [Assertion101](https://muzec0318.github.io/posts/PG/assertion101.html) `Assert LFI`
 
-* * *
-<h4 class="mume-header" id="hackmyvm">HackMyVm:</h4>
-_Hack and Fun. Download more than our 100 vulnerable VMs and start learning/hacking._
-<hr>
-<hr>
 
-
-- [[NOV 15, 2021]] [Condor](https://muzec0318.github.io/posts/hackmyvm/condor.html) `CGI Tricks`
-- [[NOV 03, 2021]] [Level](https://muzec0318.github.io/posts/hackmyvm/level.html) `Port Forwarding`
-- [[Oct 22, 2021]] [Pwned](https://muzec0318.github.io/posts/hackmyvm/pwned.html)
-- [[Oct 22, 2021]] [Hommie](https://muzec0318.github.io/posts/hackmyvm/hommie.html) `Hijacking Path Variable`
-- [[Oct 22, 2021]] [Noob](https://muzec0318.github.io/posts/hackmyvm/noob.html)
-- [[Oct 18, 2021]] [May](https://muzec0318.github.io/posts/hackmyvm/may.html) `Brute Forcing,` `Webmin Conf`
-- [[Oct 03, 2021]] [Video-Club](https://muzec0318.github.io/posts/hackmyvm/videoclub.html) `CMD Fuzzing With FFUF`
-- [[Oct 01, 2021]] [DriftingBlues 6](https://muzec0318.github.io/posts/hackmyvm/Driftingblues6.html)
-- [[Jun 07, 2021]] [Ripper](https://muzec0318.github.io/posts/hackmyvm/ripper1.html) `Crontab`
-- [[Jun 07, 2021]] [Gift](https://muzec0318.github.io/posts/hackmyvm/gift.html)
-- [[Jun 08, 2021]] [Dominator](https://muzec0318.github.io/posts/hackmyvm/dominator.html) `Rot13`
 
 * * *
 <h4 class="mume-header" id="ctf">CTF Competitions:</h4>
