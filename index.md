@@ -165,7 +165,7 @@ _PortSwigger is a global leader in cybersecurity. We created Burp Suite, the lea
 
 * * *
 #### PwnTillDawn:
-_PwnTillDawn is a concept developed by wizlynx group to bring fun to cyber security by gamifying the process of penetration testing and allowing people to learn & exercise their offensive skills._
+_PwnTillDawn is a concept developed by wizlynx group to bring fun to cyber security by gamifying the process and allowing people to learn & exercise their offensive skills._
 * * *
 
 
@@ -176,8 +176,8 @@ _PwnTillDawn is a concept developed by wizlynx group to bring fun to cyber secur
 
 
 * * *
-## Offsec Proving Grounds:
-_Practice your pentesting skills in a standalone, private lab environment with the additions of PG Play and PG Practice to Offensive Security’s Proving Grounds training labs._ 
+#### Offensive Proving Grounds:
+_Practice your pentesting skills in a standalone, private lab environment with the additions of PG Play and PG Practice to Offensive Security’s Proving Grounds._ 
 * * *
 
 
@@ -207,7 +207,9 @@ _Hack and Fun. Download more than our 100 vulnerable VMs and start learning/hack
 
 * * *
 #### CTF Competitions:
+_Capture the Flag (CTF) in computer security is an exercise in which "flags" are secretly hidden in purposefully-vulnerable programs or websites._
 * * *
+
 
 - [[Jun 15, 2022]] [Ilyasehacker](https://muzec0318.github.io/posts/CTF/ilyasehacker.html)
 - [[May 14, 2022]] [CysecNG CTF 2022](https://muzec0318.github.io/posts/CTF/cysecctf.html)
@@ -218,8 +220,10 @@ _Hack and Fun. Download more than our 100 vulnerable VMs and start learning/hack
 - [[Feb 07, 2021]] [zSecurity Cute CTF](https://muzec0318.github.io/posts/CTF/Zcute.html)
 
 * * *
-#### **echoCTF.RED:~#**
+#### echoCTF.RED:
+_An online platform to train your offensive and defensive IT security skills._
 * * *
+
 
 - [[Dec 07, 2021]] [PcPrincipal](https://muzec0318.github.io/posts/echoctf/pcprincipal.html) `GilaCMS,` `ETCD,` `CONFD`
 - [[Dec 04, 2021]] [CVE-2020-7247](https://muzec0318.github.io/posts/echoctf/cve-2020-7247.html) `OpenSMTPD RCE`
@@ -228,7 +232,8 @@ _Hack and Fun. Download more than our 100 vulnerable VMs and start learning/hack
 - [[Dec 03, 2021]] [Anvil](https://muzec0318.github.io/posts/echoctf/anvil.html) `Privilege Escalation`
 
 * * *
-## **Support Or Contact Me:~#**
+#### Support Or Contact Me:
+_Feeling generous you can always shoot a DM away let discuss hacking._
 * * *
 
 Hey You, Having Any Issues With My Writeups, Articles Send Me A DM on Twitter [Muzec](https://twitter.com/muzec_saminu)  Am Alawys Free To Help......
