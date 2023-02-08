@@ -10,3 +10,10 @@ gems:
 whitelist:
   - jekyll-sitemap
 
+socialIcons:
+    - name: twitter
+      url: "https://twitter.com/muzec_saminu"
+    - name: github
+      url: "https://github.com/Muzec0318"
+    - name: discord
+      url: "Muzec0318"
