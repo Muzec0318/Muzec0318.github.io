@@ -109,9 +109,9 @@ _These are notes about all things focusing on, but not limited to, red teaming a
 <hr>
 
 
-- Coming soon
-- Coming soon
-- Coming soon
+- AV Evasion 101 - PowerShell Coming soon
+- AV Evasion 101 - C# Coming soon
+- AV Evasion 101 - VBS/VBA - Office Macros Coming soon
 
 
 
