@@ -123,3 +123,33 @@ _Feeling generous you can always shoot a DM away let discuss hacking._
 
 Hey You, Having Any Issues With My Writeups, Articles Send Me A DM on Twitter [Muzec](https://twitter.com/muzec_saminu)  Am Alawys Free To Help......
 
+
+<!-- display the social media buttons in your README -->
+
+[![alt text][1.1]][1]
+[![alt text][2.1]][2]
+[![alt text][3.1]][3]
+[![alt text][4.1]][4]
+[![alt text][5.1]][5]
+[![alt text][6.1]][6]
+
+<!-- icons with padding -->
+
+[1.1]: http://i.imgur.com/tXSoThF.png
+[2.1]: http://i.imgur.com/P3YfQoD.png
+[3.1]: http://i.imgur.com/yCsTjba.png
+[4.1]: http://i.imgur.com/YckIOms.png
+[5.1]: http://i.imgur.com/1AGmwO3.png
+[6.1]: http://i.imgur.com/0o48UoR.png
+
+
+<!-- links to your social media accounts -->
+<!-- update these accordingly -->
+
+
+[1]: http://www.twitter.com/muzec_saminu
+[2]: http://www.facebook.com/muzec_saminu
+[3]: https://plus.google.com/+MuzecSaminu
+[4]: http://muzec.tumblr.com
+[5]: http://dribbble.com/muzec_saminu
+[6]: http://www.github.com/Muzec0318
