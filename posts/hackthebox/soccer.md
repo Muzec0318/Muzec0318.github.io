@@ -180,6 +180,8 @@ Interesting i decided to try a wrong ticket ID to see what happened.
 
 Which seems to be wrong when i try a false ID. Checking the page source and we notice it seems to be using a websocket URL to make a request to the internal port 9091 just from my guessing we should know we are actually dealing with an SQL injection vulns.
 
+A QUICK NOTE:- The **wss** protocol establishes a WebSocket over an encrypted TLS connection, while the **ws** protocol uses an unencrypted connection.
+
 ![image](https://user-images.githubusercontent.com/69868171/218135435-895ba792-be70-4fa2-bc6d-aba8c0de67ef.png)
 
 
