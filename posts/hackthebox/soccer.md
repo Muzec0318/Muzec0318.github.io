@@ -366,3 +366,30 @@ Dstat recognizes plugins under "/usr/local/share/dstat/".  Check if the above ex
 ```cli
 dstat --list | grep exploit
 ```
+
+#### Doas To Execute Dstat with the Malicious Plugin
+
+Now execute "dstat" with `—exploit` flag (the flag name is determined by the suffix of the file name e.g. "dstat_<plugin-name>.py").
+
+```cli
+doas -u root /usr/bin/dstat --exploit
+```
+
+![image](https://user-images.githubusercontent.com/69868171/218170260-de8405fe-7b1e-47a3-abd2-5b3e28250b20.png)
+
+Now when we run `bash -p` we should be root.
+    
+![image](https://user-images.githubusercontent.com/69868171/218170401-c9a43b4f-e1de-437b-8179-fd1552624c97.png)
+
+    
+Now getting the root.txt file.
+
+![image](https://user-images.githubusercontent.com/69868171/218170540-53343d66-ae54-4fc0-be58-2f42af926331.png)
+
+rooooooooooooooot and done.
+    
+Greeting From [Muzec](https://twitter.com/muzec_saminu)
+
+<br> <br>
+[Back To Home](../index.md)
+<br>
