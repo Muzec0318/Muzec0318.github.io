@@ -136,5 +136,8 @@ nc -nvlp 80
 
 Navigating to http://soccer.htb/tiny/uploads/muzec.php to trigger our php file and we got a reverse shell back to our listener.
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/69868171/218131686-0a031b5b-c304-4be4-afb0-0c9f260112b7.png)
+
+We spawn a full tty shell to make our shell more stable and we go ahead and start enumerating once again to find a way to move our privilege to a higher user by checking all files sysetem on the target.
+
 
