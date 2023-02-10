@@ -204,3 +204,7 @@ A standard SQLi check is to send a `'` character, but that does nothing interest
 
 So what i did is i try and send a ticket ID that does not exist and with an SQL query `1=1` to see if it really give out a valid ticket response or an invalid ticket response.  
 
+![image](https://user-images.githubusercontent.com/69868171/218141547-5fdab925-67ba-414a-87a1-8e3cfedcd006.png)
+
+Boom we got a valid ticket response even when we know that the ID really doesn’t exist.
+
