@@ -92,4 +92,19 @@ Which i end up getting none so let go ahead amd fuzz for some directories.
 
 ![image](https://user-images.githubusercontent.com/69868171/218125962-afbc5da8-f77a-4648-882a-bfecb702a677.png)
 
+Now that is a hit let see what we really have on the tiny web directory.
+
+![image](https://user-images.githubusercontent.com/69868171/218126759-f4bee2e0-bcea-4240-874a-458003ae062d.png)
+
+
+Tiny File Manager and we seems to need a credentials to get access let try doing some research on a default credentials.
+
+![image](https://user-images.githubusercontent.com/69868171/218127164-91c79c4e-0ca3-48a5-8c79-554495d607d4.png)
+
+Default username/password: 
+
+```
+admin/admin@123
+user/12345
+```
 
