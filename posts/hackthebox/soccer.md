@@ -70,10 +70,26 @@ Now that we have that set let access the web-server surely we are using the brow
 
 Interesting a web page that talk on how soccer is the best sports in the world which is true no cap but i still take hacking like sports XD which mean sports is second to me.
 
-#### Subdomain Enumeration
+#### Subdomain Fuzz
 
 ```
 ┌──(muzec㉿muzec-sec)-[~/Documents/CTF Hacking/HTB/soccer]
 └─$ wfuzz -u http://soccer.htb/ -H "Host: FUZZ.soccer.htb" -w /opt/wordlists/subdomains.txt --hh 178
 ```
+
+![image](https://user-images.githubusercontent.com/69868171/218126218-472ce0bd-c87a-472d-b8e2-15bfd2b8e7b7.png)
+
+
+Which i end up getting none so let go ahead amd fuzz for some directories.
+
+
+
+#### Directories Fuzz
+```
+┌──(muzec㉿muzec-sec)-[~/Documents/CTF Hacking/HTB/soccer]
+└─$ feroxbuster -u http://soccer.htb/ -w /opt/wordlists/2.3-medium.txt --quiet -t 80
+```
+
+![image](https://user-images.githubusercontent.com/69868171/218125962-afbc5da8-f77a-4648-882a-bfecb702a677.png)
+
 
