@@ -196,4 +196,11 @@ We can notice from the history when a ticket is valid we got `Ticket Exists` but
 ![image](https://user-images.githubusercontent.com/69868171/218138872-e8ddd04f-4f54-4796-8716-7f328635f971.png)
 
 
+#### Testing For SQL Injection
+
+A standard SQLi check is to send a `'` character, but that does nothing interesting here we just got a response with no valid tickets:
+
+![image](https://user-images.githubusercontent.com/69868171/218139885-6a16e799-c3e9-44a3-9fce-1581326fdbef.png)
+
+So what i did is i try and send a ticket ID that does not exist and with an SQL query `1=1` to see if it really give out a valid ticket response or an invalid ticket response.  
 
