@@ -141,3 +141,20 @@ Navigating to http://soccer.htb/tiny/uploads/muzec.php to trigger our php file a
 We spawn a full tty shell to make our shell more stable and we go ahead and start enumerating once again to find a way to move our privilege to a higher user by checking all files sysetem on the target.
 
 
+#### WWW-DATA 
+
+![image](https://user-images.githubusercontent.com/69868171/218132637-2ab8f6b6-a928-492e-9613-ab6b1e2311df.png)
+
+Now that seems like a new subdomain no wonders we are unable to get hit when we fuzz for one seems unique. Back to our attacking machine to add the new subdomain we got from the target machine.
+
+
+```
+sudo vim /etc/hosts
+
+.........
+10.10.11.194          soccer.htb    soc-player.soccer.htb
+.........
+
+```
+
+
