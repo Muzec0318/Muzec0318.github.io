@@ -6,6 +6,9 @@ title : muzec - Soccer HTB Writeup
 
 ![image](https://user-images.githubusercontent.com/69868171/218117279-f27eebec-fbed-4900-a1e9-7cdd0c83c12c.png)
 
+
+#### RECON
+
 Enumeration is the key to everthing so we always kick off with an nmap scan on the target IP.
 
 ```
@@ -51,4 +54,26 @@ Location: http://soccer.htb/
 ```
 
 Some old habit i always use to print out the response headers in the output using `curl` command now that we have the domain let add to our hosts file.
+
+```
+sudo vim /etc/hosts
+
+.......
+10.10.11.194        soccer.htb
+.......
+```
+
+Now that we have that set let access the web-server surely we are using the browser XD.
+
+![image](https://user-images.githubusercontent.com/69868171/218122187-0bc713c6-ee50-4e23-bcf2-0cc4a0a3294a.png)
+
+
+Interesting a web page that talk on how soccer is the best sports in the world which is true no cap but i still take hacking like sports XD which mean sports is second to me.
+
+#### Subdomain Enumeration
+
+```
+┌──(muzec㉿muzec-sec)-[~/Documents/CTF Hacking/HTB/soccer]
+└─$ wfuzz -u http://soccer.htb/ -H "Host: FUZZ.soccer.htb" -w /opt/wordlists/subdomains.txt --hh 178
+```
 
