@@ -37,7 +37,7 @@ _Hack The Box is a massive hacking playground, and infosec community of over 1.7
 <hr>
 
 
-- [[Feb 10, 2023]] [Soccer](https://muzec0318.github.io/posts/hackthebox/soccer.html) `Tiny RCE,` `websockets SQL injection` ` Doas with Dstat`
+- [[Feb 10, 2023]] [Soccer](https://muzec0318.github.io/posts/hackthebox/soccer.html) `Tiny RCE,` `websockets SQL injection` `Doas with Dstat`
 - [[Mar 01, 2022]] [Acute](https://muzec0318.github.io/posts/hackthebox/acute.html) `AD,` `Windows`
 - [[Feb 17, 2022]] [Search](https://muzec0318.github.io/posts/hackthebox/search.html) `AD,` `ldapsearch,` `Crackmapexec,` `Kerberoasting,` `Excel,` `BloodHound`
 - [[Jan 02, 2022]] [Timing](https://muzec0318.github.io/posts/hackthebox/timing.html) `LFI,` `PHP code review,` `Bypasses to gain admin,` `Sudo,` `Cronjob`
