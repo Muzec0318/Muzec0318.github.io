@@ -157,4 +157,33 @@ sudo vim /etc/hosts
 
 ```
 
+![image](https://user-images.githubusercontent.com/69868171/218133536-9f0ae061-3453-4274-8ae3-a2d7b18ea3ba.png)
+
+Now that look promising right i bet you think the same we have a page to login/sign up since we have no active credentials let sign up.
+
+![image](https://user-images.githubusercontent.com/69868171/218134349-1a4acfb9-cd49-4128-8d28-c794349f38e3.png)
+
+Now that our account is ready let hit the login page to sign in.
+
+![image](https://user-images.githubusercontent.com/69868171/218134529-f16cff8f-e396-4419-99d8-af57ecc48068.png)
+
+
+Now we are done to a check page which check a valid ticket ID.
+
+
+![image](https://user-images.githubusercontent.com/69868171/218134728-d16d03f7-59ef-43a5-8b7f-1cc279b186ba.png)
+
+
+Interesting i decided to try a wrong ticket ID to see what happened.
+
+![image](https://user-images.githubusercontent.com/69868171/218134933-16dec5b5-08b2-4d24-a671-5c44437254c4.png)
+
+Which seems to be wrong when i try a false ID. Checking the page source and we notice it seems to be using a websocket URL to make a request to the internal port 9091 just from my guessing we should know we are actually dealing with an SQL injection vulns.
+
+![image](https://user-images.githubusercontent.com/69868171/218135435-895ba792-be70-4fa2-bc6d-aba8c0de67ef.png)
+
+
+#### Find SQLi in Websockets
+
+Interacting with WS with Burp suite which is really nice here. Let inetercept the tickets form checker with burp suite.
 
