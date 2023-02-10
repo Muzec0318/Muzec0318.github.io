@@ -187,5 +187,13 @@ A QUICK NOTE:- The **wss** protocol establishes a WebSocket over an encrypted TL
 
 #### Find SQLi in Websockets
 
-Interacting with WS with Burp suite which is really nice here. Let inetercept the tickets form checker with burp suite.
+Interacting with WS with Burp suite which is really nice here. Let inetercept the tickets form checker with burp suite and right click and send it to Repeater:
+
+![image](https://user-images.githubusercontent.com/69868171/218138442-35825139-c51b-4563-b752-d3eb2c38a19b.png)
+
+We can notice from the history when a ticket is valid we got `Ticket Exists` but when a ticket is not valid we know the response is `Ticket Doesn't Exist` now that we know it clear let go ahead and test fro sql injection.
+
+![image](https://user-images.githubusercontent.com/69868171/218138872-e8ddd04f-4f54-4796-8716-7f328635f971.png)
+
+
 
