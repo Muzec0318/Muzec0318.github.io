@@ -208,3 +208,6 @@ So what i did is i try and send a ticket ID that does not exist and with an SQL 
 
 Boom we got a valid ticket response even when we know that the ID really doesn’t exist. This is confirmed SQL injection.
 
+#### SQLi Helpers with SQLMAP and a custom python flask proxy
+
+
