@@ -275,3 +275,6 @@ try:
 except KeyboardInterrupt:
     pass
 ```
+
+The python script will get a request with a single parameter, and use that to make the websocket connection with that parameter as the injection. This allows `sqlmap` to see a standard HTTP server, but then it does the websockets injection.
+
