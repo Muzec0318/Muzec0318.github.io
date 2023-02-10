@@ -108,3 +108,14 @@ admin/admin@123
 user/12345
 ```
 
+![image](https://user-images.githubusercontent.com/69868171/218127761-74141392-38ee-4ae4-9171-387a6d53e297.png)
+
+
+We got access to the Tiny File Manager and seems to find the version it running a quick research again.
+
+![image](https://user-images.githubusercontent.com/69868171/218128210-f73afd5b-84a5-47a6-92ae-248d922afa64.png)
+
+
+Which come to our notice that tiny file manager is vulnerable to an authenticated remote code execution allowing a malicious user to upload a php file to be able to execute a system command on the webserver now that we know what we are dealing with let get our malicious php file ready and upload on the webserver to get a reverse shell.
+
+
