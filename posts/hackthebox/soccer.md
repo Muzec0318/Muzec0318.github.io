@@ -118,4 +118,23 @@ We got access to the Tiny File Manager and seems to find the version it running 
 
 Which come to our notice that tiny file manager is vulnerable to an authenticated remote code execution allowing a malicious user to upload a php file to be able to execute a system command on the webserver now that we know what we are dealing with let get our malicious php file ready and upload on the webserver to get a reverse shell.
 
+![image](https://user-images.githubusercontent.com/69868171/218128951-d015947c-16f6-49ab-99a3-f83c0033efa3.png)
+
+
+Created a PHP file added our tun0 IP, Port to receive a reverse shell back to us.
+
+![image](https://user-images.githubusercontent.com/69868171/218130364-444fbf10-8b2f-416b-9bf6-a3ef05678ba4.png)
+
+
+```
+nc -nvlp 80
+```
+
+
+![image](https://user-images.githubusercontent.com/69868171/218130939-3af7db85-7fba-460f-ba25-017298cf7a32.png)
+
+
+Navigating to http://soccer.htb/tiny/uploads/muzec.php to trigger our php file and we got a reverse shell back to our listener.
+
+![Uploading image.png…]()
 
