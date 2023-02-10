@@ -5,7 +5,7 @@ title : muzec - Acute HTB Writeup
 
 ![image](https://user-images.githubusercontent.com/69868171/156177972-e49f95d9-c2ca-41e9-8b24-01f8194d90a5.png)
 
-Now that is a tough machine man it pain full of pain but interesting at last witjout easting to much of time let jump in already.
+Now that is a tough machine man it pain full of pain but interesting at last without wasting to much of time let jump in already.
 
 We always start with an nmap scan.....
 
