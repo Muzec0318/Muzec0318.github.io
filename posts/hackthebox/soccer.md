@@ -31,3 +31,24 @@ Nmap done: 1 IP address (1 host up) scanned in 286.53 seconds
 
 Now it connfirm we have SSH 22 and HTTP 80 port presently open the target which is interesting since it rated easy i think we already know we don't need to dig that much we can start a quick enumeration on the HTTP port already.
 
+```
+└─$ curl -i http://10.10.11.194
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.18.0 (Ubuntu)
+Date: Fri, 10 Feb 2023 14:48:02 GMT
+Content-Type: text/html
+Content-Length: 178
+Connection: keep-alive
+Location: http://soccer.htb/
+
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.18.0 (Ubuntu)</center>
+</body>
+</html>
+```
+
+Some old habit i always use to print out the response headers in the output using `curl` command now that we have the domain let add to our hosts file.
+
