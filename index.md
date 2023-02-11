@@ -99,7 +99,7 @@ _Web application security testing playgrounds for various techniques use in web 
 
 
 - [[Dec 15, 2021]] [SQL Injection](https://muzec0318.github.io/posts/portswigger/sqli1.html)
-- API Penetration Testing - Coming soon
+- API Penetration Testing 101 - Coming soon
 
 
 
