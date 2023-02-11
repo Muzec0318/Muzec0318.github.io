@@ -92,13 +92,14 @@ _Capture the Flag (CTF) in computer security is an exercise in which "flags" are
 
 
 * * *
-<h4 class="mume-header" id="portswigger">PortSwigger:</h4>
-_PortSwigger is a global leader in cybersecurity. We created Burp Suite, the leading toolkit for web application security testing._
+<h4 class="mume-header" id="webapp">Web App PlayGrounds:</h4>
+_Web application security testing playgrounds for various techniques use in web application testing from apis,subdomain enumeration,subdomain takeover etc._
 <hr>
 <hr>
 
 
 - [[Dec 15, 2021]] [SQL Injection](https://muzec0318.github.io/posts/portswigger/sqli1.html)
+- API Penetration Testing - Coming soon
 
 
 
