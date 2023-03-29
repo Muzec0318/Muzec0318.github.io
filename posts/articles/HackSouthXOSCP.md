@@ -58,3 +58,16 @@ Since we already have all the infomation we need i jump into HackTheBox platform
 
 Working through the tasks was fun since I have been active on HackTheBox for so long. I was able to complete the tasks quickly and took screenshots of each approach used to compromise the targets. Then, I moved on to the report writing part, which took me some time to complete. Finally, I submitted my report to `payitforward@hacksouth.africa`.
 
+Now I'm waiting with anticipation! I keep refreshing my inbox every minute, haha. Just a few days after submitting my report, I received an email stating that I will be awarded one of the Pay It Forward vouchers.
+
+![image](https://user-images.githubusercontent.com/69868171/228579628-6aaa2457-f338-4018-ad47-e1cfea6a95e6.png)
+
+I was so excited to receive the email! It felt like I had just passed the OSCP examination, all thanks to HackSouth, the PIF Mentors, Munx, and TOKO for their help and motivation throughout the process.
+
+![image](https://user-images.githubusercontent.com/69868171/228582734-9b24075b-e65e-46c5-ad74-6024463b5f2f.png)
+
+
+Another highlight of the Pay It Forward(PIF) event was the opportunity to network with other participants and professionals in the cybersecurity field. I was able to make connections with like-minded individuals and learned about different career paths and opportunities in the field.
+
+Overall, my experience with HackSouth was invaluable. I gained new skills, developed existing ones, and made valuable connections that will help me in my career. I am grateful for the opportunity to have participated in this event and highly recommend it to anyone interested in cybersecurity.
+
