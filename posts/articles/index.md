@@ -12,7 +12,7 @@ _CVE, Cheat Sheets created and compile by me or from a source and editted with a
 <hr>
 
 
-- [[Mar 29, 2023]][My Experience With HackSouth X My OSCP Journey](https://muzec0318.github.io/posts/articles/HackSouthXOSCP.html)
+- [[Mar 29, 2023]] [My Experience With HackSouth X My OSCP Journey](https://muzec0318.github.io/posts/articles/HackSouthXOSCP.html)
 - [[Mar 11, 2022]] [DirtyPipe (DirtyCow Reloaded) -  Local Privilege Escalation - CVE-2022-0847 (POC)](https://muzec0318.github.io/posts/articles/CVE-2022-0847.html)
 - [[Jan 27, 2022]] [Polkit Pkexec (PwnKit) -  Local Privilege Escalation - CVE-2021-4034 (POC)](https://muzec0318.github.io/posts/articles/CVE-2021-4034.html)
 - [[Nov 21, 2021]] [All About Payloads Cheat Sheet For XXE,LFI,RFI,SSTI,SSRF](https://muzec0318.github.io/posts/articles/cheatsheets.html)
