@@ -52,5 +52,9 @@ Steps On How I Got The OSCP Voucher From HackSouth:-
 
 Now for the fun part we are task to complete a 3 standalone machine on HackTheBox  using the (Offensive Security)[https://www.offensive-security.com/pwk-online/PWKv1-REPORT.doc] template, and include screenshots and enough information that someone with limited technical knowledge would be able to replicate our actions and should be submited in a PDF format to: `payitforward@hacksouth.africa` .
 
-Since we already have all the infomation we need i jump into HackTheBox platform to complete 2 x Easy boxes and 1 x Medium box between you don't need to rush there is no deadline on when to submit your report.
+Since we already have all the infomation we need i jump into HackTheBox platform to complete 2 x Easy boxes and 1 x Medium box between you don't need to rush there is no deadline on when to submit your report. 
+
+![image](https://user-images.githubusercontent.com/69868171/228574592-3e3d6b35-b89f-46b0-be38-b80f3b8f2242.png)
+
+Working through the tasks was fun since I have been active on HackTheBox for so long. I was able to complete the tasks quickly and took screenshots of each approach used to compromise the targets. Then, I moved on to the report writing part, which took me some time to complete. Finally, I submitted my report to `payitforward@hacksouth.africa`.
 
