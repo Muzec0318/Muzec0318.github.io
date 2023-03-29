@@ -21,7 +21,7 @@ I'm committed to staying up-to-date with the latest developments in the cybersec
 
 - My Experience with HackSouth to Get the OSCP Voucher:- 
 
-My experience with HackSouth was nothing short of incredible. As someone with a growing interest in cybersecurity, I was very excited to participate in the [Pay It Forward(PIF) Program](https://hacksouth.africa/community/Pay-It-Forward/).
+My experience with HackSouth was nothing short of incredible. As someone with a growing interest in cybersecurity, I was very excited to participate in the [Pay It Forward(PIF)](https://hacksouth.africa/community/Pay-It-Forward/).
 
 Hack South is a South African based collective of infosec professionals, security researchers and students. Coming together to share insight, advice and guidance to solve modern day security challenges. Without wasting to much of time let jump to the requirements already.
 
@@ -50,4 +50,7 @@ Steps On How I Got The OSCP Voucher From HackSouth:-
 
 3. **This is your chance to show us what you can do! Are you active on Hack The Box?, OffSec Proving Grounds?, TryHackMe? Have you built your own home lab? Do you have a blog where you share what you've learnt? Do you build or create? We don't care how you get your hacky on, we just want to see it in action!**
 
-  
+Now for the fun part we are task to complete a 3 standalone machine on HackTheBox  using the (Offensive Security)[https://www.offensive-security.com/pwk-online/PWKv1-REPORT.doc] template, and include screenshots and enough information that someone with limited technical knowledge would be able to replicate our actions and should be submited in a PDF format to: `payitforward@hacksouth.africa` .
+
+Since we already have all the infomation we need i jump into HackTheBox platform to complete 2 x Easy boxes and 1 x Medium box between you don't need to rush there is no deadline on when to submit your report.
+
