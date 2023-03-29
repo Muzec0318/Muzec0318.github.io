@@ -75,6 +75,19 @@ Overall, my experience with HackSouth was invaluable. I gained new skills, devel
 
 - My OSCP Journey
 
-I was awarded a 90-day lab voucher by [HackSouth](https://discord.gg/hacksouth) , I redeemed the voucher then was ready to start PWK Labs without wasting to much  of time i jump into the labs direct without reading the PDF or videos.
+I was awarded a 90-day lab voucher by [HackSouth](https://discord.gg/hacksouth) , I redeemed the voucher then was ready to start PWK Labs without wasting to much of time i jump into the labs direct without reading the PDF or videos 90% of labs machine pwned and i scheduled my exam.
+
+1. Enumeration is the Key
+2. Research always do research it more like all what you need is on google already
+3. Take Note i love the ideas of always taking note and do some research on how the labs is built and how to break it
+4. Patience
+5. HackSouth do have a nice guide here [OSCP Guide](https://hacksouth.africa/community/oscp-guide/)
+6. [HackSouth Community](https://discord.gg/hacksouth) is a great resources to add
 
 
+The Great achievement LOL.
+
+![image](https://user-images.githubusercontent.com/69868171/228598335-ea2f7281-7cc1-487b-90c1-51a787fb43fe.png)
+
+
+ALL thanks to HackSouth and the community.
