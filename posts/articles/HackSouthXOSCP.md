@@ -69,5 +69,12 @@ I was so excited to receive the email! It felt like I had just passed the OSCP e
 
 Another highlight of the Pay It Forward(PIF) event was the opportunity to network with other participants and professionals in the cybersecurity field. I was able to make connections with like-minded individuals and learned about different career paths and opportunities in the field.
 
-Overall, my experience with HackSouth was invaluable. I gained new skills, developed existing ones, and made valuable connections that will help me in my career. I am grateful for the opportunity to have participated in this event and highly recommend it to anyone interested in cybersecurity.
+Overall, my experience with HackSouth was invaluable. I gained new skills, developed existing ones, and made valuable connections that will help me in my career. I am grateful for the opportunity to have participated in this Pay It Forward (PIF) event and highly recommend (HackSouth Community)[https://discord.gg/hacksouth] it to anyone interested in cyber-security.
+
+
+
+- My OSCP Journey
+
+I was awarded a 90-day lab voucher by (HackSouth)[https://discord.gg/hacksouth] , I redeemed the voucher then was ready to start PWK Labs without wasting to much  of time i jump into the labs direct without reading the PDF or videos.
+
 
