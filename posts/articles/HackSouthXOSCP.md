@@ -21,3 +21,16 @@ I'm committed to staying up-to-date with the latest developments in the cybersec
 
 - My Experience with HackSouth to Get the OSCP Voucher:- 
 
+My experience with HackSouth was nothing short of incredible. As someone with a growing interest in cybersecurity, I was very excited to participate in the [Pay It Forward(PIF) Program](https://hacksouth.africa/community/Pay-It-Forward/).
+
+Hack South is a South African based collective of infosec professionals, security researchers and students. Coming together to share insight, advice and guidance to solve modern day security challenges. Without wasting to much of time let jump to the requirements already.
+
+The OSCP voucher includes 90 days of lab time, course PDFs and videos, and one exam voucher. Obtaining it is easy and straightforward, with HackSouth providing excellent preparation for the OSCP exam. Furthermore, the requirement includes a report writing utilizing the OSCP exam template, which is very beneficial. Isn't that great?"
+
+![image](https://user-images.githubusercontent.com/69868171/228522524-7a54e07f-013e-4647-a4d5-486e09936ad7.png)
+
+
+Steps:- 
+
+1. MOTIVATION 
+              We want to know a bit about you, why do you want to get your OSCP? We also need to know more about how you meet the requirements above. You can email this through to `the-munx@protonmail.com`. Which i actually compile my mail at the time reading it ad send i remember getting pretty nervous XD because i end up sending it at 10PM Nigeria time.
