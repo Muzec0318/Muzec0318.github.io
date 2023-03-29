@@ -33,9 +33,9 @@ The OSCP voucher includes 90 days of lab time, course PDFs and videos, and one e
 Steps:- 
 
 1. MOTIVATION 
-              We want to know a bit about you, why do you want to get your OSCP? We also need to know more about how you meet the requirements above. You can email this through to `the-munx@protonmail.com`.
-              
-              ```
-              I remember drafting my email at 10PM at night, and I ended up going through the requirements over and over again to make sure I didn't miss               anything in my email. After clicking the send button, I was hoping that it would take a while to receive a reply. However, I was surprised                 when I received a response the next day.
-              ```
+
+We want to know a bit about you, why do you want to get your OSCP? We also need to know more about how you meet the requirements above. You can email this through to `the-munx@protonmail.com`.
+          
+  _I remember drafting my email at 10PM at night, and I ended up going through the requirements over and over again to make sure I didn't miss               anything in my email. After clicking the send button, I was hoping that it would take a while to receive a reply. However, I was surprised                 when I received a response the next day._
+             
 ![image](https://user-images.githubusercontent.com/69868171/228529453-c0d5eb59-3cd7-4c1d-aa39-c4d0dccaf082.png)
