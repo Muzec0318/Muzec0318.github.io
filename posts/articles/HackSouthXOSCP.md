@@ -21,7 +21,7 @@ I'm committed to staying up-to-date with the latest developments in the cybersec
 
 - My Experience with HackSouth to Get the OSCP Voucher:- 
 
-My experience with HackSouth was nothing short of incredible. As someone with a growing interest in cybersecurity, I was very excited to participate in the [Pay It Forward(PIF)](https://hacksouth.africa/community/Pay-It-Forward/).
+My experience with HackSouth was nothing short of incredible. As someone with a growing interest in cybersecurity, I was very excited to participate in the [Pay It Forward(PIF)](https://hacksouth.africa/community/Pay-It-Forward/) .
 
 Hack South is a South African based collective of infosec professionals, security researchers and students. Coming together to share insight, advice and guidance to solve modern day security challenges. Without wasting to much of time let jump to the requirements already.
 
