@@ -23,7 +23,7 @@ Hey You, Yes You, Welcome To My Cyber Security Blog My Name is Muzec I Posts Dif
 <p><strong>What Do I Do :</strong> <a href="#">CTF / Red Teaming / Penetration tester</a></p>
 <p><strong>GitHub :</strong> <a href="https://github.com/Muzec0318">github.com/Muzec0318</a></p>
 <p><strong>Twitter :</strong> <a href="https://twitter.com/muzec_saminu">twitter.com/muzec_saminu</a></p>
-<p><strong>Certification :</strong> <a href="#">OSCP, PNPT</a></p>
+<p><strong>Certifications :</strong> <a href="#">OSEP, OSCP, PNPT</a></p>
 <br clear="left">
 <br clear="left">
 
@@ -149,7 +149,7 @@ Hey You, Having Any Issues With My Writeups, Articles Send Me A DM on Twitter [M
 <!-- update these accordingly -->
 
 
-[1]: http://www.twitter.com/muzec_saminu
+[1]: http://www.twitter.com/muzecsec
 [2]: http://www.facebook.com/muzec_saminu
 [3]: https://plus.google.com/+MuzecSaminu
 [4]: http://muzec.tumblr.com
