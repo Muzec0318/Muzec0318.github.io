@@ -6,6 +6,10 @@ show_repo: false
 
 theme: jekyll-theme-hacker
 
+github:
+  is_project_page: false
+
+
 plugins:
   - jekyll-sitemap
 
