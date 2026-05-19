@@ -1,19 +1,20 @@
-title: root💀muzec-sec:~#
-#description: Try Harder!!!
+title: "root💀muzec-sec:~#"
+description: "Try Harder!!!"
+
 show_downloads: false
 show_repo: false
+
 theme: jekyll-theme-hacker
 
-gems:
-  - jekyll-sitemap
-
-whitelist:
+plugins:
   - jekyll-sitemap
 
 socialIcons:
-    - name: twitter
-      url: "https://twitter.com/muzec_saminu"
-    - name: github
-      url: "https://github.com/Muzec0318"
-    - name: discord
-      url: "Muzec0318"
+  - name: X
+    url: "https://X.com/muzecsec"
+
+  - name: github
+    url: "https://github.com/Muzec0318"
+
+  - name: discord
+    url: "Muzec"
