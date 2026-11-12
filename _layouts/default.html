@@ -6,6 +6,7 @@
 {% assign t = page.title | default: site.title | remove: 'muzec - ' | remove: 'Muzec - ' | strip %}
 {% assign seg = page.url | split: '/' %}
 {% assign w = content | number_of_words %}
+{% case seg[2] %}{% when 'tryhackme' %}{% assign lab = 'TryHackMe' %}{% when 'vulnhub' %}{% assign lab = 'VulnHub' %}{% when 'pwntilldawn' %}{% assign lab = 'PwnTillDawn' %}{% when 'hackmyvm' %}{% assign lab = 'HackMyVM' %}{% when 'echoctf' %}{% assign lab = 'echoCTF' %}{% when 'articles' %}{% assign lab = 'Articles' %}{% else %}{% assign lab = t %}{% endcase %}
 <title>{{ t }} | Muzec</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -50,20 +51,40 @@ h1{font:800 clamp(38px,6.5vw,84px)/.95 Syne,system-ui,sans-serif;letter-spacing:
 .post hr{border:0;border-top:1px solid var(--line);margin:2.4em 0}
 footer{border-top:1px solid var(--line);padding:36px 0 56px;color:var(--dim);font-size:13px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+.lede{color:var(--dim);max-width:60ch;margin:0}
+.hub .lay{grid-template-columns:minmax(0,1fr)}
+.hub #toc,.hub .post hr,.hub .post h2.mume-header,.hub .post h4:first-of-type.mume-header,.hub .post h4:first-of-type.mume-header+p{display:none}
+.hub .post,.hub .post p,.hub .post li{max-width:none}
+.hub .post img{max-height:240px;width:auto}
+.hub .post ul{list-style:none;margin:0;padding:0}
+.hub .post li{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;padding:13px 10px;border-top:1px solid var(--line);color:var(--dim);font-size:13.5px;transition:background .15s}
+.hub .post li:hover{background:var(--panel)}
+.hub .post li a{color:var(--ink);border:0;font-weight:500;font-size:15px}
+.hub .post li a:hover{color:var(--acc)}
+.hub .post li code{font-size:12px}
+.hub .lay{padding-top:8px}
 @media (max-width:1000px){.lay{grid-template-columns:minmax(0,1fr)}#toc{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
-<body>
+<body class="{% if page.name == 'index.md' %}hub{% endif %}">
 <div id="bar"></div>
 <div class="wrap"><nav>
 <a href="/">Main</a><a href="/posts/articles/index.html">Articles</a><a href="/posts/tryhackme/index.html">TryHackMe</a><a href="/posts/vulnhub/index.html">VulnHub</a><a href="/posts/pwntilldawn/index.html">PwnTillDawn</a><a href="/posts/hackmyvm/index.html">HackMyVm</a><a href="/posts/echoctf/index.html">echoCTF</a>
 </nav></div>
 
+{% if page.name == 'index.md' %}
+<header class="wrap ph">
+<p class="meta"><b>Section</b><a class="back" href="/#idx">Back to home</a></p>
+<h1>{{ lab }}</h1>
+<p class="lede">{{ t }}</p>
+</header>
+{% else %}
 <header class="wrap ph">
 <p class="meta"><b>{{ seg[2] }}</b><span>{{ w | divided_by: 200 | plus: 1 }} min read</span><a class="back" href="/#idx">Back to all writeups</a></p>
 <h1>{{ t }}</h1>
 </header>
+{% endif %}
 
 <div class="wrap lay">
 <aside id="toc" aria-label="On this page"></aside>
@@ -73,7 +94,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
 </div>
 
 <footer><div class="wrap">
-<div>Stuck on something here? DM me on <a href="https://twitter.com/muzec_saminu">Twitter</a>.</div>
+<div>Stuck on something here? DM me on <a href="https://X.com/muzecsec">X</a>.</div>
 <div><a href="https://github.com/Muzec0318">GitHub</a> &nbsp; <a href="/#idx">All writeups</a></div>
 </div></footer>
 
