@@ -49,6 +49,9 @@ h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--acc)}
 .idx p.sub{color:var(--dim);margin:0 0 26px}
 .f{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:18px}
 .f input{flex:1 1 220px;background:var(--panel);border:1px solid var(--line);color:var(--ink);font:inherit;padding:8px 14px;border-radius:8px}
+.sk{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;margin:0 0 22px}.sk>span{color:var(--dim);font-size:13px}.sk button{font:inherit;color:var(--dim);background:none;border:0;border-bottom:1px dashed var(--line);padding:0 0 2px;cursor:pointer}.sk button:hover{color:var(--acc)}.sk button[aria-pressed=true]{color:var(--bg);background:var(--acc);padding:0 8px;border-radius:4px;border-color:var(--acc)}.sk sup{font-size:.6em;color:var(--hot)}.sk button[aria-pressed=true] sup{color:var(--bg)}
+.df{font-style:normal;font-size:11px;border:1px solid var(--line);border-radius:99px;padding:0 9px;margin-left:10px;color:var(--dim);vertical-align:1px}.df.Medium{color:var(--acc);border-color:var(--acc)}.df.Hard{color:var(--hot);border-color:var(--hot)}
+.stat{color:var(--dim);font-size:13px;margin:18px 0 0}
 .row{display:grid;grid-template-columns:104px 190px 1fr 110px;gap:16px;padding:14px 10px;border-top:1px solid var(--line);align-items:baseline;transition:background .15s,padding-left .15s}
 .row:hover{background:var(--panel);padding-left:20px}
 .row .t{font-weight:500}
@@ -80,6 +83,7 @@ footer a{color:var(--ink);border-bottom:1px solid var(--acc)}
 <h1>Muzec<span>writeups</span></h1>
 <p class="lede"><b>Saminu Musa Saminu.</b> CTF player, red teamer and penetration tester. Every box I root gets a full writeup here, from first scan to final flag.</p>
 <div class="certs"><i>OSEP</i><i>OSCP</i><i>PNPT</i></div>
+<p class="stat" id="stat"></p>
 </div>
 <div class="term" role="region" aria-label="Interactive terminal">
 <div class="bar"><b></b><b></b><b></b>&nbsp;muzec@blog: ~</div>
@@ -93,19 +97,23 @@ footer a{color:var(--ink);border-bottom:1px solid var(--acc)}
 <h2>All writeups</h2>
 <p class="sub" id="count"></p>
 <div class="f" id="f"></div>
+<div class="sk" id="sk" aria-label="Filter by technique"></div>
 <div id="list"></div>
 <div class="soon">Coming soon: API Penetration Testing 101, AV Evasion 101 for C#, and AV Evasion 101 for VBS/VBA Office macros.</div>
 </section>
 </div>
 
 <footer><div class="wrap">
-<div>Stuck on a writeup? Send a DM on <a href="https://X.com/muzecsec">X</a> and I’ll help.</div>
-<div><a href="https://github.com/Muzec0318">GitHub</a> &nbsp; <a href="https://X.com/muzecsec">X</a></div>
+<div>Stuck on a writeup? Send a DM on <a href="https://twitter.com/muzec_saminu">Twitter</a> and I’ll help.</div>
+<div><a href="https://github.com/Muzec0318">GitHub</a> &nbsp; <a href="https://twitter.com/muzec_saminu">Twitter</a></div>
 </div></footer>
 
 <script>
 const B='https://muzec0318.github.io/posts/';
 const P={htb:['HackTheBox','hackthebox/'],pg:['PG Play','PG/'],ctf:['CTF','CTF/'],web:['Web app','portswigger/'],red:['Red team','redteaming/']};
+const DF={Soccer:'Easy',Acute:'Hard',Search:'Hard',Timing:'Medium',Horizontall:'Easy',Driver:'Easy',Backdoor:'Easy',Gobox:'Easy',Templated:'Easy',Knife:'Easy',ScriptKiddie:'Easy',Shocker:'Easy',Active:'Easy',Bastion:'Easy',Heist:'Easy',Forest:'Easy',OpenAdmin:'Easy'};
+const S={'Active Directory':/\bAD\b|Active Directory|Kerberoasting|BloodHound|ldapsearch|CrackMapExec/i,'Remote code execution':/RCE|backdoor/i,'SSTI':/SSTI/,'LFI':/LFI/,'SQL injection':/SQL/i,'Windows':/Windows|Active Directory|\bAD\b|Heist/i,'Linux privesc':/sudo|cronjob|overlayfs|doas|screen\b|dstat/i,'Pivoting':/Chisel|port forward/i,'Code review':/code review|strcmp/i,'Docker':/Docker/i,'AV evasion':/AMSI|AV Evasion/i};
+let sk='';
 const D=[
 ['htb','2023-02-10','Soccer','soccer','Tiny RCE, websockets SQLi, doas with dstat'],
 ['htb','2022-03-01','Acute','acute','AD, Windows'],
@@ -138,19 +146,23 @@ const D=[
 ['ctf','2021-02-07','zSecurity Cute CTF','Zcute',''],
 ['web','2021-12-15','SQL Injection','sqli1','PortSwigger'],
 ['red','2021-12-01','AV Evasion 101: PowerShell x AMSI','powershellxamsi','AMSI, PowerShell']
-].map(r=>({p:r[0],d:r[1],n:r[2],u:B+P[r[0]][1]+r[3]+'.html',g:r[4]}))
+].map(r=>({p:r[0],d:r[1],n:r[2],u:B+P[r[0]][1]+r[3]+'.html',g:r[4],df:r[0]==='htb'?(DF[r[2]]||''):''}))
  .sort((a,b)=>b.d<a.d?-1:1);
 const $=s=>document.querySelector(s);
 let flt='all',q='';
 const fmt=d=>new Date(d+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'2-digit',year:'numeric'});
 function render(){
-  const L=D.filter(x=>(flt==='all'||x.p===flt)&&(x.n+' '+x.g).toLowerCase().includes(q));
-  $('#list').innerHTML=L.map(x=>`<a class="row" href="${x.u}"><span class="dt">${x.p==='red'?'':fmt(x.d)}</span><span class="t">${x.n}</span><span class="g">${x.g}</span><span class="p">${P[x.p][0]}</span></a>`).join('')||'<div class="soon">No writeup matches that search.</div>';
+  const L=D.filter(x=>(flt==='all'||x.p===flt)&&(!sk||S[sk].test(x.n+' '+x.g))&&(x.n+' '+x.g).toLowerCase().includes(q));
+  $('#list').innerHTML=L.map(x=>`<a class="row" href="${x.u}"><span class="dt">${x.p==='red'?'':fmt(x.d)}</span><span class="t">${x.n}${x.df?`<em class="df ${x.df}">${x.df}</em>`:''}</span><span class="g">${x.g}</span><span class="p">${P[x.p][0]}</span></a>`).join('')||'<div class="soon">No writeup matches that search.</div>';
   $('#count').textContent=L.length+' of '+D.length+' writeups';
+  document.querySelectorAll('#sk button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.s===sk));
 }
 $('#f').innerHTML='<input id="q" placeholder="Search a box, a technique, a CVE" aria-label="Search writeups">'+['all',...Object.keys(P)].map(k=>`<button data-k="${k}" aria-pressed="${k==='all'}">${k==='all'?'All':P[k][0]}</button>`).join('');
 $('#f').addEventListener('click',e=>{const k=e.target.dataset.k;if(!k)return;flt=k;document.querySelectorAll('#f button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k));render()});
 $('#q').addEventListener('input',e=>{q=e.target.value.toLowerCase();render()});
+$('#sk').innerHTML='<span>Filter by technique:</span>'+Object.keys(S).map(k=>{const n=D.filter(x=>S[k].test(x.n+' '+x.g)).length;return n?`<button data-s="${k}" aria-pressed="false" style="font-size:${(12.5+Math.min(n,6)*1.4).toFixed(1)}px">${k} <sup>${n}</sup></button>`:''}).join('');
+$('#sk').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;sk=sk===b.dataset.s?'':b.dataset.s;render()});
+$('#stat').textContent=D.length+' writeups across '+Object.keys(P).length+' platforms, '+D.filter(x=>x.df==='Hard').length+' rated Hard on HackTheBox';
 render();
 
 const out=$('#out'),inp=$('#in');
@@ -162,11 +174,11 @@ whoami:()=>{pr('Muzec, a.k.a. Saminu Musa Saminu');pr('CTF / red teaming / penet
 certs:()=>{pr('OSEP');pr('OSCP');pr('PNPT')},
 cat:a=>{if(a==='flag.txt')return pr('Permission denied. root only.','h');if(a==='.secret')return pr('ZmxhZ3ttdXplY193YXNfaGVyZX0=');pr('cat: '+a.replace(/</g,'&lt;')+': No such file','h')},
 sudo:()=>pr('muzec is not in the sudoers file. This incident will be reported.','h'),
-flag:a=>a==='flag{muzec_was_here}'?pr('Flag accepted. DM it to me on <a href="https://X.com/muzec_saminu">X</a> for a shoutout.'):pr('Wrong flag. Hint: look at hidden files.','h'),
+flag:a=>a==='flag{muzec_was_here}'?pr('Flag accepted. DM it to me on <a href="https://twitter.com/muzec_saminu">Twitter</a> for a shoutout.'):pr('Wrong flag. Hint: look at hidden files.','h'),
 theme:()=>{const r=document.documentElement,l=getComputedStyle(r).colorScheme==='light';r.dataset.theme=l?'dark':'light';pr('theme: '+r.dataset.theme,'d')},
 ls:a=>{if(a==='-a')return pr('flag.txt  <span class="d">.secret</span>');const L=D.filter(x=>!a||x.p===a);if(!L.length)return pr('ls: unknown platform "'+a+'". Try htb, pg, ctf, web or red.','h');L.forEach(x=>pr(link(x)))},
 open:a=>{const x=D.find(x=>a&&x.n.toLowerCase().includes(a));x?pr('found: '+link(x)):pr('open: nothing matches "'+(a||'')+'". Try ls.','h')},
-contact:()=>pr('<a href="https://X.com/muzec_saminu">X.com/muzec_saminu</a> · <a href="https://github.com/Muzec0318">github.com/Muzec0318</a>'),
+contact:()=>pr('<a href="https://twitter.com/muzec_saminu">twitter.com/muzec_saminu</a> · <a href="https://github.com/Muzec0318">github.com/Muzec0318</a>'),
 clear:()=>{out.innerHTML=''}
 };
 function run(s){
