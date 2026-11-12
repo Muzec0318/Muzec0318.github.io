@@ -99,8 +99,8 @@ footer a{color:var(--ink);border-bottom:1px solid var(--acc)}
 </div>
 
 <footer><div class="wrap">
-<div>Stuck on a writeup? Send a DM on <a href="https://twitter.com/muzec_saminu">Twitter</a> and I’ll help.</div>
-<div><a href="https://github.com/Muzec0318">GitHub</a> &nbsp; <a href="https://twitter.com/muzec_saminu">Twitter</a></div>
+<div>Stuck on a writeup? Send a DM on <a href="https://X.com/muzecsec">X</a> and I’ll help.</div>
+<div><a href="https://github.com/Muzec0318">GitHub</a> &nbsp; <a href="https://X.com/muzecsec">X</a></div>
 </div></footer>
 
 <script>
@@ -162,11 +162,11 @@ whoami:()=>{pr('Muzec, a.k.a. Saminu Musa Saminu');pr('CTF / red teaming / penet
 certs:()=>{pr('OSEP');pr('OSCP');pr('PNPT')},
 cat:a=>{if(a==='flag.txt')return pr('Permission denied. root only.','h');if(a==='.secret')return pr('ZmxhZ3ttdXplY193YXNfaGVyZX0=');pr('cat: '+a.replace(/</g,'&lt;')+': No such file','h')},
 sudo:()=>pr('muzec is not in the sudoers file. This incident will be reported.','h'),
-flag:a=>a==='flag{muzec_was_here}'?pr('Flag accepted. DM it to me on <a href="https://twitter.com/muzec_saminu">Twitter</a> for a shoutout.'):pr('Wrong flag. Hint: look at hidden files.','h'),
+flag:a=>a==='flag{muzec_was_here}'?pr('Flag accepted. DM it to me on <a href="https://X.com/muzec_saminu">X</a> for a shoutout.'):pr('Wrong flag. Hint: look at hidden files.','h'),
 theme:()=>{const r=document.documentElement,l=getComputedStyle(r).colorScheme==='light';r.dataset.theme=l?'dark':'light';pr('theme: '+r.dataset.theme,'d')},
 ls:a=>{if(a==='-a')return pr('flag.txt  <span class="d">.secret</span>');const L=D.filter(x=>!a||x.p===a);if(!L.length)return pr('ls: unknown platform "'+a+'". Try htb, pg, ctf, web or red.','h');L.forEach(x=>pr(link(x)))},
 open:a=>{const x=D.find(x=>a&&x.n.toLowerCase().includes(a));x?pr('found: '+link(x)):pr('open: nothing matches "'+(a||'')+'". Try ls.','h')},
-contact:()=>pr('<a href="https://twitter.com/muzec_saminu">twitter.com/muzec_saminu</a> · <a href="https://github.com/Muzec0318">github.com/Muzec0318</a>'),
+contact:()=>pr('<a href="https://X.com/muzec_saminu">X.com/muzec_saminu</a> · <a href="https://github.com/Muzec0318">github.com/Muzec0318</a>'),
 clear:()=>{out.innerHTML=''}
 };
 function run(s){
